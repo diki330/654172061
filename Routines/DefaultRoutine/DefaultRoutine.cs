@@ -631,13 +631,10 @@ def Execute():
 	    {
             Log.InfoFormat("[我方回合]");
             await Coroutine.Sleep(555 + makeChoice());
-            switch (dirtychoice)
+            if(dirtychoice != -1)
             {
-                case 0: TritonHs.ChooseOneClickMiddle(); break;
-                case 1: TritonHs.ChooseOneClickLeft(); break;
-                case 2: TritonHs.ChooseOneClickRight(); break;
+                Client.LeftClickAt(Client.CardInteractPoint(ChoiceCardMgr.Get().GetFriendlyCards()[dirtychoice]));
             }
-
             dirtychoice = -1;
             await Coroutine.Sleep(555);
             Silverfish.Instance.lastpf = null;
@@ -709,13 +706,10 @@ def Execute():
             if (TritonHs.IsInChoiceMode())
             {
                 await Coroutine.Sleep(555 + makeChoice());
-                switch (dirtychoice)
+                if(dirtychoice != -1)
                 {
-                    case 0: TritonHs.ChooseOneClickMiddle(); break;
-                    case 1: TritonHs.ChooseOneClickLeft(); break;
-                    case 2: TritonHs.ChooseOneClickRight(); break;
+                    Client.LeftClickAt(Client.CardInteractPoint(ChoiceCardMgr.Get().GetFriendlyCards()[dirtychoice]));
                 }
-
                 dirtychoice = -1;
                 await Coroutine.Sleep(555);
                 return;
@@ -1023,7 +1017,7 @@ def Execute():
             {
                 var ccm = ChoiceCardMgr.Get();
                 var lscc = ccm.m_lastShownChoiceState;
-                GAME_TAG choiceMode = GAME_TAG.CHOOSE_ONE;
+                GAME_TAG choiceMode = GAME_TAG.DISCOVER;
                 int sourceEntityId = -1;
                 CardDB.cardIDEnum sourceEntityCId = CardDB.cardIDEnum.None;
                 if (lscc != null)
@@ -1036,7 +1030,7 @@ def Execute():
                         var sourceCard = entity.GetCard();
                         if (sourceCard != null)
                         {
-                            if (sourceCard.GetEntity().HasReferencedTag(GAME_TAG.DISCOVER))
+                            if (sourceCard.GetEntity().GetTag(GAME_TAG.DISCOVER) == 1)
                             {
                                 choiceMode = GAME_TAG.DISCOVER;
                                 dirtychoice = -1;
@@ -1136,6 +1130,7 @@ def Execute():
                                     if (!found) Log.ErrorFormat("[AI] sourceEntityId is missing");
                                     break;
                             }
+                            bestval += discoverCards[i].card.sim_card.getDiscoverScore(tmpPlf);
                             if (bestDiscoverValue <= bestval)
                             {
                                 bestDiscoverValue = bestval;
@@ -1146,8 +1141,8 @@ def Execute():
                     ai.mainTurnSimulator.setSecondTurnSimu(true, dirtyTwoTurnSim);
                 }
                 if (sourceEntityCId == CardDB.cardIDEnum.UNG_035) dirtychoice = new Random().Next(0, 2);
-                if (dirtychoice == 0) dirtychoice = 1;
-                else if (dirtychoice == 1) dirtychoice = 0;
+                //if (dirtychoice == 0) dirtychoice = 1;
+                //else if (dirtychoice == 1) dirtychoice = 0;
                 int ttf = (int)(DateTime.Now - tmp).TotalMilliseconds;
                 Helpfunctions.Instance.logg("发现卡牌: " + dirtychoice + (discoverCardsCount > 1 ? " " + discoverCards[1].card.cardIDenum : "") + (discoverCardsCount > 0 ? " " + discoverCards[0].card.cardIDenum : "") + (discoverCardsCount > 2 ? " " + discoverCards[2].card.cardIDenum : ""));
                 if (ttf < 3000) return (new Random().Next(ttf < 1300 ? 1300 - ttf : 0, 3100 - ttf));
