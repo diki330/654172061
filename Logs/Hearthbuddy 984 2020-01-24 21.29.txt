@@ -1,0 +1,30 @@
+2020-01-24 13:29:36,225 [1] INFO  Logger (null) - Hearthbuddy Version: 0.3.1446.417
+Path: C:\Users\<Username>\Desktop\Hearthbuddy\<ExeName>
+
+OS Name: Microsoft Windows 10 专业版
+OS Version: 10.0.18363
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2020-01-24 13:29:36,290 [1] INFO  Logger (null) - Now setting up JitProfiles...
+2020-01-24 13:29:36,291 [1] INFO  Logger (null) - JitProfiles successfully setup!
+2020-01-24 13:29:36,292 [1] INFO  Logger (null) - Now beginning pre-start tasks.
+2020-01-24 13:29:36,292 [1] INFO  Logger (null) - Now checking prerequisites...
+2020-01-24 13:29:36,877 [1] INFO  Logger (null) - Prerequisite check complete!
+2020-01-24 13:29:36,973 [1] INFO  Logger (null) - svchostPath: C:\Windows\System32\svchost.exe
+2020-01-24 13:29:37,001 [1] INFO  Logger (null) - Pre-start tasks successfully completed.
+2020-01-24 13:29:37,488 [1] INFO  Logger (null) - [AuthRegion] China.
+2020-01-24 13:29:37,833 [1] INFO  Logger (null) - [BotManager] MsBetweenTicks = 15
+2020-01-24 13:29:37,865 [1] INFO  Logger (null) - [BotManager] MsBetweenTicks = 0
+2020-01-24 13:29:38,618 [9] INFO  Logger (null) - 现在使用 DX11...
+2020-03-11 13:29:47,168 [9] ERROR Logger (null) - [OnStartup] A top-level exception has been caught.
+System.InvalidOperationException: No process is associated with this object.
+   at System.Diagnostics.Process.EnsureState(State state)
+   at System.Diagnostics.Process.EnsureState(State state)
+   at System.Diagnostics.Process.get_MainModule()
+   at Triton.Game.TritonHs.get_MainAssemblyDir()
+   at Triton.Game.TritonHs.get_MainAssemblyPath()
+   at Triton.Game.Mapping.Version.get_clientChangelist()
+   at Hearthbuddy.Windows.MainWindow.method_21(Object object_0)

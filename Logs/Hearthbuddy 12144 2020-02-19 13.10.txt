@@ -1,0 +1,76 @@
+2020-02-19 05:10:19,516 [1] INFO  Logger (null) - Hearthbuddy Version: 0.3.1446.417
+Path: C:\Users\<Username>\Desktop\Hearthbuddy\<ExeName>
+
+OS Name: Microsoft Windows 10 专业版
+OS Version: 10.0.18363
+OS Architecture: 64 位
+InstalledUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentUICulture: zh-CN [Chinese (Simplified, China)]
+CurrentCulture: zh-CN [Chinese (Simplified, China)]
+
+2020-02-19 05:10:20,619 [1] INFO  Logger (null) - Now setting up JitProfiles...
+2020-02-19 05:10:20,716 [1] INFO  Logger (null) - JitProfiles successfully setup!
+2020-02-19 05:10:20,717 [1] INFO  Logger (null) - Now beginning pre-start tasks.
+2020-02-19 05:10:20,718 [1] INFO  Logger (null) - Now checking prerequisites...
+2020-02-19 05:10:29,406 [1] INFO  Logger (null) - Prerequisite check complete!
+2020-02-19 05:10:34,851 [1] INFO  Logger (null) - svchostPath: C:\Windows\System32\svchost.exe
+2020-02-19 05:10:35,344 [1] INFO  Logger (null) - Pre-start tasks successfully completed.
+2020-02-19 05:10:38,342 [1] INFO  Logger (null) - [AuthRegion] China.
+2020-02-19 05:10:43,389 [1] INFO  Logger (null) - [BotManager] MsBetweenTicks = 15
+2020-02-19 05:10:43,475 [1] INFO  Logger (null) - [BotManager] MsBetweenTicks = 0
+2020-02-19 05:10:48,386 [6] INFO  Logger (null) - 现在使用 DX11...
+2020-02-19 05:10:58,908 [6] INFO  Logger (null) - 炉石传说的版本号为 (40734, 1409784)
+2020-02-19 05:10:59,085 [6] DEBUG Logger (null) - Reloading AssemblyLoader<Triton.Bot.IBot> - Initializing
+2020-02-19 05:11:01,256 [6] INFO  Logger (null) - [用户设置] 选牌时强制投降 = False.
+2020-02-19 05:11:01,260 [6] INFO  Logger (null) - [用户设置] 修复客户端 = False.
+2020-02-19 05:11:01,262 [6] INFO  Logger (null) - [用户设置] 缓存用户卡组信息 = False.
+2020-02-19 05:11:01,267 [6] INFO  Logger (null) - [用户设置] 缓存任务信息 = True.
+2020-02-19 05:11:01,269 [6] INFO  Logger (null) - [用户设置] 不要打开竞技场奖励 = False.
+2020-02-19 05:11:01,272 [6] INFO  Logger (null) - [用户设置] 延迟自投模式 = False.
+2020-02-19 05:11:01,276 [6] INFO  Logger (null) - [用户设置] 开局自动投降的最小延迟 = 15000.
+2020-02-19 05:11:01,282 [6] INFO  Logger (null) - [用户设置] 开局自动投降的最大延迟 = 30000.
+2020-02-19 05:11:01,288 [6] INFO  Logger (null) - [用户设置] 观察随机的好友 = True.
+2020-02-19 05:11:01,291 [6] INFO  Logger (null) - [用户设置] 允许观察的好友名 = .
+2020-02-19 05:11:01,295 [6] INFO  Logger (null) - [用户设置] 隐藏不常用的游戏模式 = True.
+2020-02-19 05:11:01,298 [6] INFO  Logger (null) - [用户设置] 保持天梯等级 = False.
+2020-02-19 05:11:01,302 [6] INFO  Logger (null) - [用户设置] 下一局玩家对战自动投降 = False.
+2020-02-19 05:11:01,306 [6] INFO  Logger (null) - [用户设置] 竞技场门票 = True.
+2020-02-19 05:11:01,313 [6] INFO  Logger (null) - [用户设置] 玩家对战模式 = 休闲模式.
+2020-02-19 05:11:01,321 [6] INFO  Logger (null) - [用户设置] 玩家对战模式卡组名 = .
+2020-02-19 05:11:01,325 [6] INFO  Logger (null) - [用户设置] 开局自动祝福对手 = True.
+2020-02-19 05:11:01,347 [6] INFO  Logger (null) - [用户设置] 游戏模式 = 练习模式.
+2020-02-19 05:11:01,353 [6] INFO  Logger (null) - [用户设置] 玩家对战规则 = 随机模式.
+2020-02-19 05:11:01,356 [6] INFO  Logger (null) - [用户设置] 练习模式难度 = Normal.
+2020-02-19 05:11:01,363 [6] INFO  Logger (null) - [用户设置] 练习模式对手种族 = HUNTER.
+2020-02-19 05:11:01,368 [6] INFO  Logger (null) - [用户设置] 练习模式卡组 = .
+2020-02-19 05:11:01,372 [6] INFO  Logger (null) - [用户设置] 好友对战卡组 = .
+2020-02-19 05:11:01,375 [6] INFO  Logger (null) - [用户设置] 允许对战的好友名 = .
+2020-02-19 05:11:01,388 [6] INFO  Logger (null) - [用户设置] 强制不缓存任务及卡组信息 = False.
+2020-02-19 05:11:01,450 [6] INFO  Logger (null) - [用户设置] 不要打开竞技场奖励 = False.
+2020-02-19 05:11:01,452 [6] INFO  Logger (null) - [用户设置] 延迟自投模式 = False.
+2020-02-19 05:11:01,453 [6] INFO  Logger (null) - [用户设置] 开局自动投降的最小延迟 = 4000.
+2020-02-19 05:11:01,454 [6] INFO  Logger (null) - [用户设置] 开局自动投降的最大延迟 = 10000.
+2020-02-19 05:11:01,455 [6] INFO  Logger (null) - [用户设置] 观察随机的好友 = True.
+2020-02-19 05:11:01,455 [6] INFO  Logger (null) - [用户设置] 允许观察的好友名 = .
+2020-02-19 05:11:01,456 [6] INFO  Logger (null) - [用户设置] 隐藏不常用的游戏模式 = True.
+2020-02-19 05:11:01,457 [6] INFO  Logger (null) - [用户设置] 保持天梯等级 = False.
+2020-02-19 05:11:01,457 [6] INFO  Logger (null) - [用户设置] 下一局玩家对战自动投降 = False.
+2020-02-19 05:11:01,458 [6] INFO  Logger (null) - [用户设置] 竞技场门票 = True.
+2020-02-19 05:11:01,459 [6] INFO  Logger (null) - [用户设置] 玩家对战模式 = 休闲模式.
+2020-02-19 05:11:01,460 [6] INFO  Logger (null) - [用户设置] 玩家对战模式卡组名 = dly.
+2020-02-19 05:11:01,461 [6] INFO  Logger (null) - [用户设置] 开局自动祝福对手 = False.
+2020-02-19 05:11:01,467 [6] INFO  Logger (null) - [用户设置] 游戏模式 = 玩家对战模式.
+2020-02-19 05:11:01,474 [6] INFO  Logger (null) - [用户设置] 玩家对战规则 = 标准模式.
+2020-02-19 05:11:01,488 [6] INFO  Logger (null) - [用户设置] 练习模式难度 = Expert.
+2020-02-19 05:11:01,490 [6] INFO  Logger (null) - [用户设置] 练习模式对手种族 = HUNTER.
+2020-02-19 05:11:01,491 [6] INFO  Logger (null) - [用户设置] 练习模式卡组 = 德鲁伊.
+2020-02-19 05:11:01,491 [6] INFO  Logger (null) - [用户设置] 好友对战卡组 = .
+2020-02-19 05:11:01,492 [6] INFO  Logger (null) - [用户设置] 允许对战的好友名 = .
+2020-02-19 05:11:01,492 [6] INFO  Logger (null) - [用户设置] 强制不缓存任务及卡组信息 = False.
+2020-02-19 05:11:01,494 [6] INFO  Logger (null) - [用户设置] 缓存任务信息 = True.
+2020-02-19 05:11:01,495 [6] INFO  Logger (null) - [用户设置] 缓存用户卡组信息 = True.
+2020-02-19 05:11:02,397 [6] DEBUG Logger (null) - Reloading AssemblyLoader<Triton.Bot.IRoutine> - Initializing
+2020-02-19 05:11:02,404 [1] DEBUG Logger (null) - Current bot set to 用户.
+2020-02-19 05:11:29,955 [1] INFO  Logger (null) - [用户设置] 选牌时强制投降 = True.
+2020-02-19 05:13:00,946 [6] INFO  Logger (null) - 开始启动...
+2020-02-19 05:13:03,454 [15] INFO  Logger (null) - [警告] 炉石传说客户端已退出. 炉石兄弟将自动关闭.
