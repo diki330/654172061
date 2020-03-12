@@ -26,4 +26,3 @@ EX1_048;warrior;shaman;Discard:2;/
 EX1_048;warrior;warlock;Hold:1;/
 EX1_048;warrior;warrior;Discard:2;/
 DRG_650;warrior;priest;Hold:1;/
-DRG_650;warrior;warrior;Hold:1;/
