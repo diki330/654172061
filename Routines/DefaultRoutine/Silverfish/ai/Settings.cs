@@ -168,7 +168,7 @@ namespace HREngine.Bots
             setWeights(this.alpha);
 
             Helpfunctions.Instance.ErrorLog("设置怼脸血线值为: " + this.enfacehp);
-            Helpfunctions.Instance.ErrorLog("设置武器怼脸血线值: " + this.weaponOnlyAttackMobsUntilEnfacehp);
+            Helpfunctions.Instance.ErrorLog("设置武器怼脸模式: " + this.weaponOnlyAttackMobsUntilEnfacehp);
             ComboBreaker.Instance.attackFaceHP = this.enfacehp;
 
             Ai.Instance.setMaxWide(this.maxwide);

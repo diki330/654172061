@@ -4430,3 +4430,1514 @@ play id 29 pos 1
 发现卡牌: 3 DRG_099t2 DRG_099t1 DRG_099t3
 发现卡牌: 3 DRG_099t2 DRG_099t1 DRG_099t3
 发现卡牌: 3 DRG_099t2 DRG_099t1 DRG_099t3
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:16:12 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 6/0
+mana 0/3
+emana 3
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+3 3 0 0 1
+ownhero:
+warrior 28 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 3 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 0 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 26 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 21 0 24 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+空中海盗 DRG_035t zp:2 e:84 A:1 H:1 mH:1 rdy:False natt:1 ex
+nzothsfirstmate OG_312 zp:3 e:11 A:1 H:1 mH:1 rdy:False natt:0 ex ptt
+城镇公告员 GIL_580 zp:4 e:13 A:1 H:2 mH:2 rdy:False natt:0 ex ptt
+EnemyMinions:
+Own Handcards: 
+pos 1 虔信狂徒 4 entity 12 DRG_050 0 0 0
+pos 2 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 3 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 4 虔信狂徒 4 entity 19 DRG_050 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,1;EX1_306,1;CS2_057,1;
+od: 
+recalc-check###########
+mana changed 0 -100 3 0 3 0
+Leathal-check###########
+ailoop
+deep 0 len 1 dones 0
+cut to len 1
+ailoop
+deep 1 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 36
+attack with hero, enemy: 67
+
+missing dmg to lethal 25
+calculated 0.2908221
+no lethal, do something random######
+ailoop
+deep 0 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 22
+calculated 0.1309201
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:16:31 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 8/0
+mana 4/4
+emana 4
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 28 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 3 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 0 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 24 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 20 0 22 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:True natt:0
+空中海盗 DRG_035t zp:2 e:84 A:1 H:1 mH:1 rdy:True natt:0
+nzothsfirstmate OG_312 zp:3 e:11 A:1 H:1 mH:1 rdy:True natt:0
+城镇公告员 GIL_580 zp:4 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+voidwalker CS2_065 zp:1 e:56 A:1 H:3 mH:3 rdy:False ex tnt
+Own Handcards: 
+pos 1 虔信狂徒 4 entity 12 DRG_050 0 0 0
+pos 2 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 3 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 4 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 5 迦拉克隆之盾 5 entity 10 DRG_242 0 0 0
+Enemy cards: 3
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,1;EX1_306,1;CS2_057,1;
+od: 
+recalc-check###########
+mana changed 4 -100 4 3 4 3
+Leathal-check###########
+ailoop
+deep 0 len 5 dones 0
+cut to len 5
+ailoop
+deep 1 len 21 dones 0
+cut to len 12
+ailoop
+deep 2 len 41 dones 0
+cut to len 17
+ailoop
+deep 3 len 45 dones 0
+cut to len 24
+ailoop
+deep 4 len 46 dones 0
+cut to len 27
+ailoop
+deep 5 len 27 dones 0
+cut to len 11
+ailoop
+deep 6 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 37
+attacker: 13 enemy: 56
+
+attack with hero, enemy: 56
+
+useability 
+
+attacker: 83 enemy: 56
+
+attacker: 84 enemy: 67
+
+attacker: 11 enemy: 67
+
+missing dmg to lethal 22
+calculated 0.6402424
+no lethal, do something random######
+ailoop
+deep 0 len 7 dones 0
+cut to len 7
+ailoop
+deep 1 len 38 dones 0
+cut to len 29
+ailoop
+deep 2 len 118 dones 0
+cut to len 55
+ailoop
+deep 3 len 166 dones 0
+cut to len 77
+ailoop
+deep 4 len 146 dones 0
+cut to len 94
+ailoop
+deep 5 len 94 dones 0
+cut to len 44
+ailoop
+deep 6 len 9 dones 0
+cut to len 4
+ailoop
+deep 7 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 41
+attack with hero, enemy: 56
+
+play id 12 pos 2
+
+attacker: 12 enemy: 56
+
+attacker: 83 enemy: 67
+
+attacker: 84 enemy: 67
+
+attacker: 11 enemy: 67
+
+attacker: 13 enemy: 67
+
+calculated 0.7141641
+attack with hero, enemy: 56
+
+英雄攻击: 加尔鲁什·地狱咆哮 目标为: 虚空行者
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:16:38 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 8/1
+mana 4/4
+emana 4
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 1 0 False
+weapon: 1 2 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 0 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 24 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 20 0 22 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:True natt:0
+空中海盗 DRG_035t zp:2 e:84 A:1 H:1 mH:1 rdy:True natt:0
+nzothsfirstmate OG_312 zp:3 e:11 A:1 H:1 mH:1 rdy:True natt:0
+城镇公告员 GIL_580 zp:4 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+voidwalker CS2_065 zp:1 e:56 A:1 H:2 mH:3 rdy:False ex tnt
+Own Handcards: 
+pos 1 虔信狂徒 4 entity 12 DRG_050 0 0 0
+pos 2 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 3 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 4 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 5 迦拉克隆之盾 5 entity 10 DRG_242 0 0 0
+Enemy cards: 3
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,1;EX1_306,1;CS2_057,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+play id 12 pos 2
+
+使用: 虔信狂徒 (12) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:16:48 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 8/2
+mana 0/4
+emana 4
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 4 0 False
+weapon: 1 2 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 1 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 24 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 20 0 22 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:True natt:0
+虔信狂徒 DRG_050 zp:2 e:12 A:2 H:2 mH:2 rdy:True natt:0 ptt
+空中海盗 DRG_035t zp:3 e:84 A:1 H:1 mH:1 rdy:True natt:0
+nzothsfirstmate OG_312 zp:4 e:11 A:1 H:1 mH:1 rdy:True natt:0
+城镇公告员 GIL_580 zp:5 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+voidwalker CS2_065 zp:1 e:56 A:1 H:2 mH:3 rdy:False ex tnt
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 迦拉克隆之盾 5 entity 10 DRG_242 0 0 0
+Enemy cards: 3
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,1;EX1_306,1;CS2_057,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attacker: 12 enemy: 56
+
+随从攻击: 虔信狂徒 目标为: 虚空行者
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:16:52 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 8/3
+mana 0/4
+emana 4
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 4 0 False
+weapon: 1 2 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 1 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 24 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 20 0 22 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:True natt:0
+虔信狂徒 DRG_050 zp:2 e:12 A:2 H:1 mH:2 rdy:False natt:1 ex ptt
+空中海盗 DRG_035t zp:3 e:84 A:1 H:1 mH:1 rdy:True natt:0
+nzothsfirstmate OG_312 zp:4 e:11 A:1 H:1 mH:1 rdy:True natt:0
+城镇公告员 GIL_580 zp:5 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 迦拉克隆之盾 5 entity 10 DRG_242 0 0 0
+Enemy cards: 3
+ownDiedMinions: 
+enemyDiedMinions: CS2_065,56;
+otg: 
+etg: CS2_065,56;
+og: CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attacker: 83 enemy: 67
+
+随从攻击: 空中海盗 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:17:18 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 10/0
+mana 5/5
+emana 5
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 2 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 1 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 14 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 19 0 20 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+空中海盗 DRG_035t zp:2 e:84 A:1 H:1 mH:1 rdy:False natt:1 ex
+nzothsfirstmate OG_312 zp:3 e:11 A:1 H:1 mH:1 rdy:False natt:1 ex
+城镇公告员 GIL_580 zp:4 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 迦拉克隆之盾 5 entity 10 DRG_242 0 0 0
+pos 5 korkronelite 4 entity 17 NEW1_011 0 0 0
+Enemy cards: 4
+ownDiedMinions: DRG_050,12;
+enemyDiedMinions: CS2_065,56;
+otg: DRG_050,12;
+etg: CS2_065,56;CS2_057,60;
+og: DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;
+od: 
+recalc-check###########
+mana changed 5 0 5 4 5 4
+Leathal-check###########
+ailoop
+deep 0 len 3 dones 0
+cut to len 3
+ailoop
+deep 1 len 5 dones 0
+cut to len 4
+ailoop
+deep 2 len 3 dones 0
+cut to len 1
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 62
+attack with hero, enemy: 67
+
+useability 
+
+missing dmg to lethal 13
+calculated 0.3887597
+no lethal, do something random######
+ailoop
+deep 0 len 6 dones 0
+cut to len 6
+ailoop
+deep 1 len 13 dones 0
+cut to len 12
+ailoop
+deep 2 len 8 dones 0
+cut to len 3
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 53
+play id 10 pos 2
+
+attack with hero, enemy: 67
+
+calculated 0.3208039
+play id 10 pos 2
+
+使用: 迦拉克隆之盾 (10) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:17:30 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 10/1
+mana 0/5
+emana 5
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 4 0 False
+weapon: 1 2 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 2 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 14 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 19 0 20 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+迦拉克隆之盾 DRG_242 zp:2 e:10 A:4 H:5 mH:5 rdy:False natt:0 ex tnt ptt
+空中海盗 DRG_035t zp:3 e:84 A:1 H:1 mH:1 rdy:False natt:1 ex
+nzothsfirstmate OG_312 zp:4 e:11 A:1 H:1 mH:1 rdy:False natt:1 ex
+城镇公告员 GIL_580 zp:5 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 korkronelite 4 entity 17 NEW1_011 0 0 0
+Enemy cards: 4
+ownDiedMinions: DRG_050,12;
+enemyDiedMinions: CS2_065,56;
+otg: DRG_050,12;
+etg: CS2_065,56;CS2_057,60;
+og: DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attack with hero, enemy: 67
+
+英雄攻击: 加尔鲁什·地狱咆哮 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:17:35 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 10/2
+mana 0/5
+emana 5
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 4 0 False
+weapon: 1 1 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 2 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 19 0 20 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+迦拉克隆之盾 DRG_242 zp:2 e:10 A:4 H:5 mH:5 rdy:False natt:0 ex tnt ptt
+空中海盗 DRG_035t zp:3 e:84 A:1 H:1 mH:1 rdy:False natt:1 ex
+nzothsfirstmate OG_312 zp:4 e:11 A:1 H:1 mH:1 rdy:False natt:1 ex
+城镇公告员 GIL_580 zp:5 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 korkronelite 4 entity 17 NEW1_011 0 0 0
+Enemy cards: 4
+ownDiedMinions: DRG_050,12;
+enemyDiedMinions: CS2_065,56;
+otg: DRG_050,12;
+etg: CS2_065,56;CS2_057,60;
+og: DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:03 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/0
+mana 6/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 1 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 2 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 12 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:True natt:0
+城镇公告员 GIL_580 zp:2 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 korkronelite 4 entity 17 NEW1_011 0 0 0
+pos 5 alexstraszaschampion 2 entity 25 AT_071 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+mana changed 6 -100 6 5 6 5
+Leathal-check###########
+ailoop
+deep 0 len 5 dones 0
+cut to len 5
+ailoop
+deep 1 len 21 dones 0
+cut to len 15
+ailoop
+deep 2 len 54 dones 0
+cut to len 20
+ailoop
+deep 3 len 56 dones 0
+cut to len 15
+ailoop
+deep 4 len 29 dones 0
+cut to len 6
+ailoop
+deep 5 len 6 dones 0
+cut to len 1
+ailoop
+deep 6 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 77
+attack with hero, enemy: 67
+
+play id 17 pos 3
+
+attacker: 13 enemy: 67
+
+useability 
+
+attacker: 17 enemy: 67
+
+attacker: 83 enemy: 67
+
+missing dmg to lethal 5
+calculated 0.5716502
+no lethal, do something random######
+ailoop
+deep 0 len 8 dones 0
+cut to len 8
+ailoop
+deep 1 len 52 dones 0
+cut to len 43
+ailoop
+deep 2 len 200 dones 0
+cut to len 86
+ailoop
+deep 3 len 255 dones 0
+cut to len 76
+ailoop
+deep 4 len 123 dones 0
+cut to len 29
+ailoop
+deep 5 len 15 dones 0
+cut to len 3
+ailoop
+deep 6 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 52
+attacker: 83 enemy: 67
+
+attacker: 13 enemy: 67
+
+play id 19 pos 2
+
+attack with hero, enemy: 67
+
+play id 25 pos 2
+
+calculated 0.4817055
+attacker: 83 enemy: 67
+
+随从攻击: 空中海盗 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:09 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/1
+mana 6/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 1 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 2 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 11 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+城镇公告员 GIL_580 zp:2 e:13 A:1 H:2 mH:2 rdy:True natt:0
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 korkronelite 4 entity 17 NEW1_011 0 0 0
+pos 5 alexstraszaschampion 2 entity 25 AT_071 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attacker: 13 enemy: 67
+
+随从攻击: 城镇公告员 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:13 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/2
+mana 6/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 1 0 False
+weapon: 1 1 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 2 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+城镇公告员 GIL_580 zp:2 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 虔信狂徒 4 entity 19 DRG_050 0 0 0
+pos 4 korkronelite 4 entity 17 NEW1_011 0 0 0
+pos 5 alexstraszaschampion 2 entity 25 AT_071 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+play id 19 pos 2
+
+使用: 虔信狂徒 (19) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:22 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/3
+mana 2/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 True 0 False 4 0 False
+weapon: 1 1 rustyhook OG_058 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 3 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+虔信狂徒 DRG_050 zp:2 e:19 A:2 H:2 mH:2 rdy:True natt:0 ptt
+城镇公告员 GIL_580 zp:3 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 korkronelite 4 entity 17 NEW1_011 0 0 0
+pos 4 alexstraszaschampion 2 entity 25 AT_071 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attack with hero, enemy: 67
+
+英雄攻击: 加尔鲁什·地狱咆哮 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:28 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/4
+mana 2/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 3 0 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 3 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+虔信狂徒 DRG_050 zp:2 e:19 A:2 H:2 mH:2 rdy:True natt:0 ptt
+城镇公告员 GIL_580 zp:3 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 korkronelite 4 entity 17 NEW1_011 0 0 0
+pos 4 alexstraszaschampion 2 entity 25 AT_071 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+play id 25 pos 2
+
+使用: 阿莱克丝塔萨的勇士 (25) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:18:34 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 12/5
+mana 0/6
+emana 6
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+2 2 0 0 1
+ownhero:
+warrior 27 30 0 False False 65 False 1 False 3 0 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 3 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 18 0 19 0
+OwnMinions:
+空中海盗 DRG_035t zp:1 e:83 A:1 H:1 mH:1 rdy:False natt:1 ex
+alexstraszaschampion AT_071 zp:2 e:25 A:2 H:3 mH:3 rdy:False natt:0 ex ptt
+虔信狂徒 DRG_050 zp:3 e:19 A:2 H:2 mH:2 rdy:True natt:0 ptt
+城镇公告员 GIL_580 zp:4 e:13 A:1 H:2 mH:2 rdy:False natt:1 ex
+EnemyMinions:
+Own Handcards: 
+pos 1 厄运信天翁 3 entity 4 DRG_071 0 0 0
+pos 2 厄运信天翁 3 entity 18 DRG_071 0 0 0
+pos 3 korkronelite 4 entity 17 NEW1_011 0 0 0
+Enemy cards: 2
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_242,1;OG_312,1;DRG_050,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_142,1;CS2_168,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:20:30 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 24/0
+mana 10/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 26 30 2 False False 65 False 0 False 0 0 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 3 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 12 0 14 0
+OwnMinions:
+EnemyMinions:
+信天翁 DRG_071t zp:1 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 unknown 6 entity 16 DRG_099 0 0 0
+pos 2 仪式斩斧 2 entity 22 DRG_021 0 0 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+mana changed 10 -100 10 6 10 6
+Leathal-check###########
+ailoop
+deep 0 len 2 dones 0
+cut to len 2
+ailoop
+deep 1 len 3 dones 0
+cut to len 2
+ailoop
+deep 2 len 2 dones 0
+cut to len 1
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 49
+play id 22 pos 1
+
+attack with hero, enemy: 67
+
+useability 
+
+missing dmg to lethal 6
+calculated 0.4288587
+no lethal, do something random######
+ailoop
+deep 0 len 3 dones 0
+cut to len 3
+ailoop
+deep 1 len 8 dones 0
+cut to len 7
+ailoop
+deep 2 len 15 dones 0
+cut to len 8
+ailoop
+deep 3 len 10 dones 0
+cut to len 4
+ailoop
+deep 4 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 68
+play id 16 pos 1
+
+play id 22 pos 1
+
+attack with hero, enemy: 67
+
+useability 
+
+calculated 0.4257608
+play id 16 pos 1
+
+使用: 克罗斯·龙蹄 (16) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:20:38 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 24/1
+mana 4/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 1 0 0 1
+ownhero:
+warrior 26 30 2 False False 65 False 0 False 0 0 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 3 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 11 0 14 0
+OwnMinions:
+unknown DRG_099 zp:1 e:16 A:6 H:6 mH:6 rdy:False natt:0 ex ptt
+EnemyMinions:
+信天翁 DRG_071t zp:1 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 仪式斩斧 2 entity 22 DRG_021 0 0 0
+pos 2 天降浩劫迦拉克隆 7 entity 20 DRG_650t2 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+deck/fatigue changed 11 12 14 14 0 0 0 0
+handcard changed: 天降浩劫迦拉克隆
+Leathal-check###########
+ailoop
+deep 0 len 2 dones 0
+cut to len 2
+ailoop
+deep 1 len 3 dones 0
+cut to len 2
+ailoop
+deep 2 len 2 dones 0
+cut to len 1
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 87
+play id 22 pos 1
+
+attack with hero, enemy: 67
+
+useability 
+
+missing dmg to lethal 6
+calculated 0.305813
+no lethal, do something random######
+ailoop
+deep 0 len 2 dones 0
+cut to len 2
+ailoop
+deep 1 len 4 dones 0
+cut to len 3
+ailoop
+deep 2 len 4 dones 0
+cut to len 2
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 53
+play id 22 pos 1
+
+attack with hero, enemy: 67
+
+useability 
+
+calculated 0.2658367
+play id 22 pos 1
+
+使用: 仪式斩斧 (22) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:20:50 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 24/2
+mana 2/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 2 0 0 1
+ownhero:
+warrior 26 30 2 False False 65 True 0 False 4 0 False
+weapon: 1 2 仪式斩斧 DRG_021 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 4 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 10 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 11 0 14 0
+OwnMinions:
+unknown DRG_099 zp:1 e:16 A:6 H:6 mH:6 rdy:False natt:0 ex ptt
+EnemyMinions:
+信天翁 DRG_071t zp:1 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attack with hero, enemy: 67
+
+英雄攻击: 加尔鲁什·地狱咆哮 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:20:55 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 24/3
+mana 2/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 2 0 0 1
+ownhero:
+warrior 26 30 2 False False 65 False 1 False 4 0 False
+weapon: 1 1 仪式斩斧 DRG_021 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 4 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 11 0 14 0
+OwnMinions:
+unknown DRG_099 zp:1 e:16 A:6 H:6 mH:6 rdy:False natt:0 ex ptt
+EnemyMinions:
+信天翁 DRG_071t zp:1 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+useability 
+
+使用英雄技能: 全副武装！ 暂时没有目标
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:20:58 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 24/4
+mana 0/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+1 2 0 0 1
+ownhero:
+warrior 26 30 4 False False 65 False 1 False 4 0 False
+weapon: 1 1 仪式斩斧 DRG_021 0 0
+ability: False CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 4 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 11 0 14 0
+OwnMinions:
+unknown DRG_099 zp:1 e:16 A:6 H:6 mH:6 rdy:False natt:0 ex ptt
+EnemyMinions:
+信天翁 DRG_071t zp:1 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:21:26 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 26/0
+mana 10/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 0 0 0 1
+ownhero:
+warrior 26 30 3 False False 65 True 0 False 1 0 False
+weapon: 1 1 仪式斩斧 DRG_021 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 4 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 10 0 13 0
+OwnMinions:
+EnemyMinions:
+wargolem CS2_186 zp:1 e:36 A:7 H:1 mH:7 rdy:False ex
+信天翁 DRG_071t zp:2 e:122 A:1 H:1 mH:1 rdy:False ex
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+pos 2 祈求觉醒 3 entity 5 DRG_249 0 0 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: 
+otg: 
+etg: 
+og: DRG_071,2;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;DRG_099,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,1;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+mana changed 10 -100 10 10 10 10
+Leathal-check###########
+ailoop
+deep 0 len 4 dones 0
+cut to len 4
+ailoop
+deep 1 len 12 dones 0
+cut to len 7
+ailoop
+deep 2 len 11 dones 0
+cut to len 5
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 100
+play id 5 pos 1
+
+attack with hero, enemy: 67
+
+play id 20 pos 1
+
+missing dmg to lethal 2
+calculated 0.3225047
+no lethal, do something random######
+ailoop
+deep 0 len 6 dones 0
+cut to len 6
+ailoop
+deep 1 len 22 dones 0
+cut to len 14
+ailoop
+deep 2 len 27 dones 0
+cut to len 13
+ailoop
+deep 3 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 87
+play id 5 pos 1
+
+attack with hero, enemy: 67
+
+play id 20 pos 1
+
+calculated 0.2898218
+play id 5 pos 1
+
+使用: 祈求觉醒 (5) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:21:35 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 26/1
+mana 7/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 1 0 0 1
+ownhero:
+warrior 26 30 3 False False 65 True 0 False 4 0 False
+weapon: 1 1 仪式斩斧 DRG_021 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 5 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 6 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 10 0 13 0
+OwnMinions:
+EnemyMinions:
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: CS2_186,36;
+otg: DRG_249,5;
+etg: CS2_186,36;
+og: DRG_071,2;DRG_249,1;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;DRG_099,1;NEW1_011,2;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,2;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+attack with hero, enemy: 67
+
+英雄攻击: 加尔鲁什·地狱咆哮 目标为: 古尔丹
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:21:40 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 26/2
+mana 7/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 1 0 0 1
+ownhero:
+warrior 26 30 3 False False 65 False 1 False 3 0 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_102
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 5 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 2 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 10 0 13 0
+OwnMinions:
+EnemyMinions:
+Own Handcards: 
+pos 1 世界末日迦拉克隆 7 entity 20 DRG_650t3 0 5 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: CS2_186,36;
+otg: DRG_249,5;DRG_021,22;
+etg: CS2_186,36;
+og: DRG_071,2;DRG_249,1;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;DRG_099,1;NEW1_011,2;DRG_021,1;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,2;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+noRecalcNeeded!!!-----------------------------------
+nmgsim-
+nmgsime-
+play id 20 pos 1
+
+使用: 世界末日迦拉克隆 (20) 抉择: 0
+#######################################################################
+#######################################################################
+开始计算, 当前时间: 10:22:00 V117.178 jk战 3000 face 15 womob:5 ets 40 iC 1 aA 0
+#######################################################################
+turn 26/3
+mana 0/10
+emana 10
+own secretsCount: 0
+enemy secretsCount: 0 ;
+player:
+0 2 0 0 1
+ownhero:
+世界末日迦拉克隆 26 30 8 False False 20 False 1 False 8 0 False
+weapon: 5 2 巨龙之爪 DRG_238ht 0 0
+ability: True DRG_238p
+osecrets: 
+cthunbonus: 0 0 0
+invoke: 5 0
+jadegolems: 0 0
+elementals: 0 0 0
+quests: None 0 1000 None 0 1000
+advanced: 0 0
+enemyhero:
+warlock 2 30 0 False False 67 False
+weapon: 0 0 unknown None 0 0
+ability: True CS2_056
+fatigue: 6 0 13 0
+OwnMinions:
+EnemyMinions:
+Own Handcards: 
+pos 1 迦拉克隆之盾 5 entity 30 DRG_242 4 4 0
+pos 2 城镇公告员 1 entity 31 GIL_580 4 4 0
+pos 3 spellbreaker 4 entity 27 EX1_048 4 4 0
+pos 4 southseadeckhand 1 entity 9 CS2_146 4 4 0
+Enemy cards: 0
+ownDiedMinions: 
+enemyDiedMinions: CS2_186,36;
+otg: DRG_249,5;DRG_021,22;
+etg: CS2_186,36;
+og: DRG_071,2;DRG_249,1;DRG_019,1;EX1_604,1;DRG_242,1;OG_312,1;DRG_050,2;GIL_580,1;DRG_099,1;NEW1_011,2;DRG_021,1;AT_071,1;LOE_077,1;CS2_146,1;DRG_024,1;CFM_637,1;GAME_005,1;
+eg: CS2_186,2;CS2_213,2;DS1_055,2;CS2_142,1;CS2_168,2;CS2_182,1;EX1_011,1;CS2_065,2;EX1_306,1;CS2_057,2;CS2_061,1;
+od: 
+recalc-check###########
+deck/fatigue changed 6 10 13 13 0 0 0 0
+hero name changed 
+Leathal-check###########
+ailoop
+deep 0 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 116
+missing dmg to lethal 2
+calculated 0.0929451
+no lethal, do something random######
+ailoop
+deep 0 len 0 dones 0
+cut to len 0
+-------------------------------------
+value of best board 93
+calculated 0.0679593

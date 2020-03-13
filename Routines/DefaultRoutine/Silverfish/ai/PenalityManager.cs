@@ -6093,6 +6093,7 @@
             equipWeaponPlayDatabase.Add(CardDB.cardName.visionsoftheassassin, 1);
             equipWeaponPlayDatabase.Add(CardDB.cardName.utheroftheebonblade, 5);
             equipWeaponPlayDatabase.Add(CardDB.cardName.scourgelordgarrosh, 4);
+            equipWeaponPlayDatabase.Add(CardDB.cardName.世界末日迦拉克隆, 5);
         }
 
 

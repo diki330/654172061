@@ -217,7 +217,8 @@
             if (m.handcard.card.targetPriority >= 1 && !m.silenced) retval += m.handcard.card.targetPriority;
             if (m.Angr >= 4) retval += 20;
             if (m.Angr >= 7) retval += 50;
-            //if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;
+            if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) retval += 4;
+            if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;
             return retval;
         }
 
