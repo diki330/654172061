@@ -4931,6 +4931,7 @@ namespace HREngine.Bots
 				case cardIDEnum.DRG_660: return new Sim_DRG_660();
 				case cardIDEnum.DRG_660t2: return new Sim_DRG_660t2();
 				case cardIDEnum.DRG_660t3: return new Sim_DRG_660t3();
+				case cardIDEnum.YOD_024 : return new Sim_YOD_024 ();
 				default : return new Sim_None();
 			}
 		}

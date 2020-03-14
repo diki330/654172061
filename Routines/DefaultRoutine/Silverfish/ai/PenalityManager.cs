@@ -2106,6 +2106,8 @@
             switch(name)
             {
                 //********jk战********
+                case CardDB.cardName.炸弹牛仔:
+                    return -4;
                 case CardDB.cardName.空中悍匪:
                     if (p.ownMaxMana == 1) return -10;
                     return 0;
