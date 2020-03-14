@@ -9,8 +9,8 @@ namespace HREngine.Bots
         //对所有其他随从造成5点伤害。
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            int dmg = (ownplay) ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
-            p.allMinionsGetDamage(dmg);
+            
+            p.allMinionsGetDamage(5);
         }
 
 	}

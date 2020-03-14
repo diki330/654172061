@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Silverfish.Routines.DefaultRoutine.Silverfish.Helpers;
 
 namespace HREngine.Bots
 {
@@ -1228,7 +1229,7 @@ namespace HREngine.Bots
                     // have to do it 2 times (or the kids inside the simcards will not have a simcard :D
                     foreach (Card c in instance.cardlist)
                     {
-                        c.sim_card = instance.getSimCard(c.cardIDenum);
+                        c.sim_card = CardHelper.GetCardSimulation(c.cardIDenum);
                     }
                     instance.setAdditionalData();
                 }
