@@ -14,7 +14,7 @@
             retval -= p.evaluatePenality;
             retval += p.owncards.Count * 3;
             retval += p.ownQuest.questProgress * 10;
-            retval += p.OwnInvoke * 8;
+            retval += p.OwnInvoke * 5;
             retval += p.ownHero.Hp + p.ownHero.armor;
             retval += -(p.enemyHero.Hp + p.enemyHero.armor);
 

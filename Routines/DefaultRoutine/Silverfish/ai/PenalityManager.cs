@@ -183,7 +183,7 @@
             return retval;
         }
 
-        public int getAttackWithHeroPenality(Minion target, Playfield p)
+        public int getAttackWithHeroPenality(Minion target, Playfield p)//英雄攻击惩罚
         {
             bool isLethalCheck = p.isLethalCheck;
             int retval = ai.botBase.getAttackWithHeroPenality(target, p);
@@ -1054,6 +1054,7 @@
                             case CardDB.cardName.acolyteofpain: if (p.owncards.Count <= 3) return 0; break;
                             case CardDB.cardName.dragonegg: if (p.ownMinions.Count <= 6) return 5; break;
                             case CardDB.cardName.impgangboss: if (p.ownMinions.Count <= 6) return 0; break;
+							case CardDB.cardName.炸弹牛仔: if (p.ownMinions.Count <= 6) return 0; break;
                             case CardDB.cardName.grimpatron: if (p.ownMinions.Count <= 6) return 0; break;
                         }
                         foreach (Handmanager.Handcard hc in p.owncards)
@@ -2115,7 +2116,7 @@
                     if (p.ownMaxMana == 1) return -10;
                     return 0;
                 case CardDB.cardName.废墟之子:
-                    if (p.OwnInvoke >= 2) return -20;
+                    if (p.OwnInvoke >= 2) return 0;
                     return 20;
                 case CardDB.cardName.无敌巨龙迦拉克隆:
                     int InvokeInHand = 0;
@@ -4134,7 +4135,12 @@
             this.heroAttackBuffDatabase.Add(CardDB.cardName.evolvespines, 4);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.feralrage, 4);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.heroicstrike, 4);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.迦拉克隆的巨力, 3);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.gnash, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.虔信狂徒, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.迦拉克隆之盾, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.仪式斩斧, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.祈求觉醒, 3);
 
             this.attackBuffDatabase.Add(CardDB.cardName.abusivesergeant, 2);
             this.attackBuffDatabase.Add(CardDB.cardName.adaptation, 1);
@@ -4754,6 +4760,7 @@
             specialMinions.Add(CardDB.cardName.igneouselemental, 0);
             specialMinions.Add(CardDB.cardName.illidanstormrage, 0);
             specialMinions.Add(CardDB.cardName.impgangboss, 0);
+			specialMinions.Add(CardDB.cardName.炸弹牛仔, 0);
             specialMinions.Add(CardDB.cardName.impmaster, 0);
             specialMinions.Add(CardDB.cardName.infestedtauren, 0);
             specialMinions.Add(CardDB.cardName.infestedwolf, 0);
@@ -5134,6 +5141,7 @@
             priorityTargets.Add(CardDB.cardName.igneouselemental, 10);
             priorityTargets.Add(CardDB.cardName.illidanstormrage, 10);
             priorityTargets.Add(CardDB.cardName.impgangboss, 10);
+			priorityTargets.Add(CardDB.cardName.炸弹牛仔, 10);
             priorityTargets.Add(CardDB.cardName.impmaster, 10);
             priorityTargets.Add(CardDB.cardName.ironsensei, 10);
             priorityTargets.Add(CardDB.cardName.junglemoonkin, 10);
@@ -5426,6 +5434,7 @@
             silenceTargets.Add(CardDB.cardName.igneouselemental, 0);
             silenceTargets.Add(CardDB.cardName.illidanstormrage, 0);
             silenceTargets.Add(CardDB.cardName.impgangboss, 0);
+			silenceTargets.Add(CardDB.cardName.炸弹牛仔, 0);
             silenceTargets.Add(CardDB.cardName.impmaster, 0);
             silenceTargets.Add(CardDB.cardName.ironsensei, 0);
             silenceTargets.Add(CardDB.cardName.jadeswarmer, 0);
