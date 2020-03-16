@@ -127,7 +127,7 @@ namespace HREngine.Bots
                 }
                 if (m.Ready) readycount++;
                 if (m.Hp <= 4 && (m.Angr > 2 || m.Hp > 3)) ownMinionsCount++;
-				if (m.rush > 0 && m.cantAttackHeroes == true) retval -= 2;//突袭测试
+				if (m.rush > 0 && m.cantAttackHeroes == true) retval -= 4;//突袭测试
                 retval += m.synergy;
             }
             retval += p.anzOgOwnCThunAngrBonus;
@@ -355,6 +355,7 @@ namespace HREngine.Bots
             }
             if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;
 			if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) retval += 4;
+            if (p.enemyHeroStartClass == TAG_CLASS.PALADIN && p.enemyHeroAblility.card.cardIDenum == CardDB.cardIDEnum.AT_132_PALADIN && m.name == CardDB.cardName.silverhandrecruit) retval += 4;
             retval += m.synergy;
             return retval;
         }
