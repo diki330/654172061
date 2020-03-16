@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_014 : SimTemplate //kingmukla
-	{
+    class Sim_EX1_014 : SimTemplate //kingmukla
+    {
 
-//    kampfschrei:/ gebt eurem gegner 2 bananen.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        //    kampfschrei:/ gebt eurem gegner 2 bananen.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             p.drawACard(CardDB.cardName.bananas, !own.own, true);
             if (own.own)
             {
@@ -20,8 +20,8 @@ namespace HREngine.Bots
             {
                 p.enemycarddraw -= 1;
             }
-		}
+        }
 
 
-	}
+    }
 }

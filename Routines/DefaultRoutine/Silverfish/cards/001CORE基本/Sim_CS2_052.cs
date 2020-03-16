@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_052 : SimTemplate //wrathofairtotem
-	{
+    class Sim_CS2_052 : SimTemplate //wrathofairtotem
+    {
 
-//    zauberschaden +1/
-		public override void  onAuraStarts(Playfield p, Minion m)
+        //    zauberschaden +1/
+        public override void onAuraStarts(Playfield p, Minion m)
         {
             if (m.own)
             {
@@ -19,7 +19,7 @@ namespace HREngine.Bots
                 p.enemyspellpower++;
             }
         }
-		
+
 
         public override void onAuraEnds(Playfield p, Minion m)
         {
@@ -33,5 +33,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

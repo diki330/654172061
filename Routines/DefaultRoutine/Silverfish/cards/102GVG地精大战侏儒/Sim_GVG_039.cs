@@ -13,7 +13,7 @@ namespace HREngine.Bots
         {
             if (triggerEffectMinion.own == turnEndOfOwner)
             {
-                
+
                 if (triggerEffectMinion.own)
                 {
                     int heal = p.getMinionHeal(4);
@@ -21,7 +21,7 @@ namespace HREngine.Bots
                 }
                 else
                 {
-                    int heal =  p.getEnemyMinionHeal(4);
+                    int heal = p.getEnemyMinionHeal(4);
                     p.minionGetDamageOrHeal(p.enemyHero, -heal, true);
                 }
 

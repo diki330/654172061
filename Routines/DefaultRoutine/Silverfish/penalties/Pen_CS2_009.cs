@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_009 : PenTemplate //markofthewild
-	{
+    class Pen_CS2_009 : PenTemplate //markofthewild
+    {
 
-//    verleiht einem diener spott/ und +2/+2.i&gt; (+2 angriff/+2 leben)/i&gt;
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht einem diener spott/ und +2/+2.i&gt; (+2 angriff/+2 leben)/i&gt;
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (!m.Ready)
@@ -39,8 +39,8 @@ namespace HREngine.Bots
                 return 500;
             }
             return 0;
-		}
+        }
 
-	}
+    }
 
 }

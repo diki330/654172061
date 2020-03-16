@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_233: SimTemplate //* Doomerang
+    class Sim_ICC_233 : SimTemplate //* Doomerang
     {
         // Throw your weapon at a minion. It deals it's damage, then returns to your hand.
 

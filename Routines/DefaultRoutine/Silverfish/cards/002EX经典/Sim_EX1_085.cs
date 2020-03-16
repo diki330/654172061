@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_085 : SimTemplate //mindcontroltech
-	{
+    class Sim_EX1_085 : SimTemplate //mindcontroltech
+    {
         //todo list
-//    kampfschrei:/ falls euer gegner mind. 4 diener hat, übernehmt zufällig die kontrolle über einen davon.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        //    kampfschrei:/ falls euer gegner mind. 4 diener hat, übernehmt zufällig die kontrolle über einen davon.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             if (own.own)
             {
                 if (p.enemyMinions.Count >= 4)
@@ -36,8 +36,8 @@ namespace HREngine.Bots
 
                 }
             }
-		}
+        }
 
-	}
+    }
 
 }

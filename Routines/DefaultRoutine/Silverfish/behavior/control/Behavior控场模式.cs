@@ -29,7 +29,7 @@ namespace HREngine.Bots
             retval += (p.enemyHeroAblility.manacost - p.ownHeroAblility.manacost) * 4;
             if (p.ownHeroPowerAllowedQuantity != p.enemyHeroPowerAllowedQuantity)
             {
-                if(p.ownHeroPowerAllowedQuantity > p.enemyHeroPowerAllowedQuantity) retval += 3;
+                if (p.ownHeroPowerAllowedQuantity > p.enemyHeroPowerAllowedQuantity) retval += 3;
                 else retval -= 3;
             }
 
@@ -113,7 +113,7 @@ namespace HREngine.Bots
                 }
                 //if (!m.taunt && m.stealth && penman.specialMinions.ContainsKey(m.name)) retval += 20;
                 //if (m.poisonous) retval += 1;
-                if (m.lifesteal) retval += m.Angr/2;
+                if (m.lifesteal) retval += m.Angr / 2;
                 if (m.divineshild && m.taunt) retval += 4;
                 //if (m.taunt && m.handcard.card.name == CardDB.cardName.frog) owntaunt++;
                 //if (m.handcard.card.isToken && m.Angr <= 2 && m.Hp <= 2) retval -= 5;
@@ -213,15 +213,15 @@ namespace HREngine.Bots
                         {
                             foreach (Minion m in p.ownMinions)
                             {
-                                if (m.wounded) { wereTarget = true; break;}
+                                if (m.wounded) { wereTarget = true; break; }
                             }
                         }
                         if (wereTarget && !(p.anzOwnAuchenaiSoulpriest > 0 || p.embracetheshadow > 0)) retval -= 10;
                         break;
                     case CardDB.cardName.poisoneddaggers: goto case CardDB.cardName.daggermastery;
                     case CardDB.cardName.daggermastery:
-                         if (!(p.ownWeapon.Durability > 1 || p.ownWeapon.Angr > 1)) retval -= 10;
-                         break;
+                        if (!(p.ownWeapon.Durability > 1 || p.ownWeapon.Angr > 1)) retval -= 10;
+                        break;
                     case CardDB.cardName.totemicslam: goto case CardDB.cardName.totemiccall;
                     case CardDB.cardName.totemiccall:
                         if (p.ownMinions.Count < 7) retval -= 10;
@@ -233,14 +233,14 @@ namespace HREngine.Bots
                         if (p.ownMinions.Count < 7) retval -= 10;
                         else retval -= 3;
                         break;
-                    case CardDB.cardName.soultap: 
+                    case CardDB.cardName.soultap:
                         if (p.owncards.Count < 10 && p.ownDeckSize > 0) retval -= 10;
                         break;
-                    case CardDB.cardName.lifetap: 
+                    case CardDB.cardName.lifetap:
                         if (p.owncards.Count < 10 && p.ownDeckSize > 0)
                         {
                             retval -= 10;
-                            if (p.ownHero.immune) retval-= 5;
+                            if (p.ownHero.immune) retval -= 5;
                         }
                         break;
                     default:
@@ -335,7 +335,7 @@ namespace HREngine.Bots
                 else if (m.Angr <= 2 && m.Hp <= 2 && !m.divineshild) retval -= 5;
             }
             else retval += m.handcard.card.rarity;
-			
+
             if (m.taunt) retval += 5;
             if (m.divineshild) retval += m.Angr;
             if (m.divineshild && m.taunt) retval += 5;
@@ -360,7 +360,7 @@ namespace HREngine.Bots
 
         public override int getSirFinleyPriority(List<Handmanager.Handcard> discoverCards)
         {
-            
+
             return -1; //comment out or remove this to set manual priority
             int sirFinleyChoice = -1;
             int tmp = int.MinValue;
@@ -379,7 +379,7 @@ namespace HREngine.Bots
         private Dictionary<CardDB.cardName, int> SirFinleyPriorityList = new Dictionary<CardDB.cardName, int>
         {
             //{HeroPowerName, Priority}, where 0-9 = manual priority
-            { CardDB.cardName.lesserheal, 0 }, 
+            { CardDB.cardName.lesserheal, 0 },
             { CardDB.cardName.shapeshift, 6 },
             { CardDB.cardName.fireblast, 7 },
             { CardDB.cardName.totemiccall, 1 },
@@ -389,7 +389,7 @@ namespace HREngine.Bots
             { CardDB.cardName.armorup, 2 },
             { CardDB.cardName.steadyshot, 8 }
         };
-		
+
     }
 
 }

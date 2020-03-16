@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_067 : SimTemplate //argentcommander
-	{
+    class Sim_EX1_067 : SimTemplate //argentcommander
+    {
 
-//    ansturm/, gottesschild/
+        //    ansturm/, gottesschild/
 
-	}
+    }
 }

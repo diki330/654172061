@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_245: SimTemplate //* Blackguard
+    class Sim_ICC_245 : SimTemplate //* Blackguard
     {
         // Whenever your hero is healed, deal that much damage to a random enemy minion.
 
@@ -16,5 +16,5 @@ namespace HREngine.Bots
             else target = p.searchRandomMinion(p.ownMinions, searchmode.searchHighestAttack); //damage the Highest (pessimistic)
             if (target != null) p.minionGetDamageOrHeal(target, dmg);
         }
-	}
+    }
 }

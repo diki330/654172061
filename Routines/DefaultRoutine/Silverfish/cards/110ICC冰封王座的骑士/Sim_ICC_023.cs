@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_023: SimTemplate //* Snowflipper Penguin
+    class Sim_ICC_023 : SimTemplate //* Snowflipper Penguin
     {
-        
+
     }
 }

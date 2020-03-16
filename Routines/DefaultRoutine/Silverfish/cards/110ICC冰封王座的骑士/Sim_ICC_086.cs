@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_086: SimTemplate //* Glacial Mysteries
+    class Sim_ICC_086 : SimTemplate //* Glacial Mysteries
     {
         // Put one of each Secret from your deck into the battlefield.
 
@@ -34,5 +34,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

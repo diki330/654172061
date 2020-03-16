@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_481p: SimTemplate //* Transmute Spirit
+    class Sim_ICC_481p : SimTemplate //* Transmute Spirit
     {
         // Hero Power: Transform a friendly minion into a random one that costs (1) more.
 

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_648 : SimTemplate //* Big-Time Racketeer
-	{
-		// Battlecry: Summon a 6/6 Ogre.
+    class Sim_CFM_648 : SimTemplate //* Big-Time Racketeer
+    {
+        // Battlecry: Summon a 6/6 Ogre.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_648t); //6/6 Ogre
 

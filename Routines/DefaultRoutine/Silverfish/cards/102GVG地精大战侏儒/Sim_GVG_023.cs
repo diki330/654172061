@@ -18,7 +18,7 @@ namespace HREngine.Bots
                     p.ownWeapon.Angr += 1;
                     p.minionGetBuffed(p.ownHero, 1, 0);
                 }
-                
+
             }
             else
             {
@@ -27,7 +27,7 @@ namespace HREngine.Bots
                     p.enemyWeapon.Angr += 1;
                     p.minionGetBuffed(p.enemyHero, 1, 0);
                 }
-                
+
             }
         }
 

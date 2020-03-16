@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_081: SimTemplate //* Drakkari Defender
+    class Sim_ICC_081 : SimTemplate //* Drakkari Defender
     {
         // Taunt Overload: (3)
 

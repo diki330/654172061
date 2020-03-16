@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NEW1_024 : SimTemplate //captaingreenskin
-	{
-//    kampfschrei:/ verleiht eurer waffe +1/+1.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+    class Sim_NEW1_024 : SimTemplate //captaingreenskin
+    {
+        //    kampfschrei:/ verleiht eurer waffe +1/+1.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             if (own.own)
             {
                 if (p.ownWeapon.Durability >= 1)
@@ -27,7 +27,7 @@ namespace HREngine.Bots
                     p.minionGetBuffed(p.enemyHero, 1, 0);
                 }
             }
-		}
+        }
 
-	}
+    }
 }

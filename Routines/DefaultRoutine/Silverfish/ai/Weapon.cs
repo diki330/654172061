@@ -4,7 +4,7 @@ namespace HREngine.Bots
 {
     using System;
     using System.Collections.Generic;
-    
+
     public class Weapon
     {
         public int pID = 0;
@@ -12,10 +12,10 @@ namespace HREngine.Bots
         public CardDB.Card card;
         public int numAttacksThisTurn = 0;
         public bool immuneWhileAttacking = false;
-        
+
         public int Angr = 0;
         public int Durability = 0;
-        
+
         public bool windfury = false;
         public bool immune = false;
         public bool lifesteal = false;
@@ -75,6 +75,6 @@ namespace HREngine.Bots
         {
             return this.Angr + " " + this.Durability + " " + this.name + " " + this.card.cardIDenum + " " + (this.poisonous ? 1 : 0) + " " + (this.lifesteal ? 1 : 0);
         }
-            
+
     }
 }

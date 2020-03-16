@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_829p: SimTemplate //* The Four Horsemen
+    class Sim_ICC_829p : SimTemplate //* The Four Horsemen
     {
         // Hero Power: Summon a 2/2 Horseman. If you have all 4, destroy the enemy hero.
 

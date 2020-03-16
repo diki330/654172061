@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_325 : SimTemplate //* Carrion Grub
-	{
-		// -
-	}
+    class Sim_OG_325 : SimTemplate //* Carrion Grub
+    {
+        // -
+    }
 }

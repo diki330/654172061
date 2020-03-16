@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_Mekka1 : SimTemplate //homingchicken
-	{
+    class Sim_Mekka1 : SimTemplate //homingchicken
+    {
 
-//    vernichtet zu beginn eures zuges diesen diener und zieht 3 karten.
+        //    vernichtet zu beginn eures zuges diesen diener und zieht 3 karten.
 
         public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
         {
@@ -20,5 +20,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_450: SimTemplate //* Death Revenant
+    class Sim_ICC_450 : SimTemplate //* Death Revenant
     {
         // Battlecry: Gain +1/+1 for each damaged minion.
 

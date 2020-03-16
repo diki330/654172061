@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_558 : SimTemplate //harrisonjones
-	{
-//    kampfschrei:/ zerstört die waffe eures gegners. zieht ihrer haltbarkeit entsprechend karten.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+    class Sim_EX1_558 : SimTemplate //harrisonjones
+    {
+        //    kampfschrei:/ zerstört die waffe eures gegners. zieht ihrer haltbarkeit entsprechend karten.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             if (own.own)
             {
                 //this.owncarddraw += enemyWeaponDurability;
@@ -26,8 +26,8 @@ namespace HREngine.Bots
                 }
                 p.lowerWeaponDurability(1000, true);
             }
-		}
+        }
 
 
-	}
+    }
 }

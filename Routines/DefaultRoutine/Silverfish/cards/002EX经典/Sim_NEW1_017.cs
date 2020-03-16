@@ -13,6 +13,6 @@ namespace HREngine.Bots
                 p.minionGetDestroyed(target);
                 p.minionGetBuffed(own, 2, 2);
             }
-        } 
+        }
     }
 }

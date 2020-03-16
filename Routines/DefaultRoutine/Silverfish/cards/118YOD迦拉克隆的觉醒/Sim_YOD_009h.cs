@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_009h  : SimTemplate// YOD_009h  whatdoesthisdo
-//[x]passive hero power
+    class Sim_YOD_009h : SimTemplate// YOD_009h  whatdoesthisdo
+                                    //[x]passive hero power
 
-	{
-	}
+    {
+    }
 }

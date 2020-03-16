@@ -32,7 +32,7 @@ namespace HREngine.Bots
                 p.enemyspellpower--;
             }
         }
-        
+
 
 
     }

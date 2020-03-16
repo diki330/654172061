@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_029 : SimTemplate //dancingswords
-	{
+    class Sim_FP1_029 : SimTemplate //dancingswords
+    {
 
-//    todesröcheln:/ euer gegner zieht eine karte.
+        //    todesröcheln:/ euer gegner zieht eine karte.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
             p.drawACard(CardDB.cardIDEnum.None, !m.own);
         }
 
-	}
+    }
 }

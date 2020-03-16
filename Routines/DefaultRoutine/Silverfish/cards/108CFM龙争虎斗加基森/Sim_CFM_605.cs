@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_605 : SimTemplate //* Drakonid Operative
-	{
-		// Battlecry: If you're holding a Dragon, Discover a card in your opponent's deck.
+    class Sim_CFM_605 : SimTemplate //* Drakonid Operative
+    {
+        // Battlecry: If you're holding a Dragon, Discover a card in your opponent's deck.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

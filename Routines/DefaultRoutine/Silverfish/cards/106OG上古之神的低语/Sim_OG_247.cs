@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_247 : SimTemplate //* Twisted Worgen
-	{
-		//Stealth
-	}
+    class Sim_OG_247 : SimTemplate //* Twisted Worgen
+    {
+        //Stealth
+    }
 }

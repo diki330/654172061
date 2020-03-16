@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_067 : SimTemplate //* The Caverns Below
-	{
-		//Quest: Play four minions with the same name. Reward: Crystal Core.
+    class Sim_UNG_067 : SimTemplate //* The Caverns Below
+    {
+        //Quest: Play four minions with the same name. Reward: Crystal Core.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

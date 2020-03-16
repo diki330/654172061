@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_310 : SimTemplate //* Call in the Finishers
-	{
-		// Summon four 1/1 Murlocs.
+    class Sim_CFM_310 : SimTemplate //* Call in the Finishers
+    {
+        // Summon four 1/1 Murlocs.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_310t); //1/1 Murloc Razorgill
 

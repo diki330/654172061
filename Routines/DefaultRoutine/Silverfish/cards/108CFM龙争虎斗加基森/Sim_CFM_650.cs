@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_650 : SimTemplate //* Grimscale Chum
-	{
-		// Battlecry: Give a random Murloc in your hand +1/+1.
+    class Sim_CFM_650 : SimTemplate //* Grimscale Chum
+    {
+        // Battlecry: Give a random Murloc in your hand +1/+1.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
@@ -21,5 +21,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

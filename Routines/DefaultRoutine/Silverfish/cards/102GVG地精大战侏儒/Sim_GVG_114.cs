@@ -8,12 +8,12 @@ namespace HREngine.Bots
     {
 
         // Deathrattle: Summon a random legendary minion.
-		
+
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_014);
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
-            p.callKid(kid, m.zonepos - 1, m.own); 
+            p.callKid(kid, m.zonepos - 1, m.own);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_062: SimTemplate //* Mountainfire Armor
+    class Sim_ICC_062 : SimTemplate //* Mountainfire Armor
     {
         // Deathrattle: If it's your opponent's turn, gain 6 Armor.
 

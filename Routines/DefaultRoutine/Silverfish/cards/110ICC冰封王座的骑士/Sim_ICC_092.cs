@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_092: SimTemplate //* Acherus Veteran
+    class Sim_ICC_092 : SimTemplate //* Acherus Veteran
     {
         // Battlecry: Give a friendly minion +1 Attack.
 

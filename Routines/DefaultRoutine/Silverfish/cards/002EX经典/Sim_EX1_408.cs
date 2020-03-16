@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_408 : SimTemplate //mortalstrike
-	{
+    class Sim_EX1_408 : SimTemplate //mortalstrike
+    {
 
-//    verursacht $4 schaden. verursacht stattdessen $6 schaden, wenn euer held max. 12 leben hat.
+        //    verursacht $4 schaden. verursacht stattdessen $6 schaden, wenn euer held max. 12 leben hat.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             int dmg = 0;
 
             if (ownplay)
@@ -22,7 +22,7 @@ namespace HREngine.Bots
                 dmg = (p.enemyHero.Hp <= 12) ? p.getEnemySpellDamageDamage(6) : p.getEnemySpellDamageDamage(4);
             }
             p.minionGetDamageOrHeal(target, dmg);
-		}
+        }
 
-	}
+    }
 }

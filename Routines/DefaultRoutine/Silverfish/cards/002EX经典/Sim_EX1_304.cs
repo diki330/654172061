@@ -5,11 +5,11 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_304 : SimTemplate //* Void Terror
-	{
+    {
         //Battlecry: Destroy the minions on either side of this minion and gain their Attack and Health.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
 
             int angr = 0;
@@ -24,6 +24,6 @@ namespace HREngine.Bots
                 }
             }
             p.minionGetBuffed(own, angr, hp);
-		}
-	}
+        }
+    }
 }

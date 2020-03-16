@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_077 : PenTemplate //sprint
-	{
+    class Pen_CS2_077 : PenTemplate //sprint
+    {
 
-//    zieht 4 karten.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    zieht 4 karten.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

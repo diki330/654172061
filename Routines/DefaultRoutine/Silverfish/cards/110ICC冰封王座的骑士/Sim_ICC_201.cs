@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_201: SimTemplate //* Roll the Bones
+    class Sim_ICC_201 : SimTemplate //* Roll the Bones
     {
         // Draw a card. If it has Deathrattle, cast this again.
 

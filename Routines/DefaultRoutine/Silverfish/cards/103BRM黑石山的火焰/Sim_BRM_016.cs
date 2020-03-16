@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_016 : SimTemplate //* Axe Flinger
-	{
-		// Whenever this minion takes damage, deal 2 damage to the enemy hero
+    class Sim_BRM_016 : SimTemplate //* Axe Flinger
+    {
+        // Whenever this minion takes damage, deal 2 damage to the enemy hero
 
         public override void onMinionGotDmgTrigger(Playfield p, Minion m, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
         {
@@ -16,9 +16,9 @@ namespace HREngine.Bots
                 m.anzGotDmg = 0;
                 for (int i = 0; i < tmp; i++)
                 {
-					p.minionGetDamageOrHeal(m.own ? p.enemyHero : p.ownHero, 2);
+                    p.minionGetDamageOrHeal(m.own ? p.enemyHero : p.ownHero, 2);
                 }
             }
         }
-	}
+    }
 }

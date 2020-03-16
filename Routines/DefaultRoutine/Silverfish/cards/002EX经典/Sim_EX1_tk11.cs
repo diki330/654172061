@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_tk11 : SimTemplate //spiritwolf
-	{
+    class Sim_EX1_tk11 : SimTemplate //spiritwolf
+    {
 
-//    spott/
-		
+        //    spott/
 
-	}
+
+    }
 }

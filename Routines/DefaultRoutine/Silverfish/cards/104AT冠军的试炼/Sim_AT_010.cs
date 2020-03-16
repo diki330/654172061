@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_010 : SimTemplate //* Ram Wrangler
-	{
-		//Battlecry: If you have a Beast, summon a random Beast.
+    class Sim_AT_010 : SimTemplate //* Ram Wrangler
+    {
+        //Battlecry: If you have a Beast, summon a random Beast.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

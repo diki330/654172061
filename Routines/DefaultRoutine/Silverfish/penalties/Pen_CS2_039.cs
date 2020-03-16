@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_039 : PenTemplate //windfury
-	{
+    class Pen_CS2_039 : PenTemplate //windfury
+    {
 
-//    verleiht einem diener windzorn/.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    verleiht einem diener windzorn/.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

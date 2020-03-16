@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_101t : PenTemplate //silverhandrecruit
-	{
+    class Pen_CS2_101t : PenTemplate //silverhandrecruit
+    {
 
-//
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_172 : SimTemplate //bloodfenraptor
-	{
+    class Sim_CS2_172 : SimTemplate //bloodfenraptor
+    {
 
-//
+        //
 
 
-	}
+    }
 }

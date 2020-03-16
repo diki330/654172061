@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_LOE_046 : SimTemplate //* Huge Toad
-	{
-		//Deathrattle: Deal 1 damage to a random enemy.
-		
+    class Sim_LOE_046 : SimTemplate //* Huge Toad
+    {
+        //Deathrattle: Deal 1 damage to a random enemy.
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             Minion target = null;
@@ -21,7 +21,7 @@ namespace HREngine.Bots
                 target = p.searchRandomMinion(p.ownMinions, searchmode.searchLowestHP); //(pessimistic)
                 if (target == null) target = p.ownHero;
             }
-			p.minionGetDamageOrHeal(target, 1);
+            p.minionGetDamageOrHeal(target, 1);
         }
     }
 }

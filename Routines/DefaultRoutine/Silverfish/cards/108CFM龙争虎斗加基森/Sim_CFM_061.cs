@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_061 : SimTemplate //* Jinyu Waterspeaker
-	{
-		// Battlecry: Restore 6 Health. Overload: (1)
+    class Sim_CFM_061 : SimTemplate //* Jinyu Waterspeaker
+    {
+        // Battlecry: Restore 6 Health. Overload: (1)
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

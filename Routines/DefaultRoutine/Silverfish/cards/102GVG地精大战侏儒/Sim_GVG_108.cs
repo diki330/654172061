@@ -11,7 +11,7 @@ namespace HREngine.Bots
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            if(target == null) return;
+            if (target == null) return;
             p.minionTransform(target, target.handcard.card);
         }
 

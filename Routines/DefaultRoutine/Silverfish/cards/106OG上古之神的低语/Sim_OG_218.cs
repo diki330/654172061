@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_218 : SimTemplate //* Bloodhoof Brave
-	{
-		//Taunt. Enrage:+3 Attack.
-		
+    class Sim_OG_218 : SimTemplate //* Bloodhoof Brave
+    {
+        //Taunt. Enrage:+3 Attack.
+
         public override void onEnrageStart(Playfield p, Minion m)
         {
             m.Angr += 3;
@@ -17,5 +17,5 @@ namespace HREngine.Bots
         {
             m.Angr -= 3;
         }
-	}
+    }
 }

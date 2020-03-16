@@ -7,8 +7,8 @@ namespace HREngine.Bots
     class Sim_GVG_116 : SimTemplate //* Mekgineer Thermaplugg
     {
         //   Whenever an enemy minion dies, summon a Leper Gnome.
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_029);//lepergnome
-		
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_029);//lepergnome
+
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
             int diedMinions = (m.own) ? p.tempTrigger.enemyMinionsDied : p.tempTrigger.ownMinionsDied;
@@ -17,9 +17,9 @@ namespace HREngine.Bots
             m.pID = p.pID;
             m.extraParam2 = diedMinions;
             for (int i = 0; i < residual; i++)
-			{
-				p.callKid(kid, m.zonepos, m.own);
-			}
+            {
+                p.callKid(kid, m.zonepos, m.own);
+            }
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_082 : SimTemplate //* Mad Bomber
-	{
+    {
         // Battlecry: Deal 3 damage randomly split between all other characters.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             int anz = 3;
             for (int i = 0; i < anz; i++)
             {
@@ -33,6 +33,6 @@ namespace HREngine.Bots
                 }
                 p.minionGetDamageOrHeal(p.enemyHero, 1);
             }
-		}
-	}
+        }
+    }
 }

@@ -141,15 +141,15 @@
                 this.canBe_missdirection = (canbe[5] == '1');
                 this.canBe_darttrap = (canbe[6] == '1');
                 this.canBe_cattrick = (canbe[7] == '1');
-                this.canBe_counterspell = (canbe[8] == '1');               
+                this.canBe_counterspell = (canbe[8] == '1');
                 this.canBe_iceblock = (canbe[9] == '1');
-                this.canBe_flameward = (canbe[10] == '1');              
-                this.canBe_sacredtrial = (canbe[11] == '1');               
+                this.canBe_flameward = (canbe[10] == '1');
+                this.canBe_sacredtrial = (canbe[11] == '1');
                 this.canBe_eyeforaneye = (canbe[12] == '1');
                 this.canBe_noblesacrifice = (canbe[13] == '1');
                 this.canBe_redemption = (canbe[14] == '1');
                 this.canBe_repentance = (canbe[15] == '1');
-                this.canBe_avenge = (canbe[16] == '1');                             
+                this.canBe_avenge = (canbe[16] == '1');
             }
             else if (canbe.Length == 15)
             {
@@ -160,8 +160,8 @@
                 this.canBe_freezing = (canbe[4] == '1');
                 this.canBe_missdirection = (canbe[5] == '1');
                 this.canBe_darttrap = (canbe[6] == '1');
-                this.canBe_counterspell = (canbe[7] == '1');               
-                this.canBe_iceblock = (canbe[8] == '1');               
+                this.canBe_counterspell = (canbe[7] == '1');
+                this.canBe_iceblock = (canbe[8] == '1');
                 this.canBe_eyeforaneye = (canbe[9] == '1');
                 this.canBe_noblesacrifice = (canbe[10] == '1');
                 this.canBe_redemption = (canbe[11] == '1');
@@ -169,7 +169,7 @@
                 this.canBe_avenge = (canbe[13] == '1');
                 this.canBe_sacredtrial = (canbe[14] == '1');
             }
-            
+
 
             this.updateCanBeTriggered();
         }
@@ -275,7 +275,7 @@
             //retval += "" + ((canBe_mirrorentity) ? "1" : "0");
             //retval += "" + ((canBe_spellbender) ? "1" : "0");
             //retval += "" + ((canBe_vaporize) ? "1" : "0");
-           //retval += "" + ((canBe_duplicate) ? "1" : "0");
+            //retval += "" + ((canBe_duplicate) ? "1" : "0");
             //retval += "" + ((canBe_effigy) ? "1" : "0");
 
             retval += "" + ((canBe_eyeforaneye) ? "1" : "0");
@@ -292,8 +292,8 @@
             bool result = this.entityId == s.entityId;
             if (!result)
             {
-                result = result && this.canBe_avenge == s.canBe_avenge && this.canBe_counterspell == s.canBe_counterspell   && this.canBe_explosive == s.canBe_explosive && this.canBe_flameward == s.canBe_flameward;
-                result = result && this.canBe_eyeforaneye == s.canBe_eyeforaneye && this.canBe_freezing == s.canBe_freezing  && this.canBe_iceblock == s.canBe_iceblock;
+                result = result && this.canBe_avenge == s.canBe_avenge && this.canBe_counterspell == s.canBe_counterspell && this.canBe_explosive == s.canBe_explosive && this.canBe_flameward == s.canBe_flameward;
+                result = result && this.canBe_eyeforaneye == s.canBe_eyeforaneye && this.canBe_freezing == s.canBe_freezing && this.canBe_iceblock == s.canBe_iceblock;
                 result = result && this.canBe_missdirection == s.canBe_missdirection && this.canBe_noblesacrifice == s.canBe_noblesacrifice && this.canBe_redemption == s.canBe_redemption;
                 result = result && this.canBe_repentance == s.canBe_repentance && this.canBe_snaketrap == s.canBe_snaketrap && this.canBe_snipe == s.canBe_snipe;
                 result = result && this.canBe_sacredtrial == s.canBe_sacredtrial && this.canBe_darttrap == s.canBe_darttrap && this.canBe_beartrap == s.canBe_beartrap && this.canBe_cattrick == s.canBe_cattrick;
@@ -353,7 +353,7 @@
                 if (tmp.Key == CardDB.cardIDEnum.FP1_014) this.stalaggDead = true;
             }
         }
-        
+
         public void printTurnGraveYard()
         {
             /*string g = "";
@@ -615,7 +615,7 @@
                 {
                     sec.canBe_explosive = false;
                 }
-                
+
                 if (enemyCardsOut.ContainsKey(CardDB.cardIDEnum.AT_060) && enemyCardsOut[CardDB.cardIDEnum.AT_060] >= 2)
                 {
                     sec.canBe_beartrap = false;
@@ -669,22 +669,22 @@
                     sec.canBe_counterspell = false;
                 }
 
-               
+
 
                 if (enemyCardsOut.ContainsKey(CardDB.cardIDEnum.EX1_295) && enemyCardsOut[CardDB.cardIDEnum.EX1_295] >= 2)
                 {
                     sec.canBe_iceblock = false;
                 }
 
-                
 
-               
 
-                
 
-                
 
-                
+
+
+
+
+
             }
 
             if (SecClass == TAG_CLASS.PALADIN)
@@ -837,11 +837,11 @@
             bool darttrap = false;
             bool cattrick = false;
 
-           // bool mirrorentity = false;
+            // bool mirrorentity = false;
             bool counterspell = false;
             //bool spellbender = false;
             bool iceblock = false;
-           // bool icebarrier = false;
+            // bool icebarrier = false;
             //bool vaporize = false;
             //bool duplicate = false;
             //bool effigy = false;
@@ -856,20 +856,20 @@
             if (enemyMinionsDiedStep.Count > 0)
             {
                 //duplicate = true;
-                
+
                 if (old.enemyMinions.Count > 1) avenge = true;
                 if (old.enemyMinions.Count < 7)
                 {
                     //effigy = true;
                     redemption = true;
                 }
-                else if (!enemyMinionsDiedStep[0].deathrattle) { redemption = true;  }
+                else if (!enemyMinionsDiedStep[0].deathrattle) { redemption = true; }
                 else
                 {
                     switch (enemyMinionsDiedStep[0].cardIDenum)
                     {
-                        case CardDB.cardIDEnum.AT_019: redemption = false;  break;
-                        case CardDB.cardIDEnum.AT_036: redemption = false;  break;
+                        case CardDB.cardIDEnum.AT_019: redemption = false; break;
+                        case CardDB.cardIDEnum.AT_036: redemption = false; break;
                         case CardDB.cardIDEnum.BRMC_87: redemption = false; break;
                         case CardDB.cardIDEnum.EX1_110: redemption = false; break;
                         case CardDB.cardIDEnum.EX1_534: redemption = false; break;
@@ -882,7 +882,7 @@
                         case CardDB.cardIDEnum.GVG_114: redemption = false; break;
                         case CardDB.cardIDEnum.LOE_050: redemption = false; break;
                         case CardDB.cardIDEnum.LOE_089: redemption = false; break;
-                        default: redemption = true;break;
+                        default: redemption = true; break;
                     }
                 }
             }
@@ -900,7 +900,7 @@
                     if (doneMove.actionType == actionEnum.attackWithMinion) freezing = true;
                     if (targetWasHero)
                     {
-                        
+
                         flameward = true;
                         if (old.enemyMinions.Count < 7) beartrap = true;
                         missdirection = true;
@@ -957,7 +957,7 @@
                                 freezing = true;
                                 //vaporize = false;
                                 continue;
-                            
+
                             case CardDB.cardIDEnum.EX1_130:   //noblesacrifice
                                 noblesacrifice = true;
                                 snaketrap = true;
@@ -976,13 +976,13 @@
                     counterspell = true;
                     //if (!targetWasHero) spellbender = true;
                 }
-                 else if (doneMove.card.card.type == CardDB.cardtype.MOB) //we need the response from the core
-                 {
-                     
-                     snipe = true;
-                     repentance = true;
-                     if (p.ownMinions.Count > 3) sacredtrial = true;
-                 }
+                else if (doneMove.card.card.type == CardDB.cardtype.MOB) //we need the response from the core
+                {
+
+                    snipe = true;
+                    repentance = true;
+                    if (p.ownMinions.Count > 3) sacredtrial = true;
+                }
             }
             if (p.mobsplayedThisTurn > old.mobsplayedThisTurn) //if we have a response from the core - remove
             {

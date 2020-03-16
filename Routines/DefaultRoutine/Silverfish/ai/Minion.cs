@@ -50,7 +50,7 @@ namespace HREngine.Bots
 
         public bool allreadyAttacked = false;
 
-        
+
         public bool shadowmadnessed = false;//´can be silenced :D
 
         public bool destroyOnOwnTurnStart = false; // depends on own!
@@ -144,7 +144,7 @@ namespace HREngine.Bots
             this.numAttacksThisTurn = m.numAttacksThisTurn;
             this.immuneWhileAttacking = m.immuneWhileAttacking;
 
-            
+
             this.shadowmadnessed = m.shadowmadnessed;
 
             this.ancestralspirit = m.ancestralspirit;
@@ -209,7 +209,7 @@ namespace HREngine.Bots
             //dont silence----------------------------
             this.anzGotDmg = m.anzGotDmg;
             this.GotDmgValue = m.GotDmgValue;
-			this.anzGotHealed = m.anzGotHealed;
+            this.anzGotHealed = m.anzGotHealed;
             this.gotInspire = m.gotInspire;
             this.isHero = m.isHero;
             this.own = m.own;
@@ -229,7 +229,7 @@ namespace HREngine.Bots
             this.numAttacksThisTurn = m.numAttacksThisTurn;
             this.immuneWhileAttacking = m.immuneWhileAttacking;
 
-            
+
             this.shadowmadnessed = m.shadowmadnessed;
 
             this.ancestralspirit = m.ancestralspirit;
@@ -261,7 +261,7 @@ namespace HREngine.Bots
             this.Angr = m.Angr;
             this.AdjacentAngr = m.AdjacentAngr;
             this.tempAttack = m.tempAttack;
-            
+
 
             this.taunt = m.taunt;
             this.wounded = m.wounded;
@@ -301,7 +301,7 @@ namespace HREngine.Bots
             if (this.Hp <= 0) return;
 
             if (this.immune && dmg > 0 || this.untouchable) return;
-            
+
             int damage = dmg;
             int heal = 0;
             if (dmg < 0) heal = -dmg;
@@ -395,7 +395,7 @@ namespace HREngine.Bots
             }
 
             //its a Minion--------------------------------------------------------------
-            
+
             bool woundedbefore = this.wounded;
             if (damage > 0) this.allreadyAttacked = true;
 
@@ -497,7 +497,7 @@ namespace HREngine.Bots
             {
                 this.handcard.card.sim_card.onEnrageStart(p, this);
             }
-            
+
             if (this.Hp <= 0)
             {
                 this.minionDied(p);
@@ -516,7 +516,7 @@ namespace HREngine.Bots
                 if (this.name == CardDB.cardName.feugen) p.feugenDead = true;
             }
 
-            
+
 
             if (own)
             {
@@ -572,7 +572,7 @@ namespace HREngine.Bots
                 return;
             }
 
-            if (!frozen && ((charge >= 1 && playedThisTurn) || !playedThisTurn || shadowmadnessed) && (numAttacksThisTurn == 0 || (numAttacksThisTurn == 1 && windfury) || ( !silenced && this.name == CardDB.cardName.v07tr0n && numAttacksThisTurn <=3 )) ) Ready = true;
+            if (!frozen && ((charge >= 1 && playedThisTurn) || !playedThisTurn || shadowmadnessed) && (numAttacksThisTurn == 0 || (numAttacksThisTurn == 1 && windfury) || (!silenced && this.name == CardDB.cardName.v07tr0n && numAttacksThisTurn <= 3))) Ready = true;
             if (!frozen && (((charge == 0 && rush >= 1 && playedThisTurn)) || !playedThisTurn || shadowmadnessed) && (numAttacksThisTurn == 0 || (numAttacksThisTurn == 1 && windfury) || (!silenced && this.name == CardDB.cardName.v07tr0n && numAttacksThisTurn <= 3))) { Ready = true; cantAttackHeroes = true; }
             if (!frozen && (((charge > 0 && rush >= 1 && playedThisTurn)) || !playedThisTurn || shadowmadnessed) && (numAttacksThisTurn == 0 || (numAttacksThisTurn == 1 && windfury) || (!silenced && this.name == CardDB.cardName.v07tr0n && numAttacksThisTurn <= 3)))
             {
@@ -638,7 +638,7 @@ namespace HREngine.Bots
             poisonous = false;
             cantLowerHPbelowONE = false;
             lifesteal = false;
-            
+
 
             //delete enrage (if minion is silenced the first time)
             if (wounded && handcard.card.Enrage && !silenced)
@@ -711,7 +711,7 @@ namespace HREngine.Bots
             {
                 // reborns and destoyings----------------------------------------------
 
-                
+
                 if (me.CARDID == CardDB.cardIDEnum.EX1_363e || me.CARDID == CardDB.cardIDEnum.EX1_363e2) //BlessingOfWisdom
                 {
                     if (me.controllerOfCreator == ownPlayerControler)
@@ -766,12 +766,12 @@ namespace HREngine.Bots
                 {
                     // todo Your next Secret costs (0).
                 }
-               // if (me.CARDID == CardDB.cardIDEnum.EX1_084e) //warsongcommander
-               // {
-              //      this.charge++;
-              //  }
-                
-                switch(me.CARDID)
+                // if (me.CARDID == CardDB.cardIDEnum.EX1_084e) //warsongcommander
+                // {
+                //      this.charge++;
+                //  }
+
+                switch (me.CARDID)
                 {
                     //ToDo: TBUD_1	Each turn, if you have less health then a your opponent, summon a free minion
 
@@ -789,23 +789,23 @@ namespace HREngine.Bots
                     // deathrattles-------------------------------------------------
                     case CardDB.cardIDEnum.LOE_105e: this.explorershat++; continue;
                     case CardDB.cardIDEnum.UNG_956e: this.returnToHand++; continue;
-                        
+
                     case CardDB.cardIDEnum.CS2_038e: this.ancestralspirit++; continue;
                     case CardDB.cardIDEnum.ICC_244e: this.desperatestand++; continue;
                     case CardDB.cardIDEnum.EX1_158e: this.souloftheforest++; continue;
                     case CardDB.cardIDEnum.UNG_952e: this.stegodon++; continue;
                     case CardDB.cardIDEnum.UNG_999t2e: this.livingspores++; continue;
-                        
+
                     case CardDB.cardIDEnum.OG_045a: this.infest++; continue;
                     case CardDB.cardIDEnum.LOE_019e: this.extraParam2 = me.copyDeathrattle; continue; //unearthedraptor
-                   // case CardDB.cardIDEnum.LOE_012e: this.deathrattle2 = ; continue; //zzdeletetombexplorer
+                                                                                                      // case CardDB.cardIDEnum.LOE_012e: this.deathrattle2 = ; continue; //zzdeletetombexplorer
 
 
                     //conceal-------------------------------------------------
                     case CardDB.cardIDEnum.EX1_128e: this.conceal = true; continue;
                     case CardDB.cardIDEnum.NEW1_014e: this.conceal = true; continue;
                     case CardDB.cardIDEnum.PART_004e: this.conceal = true; continue;
-                    case CardDB.cardIDEnum.OG_080de: this.conceal = true; continue; 
+                    case CardDB.cardIDEnum.OG_080de: this.conceal = true; continue;
 
                     //cantLowerHPbelowONE-------------------------------------------------
                     case CardDB.cardIDEnum.NEW1_036e: this.cantLowerHPbelowONE = true; continue; //commandingshout
@@ -839,7 +839,7 @@ namespace HREngine.Bots
                     case CardDB.cardIDEnum.CS2_046e: this.tempAttack += 3; continue;
                     case CardDB.cardIDEnum.CS2_105e: this.tempAttack += 4; continue;
                     case CardDB.cardIDEnum.EX1_570e: this.tempAttack += 4; continue;
-                    case CardDB.cardIDEnum.OG_047e: this.tempAttack += 4; continue;  
+                    case CardDB.cardIDEnum.OG_047e: this.tempAttack += 4; continue;
                     case CardDB.cardIDEnum.NAX12_04e: this.tempAttack += 6; continue;
                     case CardDB.cardIDEnum.GVG_011a: this.tempAttack += -2; continue;
                     case CardDB.cardIDEnum.CFM_661e: this.tempAttack += -3; continue;
@@ -850,10 +850,10 @@ namespace HREngine.Bots
                     case CardDB.cardIDEnum.CS2_017o: this.tempAttack += 1; continue;
 
 
-                        
-                    
 
-                   
+
+
+
 
 
 

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_607 : PenTemplate //innerrage
-	{
+    class Pen_EX1_607 : PenTemplate //innerrage
+    {
 
-//    fügt einem diener $1 schaden zu. der diener erhält +2 angriff.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    fügt einem diener $1 schaden zu. der diener erhält +2 angriff.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (m.Hp == 1) return 500;
@@ -42,7 +42,7 @@ namespace HREngine.Bots
                 return base.getValueOfMinion(4, 5);
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

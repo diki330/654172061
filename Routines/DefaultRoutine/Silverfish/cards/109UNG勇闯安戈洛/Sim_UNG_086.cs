@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_086 : SimTemplate //* Giant Anaconda
-	{
-		//Deathrattle: Summon a minion from your hand with 5 or more Attack.
+    class Sim_UNG_086 : SimTemplate //* Giant Anaconda
+    {
+        //Deathrattle: Summon a minion from your hand with 5 or more Attack.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
@@ -14,15 +14,15 @@ namespace HREngine.Bots
             {
                 foreach (Handmanager.Handcard hc in p.owncards)
                 {
-					if (hc.card.Attack + hc.addattack >= 5)
+                    if (hc.card.Attack + hc.addattack >= 5)
                     {
                         p.callKid(hc.card, p.owncards.Count, m.own);
-						p.removeCard(hc);
+                        p.removeCard(hc);
                         break;
                     }
                 }
             }
             else p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_586), p.enemyMinions.Count, m.own);
         }
-	}
+    }
 }

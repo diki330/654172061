@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_015 : PenTemplate //noviceengineer
-	{
+    class Pen_EX1_015 : PenTemplate //noviceengineer
+    {
 
-//    kampfschrei:/ zieht eine karte.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    kampfschrei:/ zieht eine karte.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

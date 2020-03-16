@@ -30,7 +30,7 @@
         Dictionary<CardDB.cardName, int> tauntBuffDatabase = new Dictionary<CardDB.cardName, int>();
 
         Dictionary<CardDB.cardName, int> lethalHelpers = new Dictionary<CardDB.cardName, int>();
-        
+
         Dictionary<CardDB.cardName, int> spellDependentDatabase = new Dictionary<CardDB.cardName, int>();
         Dictionary<CardDB.cardName, int> dragonDependentDatabase = new Dictionary<CardDB.cardName, int>();
         Dictionary<CardDB.cardName, int> elementalLTDependentDatabase = new Dictionary<CardDB.cardName, int>();
@@ -48,7 +48,7 @@
         Dictionary<CardDB.cardName, int> returnHandDatabase = new Dictionary<CardDB.cardName, int>();
         Dictionary<CardDB.cardName, int> GangUpDatabase = new Dictionary<CardDB.cardName, int>();
         Dictionary<CardDB.cardName, int> buffHandDatabase = new Dictionary<CardDB.cardName, int>();
-        Dictionary<CardDB.cardName, int> equipWeaponPlayDatabase = new Dictionary<CardDB.cardName, int>(); 
+        Dictionary<CardDB.cardName, int> equipWeaponPlayDatabase = new Dictionary<CardDB.cardName, int>();
 
         Dictionary<CardDB.cardName, int> priorityDatabase = new Dictionary<CardDB.cardName, int>();
         Dictionary<CardDB.cardName, int> UsefulNeedKeepDatabase = new Dictionary<CardDB.cardName, int>();
@@ -73,7 +73,7 @@
         Dictionary<TAG_RACE, int> ClassRacePriorityPriest = new Dictionary<TAG_RACE, int>();
         Dictionary<TAG_RACE, int> ClassRacePriorityRouge = new Dictionary<TAG_RACE, int>();
         Dictionary<TAG_RACE, int> ClassRacePriorityWarrior = new Dictionary<TAG_RACE, int>();
-        
+
         ComboBreaker cb;
         Hrtprozis prozis;
         Settings settings;
@@ -124,7 +124,7 @@
             setupClassRacePriorityDatabase();
             setupGangUpDatabase();
             setupOwnSummonFromDeathrattle();
-			setupbuffHandDatabase();
+            setupbuffHandDatabase();
             setupequipWeaponPlayDatabase();
             setupReturnBackToHandCards();
         }
@@ -166,10 +166,10 @@
                 case CardDB.cardName.toshley: goto case CardDB.cardName.aiextra1;
                 case CardDB.cardName.webspinner: goto case CardDB.cardName.aiextra1;
                 case CardDB.cardName.aiextra1:
-                    
+
                     if (m.Hp <= target.Angr && m.own && !m.divineshild && !m.immune)
                     {
-                        int carddraw = 1; 
+                        int carddraw = 1;
                         if (p.owncards.Count + carddraw > 10) retval += 15 * (p.owncards.Count + carddraw - 10);
                         else retval += 3 * p.optionsPlayedThisTurn;
                     }
@@ -180,7 +180,7 @@
             if (this.UsefulNeedKeepDatabase.ContainsKey(m.name) && !target.isHero && !(m.divineshild || target.Angr == 0)) retval++;
             if (m.justBuffed > 0)
             {
-                if (m.divineshild || m.immune) {}
+                if (m.divineshild || m.immune) { }
                 else if (target.poisonous || target.Angr >= m.Hp) retval += m.justBuffed;
             }
             return retval;
@@ -380,7 +380,7 @@
             if (!target.isHero && !target.own)
             {
                 if (card.type == CardDB.cardtype.MOB && p.ownMinions.Count == 0) return 2;
-                
+
                 foreach (Handmanager.Handcard hc in p.owncards)
                 {
                     switch (hc.card.name)
@@ -478,7 +478,7 @@
             if (!this.tauntBuffDatabase.ContainsKey(name)) return 0;
             if (name == CardDB.cardName.markofnature && card.cardIDenum != CardDB.cardIDEnum.EX1_155b) return 0;
             if (name == CardDB.cardName.darkwispers && card.cardIDenum != CardDB.cardIDEnum.GVG_041a) return 0;
-            
+
             if (target == null) return 3;
             if (!target.isHero && !target.own)
             {
@@ -593,7 +593,7 @@
             if (name == CardDB.cardName.shieldslam && p.ownHero.armor == 0) return 500;
             if (name == CardDB.cardName.savagery && p.ownHero.Angr == 0) return 500;
             if (name == CardDB.cardName.maelstromportal) return 0;//大漩涡特例
-            
+
             //aoe damage *************************************************************************************
             int aoeDamageType = 0;
             if (this.DamageAllEnemysDatabase.ContainsKey(name)) aoeDamageType = 1;
@@ -615,7 +615,7 @@
                     if (name == CardDB.cardName.revenge && p.ownHero.Hp <= 12) aoeDamage = p.getSpellDamageDamage(3);
                     else aoeDamage = (card.type == CardDB.cardtype.SPELL) ? p.getSpellDamageDamage(this.DamageAllDatabase[name]) : this.DamageAllDatabase[name];
                 }
-                
+
                 int preventDamage = 0;
                 int lostOwnDamage = 0;
                 int lostOwnHp = 0;
@@ -638,38 +638,38 @@
                     {
                         switch (name)
                         {
-                            case CardDB.cardName.sleepwiththefishes: 
+                            case CardDB.cardName.sleepwiththefishes:
                                 if (!m.wounded) continue;
                                 break;
-                            case CardDB.cardName.dragonfirepotion: 
+                            case CardDB.cardName.dragonfirepotion:
                                 if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DRAGON) continue;
                                 break;
-                            case CardDB.cardName.corruptedseer: 
+                            case CardDB.cardName.corruptedseer:
                                 if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC) continue;
                                 break;
-                            case CardDB.cardName.shadowvolley: 
+                            case CardDB.cardName.shadowvolley:
                                 if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DEMON) continue;
                                 break;
-                            case CardDB.cardName.demonwrath: 
+                            case CardDB.cardName.demonwrath:
                                 if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DEMON) continue;
                                 break;
-                            case CardDB.cardName.scarletpurifier: 
+                            case CardDB.cardName.scarletpurifier:
                                 if (!(m.handcard.card.deathrattle && !m.silenced)) continue;
                                 break;
-                            case CardDB.cardName.yseraawakens: 
+                            case CardDB.cardName.yseraawakens:
                                 if (m.name == CardDB.cardName.ysera) continue;
                                 break;
-                            case CardDB.cardName.lightbomb: 
+                            case CardDB.cardName.lightbomb:
                                 if (m.Hp > m.Angr) continue;
                                 break;
                         }
-                        
+
                         if (this.specialMinions.ContainsKey(m.name)) numSpecialMinionsEnemy++;
                         switch (m.name)
                         {
-                            case CardDB.cardName.direwolfalpha: 
+                            case CardDB.cardName.direwolfalpha:
                                 if (m.silenced) break;
-                                
+
                                 if (i > 0)
                                 {
                                     if (p.enemyMinions[i - 1].divineshild)
@@ -697,7 +697,7 @@
                                     }
                                 }
                                 break;
-                            case CardDB.cardName.flametonguetotem: 
+                            case CardDB.cardName.flametonguetotem:
                                 if (m.silenced) break;
                                 if (i > 0)
                                 {
@@ -726,62 +726,62 @@
                                     }
                                 }
                                 break;
-                            case CardDB.cardName.leokk: 
+                            case CardDB.cardName.leokk:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions) if (mm.Hp > aoeDamage || mm.divineshild) preventDamage += 1;
                                 break;
-                            case CardDB.cardName.raidleader: 
+                            case CardDB.cardName.raidleader:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions) if (mm.Hp > aoeDamage || mm.divineshild) preventDamage += 1;
                                 break;
-                            case CardDB.cardName.stormwindchampion: 
+                            case CardDB.cardName.stormwindchampion:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions) if (mm.Hp > aoeDamage || mm.divineshild) preventDamage += 1;
                                 break;
-                            case CardDB.cardName.grimscaleoracle: 
+                            case CardDB.cardName.grimscaleoracle:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.MURLOC && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 1;
                                 }
                                 break;
-                                 
-                            case CardDB.cardName.murlocwarleader: 
+
+                            case CardDB.cardName.murlocwarleader:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.MURLOC && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 2;
                                 }
                                 break;
-                            case CardDB.cardName.malganis: 
+                            case CardDB.cardName.malganis:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.DEMON && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 2;
                                 }
                                 break;
-                            case CardDB.cardName.southseacaptain: 
+                            case CardDB.cardName.southseacaptain:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.PIRATE && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 1;
                                 }
                                 break;
-                            case CardDB.cardName.timberwolf: 
+                            case CardDB.cardName.timberwolf:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.PET && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 1;
                                 }
                                 break;
-                            case CardDB.cardName.warhorsetrainer: 
+                            case CardDB.cardName.warhorsetrainer:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
                                     if (mm.name == CardDB.cardName.silverhandrecruit && (mm.Hp > aoeDamage || mm.divineshild)) preventDamage += 1;
                                 }
                                 break;
-                            case CardDB.cardName.warsongcommander: 
+                            case CardDB.cardName.warsongcommander:
                                 if (m.silenced) break;
                                 foreach (Minion mm in p.enemyMinions)
                                 {
@@ -819,100 +819,100 @@
                         {
                             switch (name)
                             {
-                                case CardDB.cardName.sleepwiththefishes: 
+                                case CardDB.cardName.sleepwiththefishes:
                                     if (!m.wounded) continue;
                                     break;
-                                case CardDB.cardName.dragonfirepotion: 
+                                case CardDB.cardName.dragonfirepotion:
                                     if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DRAGON) continue;
                                     break;
-                                case CardDB.cardName.corruptedseer: 
+                                case CardDB.cardName.corruptedseer:
                                     if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC) continue;
                                     break;
-                                case CardDB.cardName.shadowvolley: 
+                                case CardDB.cardName.shadowvolley:
                                     if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DEMON) continue;
                                     break;
-                                case CardDB.cardName.demonwrath: 
+                                case CardDB.cardName.demonwrath:
                                     if ((TAG_RACE)m.handcard.card.race == TAG_RACE.DEMON) continue;
                                     break;
-                                case CardDB.cardName.scarletpurifier: 
+                                case CardDB.cardName.scarletpurifier:
                                     if (!(m.handcard.card.deathrattle && !m.silenced)) continue;
                                     break;
-                                case CardDB.cardName.yseraawakens: 
+                                case CardDB.cardName.yseraawakens:
                                     if (m.name == CardDB.cardName.ysera) continue;
                                     break;
-                                case CardDB.cardName.lightbomb: 
+                                case CardDB.cardName.lightbomb:
                                     if (m.Hp > m.Angr) continue;
                                     break;
                             }
 
                             switch (m.name)
                             {
-                                case CardDB.cardName.direwolfalpha: 
+                                case CardDB.cardName.direwolfalpha:
                                     if (m.silenced) break;
                                     if (i > 0 && (p.ownMinions[i - 1].Hp > aoeDamage || p.ownMinions[i - 1].divineshild)) lostOwnDamage += 1;
                                     if (i < anz - 1 && (p.ownMinions[i + 1].Hp > aoeDamage || p.ownMinions[i + 1].divineshild)) lostOwnDamage += 1;
                                     break;
-                                case CardDB.cardName.flametonguetotem: 
+                                case CardDB.cardName.flametonguetotem:
                                     if (m.silenced) break;
                                     if (i > 0 && (p.ownMinions[i - 1].Hp > aoeDamage || p.ownMinions[i - 1].divineshild)) lostOwnDamage += 2;
                                     if (i < anz - 1 && (p.ownMinions[i + 1].Hp > aoeDamage || p.ownMinions[i + 1].divineshild)) lostOwnDamage += 2;
                                     break;
-                                case CardDB.cardName.leokk: 
+                                case CardDB.cardName.leokk:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions) if (mm.Hp > aoeDamage || mm.divineshild) lostOwnDamage += 1;
                                     break;
-                                case CardDB.cardName.raidleader: 
+                                case CardDB.cardName.raidleader:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions) if (mm.Hp > aoeDamage || mm.divineshild) lostOwnDamage += 1;
                                     break;
-                                case CardDB.cardName.stormwindchampion: 
+                                case CardDB.cardName.stormwindchampion:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions) if (mm.Hp > aoeDamage || mm.divineshild) lostOwnDamage += 1;
                                     break;
-                                case CardDB.cardName.grimscaleoracle: 
+                                case CardDB.cardName.grimscaleoracle:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.MURLOC && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 1;
                                     }
                                     break;
-                                
-                                case CardDB.cardName.murlocwarleader: 
+
+                                case CardDB.cardName.murlocwarleader:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.MURLOC && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 2;
                                     }
                                     break;
-                                case CardDB.cardName.malganis: 
+                                case CardDB.cardName.malganis:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.DEMON && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 2;
                                     }
                                     break;
-                                case CardDB.cardName.southseacaptain: 
+                                case CardDB.cardName.southseacaptain:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.PIRATE && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 1;
                                     }
                                     break;
-                                case CardDB.cardName.timberwolf: 
+                                case CardDB.cardName.timberwolf:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if ((TAG_RACE)mm.handcard.card.race == TAG_RACE.PET && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 1;
                                     }
                                     break;
-                                case CardDB.cardName.warhorsetrainer: 
+                                case CardDB.cardName.warhorsetrainer:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
                                         if (mm.name == CardDB.cardName.silverhandrecruit && (mm.Hp > aoeDamage || mm.divineshild)) lostOwnDamage += 1;
                                     }
                                     break;
-                                case CardDB.cardName.warsongcommander: 
+                                case CardDB.cardName.warsongcommander:
                                     if (m.silenced) break;
                                     foreach (Minion mm in p.ownMinions)
                                     {
@@ -920,7 +920,7 @@
                                     }
                                     break;
                             }
-                            lostOwnHp += m.Hp; 
+                            lostOwnHp += m.Hp;
                             lostOwnDamage += m.Angr;
 
                             lostOwnMinions++;
@@ -930,7 +930,7 @@
                             else if (m.name == CardDB.cardName.grimpatron) { lostOwnDamage += 3; grimpatronOwn = true; }
                         }
                     }
-                    
+
                     if (p.ownMinions.Count - lostOwnMinions - survivedEnemyMinions > 0)
                     {
                         if (preventDamage >= lostOwnDamage) return 0;
@@ -953,7 +953,7 @@
                         else return 30;
                     }
                 }
-                else 
+                else
                 {
 
                     if (preventDamage > 5 || (p.enemyMinions.Count - survivedEnemyMinions) >= 4) return 0;
@@ -1026,17 +1026,17 @@
                     {
                         return pen;
                     }
-                    
+
                     if (m.name == CardDB.cardName.madscientist && p.ownHeroStartClass == TAG_CLASS.HUNTER) return 500;
 
                     // no pen if we have battlerage for example
                     int dmg = this.DamageTargetDatabase.ContainsKey(name) ? this.DamageTargetDatabase[name] : this.HealTargetDatabase[name];
                     switch (card.cardIDenum)
                     {
-                        case CardDB.cardIDEnum.EX1_166a: dmg = 2 - p.spellpower; break; 
-                        case CardDB.cardIDEnum.CS2_031: if (!target.frozen) return 0; break; 
-                        case CardDB.cardIDEnum.EX1_408: if (p.ownHero.Hp <= 12) dmg = 6; break; 
-                        case CardDB.cardIDEnum.EX1_539: 
+                        case CardDB.cardIDEnum.EX1_166a: dmg = 2 - p.spellpower; break;
+                        case CardDB.cardIDEnum.CS2_031: if (!target.frozen) return 0; break;
+                        case CardDB.cardIDEnum.EX1_408: if (p.ownHero.Hp <= 12) dmg = 6; break;
+                        case CardDB.cardIDEnum.EX1_539:
                             foreach (Minion mn in p.ownMinions)
                             {
                                 if ((TAG_RACE)mn.handcard.card.race == TAG_RACE.PET) { dmg = 5; break; }
@@ -1044,7 +1044,7 @@
                             break;
                     }
                     if (card.type == CardDB.cardtype.SPELL) dmg = p.getSpellDamageDamage(dmg);
-                
+
                     if (m.Hp > dmg)
                     {
                         switch (m.name)
@@ -1057,7 +1057,7 @@
                             case CardDB.cardName.acolyteofpain: if (p.owncards.Count <= 3) return 0; break;
                             case CardDB.cardName.dragonegg: if (p.ownMinions.Count <= 6) return 5; break;
                             case CardDB.cardName.impgangboss: if (p.ownMinions.Count <= 6) return 0; break;
-							case CardDB.cardName.炸弹牛仔: if (p.ownMinions.Count <= 6) return 0; break;
+                            case CardDB.cardName.炸弹牛仔: if (p.ownMinions.Count <= 6) return 0; break;
                             case CardDB.cardName.grimpatron: if (p.ownMinions.Count <= 6) return 0; break;
                         }
                         foreach (Handmanager.Handcard hc in p.owncards)
@@ -1092,7 +1092,7 @@
                 if (DamageTargetSpecialDatabase.ContainsKey(name))
                 {
                     int dmg = DamageTargetSpecialDatabase[name];
-                    Minion m = target; 
+                    Minion m = target;
                     switch (name)
                     {
                         case CardDB.cardName.crueltaskmaster: if (m.Hp >= 2) return 0; break;
@@ -1102,8 +1102,8 @@
                         case CardDB.cardName.earthshock:
                             if (m.Hp >= 2)
                             {
-                                if ((!m.silenced && this.OwnNeedSilenceDatabase.ContainsKey(m.name)) 
-                                    || m.Angr < m.handcard.card.Attack || m.maxHp < m.handcard.card.Health 
+                                if ((!m.silenced && this.OwnNeedSilenceDatabase.ContainsKey(m.name))
+                                    || m.Angr < m.handcard.card.Attack || m.maxHp < m.handcard.card.Health
                                     || m.enemyPowerWordGlory > 0 || m.enemyBlessingOfWisdom > 0
                                     || (m.frozen && !m.playedThisTurn && m.numAttacksThisTurn == 0))
                                     return 0;
@@ -1140,10 +1140,10 @@
                     realDamage = (card.type == CardDB.cardtype.SPELL) ? p.getSpellDamageDamage(this.DamageTargetSpecialDatabase[name]) : this.DamageTargetSpecialDatabase[name];
                     switch (name)
                     {
-                        case CardDB.cardName.soulfire: if (target.Hp <= realDamage - 2) pen = 10; break; 
-                        case CardDB.cardName.baneofdoom: if (target.Hp > realDamage) pen = 10; break; 
-                        case CardDB.cardName.shieldslam: if (target.Hp <= 4 || target.Angr <= 4) pen = 20; break; 
-                        case CardDB.cardName.bloodtoichor: if (target.Hp <= realDamage) pen = 2; break; 
+                        case CardDB.cardName.soulfire: if (target.Hp <= realDamage - 2) pen = 10; break;
+                        case CardDB.cardName.baneofdoom: if (target.Hp > realDamage) pen = 10; break;
+                        case CardDB.cardName.shieldslam: if (target.Hp <= 4 || target.Angr <= 4) pen = 20; break;
+                        case CardDB.cardName.bloodtoichor: if (target.Hp <= realDamage) pen = 2; break;
                     }
                 }
                 else
@@ -1153,10 +1153,10 @@
                         realDamage = this.DamageTargetDatabase[name];
                         switch (card.cardIDenum)
                         {
-                            case CardDB.cardIDEnum.EX1_166a: realDamage = 2 - p.spellpower; break; 
-                            case CardDB.cardIDEnum.CS2_031: if (!target.frozen) return 0; break; 
-                            case CardDB.cardIDEnum.EX1_408: if (p.ownHero.Hp <= 12) realDamage = 6; break; 
-                            case CardDB.cardIDEnum.EX1_539: 
+                            case CardDB.cardIDEnum.EX1_166a: realDamage = 2 - p.spellpower; break;
+                            case CardDB.cardIDEnum.CS2_031: if (!target.frozen) return 0; break;
+                            case CardDB.cardIDEnum.EX1_408: if (p.ownHero.Hp <= 12) realDamage = 6; break;
+                            case CardDB.cardIDEnum.EX1_539:
                                 foreach (Minion mn in p.ownMinions)
                                 {
                                     if ((TAG_RACE)mn.handcard.card.race == TAG_RACE.PET) { realDamage = 5; break; }
@@ -1307,12 +1307,12 @@
             if (!cardDrawBattleCryDatabase.ContainsKey(name)) return 0;
             if (name == CardDB.cardName.wrath && card.cardIDenum != CardDB.cardIDEnum.EX1_154b) return 0;
             if (name == CardDB.cardName.nourish && card.cardIDenum != CardDB.cardIDEnum.EX1_164b) return 0;
-            if (name == CardDB.cardName.tracking) return -1;            
+            if (name == CardDB.cardName.tracking) return -1;
 
             int carddraw = cardDrawBattleCryDatabase[name];
             if (carddraw == 0)
             {
-                switch(name)
+                switch (name)
                 {
                     case CardDB.cardName.harrisonjones:
                         carddraw = p.enemyWeapon.Durability;
@@ -1331,7 +1331,7 @@
                         }
                         if (carddraw == 0)
                         {
-                            if(p.ownMinions.Count == 0 && p.mana > 6)
+                            if (p.ownMinions.Count == 0 && p.mana > 6)
                             {
                                 foreach (Handmanager.Handcard hc in p.owncards)
                                 {
@@ -1364,7 +1364,7 @@
                     case CardDB.cardName.thoughtsteal:
                         carddraw = Math.Min(2, p.enemyDeckSize);
                         if (carddraw == 2) break;
-                        if (carddraw == 1) pen +=4;
+                        if (carddraw == 1) pen += 4;
                         else
                         {
                             foreach (Minion mnn in p.ownMinions)
@@ -1374,7 +1374,7 @@
                             return 500;
                         }
                         break;
-                    
+
                     case CardDB.cardName.mindvision:
                         carddraw = Math.Min(1, p.enemyAnzCards);
                         if (carddraw != 1)
@@ -1383,7 +1383,7 @@
                             foreach (Minion mnn in p.ownMinions)
                             {
                                 if (this.spellDependentDatabase.ContainsKey(mnn.name))
-                                    if(mnn.name == CardDB.cardName.lorewalkercho) pen += 20; //if(spellDependentDatabase[mnn.name] == 0);
+                                    if (mnn.name == CardDB.cardName.lorewalkercho) pen += 20; //if(spellDependentDatabase[mnn.name] == 0);
                                     else scales--;
                             }
                             if (scales == 0) return 500;
@@ -1394,12 +1394,12 @@
                             return (12 + scales * 4 + pen);
                         }
                         break;
-                        
+
                     case CardDB.cardName.echoofmedivh:
                         if (p.ownMinions.Count == 0) return 500;
                         return 0;
                         break;
-                        
+
                     case CardDB.cardName.tinkertowntechnician:
                         foreach (Minion mnn in p.ownMinions)
                         {
@@ -1413,15 +1413,15 @@
 
                     case CardDB.cardName.servantofkalimos:
                         if (p.anzOwnElementalsLastTurn > 0) carddraw = 1;
-                        break;                        
+                        break;
 
                     default:
                         break;
                 }
             }
-            
+
             if (name == CardDB.cardName.farsight || name == CardDB.cardName.callpet) pen -= 10;
-            
+
             if (name == CardDB.cardName.lifetap)
             {
                 if (p.isLethalCheck) return 500; //RR no benefit for lethal check
@@ -1528,17 +1528,17 @@
             if (carddraw == 0) return 0;
             if (p.owncards.Count >= 5) return 0;
 
-            
+
             if (card.cost > 0) pen = -carddraw + p.ownMaxMana - p.mana + p.optionsPlayedThisTurn;
 
             return pen;
         }
-        
+
         public int getCardDrawDeathrattlePenality(CardDB.cardName name, Playfield p)
         {
             // penality if carddraw is late or you have enough cards
             if (!cardDrawDeathrattleDatabase.ContainsKey(name)) return 0;
-            
+
             int carddraw = cardDrawDeathrattleDatabase[name];
             if (p.owncards.Count + carddraw > 10) return 15 * (p.owncards.Count + carddraw - 10);
             return 3 * p.optionsPlayedThisTurn;
@@ -1670,13 +1670,13 @@
                 }
             }
 
-   //         if (card.name == CardDB.cardName.totemiccall)
-			//{
-			//	first = true;
-			//}
+            //         if (card.name == CardDB.cardName.totemiccall)
+            //{
+            //	first = true;
+            //}
             if (first == false)
             {
-                    return cards + p.playactions.Count + 1;
+                return cards + p.playactions.Count + 1;
             }
 
             return 0;
@@ -1691,49 +1691,49 @@
             int anz = 0;
             switch (name)
             {
-                case CardDB.cardName.troggbeastrager: 
+                case CardDB.cardName.troggbeastrager:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.CARDRACE, TAG_RACE.PET);
                     if (hc != null) return -5;
                     break;
-                case CardDB.cardName.grimestreetsmuggler: 
+                case CardDB.cardName.grimestreetsmuggler:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.Mob);
                     if (hc != null) return -5;
                     break;
-                case CardDB.cardName.donhancho: 
+                case CardDB.cardName.donhancho:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.Mob);
                     if (hc != null) return -20;
                     break;
-                case CardDB.cardName.deathaxepunisher: 
+                case CardDB.cardName.deathaxepunisher:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.LIFESTEAL);
                     if (hc != null) return -10;
                     break;
-                case CardDB.cardName.grimscalechum: 
+                case CardDB.cardName.grimscalechum:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.CARDRACE, TAG_RACE.MURLOC);
                     if (hc == null) return -5;
                     break;
-                case CardDB.cardName.grimestreetpawnbroker: 
+                case CardDB.cardName.grimestreetpawnbroker:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.Weapon);
                     if (hc == null) return -5;
                     break;
-                case CardDB.cardName.grimestreetoutfitter: 
+                case CardDB.cardName.grimestreetoutfitter:
                     foreach (Handmanager.Handcard hc1 in p.owncards)
                     {
                         if (hc1.card.type == CardDB.cardtype.MOB) anz++;
                     }
-                    anz--; 
+                    anz--;
                     if (anz > 0) return -1 * anz * 4;
                     else return 5;
                     break;
-                case CardDB.cardName.themistcaller: 
+                case CardDB.cardName.themistcaller:
                     foreach (Handmanager.Handcard hc1 in p.owncards)
                     {
                         if (hc1.card.type == CardDB.cardtype.MOB) anz++;
                     }
-                    anz--; 
+                    anz--;
                     anz += p.ownDeckSize / 4;
                     return -1 * anz * 4;
                     break;
-                case CardDB.cardName.hobartgrapplehammer: 
+                case CardDB.cardName.hobartgrapplehammer:
                     foreach (Handmanager.Handcard hc2 in p.owncards)
                     {
                         if (hc2.card.type == CardDB.cardtype.WEAPON) anz++;
@@ -1741,22 +1741,22 @@
                     if (anz == 0) return 2;
                     else return -1 * anz * 2;
                     break;
-                case CardDB.cardName.smugglerscrate: 
+                case CardDB.cardName.smugglerscrate:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.CARDRACE, TAG_RACE.PET);
                     if (hc != null) return -10;
                     else return 10;
                     break;
-                case CardDB.cardName.stolengoods: 
+                case CardDB.cardName.stolengoods:
                     hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.TAUNT);
                     if (hc != null) return -15;
                     else return 10;
                     break;
-                case CardDB.cardName.smugglersrun: 
+                case CardDB.cardName.smugglersrun:
                     foreach (Handmanager.Handcard hc3 in p.owncards)
                     {
                         if (hc3.card.type == CardDB.cardtype.MOB) anz++;
                     }
-                    anz--; 
+                    anz--;
                     if (anz > 0) return -1 * anz * 4;
                     else return 5;
                     break;
@@ -1798,7 +1798,7 @@
         private int getDestroyOwnPenality(CardDB.cardName name, Minion target, Playfield p)
         {
             if (!this.destroyOwnDatabase.ContainsKey(name)) return 0;
-            
+
             switch (name)
             {
                 case CardDB.cardName.sanguinereveler: goto case CardDB.cardName.shadowflame;
@@ -1813,7 +1813,7 @@
                 case CardDB.cardName.doompact: goto case CardDB.cardName.brawl;
                 case CardDB.cardName.brawl:
                     if (p.mobsplayedThisTurn >= 1) return 500;
-                    
+
                     if (name == CardDB.cardName.brawl && p.ownMinions.Count + p.enemyMinions.Count <= 1) return 500;
                     int highminion = 0;
                     int veryhighminion = 0;
@@ -1895,7 +1895,7 @@
                             break;
                     }
 
-                    
+
                 }
                 return 500;
             }
@@ -1981,7 +1981,7 @@
                     {
                         case 0:
                             if (p.ownMinions.Count > 0) return 0;
-                                break;
+                            break;
                         case 1:
                             foreach (Minion mm in p.ownMinions)
                             {
@@ -2088,7 +2088,7 @@
             }
 
             //lethal end########################################################
-                        
+
             int pen = 0;
             if (dragonDependentDatabase.ContainsKey(name))
             {
@@ -2102,12 +2102,12 @@
                     }
                 }
             }
-            
+
             if (elementalLTDependentDatabase.ContainsKey(name) && p.anzOwnElementalsLastTurn == 0) pen += 10;
 
             //卡牌惩罚
             int targets = 0;
-            switch(name)
+            switch (name)
             {
                 //********jk战********
                 case CardDB.cardName.炸弹牛仔:
@@ -2119,7 +2119,7 @@
                     if (p.ownMaxMana == 1) return -10;
                     return 0;
                 case CardDB.cardName.废墟之子:
-                    if (p.OwnInvoke >= 2) return 0;
+                    if (p.OwnInvoke >= 2) return -12;
                     return 20;
                 case CardDB.cardName.无敌巨龙迦拉克隆:
                     int InvokeInHand = 0;
@@ -2215,13 +2215,13 @@
                     break;
                 case CardDB.cardName.maelstromportal:
                     int destroyenemy = 0;
-                    foreach(Minion m in p.enemyMinions)
+                    foreach (Minion m in p.enemyMinions)
                     {
-                        int dmg =  p.getSpellDamageDamage(1);
+                        int dmg = p.getSpellDamageDamage(1);
                         if (m.Hp <= dmg)
-                        destroyenemy++;                     
+                            destroyenemy++;
                     }
-                    return (20- destroyenemy * 10);
+                    return (20 - destroyenemy * 10);
                 case CardDB.cardName.totemiccall:
                     if (p.ownMaxMana == 1) return -20;
                     return 0;
@@ -2242,29 +2242,29 @@
                         int bonusValue = 0;
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM)
                         {
-                            TotemCount ++;
-                            if(m.handcard.card.name == CardDB.cardName.怪盗图腾)
+                            TotemCount++;
+                            if (m.handcard.card.name == CardDB.cardName.怪盗图腾)
                             {
                                 bonusValue += 6;
                             }
-                            if(m.handcard.card.name == CardDB.cardName.healingtotem)
+                            if (m.handcard.card.name == CardDB.cardName.healingtotem)
                             {
                                 bonusValue += 2;
                             }
-                            if(m.handcard.card.name == CardDB.cardName.wrathofairtotem)
+                            if (m.handcard.card.name == CardDB.cardName.wrathofairtotem)
                             {
                                 bonusValue += 2;
                             }
                             ownTotemsValue += (2 * m.Angr + 1 * m.Hp + bonusValue);
                             //ownTotemsValue += (m.Hp + m.Angr + bonusAngr);
-                        } 
+                        }
                     }
                     //分段处理,避免爆仓
-                    if(TotemCount == 0)
+                    if (TotemCount == 0)
                     {
                         return 100;
                     }
-                    else if(TotemCount > 0 && TotemCount <= 3)
+                    else if (TotemCount > 0 && TotemCount <= 3)
                     {
                         //分段处理，均使用线性递减函数，以下同理
                         if (ownTotemsValue >= 0 && ownTotemsValue < 4) //0到一个灼热一个嘲讽
@@ -2280,7 +2280,7 @@
                             return 16 - ownTotemsValue * 2;
                         }
                     }
-					return 0;
+                    return 0;
                 case CardDB.cardName.totemicmight:
                     int ownTotemsCount = 0;
                     foreach (Minion m in p.ownMinions)
@@ -2298,40 +2298,41 @@
                 case CardDB.cardName.怪盗图腾:
                     return -10;
                 //********原有********
-                case CardDB.cardName.hobartgrapplehammer: return -5; 
-                case CardDB.cardName.bloodsailraider: if (p.ownWeapon.Durability == 0) return 5; return 0; 
-                case CardDB.cardName.captaingreenskin: if (p.ownWeapon.Durability == 0) return 10; return 0; 
-                case CardDB.cardName.luckydobuccaneer: if (!(p.ownWeapon.Durability > 0 && p.ownWeapon.Angr > 2)) return 10; return 0; 
-                case CardDB.cardName.nagacorsair: if (p.ownWeapon.Durability == 0) return 5; return 0; 
-                case CardDB.cardName.goblinautobarber: if (p.ownWeapon.Durability == 0) return 5; return 0; 
-                case CardDB.cardName.dreadcorsair: if (p.ownWeapon.Durability == 0) return 5; return 0; 
-                case CardDB.cardName.grimestreetpawnbroker: 
+                case CardDB.cardName.hobartgrapplehammer: return -5;
+                case CardDB.cardName.bloodsailraider: if (p.ownWeapon.Durability == 0) return 5; return 0;
+                case CardDB.cardName.captaingreenskin: if (p.ownWeapon.Durability == 0) return 10; return 0;
+                case CardDB.cardName.luckydobuccaneer: if (!(p.ownWeapon.Durability > 0 && p.ownWeapon.Angr > 2)) return 10; return 0;
+                case CardDB.cardName.nagacorsair: if (p.ownWeapon.Durability == 0) return 5; return 0;
+                case CardDB.cardName.goblinautobarber: if (p.ownWeapon.Durability == 0) return 5; return 0;
+                case CardDB.cardName.dreadcorsair: if (p.ownWeapon.Durability == 0) return 5; return 0;
+                case CardDB.cardName.grimestreetpawnbroker:
                     foreach (Handmanager.Handcard hc in p.owncards) if (hc.card.type == CardDB.cardtype.WEAPON) return 0;
                     return 5;
-                case CardDB.cardName.bloodsailcultist: ; 
+                case CardDB.cardName.bloodsailcultist:
+                    ;
                     if (p.ownWeapon.Durability > 0) foreach (Minion m in p.ownMinions) if ((TAG_RACE)m.handcard.card.race == TAG_RACE.PIRATE) return 0;
                     return 8;
-                case CardDB.cardName.ravasaurrunt: 
+                case CardDB.cardName.ravasaurrunt:
                     if (p.ownMinions.Count < 2) return 5;
                     break;
-                case CardDB.cardName.nestingroc: 
+                case CardDB.cardName.nestingroc:
                     if (p.ownMinions.Count < 2) return 5;
                     break;
-                case CardDB.cardName.gentlemegasaur: 
+                case CardDB.cardName.gentlemegasaur:
                     targets = 0;
                     foreach (Minion m in p.ownMinions)
                     {
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC) targets++;
                     }
                     return 20 - targets * 5;
-                case CardDB.cardName.primalfinlookout: 
+                case CardDB.cardName.primalfinlookout:
                     targets = 0;
                     foreach (Minion m in p.ownMinions)
                     {
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC) targets++;
                     }
                     return 20 - targets * 5;
-                case CardDB.cardName.spiritecho: 
+                case CardDB.cardName.spiritecho:
                     if (p.ownQuest.Id == CardDB.cardIDEnum.UNG_942)
                     {
                         targets = 0;
@@ -2344,10 +2345,10 @@
                     }
                     else if (p.ownMinions.Count < 2) return 7;
                     return 0;
-                case CardDB.cardName.evolvingspores: 
+                case CardDB.cardName.evolvingspores:
                     if (p.ownMinions.Count < 3) return 15 - p.ownMinions.Count * 5;
                     return 0;
-                case CardDB.cardName.livingmana: 
+                case CardDB.cardName.livingmana:
                     int free = 7 - p.ownMinions.Count;
                     switch (free)
                     {
@@ -2362,12 +2363,12 @@
                             return 500;
                     }
                     break;
-                case CardDB.cardName.elisethetrailblazer: return -7; 
-                case CardDB.cardName.cracklingrazormaw:   
+                case CardDB.cardName.elisethetrailblazer: return -7;
+                case CardDB.cardName.cracklingrazormaw:
                     if (target != null) return 0;
                     return 5;
-                case CardDB.cardName.dinomancy: return -7; 
-                case CardDB.cardName.moltenblade: return -10; 
+                case CardDB.cardName.dinomancy: return -7;
+                case CardDB.cardName.moltenblade: return -10;
                 case CardDB.cardName.gluttonousooze: goto case CardDB.cardName.acidicswampooze;
                 case CardDB.cardName.acidicswampooze:
                     if (p.enemyWeapon.Angr > 0) return 0;
@@ -2378,7 +2379,7 @@
                     if (p.enemyMinions.Count == 0)
                     {
                         List<Handmanager.Handcard> temp = new List<Handmanager.Handcard>(p.owncards);
-                        temp.Sort((a, b) => a.card.cost.CompareTo(b.card.cost)); 
+                        temp.Sort((a, b) => a.card.cost.CompareTo(b.card.cost));
                         int cnum = 0;
                         int pcards = 0;
                         int nextTurnMana = p.ownMaxMana + 1;
@@ -2396,10 +2397,10 @@
                         return -3 * pcards;
                     }
                     break;
-                case CardDB.cardName.deadmanshand: 
+                case CardDB.cardName.deadmanshand:
                     if (p.owncards.Count > 2) return -5 * p.owncards.Count;
                     break;
-                case CardDB.cardName.bringiton: 
+                case CardDB.cardName.bringiton:
                     return 3 * p.enemyAnzCards * (11 - p.enemyMaxMana);
                 case CardDB.cardName.strongshellscavenger:
                     int tmp = 0;
@@ -2468,14 +2469,14 @@
                 else return 10;
             }
 
-            
+
 
             if ((name == CardDB.cardName.lifetap || name == CardDB.cardName.soultap) && p.owncards.Count <= 9)
             {
-                 foreach (Minion mnn in p.ownMinions)
-                 {
-                     if (mnn.name == CardDB.cardName.wilfredfizzlebang && !mnn.silenced) return -20;
-                 }
+                foreach (Minion mnn in p.ownMinions)
+                {
+                    if (mnn.name == CardDB.cardName.wilfredfizzlebang && !mnn.silenced) return -20;
+                }
             }
 
             if (name == CardDB.cardName.forbiddenritual)
@@ -2483,7 +2484,7 @@
                 if (p.ownMinions.Count == 7 || p.mana == 0) return 500;
                 return 7;
             }
-            
+
             if (name == CardDB.cardName.competitivespirit)
             {
                 if (p.ownMinions.Count < 1) return 500;
@@ -2526,26 +2527,26 @@
                 }
 
             }
-            
+
             //destroySecretPenality
             pen = 0;
             switch (card.name)
             {
-                case CardDB.cardName.flare: 
+                case CardDB.cardName.flare:
                     foreach (Minion mn in p.ownMinions) if (mn.stealth) pen++;
                     foreach (Minion mn in p.enemyMinions) if (mn.stealth) pen--;
                     if (p.enemySecretCount > 0)
                     {
                         bool canPlayMinion = false;
                         bool canPlaySpell = false;
-                        foreach(Handmanager.Handcard hc in p.owncards)
+                        foreach (Handmanager.Handcard hc in p.owncards)
                         {
                             if (hc.card.name == CardDB.cardName.flare) continue;
-                            if (hc.card.cost <= p.mana - 2) 
+                            if (hc.card.cost <= p.mana - 2)
                             {
                                 if (!canPlayMinion && hc.card.type == CardDB.cardtype.MOB)
                                 {
-                                    
+
                                     int tmp = p.getSecretTriggersByType(0, true, false, target);
                                     if (tmp > 0) pen -= tmp * 50;
                                     canPlayMinion = true;
@@ -2573,7 +2574,7 @@
                         }
                     }
                     break;
-                case CardDB.cardName.eaterofsecrets: 
+                case CardDB.cardName.eaterofsecrets:
                     if (p.enemySecretCount > 0)
                     {
                         pen -= p.enemySecretCount * 50;
@@ -2589,7 +2590,7 @@
                         }
                     }
                     break;
-                case CardDB.cardName.kezanmystic: 
+                case CardDB.cardName.kezanmystic:
                     if (p.enemySecretCount == 1 && p.playactions.Count == 0) pen -= 50;
                     break;
 
@@ -2604,7 +2605,7 @@
                 case CardDB.cardName.flametonguetotem:
                     if (p.ownMinions.Count == 0) return 100;
                     break;
-                
+
                 case CardDB.cardName.stampedingkodo:
                     bool found = false;
                     foreach (Minion mi in p.enemyMinions)
@@ -2647,7 +2648,7 @@
                 case CardDB.cardName.flameimp:
                     if (p.ownHero.Hp + p.ownHero.armor > 20) pen -= 3;
                     break;
-             
+
 
                 case CardDB.cardName.quartermaster:
                     foreach (Minion mm in p.ownMinions)
@@ -2657,12 +2658,12 @@
                     return 5;
 
                 case CardDB.cardName.mysteriouschallenger: return -14;
-                  
+
 
                 case CardDB.cardName.biggamehunter:
                     if (target == null || target.own) return 40;
                     break;
-                    
+
                 case CardDB.cardName.emergencycoolant:
                     if (target != null && target.own) pen = 500;
                     break;
@@ -2944,7 +2945,7 @@
                     }
                     else pen = 40;
                     break;
-            
+
                 case CardDB.cardName.direwolfalpha: goto case CardDB.cardName.abusivesergeant;
                 case CardDB.cardName.abusivesergeant:
                     int ready = 0;
@@ -2954,14 +2955,14 @@
                     }
                     if (ready == 0) pen = 5;
                     break;
-                    
+
                 case CardDB.cardName.gangup:
                     if (this.GangUpDatabase.ContainsKey(target.handcard.card.name))
                     {
                         return (-5 - 1 * GangUpDatabase[target.handcard.card.name]);
                     }
                     else return 40;
-                    
+
                 case CardDB.cardName.defiasringleader:
                     if (p.cardsPlayedThisTurn == 0) pen = 10;
                     break;
@@ -2985,7 +2986,7 @@
                         if (target.handcard.card.deathrattle || target.ancestralspirit >= 1 || target.desperatestand >= 1 || target.souloftheforest >= 1 || target.stegodon >= 1 || target.livingspores >= 1 || target.infest >= 1 || target.explorershat >= 1 || target.returnToHand >= 1 || target.deathrattle2 != null || target.enemyBlessingOfWisdom >= 1 || target.enemyPowerWordGlory >= 1) return 0;
                         if (target.handcard.card.Charge && ((target.numAttacksThisTurn == 1 && !target.windfury) || (target.numAttacksThisTurn == 2 && target.windfury))) return 0;
                         if (target.wounded || target.Angr < target.handcard.card.Attack || (target.silenced && this.specialMinions.ContainsKey(target.name))) return 0;
-                        
+
                         bool hasOnMinionDiesMinion = false;
                         foreach (Minion mnn in p.ownMinions)
                         {
@@ -3059,8 +3060,8 @@
                 {
                     if (card.type == CardDB.cardtype.SPELL && card.name != CardDB.cardName.风暴聚合器)
                     {
-                        if (!(DamageTargetDatabase.ContainsKey(card.name) || DamageAllEnemysDatabase.ContainsKey(card.name) 
-                            || DamageAllDatabase.ContainsKey(card.name) || DamageRandomDatabase.ContainsKey(card.name) 
+                        if (!(DamageTargetDatabase.ContainsKey(card.name) || DamageAllEnemysDatabase.ContainsKey(card.name)
+                            || DamageAllDatabase.ContainsKey(card.name) || DamageRandomDatabase.ContainsKey(card.name)
                             || DamageTargetSpecialDatabase.ContainsKey(card.name) || DamageHeroDatabase.ContainsKey(card.name))) pen += 10;
                     }
                     else if (card.name == CardDB.cardName.frostwolfwarlord || card.name == CardDB.cardName.thingfrombelow || card.name == CardDB.cardName.draeneitotemcarver || card.name == CardDB.cardName.seagiant || card.name == CardDB.cardName.风暴聚合器) return -1;
@@ -3202,7 +3203,7 @@
 
             return pen;
         }
-        
+
 
         ///secret strategys pala
         /// -Attack lowest enemy. If you can’t, use noncombat means to kill it. 
@@ -3230,10 +3231,10 @@
 
             switch (c.name)
             {
-                case CardDB.cardName.flare: return 0; break; 
-                case CardDB.cardName.eaterofsecrets: return 0; break; 
-                case CardDB.cardName.kezanmystic: 
-                    if (p.enemySecretCount == 1)  return 0;
+                case CardDB.cardName.flare: return 0; break;
+                case CardDB.cardName.eaterofsecrets: return 0; break;
+                case CardDB.cardName.kezanmystic:
+                    if (p.enemySecretCount == 1) return 0;
                     break;
             }
 
@@ -3349,7 +3350,7 @@
                     }
                     if (canBe_explosive)
                     {
-                        foreach(Action a in p.playactions)
+                        foreach (Action a in p.playactions)
                         {
                             switch (a.actionType)
                             {
@@ -3376,8 +3377,8 @@
                     if (hasMinionsWithLowHeal(p)) pen += 10; //penality if we doesn't attacked minions before
                 }
             }
-			
-			if (p.enemyHeroStartClass == TAG_CLASS.MAGE)
+
+            if (p.enemyHeroStartClass == TAG_CLASS.MAGE)
             {
                 if (target.isHero)
                 {
@@ -3388,7 +3389,7 @@
                     }
                     if (canBe_flameward)
                     {
-                        foreach(Action a in p.playactions)
+                        foreach (Action a in p.playactions)
                         {
                             switch (a.actionType)
                             {
@@ -3526,7 +3527,7 @@
             return ret;
         }
 
-        
+
 
         private bool isOwnLowestInHand(Minion mnn, Playfield p)
         {
@@ -3547,7 +3548,7 @@
             return ret;
         }
 
-        
+
 
 
         private int getValueOfEnemyMinion(Minion m)
@@ -3835,7 +3836,7 @@
             DamageTargetDatabase.Add(CardDB.cardName.meteor, 15);
             DamageTargetDatabase.Add(CardDB.cardName.mindshatter, 3);
             DamageTargetDatabase.Add(CardDB.cardName.mindspike, 2);
-            DamageTargetDatabase.Add(CardDB.cardName.moonfire, 1); 
+            DamageTargetDatabase.Add(CardDB.cardName.moonfire, 1);
             DamageTargetDatabase.Add(CardDB.cardName.mortalcoil, 1);
             DamageTargetDatabase.Add(CardDB.cardName.mortalstrike, 4);
             DamageTargetDatabase.Add(CardDB.cardName.northseakraken, 4);
@@ -3873,16 +3874,16 @@
             DamageTargetDatabase.Add(CardDB.cardName.doomerang, 2);
             DamageTargetDatabase.Add(CardDB.cardName.avalanche, 0);
 
-            DamageTargetSpecialDatabase.Add(CardDB.cardName.baneofdoom, 2); 
+            DamageTargetSpecialDatabase.Add(CardDB.cardName.baneofdoom, 2);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.bash, 3); //+3 armor
-            DamageTargetSpecialDatabase.Add(CardDB.cardName.bloodtoichor, 1); 
+            DamageTargetSpecialDatabase.Add(CardDB.cardName.bloodtoichor, 1);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.crueltaskmaster, 1); // gives 2 attack
             DamageTargetSpecialDatabase.Add(CardDB.cardName.deathbloom, 5);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.demonfire, 2); // friendly demon get +2/+2
             DamageTargetSpecialDatabase.Add(CardDB.cardName.demonheart, 5);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.earthshock, 1); //SILENCE /good for raggy etc or iced
-            DamageTargetSpecialDatabase.Add(CardDB.cardName.feedingtime, 3); 
-            DamageTargetSpecialDatabase.Add(CardDB.cardName.flamegeyser, 2); 
+            DamageTargetSpecialDatabase.Add(CardDB.cardName.feedingtime, 3);
+            DamageTargetSpecialDatabase.Add(CardDB.cardName.flamegeyser, 2);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.hammerofwrath, 3); //draw a card
             DamageTargetSpecialDatabase.Add(CardDB.cardName.holywrath, 2);//draw a card
             DamageTargetSpecialDatabase.Add(CardDB.cardName.innerrage, 1); // gives 2 attack
@@ -3902,7 +3903,7 @@
             HeroPowerEquipWeapon.Add(CardDB.cardName.shapeshift, 1);
             HeroPowerEquipWeapon.Add(CardDB.cardName.plaguelord, 3);
 
-            
+
             this.maycauseharmDatabase.Add(CardDB.cardName.arcaneblast, 1);
             this.maycauseharmDatabase.Add(CardDB.cardName.arcaneshot, 1);
             this.maycauseharmDatabase.Add(CardDB.cardName.backstab, 1);
@@ -4010,7 +4011,7 @@
 
         private void setupsilenceDatabase()//沉默数据库
         {
-            
+
             this.silenceDatabase.Add(CardDB.cardName.defiascleaner, 1);
             this.silenceDatabase.Add(CardDB.cardName.dispel, 1);
             this.silenceDatabase.Add(CardDB.cardName.earthshock, 1);
@@ -4763,7 +4764,7 @@
             specialMinions.Add(CardDB.cardName.igneouselemental, 0);
             specialMinions.Add(CardDB.cardName.illidanstormrage, 0);
             specialMinions.Add(CardDB.cardName.impgangboss, 0);
-			specialMinions.Add(CardDB.cardName.炸弹牛仔, 0);
+            specialMinions.Add(CardDB.cardName.炸弹牛仔, 0);
             specialMinions.Add(CardDB.cardName.impmaster, 0);
             specialMinions.Add(CardDB.cardName.infestedtauren, 0);
             specialMinions.Add(CardDB.cardName.infestedwolf, 0);
@@ -5144,7 +5145,7 @@
             priorityTargets.Add(CardDB.cardName.igneouselemental, 10);
             priorityTargets.Add(CardDB.cardName.illidanstormrage, 10);
             priorityTargets.Add(CardDB.cardName.impgangboss, 10);
-			priorityTargets.Add(CardDB.cardName.炸弹牛仔, 10);
+            priorityTargets.Add(CardDB.cardName.炸弹牛仔, 10);
             priorityTargets.Add(CardDB.cardName.impmaster, 10);
             priorityTargets.Add(CardDB.cardName.ironsensei, 10);
             priorityTargets.Add(CardDB.cardName.junglemoonkin, 10);
@@ -5401,7 +5402,7 @@
             silenceTargets.Add(CardDB.cardName.explosivesheep, 0);
             silenceTargets.Add(CardDB.cardName.eydisdarkbane, 0);
             silenceTargets.Add(CardDB.cardName.fallenhero, 0);
-            silenceTargets.Add(CardDB.cardName.masterchest, 0);            
+            silenceTargets.Add(CardDB.cardName.masterchest, 0);
             silenceTargets.Add(CardDB.cardName.fandralstaghelm, 0);
             silenceTargets.Add(CardDB.cardName.feugen, 0);
             silenceTargets.Add(CardDB.cardName.finjatheflyingstar, 0);
@@ -5437,7 +5438,7 @@
             silenceTargets.Add(CardDB.cardName.igneouselemental, 0);
             silenceTargets.Add(CardDB.cardName.illidanstormrage, 0);
             silenceTargets.Add(CardDB.cardName.impgangboss, 0);
-			silenceTargets.Add(CardDB.cardName.炸弹牛仔, 0);
+            silenceTargets.Add(CardDB.cardName.炸弹牛仔, 0);
             silenceTargets.Add(CardDB.cardName.impmaster, 0);
             silenceTargets.Add(CardDB.cardName.ironsensei, 0);
             silenceTargets.Add(CardDB.cardName.jadeswarmer, 0);
@@ -5799,31 +5800,31 @@
                     break;
                 case TAG_CLASS.WARRIOR:
                     if (this.ClassRacePriorityWarrior.ContainsKey(minionRace)) retval += this.ClassRacePriorityWarrior[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.ROGUE:
                     if (this.ClassRacePriorityRouge.ContainsKey(minionRace)) retval += this.ClassRacePriorityRouge[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.SHAMAN:
                     if (this.ClassRacePriorityShaman.ContainsKey(minionRace)) retval += this.ClassRacePriorityShaman[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.PRIEST:
                     if (this.ClassRacePriorityPriest.ContainsKey(minionRace)) retval += this.ClassRacePriorityPriest[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.PALADIN:
                     if (this.ClassRacePriorityPaladin.ContainsKey(minionRace)) retval += this.ClassRacePriorityPaladin[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.MAGE:
                     if (this.ClassRacePriorityMage.ContainsKey(minionRace)) retval += this.ClassRacePriorityMage[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.HUNTER:
                     if (this.ClassRacePriorityHunter.ContainsKey(minionRace)) retval += this.ClassRacePriorityHunter[minionRace];
-					break;
+                    break;
                 case TAG_CLASS.DRUID:
                     if (this.ClassRacePriorityDruid.ContainsKey(minionRace)) retval += this.ClassRacePriorityDruid[minionRace];
                     break;
                 default:
                     break;
-			}
+            }
             return retval;
         }
 

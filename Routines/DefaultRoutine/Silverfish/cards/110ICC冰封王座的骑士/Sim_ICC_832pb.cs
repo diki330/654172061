@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_832pb: SimTemplate //* Spider Fangs
+    class Sim_ICC_832pb : SimTemplate //* Spider Fangs
     {
         // +3 Attack.
 

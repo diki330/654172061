@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_skele11 : SimTemplate //skeleton
-	{
+    class Sim_skele11 : SimTemplate //skeleton
+    {
 
-//    /
-		
+        //    /
 
-	}
+
+    }
 }

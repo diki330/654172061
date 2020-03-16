@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_281: SimTemplate //* Forge of Souls
+    class Sim_ICC_281 : SimTemplate //* Forge of Souls
     {
         // Draw 2 weapons from your deck.
 

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_080 : SimTemplate //* Garrison Commander
-	{
-		//You can use your Hero Power twice on your turn.
-	
+    class Sim_AT_080 : SimTemplate //* Garrison Commander
+    {
+        //You can use your Hero Power twice on your turn.
+
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 bool another = false;
@@ -28,7 +28,7 @@ namespace HREngine.Bots
                 }
                 if (!another) p.enemyHeroPowerAllowedQuantity++;
             }
-		}
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
@@ -53,5 +53,5 @@ namespace HREngine.Bots
                 if (p.anzUsedEnemyHeroPower >= p.enemyHeroPowerAllowedQuantity) p.enemyAbilityReady = false;
             }
         }
-	}
+    }
 }

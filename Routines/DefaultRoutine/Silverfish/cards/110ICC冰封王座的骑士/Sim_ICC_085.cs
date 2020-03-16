@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_085: SimTemplate //* Ultimate Infestation
+    class Sim_ICC_085 : SimTemplate //* Ultimate Infestation
     {
         // Deal 5 damage. Draw 5 cards. Gain 5 Armor. Summon a 5/5 Ghoul.
 

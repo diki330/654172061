@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_132_SHAMANa : SimTemplate //* Healing Totem
-	{
-		//At the end of your turn, restore 1 Health to all friendly minions.
+    class Sim_AT_132_SHAMANa : SimTemplate //* Healing Totem
+    {
+        //At the end of your turn, restore 1 Health to all friendly minions.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {
@@ -16,5 +16,5 @@ namespace HREngine.Bots
                 p.allMinionOfASideGetDamage(turnEndOfOwner, -heal);
             }
         }
-	}
+    }
 }

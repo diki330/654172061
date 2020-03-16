@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_214: SimTemplate //* Obsidian Statue
+    class Sim_ICC_214 : SimTemplate //* Obsidian Statue
     {
         // Taunt. Lifesteal. Deathrattle: Destroy a random enemy minion.
 

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_001  : SimTemplate// YOD_001  risingwinds
-      //twinspell
+    class Sim_YOD_001 : SimTemplate// YOD_001  risingwinds
+                                   //twinspell
 
-	{
+    {
 
-	}
+    }
 }

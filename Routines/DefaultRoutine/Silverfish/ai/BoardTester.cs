@@ -170,7 +170,7 @@
             {
                 string s = sss + " ";
                 Helpfunctions.Instance.logg(s);
-                
+
                 if (s.StartsWith("ailoop") || s.StartsWith("deep ") || s.StartsWith("cut to len"))
                 {
                     continue;
@@ -206,7 +206,7 @@
                         string tmp = s.Split(new string[] { "face " }, StringSplitOptions.RemoveEmptyEntries)[1].Split(' ')[0];
                         facehp = Convert.ToInt32(tmp);
                     }
-                        
+
                     if (s.Contains(" womob:"))
                     {
                         string tmp = s.Split(new string[] { " womob:" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(' ')[0];
@@ -245,7 +245,7 @@
                         string eturnsim2 = s.Split(new string[] { " ets2 " }, StringSplitOptions.RemoveEmptyEntries)[1];
                         ets2 = Convert.ToInt32(eturnsim2.Split(' ')[0]);
                     }
-                    
+
                     if (s.Contains(" ntss "))
                     {
                         string ss = s.Split(new string[] { " ntss " }, StringSplitOptions.RemoveEmptyEntries)[1];
@@ -253,7 +253,7 @@
                         ntssw = Convert.ToInt32(ss.Split(' ')[1]);
                         ntssm = Convert.ToInt32(ss.Split(' ')[2]);
                     }
-                    
+
                     if (s.Contains(" iC "))
                     {
                         string ss = s.Split(new string[] { " iC " }, StringSplitOptions.RemoveEmptyEntries)[1];
@@ -279,7 +279,7 @@
                         string alphaval = s.Split(new string[] { " weight " }, StringSplitOptions.RemoveEmptyEntries)[1];
                         alpha = Convert.ToInt32(alphaval.Split(' ')[0]);
                     }
-                    
+
                     if (s.Contains(" plcmnt:"))
                     {
                         string tmp = s.Split(new string[] { " plcmnt:" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(' ')[0];
@@ -287,7 +287,7 @@
                     }
                     continue;
                 }
-                
+
                 if (s.StartsWith("enemy secretsCount:"))
                 {
                     this.enemySecretAmount = Convert.ToInt32(s.Split(' ')[2]);
@@ -457,7 +457,7 @@
                     }
                     continue;
                 }
-                
+
                 if (s.StartsWith("og:"))
                 {
                     string temp = s.Replace("og: ", "");
@@ -484,7 +484,7 @@
                     }
                     continue;
                 }
-                
+
                 if (s.StartsWith("discover card:"))
                 {
                     this.discover.Add(s.Split(' ')[2]);
@@ -500,7 +500,7 @@
                     this.numMinionsPlayedThisTurn = Convert.ToInt32(ss[0]);
                     this.cardsPlayedThisTurn = Convert.ToInt32(ss[1]);
                     this.overload = Convert.ToInt32(ss[2]);
-                    if (ss.Length == 5) this.ownPlayer = Convert.ToInt32(ss[3]); 
+                    if (ss.Length == 5) this.ownPlayer = Convert.ToInt32(ss[3]);
                     else
                     {
                         this.lockedMana = Convert.ToInt32(ss[3]);
@@ -685,7 +685,7 @@
 
                         int souloftheforest = 0;//adjadmg
                         if (s.Contains(" souloffrst(")) souloftheforest = Convert.ToInt32(s.Split(new string[] { " souloffrst(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
-                                                    
+
                         int stegodon = 0;//adjadmg
                         if (s.Contains(" stegodon(")) stegodon = Convert.ToInt32(s.Split(new string[] { " stegodon(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
@@ -694,10 +694,10 @@
 
                         int explorershat = 0;//adjadmg
                         if (s.Contains(" explHat(")) explorershat = Convert.ToInt32(s.Split(new string[] { " explHat(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
-                        
+
                         int returnToHand = 0;//adjadmg
                         if (s.Contains(" retHand(")) returnToHand = Convert.ToInt32(s.Split(new string[] { " retHand(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
-                        
+
                         int infest = 0;//adjadmg
                         if (s.Contains(" infest(")) infest = Convert.ToInt32(s.Split(new string[] { " infest(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
@@ -840,7 +840,7 @@
 
                         int souloftheforest = 0;//adjadmg
                         if (s.Contains(" souloffrst(")) souloftheforest = Convert.ToInt32(s.Split(new string[] { " souloffrst(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
-                        
+
                         int stegodon = 0;//adjadmg
                         if (s.Contains(" stegodon(")) stegodon = Convert.ToInt32(s.Split(new string[] { " stegodon(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
@@ -852,7 +852,7 @@
 
                         int returnToHand = 0;//adjadmg
                         if (s.Contains(" retHand(")) returnToHand = Convert.ToInt32(s.Split(new string[] { " retHand(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
-                        
+
                         int infest = 0;//adjadmg
                         if (s.Contains(" infest(")) infest = Convert.ToInt32(s.Split(new string[] { " infest(" }, StringSplitOptions.RemoveEmptyEntries)[1].Split(')')[0]);
 
@@ -991,7 +991,7 @@
             Settings.Instance.enfacehp = facehp;
             Settings.Instance.weaponOnlyAttackMobsUntilEnfacehp = weaponOnlyAttackMobsUntilEnfacehp;
             Settings.Instance.berserkIfCanFinishNextTour = berserkIfCanFinishNextTour;
-            Settings.Instance.concedeMode = concedeMode;            
+            Settings.Instance.concedeMode = concedeMode;
             Settings.Instance.enemyTurnMaxWide = ets;
             Settings.Instance.enemyTurnMaxWideSecondStep = ets2;
             Settings.Instance.placement = placement;
@@ -1015,7 +1015,7 @@
             Ai.Instance.setMaxWide(this.maxwide);
             Ai.Instance.setTwoTurnSimulation(false, this.twoturnsim);
             Ai.Instance.setPlayAround();
-            
+
 
             Hrtprozis.Instance.setOwnPlayer(ownPlayer);
             Handmanager.Instance.setOwnPlayer(ownPlayer);
@@ -1055,7 +1055,7 @@
             this.enemyHero.entitiyID = enemyHEntity;
             this.ownHero.cardClass = heroNametoClass(this.ownheroname);
             this.enemyHero.cardClass = heroNametoClass(this.enemyheroname);
-            
+
             this.ownHero.Angr = ownHeroAttack;
             this.ownHero.Hp = ownherohp;
             this.ownHero.armor = ownherodefence;

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_305 : SimTemplate //* Smuggler's Run
-	{
-		// Gige all minions in your hand +1/+1.
+    class Sim_CFM_305 : SimTemplate //* Smuggler's Run
+    {
+        // Gige all minions in your hand +1/+1.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
@@ -23,5 +23,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

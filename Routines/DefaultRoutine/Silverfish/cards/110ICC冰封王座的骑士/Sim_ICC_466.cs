@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_466: SimTemplate //* Saronite Chain Gang
+    class Sim_ICC_466 : SimTemplate //* Saronite Chain Gang
     {
         // Taunt Battlecry: Summon another Saronite Chain Gang.
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_407: SimTemplate //* Gnomeferatu
+    class Sim_ICC_407 : SimTemplate //* Gnomeferatu
     {
         // Battlecry: Remove the top card of your opponent's deck.
 

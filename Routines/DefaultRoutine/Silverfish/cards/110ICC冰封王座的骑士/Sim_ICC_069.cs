@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_069: SimTemplate //* Ghastly Conjurer
+    class Sim_ICC_069 : SimTemplate //* Ghastly Conjurer
     {
         // Battlecry: Add a 'Mirror Image' spell to your hand.
 

@@ -25,7 +25,7 @@
             return;
         }
 
-        public virtual bool onCardDicscard(Playfield p, Handmanager.Handcard hc, Minion own, int num, bool checkBonus = false) 
+        public virtual bool onCardDicscard(Playfield p, Handmanager.Handcard hc, Minion own, int num, bool checkBonus = false)
         {
             return false;
         }
@@ -68,7 +68,7 @@
         public virtual void onACharGotHealed(Playfield p, Minion triggerEffectMinion, int charsGotHealed)
         {
             return;
-        }        
+        }
 
         public virtual void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_083: SimTemplate //* Doomed Apprentice
+    class Sim_ICC_083 : SimTemplate //* Doomed Apprentice
     {
         // Your opponent's spells cost (1) more.
 

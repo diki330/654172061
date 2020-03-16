@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_053 : PenTemplate //farsight
-	{
+    class Pen_CS2_053 : PenTemplate //farsight
+    {
 
-//    zieht eine karte. diese karte kostet (3) weniger.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    zieht eine karte. diese karte kostet (3) weniger.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

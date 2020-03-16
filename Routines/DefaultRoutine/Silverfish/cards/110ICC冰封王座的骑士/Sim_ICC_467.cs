@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_467: SimTemplate //* Deathspeaker
+    class Sim_ICC_467 : SimTemplate //* Deathspeaker
     {
         // Battlecry: Give a friendly minion Immune this turn.
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_854: SimTemplate //* Arfus
+    class Sim_ICC_854 : SimTemplate //* Arfus
     {
         // Deathrattle: Add a random Death Knight card to your hand.
 

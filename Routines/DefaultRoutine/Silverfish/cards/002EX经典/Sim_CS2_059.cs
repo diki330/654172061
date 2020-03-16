@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_CS2_059 : SimTemplate //* Blood Imp
-	{
+    {
         // Stealth. At the end of your turn, give another random friendly minion +1 Health.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
@@ -29,5 +29,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

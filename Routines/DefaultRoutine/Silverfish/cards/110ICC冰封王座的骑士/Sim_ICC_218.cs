@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_218: SimTemplate //* Howlfiend
+    class Sim_ICC_218 : SimTemplate //* Howlfiend
     {
         // Whenever this minion takes damage, discard a random card.
 

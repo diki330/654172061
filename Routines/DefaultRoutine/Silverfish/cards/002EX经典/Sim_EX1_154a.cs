@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_154a : SimTemplate //wrath
-	{
+    class Sim_EX1_154a : SimTemplate //wrath
+    {
 
-//    fügt einem diener $3 schaden zu.
+        //    fügt einem diener $3 schaden zu.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
@@ -17,5 +17,5 @@ namespace HREngine.Bots
             p.minionGetDamageOrHeal(target, damage);
         }
 
-	}
+    }
 }

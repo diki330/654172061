@@ -20,7 +20,7 @@
         ragnarosthefirelord,
         hogger
     }
-        
+
     public class Hrtprozis
     {
         public int pId = 0;
@@ -28,7 +28,7 @@
         public int ownHeroFatigue = 0;
         public int ownDeckSize = 30;
         public int enemyDeckSize = 30;
-        public int enemyHeroFatigue = 0;        
+        public int enemyHeroFatigue = 0;
         public int gTurn = 0;
         public int gTurnStep = 0;
 
@@ -54,8 +54,8 @@
         public bool noDuplicates = false;
 
         private int numTauntCards = -1;
-        private int numDivineShieldCards = -1; 
-        private int numLifestealCards = -1; 
+        private int numDivineShieldCards = -1;
+        private int numLifestealCards = -1;
         private int numWindfuryCards = -1;
 
         public bool setGameRule = false;
@@ -78,7 +78,7 @@
         public int lockedMana = 0;
         public int ownMaxMana = 0;
         public int enemyMaxMana = 0;
-        
+
         public Minion ownHero = new Minion();
         public Minion enemyHero = new Minion();
         public Weapon ownWeapon = new Weapon();
@@ -100,7 +100,7 @@
         public int anzOwnElementalsLastTurn = 0;
         public int ownElementalsHaveLifesteal = 0;
         private int ownPlayerController = 0;
-        
+
         public PenalityManager penman;
         public Settings settings;
         Helpfunctions help;
@@ -223,7 +223,7 @@
         {
             anzOwnElementalsThisTurn = anzOwnElemTT;
             anzOwnElementalsLastTurn = anzOwnElemLT;
-            ownElementalsHaveLifesteal = ownElementalsHaveLS;  
+            ownElementalsHaveLifesteal = ownElementalsHaveLS;
         }
 
         public string heroIDtoName(string s)
@@ -351,7 +351,7 @@
                 this.LurkersDB.Add(lt.Key, lt.Value);
             }
         }
-		
+
         public void updateSecretStuff(List<string> ownsecs, int numEnemSec)
         {
             this.ownSecretList.Clear();
@@ -361,7 +361,7 @@
             }
             this.enemySecretCount = numEnemSec;
         }
-        
+
         public void updateTurnDeck(Dictionary<CardDB.cardIDEnum, int> deck, bool noDupl)
         {
             this.turnDeck.Clear();
@@ -441,7 +441,7 @@
             this.enemyHeroStartClass = enemyHSClass;
         }
 
-        
+
         public void updateHero(Weapon w, string heron, CardDB.Card ability, bool abrdy, int abCost, Minion hero, int enMaxMana = 10)
         {
             if (w.name == CardDB.cardName.foolsbane) w.cantAttackHeroes = true;
@@ -457,7 +457,7 @@
                 this.ownHero.poisonous = this.ownWeapon.poisonous;
                 this.ownHero.lifesteal = this.ownWeapon.lifesteal;
                 if (this.ownWeapon.name == CardDB.cardName.gladiatorslongbow) this.ownHero.immuneWhileAttacking = true;
-                
+
                 this.heroAbility = ability;
                 this.ownHeroPowerCost = abCost;
                 this.ownAbilityisReady = abrdy;
@@ -465,7 +465,7 @@
             else
             {
                 this.enemyWeapon = new Weapon(w);
-                this.enemyHero = new Minion(hero);;
+                this.enemyHero = new Minion(hero); ;
 
                 this.enemyHeroname = this.heroNametoEnum(heron);
                 this.enemyHeronameingame = heron;
@@ -473,7 +473,7 @@
                 this.enemyHero.poisonous = this.enemyWeapon.poisonous;
                 this.enemyHero.lifesteal = this.enemyWeapon.lifesteal;
                 if (this.enemyWeapon.name == CardDB.cardName.gladiatorslongbow) this.enemyHero.immuneWhileAttacking = true;
-           
+
                 this.enemyAbility = ability;
                 this.enemyHeroPowerCost = abCost;
 
@@ -493,7 +493,7 @@
             this.anzOgOwnCThunHpBonus = OgOwnCThunHpBonus;
             this.anzOgOwnCThunTaunt = OgOwnCThunTaunt;
         }
-        
+
         public void updateFatigueStats(int ods, int ohf, int eds, int ehf)
         {
             this.ownDeckSize = ods;
@@ -597,7 +597,7 @@
             help.logg("jadegolems: " + this.anzOwnJadeGolem + " " + this.anzEnemyJadeGolem);
             help.logg("elementals: " + this.anzOwnElementalsThisTurn + " " + this.anzOwnElementalsLastTurn + " " + this.ownElementalsHaveLifesteal);
             help.logg(Questmanager.Instance.getQuestsString());
-            help.logg("advanced: " + this.ownCrystalCore + " " + (this.ownMinionsInDeckCost0 ? 1: 0));
+            help.logg("advanced: " + this.ownCrystalCore + " " + (this.ownMinionsInDeckCost0 ? 1 : 0));
             help.logg("enemyhero:");
             help.logg((this.enemyHeroname == HeroEnum.None ? this.enemyHeronameingame : this.enemyHeroname.ToString()) + " " + this.enemyHero.Hp + " " + this.enemyHero.maxHp + " " + this.enemyHero.armor + " " + this.enemyHero.frozen + " " + this.enemyHero.immune + " " + this.enemyHero.entitiyID + " " + this.enemyHero.stealth);
             help.logg("weapon: " + this.enemyWeapon.Angr + " " + this.enemyWeapon.Durability + " " + this.enemyWeapon.name + " " + this.enemyWeapon.card.cardIDenum + " " + (this.enemyWeapon.poisonous ? 1 : 0) + " " + (this.enemyWeapon.lifesteal ? 1 : 0));

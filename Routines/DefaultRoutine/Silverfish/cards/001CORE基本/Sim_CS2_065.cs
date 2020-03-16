@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_065 : SimTemplate //voidwalker
-	{
+    class Sim_CS2_065 : SimTemplate //voidwalker
+    {
 
-//    spott/
+        //    spott/
 
 
-	}
+    }
 }

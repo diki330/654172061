@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_201 : SimTemplate //* Primalfin Totem
-	{
-		//At the end of your turn, summon a 1/1 Murloc.
+    class Sim_UNG_201 : SimTemplate //* Primalfin Totem
+    {
+        //At the end of your turn, summon a 1/1 Murloc.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.UNG_201t); //Primalfin
 
@@ -18,5 +18,5 @@ namespace HREngine.Bots
                 p.callKid(kid, pos, triggerEffectMinion.own);
             }
         }
-	}
+    }
 }

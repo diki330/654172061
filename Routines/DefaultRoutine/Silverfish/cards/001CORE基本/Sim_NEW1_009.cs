@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NEW1_009 : SimTemplate //healingtotem
-	{
+    class Sim_NEW1_009 : SimTemplate //healingtotem
+    {
 
-//    stellt am ende eures zuges bei allen befreundeten dienern 1 leben wieder her.
+        //    stellt am ende eures zuges bei allen befreundeten dienern 1 leben wieder her.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {
@@ -18,5 +18,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

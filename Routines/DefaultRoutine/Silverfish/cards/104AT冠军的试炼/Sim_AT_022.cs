@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_022 : SimTemplate //* Fist of Jaraxxus
-	{
-		//When you play or discard this, deal 4 damage to a random enemy.
+    class Sim_AT_022 : SimTemplate //* Fist of Jaraxxus
+    {
+        //When you play or discard this, deal 4 damage to a random enemy.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

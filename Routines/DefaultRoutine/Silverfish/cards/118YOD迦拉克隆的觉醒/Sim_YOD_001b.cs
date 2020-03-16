@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_001b  : SimTemplate// YOD_001b  takeflight
-//draw a card.
+    class Sim_YOD_001b : SimTemplate// YOD_001b  takeflight
+                                    //draw a card.
 
-	{
-	}
+    {
+    }
 }

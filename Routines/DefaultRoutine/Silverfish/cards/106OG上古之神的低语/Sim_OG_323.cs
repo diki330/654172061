@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_323 : SimTemplate //* Polluted Hoarder
-	{
-		//Deathrattle: Draw a card.
-		
+    class Sim_OG_323 : SimTemplate //* Polluted Hoarder
+    {
+        //Deathrattle: Draw a card.
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             p.drawACard(CardDB.cardIDEnum.None, m.own);

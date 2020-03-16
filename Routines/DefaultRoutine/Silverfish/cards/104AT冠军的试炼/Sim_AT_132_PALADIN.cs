@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_132_PALADIN : SimTemplate //* The Silver Hand
-	{
-		//Hero Power. Summon two 1/1 Recruits.
+    class Sim_AT_132_PALADIN : SimTemplate //* The Silver Hand
+    {
+        //Hero Power. Summon two 1/1 Recruits.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_101t);//silverhandrecruit
 
@@ -16,5 +16,5 @@ namespace HREngine.Bots
             p.callKid(kid, place, ownplay, false);
             p.callKid(kid, place, ownplay);
         }
-	}
+    }
 }

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_619 : SimTemplate //* equality
-	{
+    class Sim_EX1_619 : SimTemplate //* equality
+    {
         //Change the Health of ALL minions to 1.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             foreach (Minion m in p.ownMinions)
             {
                 p.minionSetLifetoX(m, 1);
@@ -18,6 +18,6 @@ namespace HREngine.Bots
             {
                 p.minionSetLifetoX(m, 1);
             }
-		}
-	}
+        }
+    }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_408: SimTemplate //* Val'kyr Soulclaimer
+    class Sim_ICC_408 : SimTemplate //* Val'kyr Soulclaimer
     {
         // Whenever this minion survives damage, summon a 2/2 Ghoul
 

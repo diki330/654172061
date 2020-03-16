@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_169 : SimTemplate //youngdragonhawk
-	{
+    class Sim_CS2_169 : SimTemplate //youngdragonhawk
+    {
 
-//    windzorn/
+        //    windzorn/
 
-	}
+    }
 }

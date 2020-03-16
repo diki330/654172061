@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_122 : SimTemplate //raidleader
-	{
+    class Sim_CS2_122 : SimTemplate //raidleader
+    {
 
-//    eure anderen diener haben +1 angriff.
+        //    eure anderen diener haben +1 angriff.
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 p.anzOwnRaidleader++;
@@ -26,8 +26,8 @@ namespace HREngine.Bots
                     if (own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 1, 0);
                 }
             }
-            
-		}
+
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
@@ -49,5 +49,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

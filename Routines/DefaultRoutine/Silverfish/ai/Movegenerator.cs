@@ -19,7 +19,7 @@
         private Movegenerator()
         {
         }
-        
+
         public List<Action> getMoveList(Playfield p, bool usePenalityManager, bool useCutingTargets, bool own)
         {
             //generates only own moves
@@ -31,7 +31,7 @@
                 return ret;
             }
 
-          //play cards:
+            //play cards:
             if (own)
             {
                 List<string> playedcards = new List<string>();
@@ -96,12 +96,12 @@
                 }
             }
 
-          //get targets for Hero weapon and Minions  ###################################################################################
+            //get targets for Hero weapon and Minions  ###################################################################################
 
             trgts = p.getAttackTargets(own, p.isLethalCheck);
             if (!p.isLethalCheck) trgts = this.cutAttackList(trgts);
 
-          // attack with minions
+            // attack with minions
             List<Minion> attackingMinions = new List<Minion>(8);
             foreach (Minion m in (own ? p.ownMinions : p.enemyMinions))
             {
@@ -124,7 +124,7 @@
                 }
             }
 
-          // attack with hero (weapon)
+            // attack with hero (weapon)
             if ((own && p.ownHero.Ready && p.ownHero.Angr >= 1) || (!own && p.enemyHero.Ready && p.enemyHero.Angr >= 1))
             {
                 int heroAttackPen = 0;
@@ -194,14 +194,14 @@
                     //help.logg(mnn.silenced + " " + m.silenced + " " + mnn.name + " " + m.name + " " + penman.specialMinions.ContainsKey(m.name));
 
                     bool otherisSpecial = mnn.handcard.card.isSpecialMinion;
-			        bool onlySpecial = isSpecial && otherisSpecial && !m.silenced && !mnn.silenced;
-			        bool onlyNotSpecial =(!isSpecial || (isSpecial && m.silenced)) && (!otherisSpecial || (otherisSpecial && mnn.silenced));
-			
-			        if(onlySpecial && (m.name != mnn.name)) continue; // different name -> take it
+                    bool onlySpecial = isSpecial && otherisSpecial && !m.silenced && !mnn.silenced;
+                    bool onlyNotSpecial = (!isSpecial || (isSpecial && m.silenced)) && (!otherisSpecial || (otherisSpecial && mnn.silenced));
+
+                    if (onlySpecial && (m.name != mnn.name)) continue; // different name -> take it
                     if ((onlySpecial || onlyNotSpecial) && (mnn.Angr == m.Angr && mnn.Hp == m.Hp && mnn.divineshild == m.divineshild && mnn.taunt == m.taunt && mnn.poisonous == m.poisonous && mnn.lifesteal == m.lifesteal && m.handcard.card.isToken == mnn.handcard.card.isToken && mnn.handcard.card.race == m.handcard.card.race))
                     {
-				        goingtoadd = false;
-				        break;
+                        goingtoadd = false;
+                        break;
                     }
                 }
 
@@ -282,8 +282,8 @@
 
                     if (m.name == CardDB.cardName.scavenginghyena) hashyena = true;
                     if (m.handcard.card.race == 20) haspets++;
-                    if (m.name == CardDB.cardName.harvestgolem || m.name == CardDB.cardName.hauntedcreeper || m.souloftheforest >= 1 || m.stegodon >= 1 || m.livingspores >= 1 || m.infest >= 1 || m.ancestralspirit >= 1 || m.desperatestand  >= 1 || m.explorershat >= 1 || m.returnToHand >= 1 || m.name == CardDB.cardName.nerubianegg || m.name == CardDB.cardName.savannahhighmane || m.name == CardDB.cardName.sludgebelcher || m.name == CardDB.cardName.cairnebloodhoof || m.name == CardDB.cardName.feugen || m.name == CardDB.cardName.stalagg || m.name == CardDB.cardName.thebeast) spawnminions = true;
-                    
+                    if (m.name == CardDB.cardName.harvestgolem || m.name == CardDB.cardName.hauntedcreeper || m.souloftheforest >= 1 || m.stegodon >= 1 || m.livingspores >= 1 || m.infest >= 1 || m.ancestralspirit >= 1 || m.desperatestand >= 1 || m.explorershat >= 1 || m.returnToHand >= 1 || m.name == CardDB.cardName.nerubianegg || m.name == CardDB.cardName.savannahhighmane || m.name == CardDB.cardName.sludgebelcher || m.name == CardDB.cardName.cairnebloodhoof || m.name == CardDB.cardName.feugen || m.name == CardDB.cardName.stalagg || m.name == CardDB.cardName.thebeast) spawnminions = true;
+
                 }
             }
 

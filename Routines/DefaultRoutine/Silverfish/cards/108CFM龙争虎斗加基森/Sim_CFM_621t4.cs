@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_621t4 : SimTemplate //* Felbloom
-	{
-		// Deal $2 damage to all minions.
+    class Sim_CFM_621t4 : SimTemplate //* Felbloom
+    {
+        // Deal $2 damage to all minions.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

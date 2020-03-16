@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_832: SimTemplate //* Malfurion the Pestilent
+    class Sim_ICC_832 : SimTemplate //* Malfurion the Pestilent
     {
         // Choose One - Summon 2 Poisonous Spiders; or 2 Scarabs with Taunt.
 
         CardDB.Card kidSpider = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ICC_832t3); //Frost Widow
         CardDB.Card kidScarab = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ICC_832t4); //Scarab Beetle
-        
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             p.setNewHeroPower(CardDB.cardIDEnum.ICC_832p, ownplay); // Plague Lord

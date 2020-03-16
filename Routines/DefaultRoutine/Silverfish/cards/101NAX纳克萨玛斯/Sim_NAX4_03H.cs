@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX4_03H : SimTemplate //* Skeleton
-	{
-		//-
-	}
+    class Sim_NAX4_03H : SimTemplate //* Skeleton
+    {
+        //-
+    }
 }

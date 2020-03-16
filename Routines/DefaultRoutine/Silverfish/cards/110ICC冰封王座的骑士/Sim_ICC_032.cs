@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_032: SimTemplate //* Venomancer
+    class Sim_ICC_032 : SimTemplate //* Venomancer
     {
         // Poisonous
     }

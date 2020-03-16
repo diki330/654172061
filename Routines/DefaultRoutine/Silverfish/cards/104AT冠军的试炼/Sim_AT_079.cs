@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_079 : SimTemplate //* Mysterious Challenger
-	{
-		//Battlecry: Put one of each Secret from your deck into the battlefield.
+    class Sim_AT_079 : SimTemplate //* Mysterious Challenger
+    {
+        //Battlecry: Put one of each Secret from your deck into the battlefield.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
@@ -34,5 +34,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

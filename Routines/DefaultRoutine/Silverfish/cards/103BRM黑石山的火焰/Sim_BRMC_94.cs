@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRMC_94 : SimTemplate //* Sulfuras
-	{
-		// Deathrattle:: Your Hero Power becomes 'Deal 8 damage to a random enemy'.
-		
+    class Sim_BRMC_94 : SimTemplate //* Sulfuras
+    {
+        // Deathrattle:: Your Hero Power becomes 'Deal 8 damage to a random enemy'.
+
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRMC_94);
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)

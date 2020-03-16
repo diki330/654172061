@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_549 : PenTemplate //bestialwrath
-	{
+    class Pen_EX1_549 : PenTemplate //bestialwrath
+    {
 
-//    verleiht einem wildtier +2 angriff und immunität/ in diesem zug.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht einem wildtier +2 angriff und immunität/ in diesem zug.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             {
                 if (target.own)
                 {
@@ -28,7 +28,7 @@ namespace HREngine.Bots
                 }
                 return 0;
             }
-		}
+        }
 
-	}
+    }
 }

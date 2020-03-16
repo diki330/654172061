@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_092 : SimTemplate //* Ice Rager
-	{
-		//-
-	}
+    class Sim_AT_092 : SimTemplate //* Ice Rager
+    {
+        //-
+    }
 }

@@ -30,7 +30,7 @@ namespace HREngine.Bots
 
                 p.minionGetDamageOrHeal(enemy, times);
 
-            } 
+            }
         }
 
     }

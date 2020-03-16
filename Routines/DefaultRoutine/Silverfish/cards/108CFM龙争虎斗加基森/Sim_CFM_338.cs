@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_338 : SimTemplate //* Trogg Beastrager
-	{
+    class Sim_CFM_338 : SimTemplate //* Trogg Beastrager
+    {
         // Battlecry: Give a random Beast in your hand +1/+1.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
@@ -21,5 +21,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

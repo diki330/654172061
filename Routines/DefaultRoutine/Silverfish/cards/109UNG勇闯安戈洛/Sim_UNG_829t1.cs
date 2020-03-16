@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_829t1 : SimTemplate //* Nether Portal
-	{
-		//Open a permanent portal that summons 3/2 Imps.
+    class Sim_UNG_829t1 : SimTemplate //* Nether Portal
+    {
+        //Open a permanent portal that summons 3/2 Imps.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.UNG_829t2); //Nether Portal
 
@@ -14,7 +14,7 @@ namespace HREngine.Bots
         {
             int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
             p.callKid(kid, pos, ownplay, false);
-			p.evaluatePenality -= 15;
+            p.evaluatePenality -= 15;
         }
     }
 }

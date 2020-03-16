@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_KAR_041 : SimTemplate //* Moat Lurker
-	{
-		//Battlecry: Destroy a minion. Deathrattle: Resummon it.
+    class Sim_KAR_041 : SimTemplate //* Moat Lurker
+    {
+        //Battlecry: Destroy a minion. Deathrattle: Resummon it.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
@@ -16,7 +16,7 @@ namespace HREngine.Bots
                 p.minionGetDestroyed(target);
             }
         }
-        
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             if (p.LurkersDB.ContainsKey(m.entitiyID))
@@ -26,5 +26,5 @@ namespace HREngine.Bots
                 p.callKid(CardDB.Instance.getCardDataFromID(p.LurkersDB[m.entitiyID].IDEnum), pos, own);
             }
         }
-	}
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_790 : SimTemplate //* Dirty Rat
-	{
-		// Taunt. Battlecry: Your opponent summons a random minion from their hand.
+    class Sim_CFM_790 : SimTemplate //* Dirty Rat
+    {
+        // Taunt. Battlecry: Your opponent summons a random minion from their hand.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_066); //acidicswampooze
 

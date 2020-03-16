@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_225 : SimTemplate //raidleader
-	{
+    class Sim_DRG_225 : SimTemplate //raidleader
+    {
 
-//    eure anderen diener haben +1 angriff.
+        //    eure anderen diener haben +1 angriff.
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 p.anzOwnRaidleader++;
@@ -26,8 +26,8 @@ namespace HREngine.Bots
                     if (own.entitiyID != m.entitiyID && (TAG_RACE)m.handcard.card.race == TAG_RACE.MECHANICAL) p.minionGetBuffed(m, 1, 0);
                 }
             }
-            
-		}
+
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
@@ -48,8 +48,8 @@ namespace HREngine.Bots
                 }
             }
         }
-		
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DRG_225t); //1/1 Skeleton
+
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DRG_225t); //1/1 Skeleton
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
@@ -57,5 +57,5 @@ namespace HREngine.Bots
             p.callKid(kid, own.zonepos, own.own);
         }
 
-	}
+    }
 }

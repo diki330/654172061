@@ -10,23 +10,23 @@ namespace HREngine.Bots
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {
-			if(m.own)
-			{
-				bool dragonInHand = false;
-				foreach (Handmanager.Handcard hc in p.owncards)
-				{
-					if ((TAG_RACE)hc.card.race == TAG_RACE.DRAGON)
-					{
-						dragonInHand = true;
-						break;
-					}
-				}
-				if(dragonInHand) p.minionGetBuffed(m, 0, 2);
-			}
-			else
-			{
+            if (m.own)
+            {
+                bool dragonInHand = false;
+                foreach (Handmanager.Handcard hc in p.owncards)
+                {
+                    if ((TAG_RACE)hc.card.race == TAG_RACE.DRAGON)
+                    {
+                        dragonInHand = true;
+                        break;
+                    }
+                }
+                if (dragonInHand) p.minionGetBuffed(m, 0, 2);
+            }
+            else
+            {
                 if (p.enemyAnzCards >= 2) p.minionGetBuffed(m, 0, 2);
-			}
+            }
         }
     }
 }

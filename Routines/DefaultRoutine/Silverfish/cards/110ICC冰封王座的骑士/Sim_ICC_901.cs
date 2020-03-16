@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_901: SimTemplate //* Drakkari Enchanter
+    class Sim_ICC_901 : SimTemplate //* Drakkari Enchanter
     {
         // Your end of turn effects trigger twice.
 

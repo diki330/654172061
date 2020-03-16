@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_207: SimTemplate //* Devour Mind
+    class Sim_ICC_207 : SimTemplate //* Devour Mind
     {
         // Copy 3 cards in your opponent's deck and add them to your hand.
 

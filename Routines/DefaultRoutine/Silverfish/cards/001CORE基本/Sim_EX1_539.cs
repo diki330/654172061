@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_539 : SimTemplate //killcommand
-	{
+    class Sim_EX1_539 : SimTemplate //killcommand
+    {
 
-//    verursacht $3 schaden. verursacht stattdessen $5 schaden, wenn ihr ein wildtier besitzt.
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        //    verursacht $3 schaden. verursacht stattdessen $5 schaden, wenn ihr ein wildtier besitzt.
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             if (ownplay)
             {
                 bool haspet = false;
@@ -26,7 +26,7 @@ namespace HREngine.Bots
                 if (haspet) dmg = (ownplay) ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
                 p.minionGetDamageOrHeal(target, dmg);
             }
-		}
+        }
 
-	}
+    }
 }

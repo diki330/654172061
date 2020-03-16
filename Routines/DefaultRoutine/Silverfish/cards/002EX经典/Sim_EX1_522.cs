@@ -6,7 +6,7 @@ namespace HREngine.Bots
 {
     class Sim_EX1_522 : SimTemplate//patient assasin
     {
-       
+
 
     }
 }

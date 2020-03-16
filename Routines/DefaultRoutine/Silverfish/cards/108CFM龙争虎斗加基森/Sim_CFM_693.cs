@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_693 : SimTemplate //* Gadgetzan Ferryman
-	{
-		// Combo: Return a friendly minion to your hand.
+    class Sim_CFM_693 : SimTemplate //* Gadgetzan Ferryman
+    {
+        // Combo: Return a friendly minion to your hand.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

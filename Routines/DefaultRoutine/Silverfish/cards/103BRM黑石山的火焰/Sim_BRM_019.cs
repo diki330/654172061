@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_019 : SimTemplate //* Grim Patron
-	{
-		// Whenever this minion survives damage, summon another Grim Patron.
+    class Sim_BRM_019 : SimTemplate //* Grim Patron
+    {
+        // Whenever this minion survives damage, summon another Grim Patron.
 
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRM_019);//Grim Patron
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRM_019);//Grim Patron
 
         public override void onMinionGotDmgTrigger(Playfield p, Minion m, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
         {
@@ -22,5 +22,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

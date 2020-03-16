@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_022 : SimTemplate //* voidcaller
-	{
+    class Sim_FP1_022 : SimTemplate //* voidcaller
+    {
         //Deathrattle: Put a random Demon from your hand into the battlefield.
         CardDB.Card c = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_301);//felguard
 
@@ -39,5 +39,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

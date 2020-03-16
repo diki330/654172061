@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_147 : SimTemplate //gnomishinventor
-	{
+    class Sim_CS2_147 : SimTemplate //gnomishinventor
+    {
 
-//    kampfschrei:/ zieht eine karte.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        //    kampfschrei:/ zieht eine karte.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             p.drawACard(CardDB.cardIDEnum.None, own.own);
-		}
+        }
 
 
-	}
+    }
 }

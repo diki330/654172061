@@ -1,6 +1,6 @@
 ﻿namespace HREngine.Bots
 {
-   
+
     internal class PenTemplate
     {
 

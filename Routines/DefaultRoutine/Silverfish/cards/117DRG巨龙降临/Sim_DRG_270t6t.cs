@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_270t6t : SimTemplate //* 玛里苟斯的绵羊(Malygos's Sheep)
-	{
-		// [x]Malygos's Sheep
-		// 玛里苟斯的绵羊
-		
-	}
+    class Sim_DRG_270t6t : SimTemplate //* 玛里苟斯的绵羊(Malygos's Sheep)
+    {
+        // [x]Malygos's Sheep
+        // 玛里苟斯的绵羊
+
+    }
 
 
 }

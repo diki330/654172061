@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_330 : SimTemplate //* Undercity Huckster
-	{
-		//Deathrattle: Add a random class card to your hand (from your opponent's class).
+    class Sim_OG_330 : SimTemplate //* Undercity Huckster
+    {
+        //Deathrattle: Add a random class card to your hand (from your opponent's class).
 
-		public override void onDeathrattle(Playfield p, Minion m)
+        public override void onDeathrattle(Playfield p, Minion m)
         {
             p.drawACard(CardDB.cardIDEnum.None, m.own, true);
         }

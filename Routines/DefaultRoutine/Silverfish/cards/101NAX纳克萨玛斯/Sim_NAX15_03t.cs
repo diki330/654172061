@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX15_03t : SimTemplate //* Guardian of Icecrown
-	{
-		//Taunt
-	}
+    class Sim_NAX15_03t : SimTemplate //* Guardian of Icecrown
+    {
+        //Taunt
+    }
 }

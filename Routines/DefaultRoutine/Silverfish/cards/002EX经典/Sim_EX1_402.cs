@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_402 : SimTemplate //* armorsmith
-	{
-    // Whenever a friendly minion takes damage, gain 1 Armor.
+    class Sim_EX1_402 : SimTemplate //* armorsmith
+    {
+        // Whenever a friendly minion takes damage, gain 1 Armor.
 
         public override void onMinionGotDmgTrigger(Playfield p, Minion m, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
         {
@@ -14,7 +14,7 @@ namespace HREngine.Bots
             {
                 for (int i = 0; i < anzOwnMinionsGotDmg - anzOwnHeroGotDmg; i++)
                 {
-					p.minionGetArmor(p.ownHero, 1);
+                    p.minionGetArmor(p.ownHero, 1);
                 }
             }
             else
@@ -25,5 +25,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

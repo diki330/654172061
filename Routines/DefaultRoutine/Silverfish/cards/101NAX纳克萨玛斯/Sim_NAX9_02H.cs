@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX9_02H : SimTemplate //* Lady Blaumeux
-	{
+    class Sim_NAX9_02H : SimTemplate //* Lady Blaumeux
+    {
         // Your hero is Immune.
 
         public override void onAuraStarts(Playfield p, Minion own)

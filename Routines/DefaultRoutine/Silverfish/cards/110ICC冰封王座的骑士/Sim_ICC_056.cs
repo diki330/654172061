@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_056: SimTemplate //* Cryostasis
+    class Sim_ICC_056 : SimTemplate //* Cryostasis
     {
         // Give a minion +3/+3 and Freeze it.
 

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_276 : SimTemplate //* Blood Warriors
-	{
-		//Add a copy of each damaged friendly minion to your hand.
+    class Sim_OG_276 : SimTemplate //* Blood Warriors
+    {
+        //Add a copy of each damaged friendly minion to your hand.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

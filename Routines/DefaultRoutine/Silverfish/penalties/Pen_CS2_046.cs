@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_046 : PenTemplate //bloodlust
-	{
+    class Pen_CS2_046 : PenTemplate //bloodlust
+    {
 
-//    verleiht euren dienern +3 angriff in diesem zug.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht euren dienern +3 angriff in diesem zug.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (!isLethal)
             {
                 int targets = 0;
@@ -27,7 +27,7 @@ namespace HREngine.Bots
                 }
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

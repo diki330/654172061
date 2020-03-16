@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_197 : SimTemplate //ogremagi
-	{
+    class Sim_CS2_197 : SimTemplate //ogremagi
+    {
 
-//    zauberschaden +1/
+        //    zauberschaden +1/
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 p.spellpower++;
@@ -18,7 +18,7 @@ namespace HREngine.Bots
             {
                 p.enemyspellpower++;
             }
-		}
+        }
 
         public override void onAuraEnds(Playfield p, Minion m)
         {
@@ -33,5 +33,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

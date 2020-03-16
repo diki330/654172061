@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_595 : SimTemplate //* cultmaster
-	{
+    class Sim_EX1_595 : SimTemplate //* cultmaster
+    {
         // Whenever one of your other minions dies, draw a card.
 
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
@@ -20,5 +20,5 @@ namespace HREngine.Bots
                 p.drawACard(CardDB.cardIDEnum.None, m.own);
             }
         }
-	}
+    }
 }

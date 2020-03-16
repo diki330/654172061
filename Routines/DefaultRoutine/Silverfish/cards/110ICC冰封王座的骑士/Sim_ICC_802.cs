@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_802: SimTemplate //* Spirit Lash
+    class Sim_ICC_802 : SimTemplate //* Spirit Lash
     {
         // Lifesteal. Deal 1 damage to all minions.
 

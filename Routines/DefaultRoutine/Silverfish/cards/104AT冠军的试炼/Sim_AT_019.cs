@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_019 : SimTemplate //* Dreadsteed
-	{
-		//Deathrattle: Summon a Dreadsteed.
+    class Sim_AT_019 : SimTemplate //* Dreadsteed
+    {
+        //Deathrattle: Summon a Dreadsteed.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AT_019);
 
@@ -14,5 +14,5 @@ namespace HREngine.Bots
         {
             p.callKid(kid, m.zonepos - 1, m.own);
         }
-	}
+    }
 }

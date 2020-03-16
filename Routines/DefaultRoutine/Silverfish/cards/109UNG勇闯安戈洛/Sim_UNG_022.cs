@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_022 : SimTemplate //* Mirage Caller
-	{
-		//Battlecry: Choose a friendly minion. Summon a 1/1 copy of it.
+    class Sim_UNG_022 : SimTemplate //* Mirage Caller
+    {
+        //Battlecry: Choose a friendly minion. Summon a 1/1 copy of it.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_319 : SimTemplate //* Twin Emperor Vek'nilash
-	{
-		//Taunt
-	}
+    class Sim_OG_319 : SimTemplate //* Twin Emperor Vek'nilash
+    {
+        //Taunt
+    }
 }

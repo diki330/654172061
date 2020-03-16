@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_132_PRIEST : SimTemplate //* Heal
-	{
-		//Hero Power. Restore 4 Health.
-		
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+    class Sim_AT_132_PRIEST : SimTemplate //* Heal
+    {
+        //Hero Power. Restore 4 Health.
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             int heal = 4;
             if (ownplay)
             {
@@ -22,6 +22,6 @@ namespace HREngine.Bots
                 if (p.enemydoublepriest >= 1) heal *= (2 * p.enemydoublepriest);
             }
             p.minionGetDamageOrHeal(target, -heal);
-		}
-	}
+        }
+    }
 }

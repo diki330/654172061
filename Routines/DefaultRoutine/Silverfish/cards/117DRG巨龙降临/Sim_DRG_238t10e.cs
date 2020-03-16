@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_238t10e : SimTemplate //迦拉克隆的巨力
+    class Sim_DRG_238t10e : SimTemplate //迦拉克隆的巨力
     {
 
         //    英雄技能 在本回合中，获得+3攻击力.
@@ -21,5 +21,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

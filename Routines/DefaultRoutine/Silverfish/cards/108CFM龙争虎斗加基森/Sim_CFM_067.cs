@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_067 : SimTemplate //* Hozen Healer
-	{
-		// Battlecry: Restore a minion to full Health.
+    class Sim_CFM_067 : SimTemplate //* Hozen Healer
+    {
+        // Battlecry: Restore a minion to full Health.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

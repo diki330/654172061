@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_087 : PenTemplate //blessingofmight
-	{
+    class Pen_CS2_087 : PenTemplate //blessingofmight
+    {
 
-//    verleiht einem diener +3 angriff.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht einem diener +3 angriff.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
-                if (!m.Ready )
+                if (!m.Ready)
                 {
                     return 50;
                 }
@@ -31,7 +31,7 @@ namespace HREngine.Bots
                 return 500;
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

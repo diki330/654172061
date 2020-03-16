@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_852: SimTemplate //* Prince Taldaram
+    class Sim_ICC_852 : SimTemplate //* Prince Taldaram
     {
         // Battlecry: If your deck has no 3-Cost cards, transform into a 3/3 copy of a minion.
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_018: SimTemplate //* Phantom Freebooter
+    class Sim_ICC_018 : SimTemplate //* Phantom Freebooter
     {
         // Battlecry: Gain stats equal to your weapon's.
 

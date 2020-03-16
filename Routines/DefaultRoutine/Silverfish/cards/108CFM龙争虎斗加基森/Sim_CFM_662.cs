@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_662 : SimTemplate //* Dragonfire Potion
-	{
-		// Deal 5 damage to all minions except Dragons.
+    class Sim_CFM_662 : SimTemplate //* Dragonfire Potion
+    {
+        // Deal 5 damage to all minions except Dragons.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

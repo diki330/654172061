@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_904: SimTemplate //* Wicked Skeleton
+    class Sim_ICC_904 : SimTemplate //* Wicked Skeleton
     {
         // Battlecry: Gain +1/+1 for each minion that died this turn.
 

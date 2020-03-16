@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_NEW1_021 : SimTemplate //* Doomsayer
-	{
+    {
         // At the start of your turn, destroy ALL minions.
 
         public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
@@ -24,5 +24,5 @@ namespace HREngine.Bots
                 p.allMinionsGetDestroyed();
             }
         }
-	}
+    }
 }

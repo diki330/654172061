@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_HERO_04 : SimTemplate //utherlightbringer
-	{
+    class Sim_HERO_04 : SimTemplate //utherlightbringer
+    {
 
-//
-		
+        //
 
-	}
+
+    }
 }

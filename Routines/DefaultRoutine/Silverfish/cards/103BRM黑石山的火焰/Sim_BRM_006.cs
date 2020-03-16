@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_006 : SimTemplate //* Imp Gang Boss
-	{
-		// Whenever this minion takes damage, summon a 1/1 Imp.
+    class Sim_BRM_006 : SimTemplate //* Imp Gang Boss
+    {
+        // Whenever this minion takes damage, summon a 1/1 Imp.
 
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRM_006t); //imp
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRM_006t); //imp
 
         public override void onMinionGotDmgTrigger(Playfield p, Minion m, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
         {
@@ -18,10 +18,10 @@ namespace HREngine.Bots
                 m.anzGotDmg = 0;
                 for (int i = 0; i < tmp; i++)
                 {
-					int pos = m.zonepos;
-					p.callKid(kid, pos, m.own);
+                    int pos = m.zonepos;
+                    p.callKid(kid, pos, m.own);
                 }
             }
         }
-	}
+    }
 }

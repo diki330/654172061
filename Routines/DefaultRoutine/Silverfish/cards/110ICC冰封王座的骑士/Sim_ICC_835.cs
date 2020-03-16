@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_835: SimTemplate //* Hadronox
+    class Sim_ICC_835 : SimTemplate //* Hadronox
     {
         // Deathrattle: Summon your taunt minions that died this game.
 

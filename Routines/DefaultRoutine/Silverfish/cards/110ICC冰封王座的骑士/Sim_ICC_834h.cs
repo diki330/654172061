@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_834h: SimTemplate //* Bladestorm
+    class Sim_ICC_834h : SimTemplate //* Bladestorm
     {
         // Hero Power: Deal 1 damage to all minions.
 

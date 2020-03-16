@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_186 : SimTemplate //wargolem
-	{
+    class Sim_CS2_186 : SimTemplate //wargolem
+    {
 
-//
+        //
 
 
-	}
+    }
 }

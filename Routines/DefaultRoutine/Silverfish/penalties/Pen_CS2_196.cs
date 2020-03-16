@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_196 : PenTemplate //razorfenhunter
-	{
+    class Pen_CS2_196 : PenTemplate //razorfenhunter
+    {
 
-//    kampfschrei:/ ruft einen eber (1/1) herbei.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    kampfschrei:/ ruft einen eber (1/1) herbei.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

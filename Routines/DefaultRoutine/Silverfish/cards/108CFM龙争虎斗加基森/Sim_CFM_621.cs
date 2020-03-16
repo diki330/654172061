@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_621 : SimTemplate //* Kazakus
-	{
-		// Battlecry: If your deck has no duplicates, create a custom spell.
+    class Sim_CFM_621 : SimTemplate //* Kazakus
+    {
+        // Battlecry: If your deck has no duplicates, create a custom spell.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

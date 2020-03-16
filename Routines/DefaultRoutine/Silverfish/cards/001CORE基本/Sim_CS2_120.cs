@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_120 : SimTemplate //rivercrocolisk
-	{
+    class Sim_CS2_120 : SimTemplate //rivercrocolisk
+    {
 
-//
+        //
 
-	}
+    }
 }

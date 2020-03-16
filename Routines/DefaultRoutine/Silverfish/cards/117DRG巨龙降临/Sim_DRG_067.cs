@@ -2,11 +2,11 @@ using System.Collections.Generic;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_067 : SimTemplate //* 巨魔蝙蝠骑士 Troll Batrider
-	{
-		 // Battlecry: Deal 3 damage to a random enemy minion.  
+    class Sim_DRG_067 : SimTemplate //* 巨魔蝙蝠骑士 Troll Batrider
+    {
+        // Battlecry: Deal 3 damage to a random enemy minion.  
 
-        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice) 
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             List<Minion> temp = (own.own) ? p.enemyMinions : p.ownMinions;
             int times = (own.own) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
@@ -27,7 +27,7 @@ namespace HREngine.Bots
 
                 p.minionGetDamageOrHeal(enemy, times);
 
-            } 
+            }
         }
 
     }

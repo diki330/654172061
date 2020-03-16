@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_094 : PenTemplate //hammerofwrath
-	{
+    class Pen_CS2_094 : PenTemplate //hammerofwrath
+    {
 
-//    verursacht $3 schaden. zieht eine karte.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    verursacht $3 schaden. zieht eine karte.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

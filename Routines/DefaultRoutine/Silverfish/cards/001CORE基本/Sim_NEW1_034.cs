@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NEW1_034 : SimTemplate //huffer
-	{
+    class Sim_NEW1_034 : SimTemplate //huffer
+    {
 
-//    ansturm/
-		
+        //    ansturm/
 
-	}
+
+    }
 }

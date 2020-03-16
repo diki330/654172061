@@ -9,8 +9,8 @@ namespace HREngine.Bots
         //Deal $3 damage to all enemy minions. Restore #3 Health to your hero.
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            int dmg = (ownplay)? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
-            int heal = (ownplay) ? p.getSpellHeal(3) : p.getEnemySpellHeal(3) ;
+            int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+            int heal = (ownplay) ? p.getSpellHeal(3) : p.getEnemySpellHeal(3);
             if (ownplay)
             {
                 p.minionGetDamageOrHeal(p.ownHero, -heal);
@@ -20,7 +20,7 @@ namespace HREngine.Bots
                     p.minionGetDamageOrHeal(m, dmg);
                 }
             }
-            else 
+            else
             {
                 p.minionGetDamageOrHeal(p.enemyHero, -heal);
                 p.minionGetDamageOrHeal(p.ownHero, dmg);

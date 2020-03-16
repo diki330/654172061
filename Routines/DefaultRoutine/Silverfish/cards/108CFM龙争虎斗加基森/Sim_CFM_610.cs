@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_610 : SimTemplate //* Crystalweaver
-	{
-		// Battlecry: Give your Demons +1/+1.
+    class Sim_CFM_610 : SimTemplate //* Crystalweaver
+    {
+        // Battlecry: Give your Demons +1/+1.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

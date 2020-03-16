@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX9_04 : SimTemplate //* Sir Zeliek
-	{
+    class Sim_NAX9_04 : SimTemplate //* Sir Zeliek
+    {
         // Your hero is Immune.
 
         public override void onAuraStarts(Playfield p, Minion own)
@@ -16,8 +16,8 @@ namespace HREngine.Bots
                 if (p.ownWeapon.name == CardDB.cardName.runeblade && p.anzOwnHorsemen < 1)
                 {
                     int bonus = (p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.NAX9_05H) ? 6 : 3;
-                    p.minionGetBuffed(p.ownHero, -1 * Math.Min(bonus, p.ownWeapon.Angr- 1), 0);
-                    p.ownWeapon.Angr= Math.Min(1, p.ownWeapon.Angr- bonus);
+                    p.minionGetBuffed(p.ownHero, -1 * Math.Min(bonus, p.ownWeapon.Angr - 1), 0);
+                    p.ownWeapon.Angr = Math.Min(1, p.ownWeapon.Angr - bonus);
                 }
                 p.anzOwnHorsemen++;
             }
@@ -46,7 +46,7 @@ namespace HREngine.Bots
                     {
                         int bonus = (p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.NAX9_05H) ? 6 : 3;
                         p.minionGetBuffed(p.ownHero, bonus, 0);
-                        p.ownWeapon.Angr+= bonus;
+                        p.ownWeapon.Angr += bonus;
                     }
                 }
             }

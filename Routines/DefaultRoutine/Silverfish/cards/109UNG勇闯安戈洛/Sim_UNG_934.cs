@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_934 : SimTemplate //* Fire Plume's Heart
-	{
-		//Quest: Play 7 Taunt minions. Reward: Sulfuras.
+    class Sim_UNG_934 : SimTemplate //* Fire Plume's Heart
+    {
+        //Quest: Play 7 Taunt minions. Reward: Sulfuras.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

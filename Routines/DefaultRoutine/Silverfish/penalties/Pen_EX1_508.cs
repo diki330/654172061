@@ -4,14 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_508 : PenTemplate //grimscaleoracle
-	{
+    class Pen_EX1_508 : PenTemplate //grimscaleoracle
+    {
 
-//    alle anderen murlocs haben +1 angriff.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
-		return 0;
-		}
+        //    alle anderen murlocs haben +1 angriff.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
+            return 0;
+        }
 
-	}
+    }
 }

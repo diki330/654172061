@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_tt_004 : SimTemplate //* flesheatingghoul
-	{
-//    Whenever a minion dies, gain +1 Attack.
+    class Sim_tt_004 : SimTemplate //* flesheatingghoul
+    {
+        //    Whenever a minion dies, gain +1 Attack.
 
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
@@ -20,5 +20,5 @@ namespace HREngine.Bots
                 p.minionGetBuffed(m, residual, 0);
             }
         }
-	}
+    }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_102 : SimTemplate //* Captured Jormungar
-	{
-		//-
-	}
+    class Sim_AT_102 : SimTemplate //* Captured Jormungar
+    {
+        //-
+    }
 }

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_393 : SimTemplate //amaniberserker
-	{
+    class Sim_EX1_393 : SimTemplate //amaniberserker
+    {
 
-//    wutanfall:/ +3 angriff
+        //    wutanfall:/ +3 angriff
 
         public override void onEnrageStart(Playfield p, Minion m)
         {
@@ -19,5 +19,5 @@ namespace HREngine.Bots
             m.Angr -= 3;
         }
 
-	}
+    }
 }

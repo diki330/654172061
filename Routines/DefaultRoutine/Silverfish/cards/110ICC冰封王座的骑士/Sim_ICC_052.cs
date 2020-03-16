@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_052: SimTemplate //* Play Dead
+    class Sim_ICC_052 : SimTemplate //* Play Dead
     {
         // Triger a friendly minion's deathrattle
 

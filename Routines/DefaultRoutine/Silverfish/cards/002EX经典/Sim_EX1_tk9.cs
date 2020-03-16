@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_tk9 : SimTemplate //treant
-	{
+    class Sim_EX1_tk9 : SimTemplate //treant
+    {
 
-//    ansturm/. vernichtet diesen diener am ende des zuges.
+        //    ansturm/. vernichtet diesen diener am ende des zuges.
 
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
@@ -18,5 +18,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

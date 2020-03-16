@@ -16,7 +16,7 @@ namespace HREngine.Bots
                 p.enemyDeckSize++;
                 if (p.enemyDeckSize <= 6)
                 {
-                    p.minionGetDamageOrHeal(p.enemyHero, Math.Min(10, p.enemyHero.Hp-1), true);
+                    p.minionGetDamageOrHeal(p.enemyHero, Math.Min(10, p.enemyHero.Hp - 1), true);
                     p.evaluatePenality -= 6;
                 }
                 else

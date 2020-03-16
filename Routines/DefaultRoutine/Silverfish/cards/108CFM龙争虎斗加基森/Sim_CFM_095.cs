@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_095 : SimTemplate //* Weasel Tunneler
-	{
-		// Deathrattle: Shuffle this minion into your opponent's deck.
+    class Sim_CFM_095 : SimTemplate //* Weasel Tunneler
+    {
+        // Deathrattle: Shuffle this minion into your opponent's deck.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

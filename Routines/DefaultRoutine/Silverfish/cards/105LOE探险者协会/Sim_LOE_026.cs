@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_LOE_026 : SimTemplate //* Anyfin Can Happen
-	{
-		//Summon 7 Murlocs that died this game.
+    class Sim_LOE_026 : SimTemplate //* Anyfin Can Happen
+    {
+        //Summon 7 Murlocs that died this game.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

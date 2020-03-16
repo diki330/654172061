@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_082 : SimTemplate //* wickedknife
-	{
+    class Sim_CS2_082 : SimTemplate //* wickedknife
+    {
         //-
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_082);

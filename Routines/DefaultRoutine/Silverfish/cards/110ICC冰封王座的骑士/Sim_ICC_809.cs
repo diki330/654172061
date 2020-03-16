@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_809: SimTemplate //* Plague Scientist
+    class Sim_ICC_809 : SimTemplate //* Plague Scientist
     {
         // Combo: Give a friendly minion Poisonous.
 

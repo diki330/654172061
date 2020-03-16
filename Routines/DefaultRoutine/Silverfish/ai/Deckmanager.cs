@@ -12,7 +12,7 @@
         //public int enemyAnzCards = 0;
         //Helpfunctions help;
         //CardDB cdb = CardDB.Instance;
-        
+
         public Deck()
         {
 

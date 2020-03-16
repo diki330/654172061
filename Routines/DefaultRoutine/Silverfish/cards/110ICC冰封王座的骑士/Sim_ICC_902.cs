@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_902: SimTemplate //* Mindbreaker
+    class Sim_ICC_902 : SimTemplate //* Mindbreaker
     {
         // Hero Powers are disabled.
 

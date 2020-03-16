@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_002t : SimTemplate //spectralspider
-	{
+    class Sim_FP1_002t : SimTemplate //spectralspider
+    {
 
-//
-		
+        //
 
-	}
+
+    }
 }

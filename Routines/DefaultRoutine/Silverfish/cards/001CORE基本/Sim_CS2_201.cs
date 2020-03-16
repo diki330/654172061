@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_201 : SimTemplate //corehound
-	{
+    class Sim_CS2_201 : SimTemplate //corehound
+    {
 
-//
+        //
 
-	}
+    }
 }

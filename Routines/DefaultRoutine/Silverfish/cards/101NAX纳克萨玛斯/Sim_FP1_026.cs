@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_026 : SimTemplate //anubarambusher
-	{
+    class Sim_FP1_026 : SimTemplate //anubarambusher
+    {
 
-//    todesröcheln:/ lasst einen zufälligen befreundeten diener auf eure hand zurückkehren.
+        //    todesröcheln:/ lasst einen zufälligen befreundeten diener auf eure hand zurückkehren.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
@@ -46,5 +46,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

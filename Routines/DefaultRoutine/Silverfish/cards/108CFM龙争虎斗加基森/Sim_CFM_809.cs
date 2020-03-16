@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_809 : SimTemplate //* Tanaris Hogchopper
-	{
-		// Battlecry: If your opponent's hand is empty, gain Charge.
+    class Sim_CFM_809 : SimTemplate //* Tanaris Hogchopper
+    {
+        // Battlecry: If your opponent's hand is empty, gain Charge.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

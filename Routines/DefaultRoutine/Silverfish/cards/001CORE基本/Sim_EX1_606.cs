@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_606 : SimTemplate //shieldblock
-	{
+    class Sim_EX1_606 : SimTemplate //shieldblock
+    {
 
-//    erhaltet 5 rüstung. zieht eine karte.
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        //    erhaltet 5 rüstung. zieht eine karte.
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             if (ownplay)
             {
                 p.minionGetArmor(p.ownHero, 5);
@@ -19,7 +19,7 @@ namespace HREngine.Bots
                 p.minionGetArmor(p.enemyHero, 5);
             }
             p.drawACard(CardDB.cardIDEnum.None, ownplay);
-		}
+        }
 
-	}
+    }
 }

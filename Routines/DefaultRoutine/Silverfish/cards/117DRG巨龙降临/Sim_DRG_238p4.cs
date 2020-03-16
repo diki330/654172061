@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_238p4 : SimTemplate //* 迦拉克隆的愤怒
+    class Sim_DRG_238p4 : SimTemplate //* 迦拉克隆的愤怒
     {
         //英雄技能 召唤一个2/1并具有突袭的元素.
 
@@ -16,5 +16,5 @@ namespace HREngine.Bots
             p.callKid(kid, place, ownplay, false);
             p.callKid(kid, place, ownplay);
         }
-	}
+    }
 }

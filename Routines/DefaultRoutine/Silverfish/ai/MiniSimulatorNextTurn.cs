@@ -17,7 +17,7 @@
         private bool dontRecalc = true;
         private bool useLethalCheck = true;
         private bool useComparison = true;
-        
+
         List<Playfield> posmoves = new List<Playfield>(7000);
 
         public Action bestmove = null;
@@ -30,7 +30,7 @@
         private bool simulateSecondTurn = false;
 
         Movegenerator movegen = Movegenerator.Instance;
-        
+
 
         public MiniSimulatorNextTurn()
         {
@@ -59,7 +59,7 @@
             bool playaround = Settings.Instance.playaround;
             int playaroundprob = Settings.Instance.playaroundprob;
             int playaroundprob2 = Settings.Instance.playaroundprob2;
-            
+
             botBase = Ai.Instance.botBase;
             this.posmoves.Clear();
             this.posmoves.Add(new Playfield(playf));
@@ -109,7 +109,7 @@
                     if (this.calculated > totalboards) break;
                 }
                 cuttingposibilities(maxwide);
-                
+
                 deep++;
 
                 if (this.calculated > totalboards) break;

@@ -21,7 +21,7 @@ namespace HREngine.Bots
             target.Angr = own.Angr;
 
             own.Hp = tmpHp;
-            own.maxHp= tmpMHp;
+            own.maxHp = tmpMHp;
             own.Angr = tmpAngr;
         }
     }

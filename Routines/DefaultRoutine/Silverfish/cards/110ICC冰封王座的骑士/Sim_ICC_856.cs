@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_856: SimTemplate //* Spellweaver
+    class Sim_ICC_856 : SimTemplate //* Spellweaver
     {
         // Spell Damage +2
 

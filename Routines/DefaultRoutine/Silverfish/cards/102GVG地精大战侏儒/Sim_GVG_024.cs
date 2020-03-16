@@ -43,7 +43,7 @@ namespace HREngine.Bots
 
                 foreach (Minion m in temp)
                 {
-                    if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MECHANICAL) return; 
+                    if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MECHANICAL) return;
                 }
 
                 if (triggerEffectMinion.own)
@@ -58,8 +58,8 @@ namespace HREngine.Bots
                 }
             }
         }
-		
-		public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
+
+        public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
             int diedMinions = (m.own) ? p.tempTrigger.ownMechanicDied : p.tempTrigger.enemyMechanicDied;
             if (diedMinions == 0) return;
@@ -67,26 +67,26 @@ namespace HREngine.Bots
             m.pID = p.pID;
             m.extraParam2 = diedMinions;
             if (residual >= 1)
-			{
-				List<Minion> temp = (m.own) ? p.ownMinions : p.enemyMinions;
-				bool hasmechanics = false;
+            {
+                List<Minion> temp = (m.own) ? p.ownMinions : p.enemyMinions;
+                bool hasmechanics = false;
                 foreach (Minion mTmp in temp)
                 {
-                    if (mTmp.Hp >=1 && (TAG_RACE)mTmp.handcard.card.race == TAG_RACE.MECHANICAL) hasmechanics = true;
+                    if (mTmp.Hp >= 1 && (TAG_RACE)mTmp.handcard.card.race == TAG_RACE.MECHANICAL) hasmechanics = true;
                 }
-				
+
                 if (!hasmechanics)
                 {
-					if(m.own)
-					{
-						p.ownWeapon.Angr -= 2;
-						p.minionGetBuffed(p.ownHero, -2, 0);
-					}
-					else
-					{
+                    if (m.own)
+                    {
+                        p.ownWeapon.Angr -= 2;
+                        p.minionGetBuffed(p.ownHero, -2, 0);
+                    }
+                    else
+                    {
                         p.enemyWeapon.Angr -= 2;
                         p.minionGetBuffed(p.enemyHero, -2, 0);
-					}
+                    }
                 }
             }
         }

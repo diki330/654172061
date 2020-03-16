@@ -11,7 +11,7 @@ namespace HREngine.Bots
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-			int heal = 1000;
+            int heal = 1000;
             foreach (Minion m in p.ownMinions)
             {
                 p.minionGetDamageOrHeal(m, -heal);

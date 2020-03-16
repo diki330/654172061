@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_838 : SimTemplate //* Tar Lord
-	{
-		//Taunt. Has +4 Attack during your opponent’s turn.
+    class Sim_UNG_838 : SimTemplate //* Tar Lord
+    {
+        //Taunt. Has +4 Attack during your opponent’s turn.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {

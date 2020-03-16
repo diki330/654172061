@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_705: SimTemplate //* Bonemare
+    class Sim_ICC_705 : SimTemplate //* Bonemare
     {
         // Battlecry: Give a friendly minion +4/+4 and Taunt.
 

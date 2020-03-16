@@ -7,7 +7,7 @@ namespace HREngine.Bots
     class Sim_ICC_047 : SimTemplate //* Fatespinner in hand
     {
         // Choose a Deathrattle (Secretly) - Deal 3 damage to all minions; or Give them +2/+2.
-        
+
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             int pen = 0;

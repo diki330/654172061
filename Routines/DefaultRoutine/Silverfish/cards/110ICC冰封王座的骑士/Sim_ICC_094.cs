@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_094: SimTemplate //* Fallen Sun Cleric
+    class Sim_ICC_094 : SimTemplate //* Fallen Sun Cleric
     {
         // Battlecry: Give a friendly minion +1/+1.
 

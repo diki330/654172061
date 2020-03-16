@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_021: SimTemplate //* Exploding Bloatbat
+    class Sim_ICC_021 : SimTemplate //* Exploding Bloatbat
     {
         // Deathrattle: Deal 2 damage to all enemy minions.
 

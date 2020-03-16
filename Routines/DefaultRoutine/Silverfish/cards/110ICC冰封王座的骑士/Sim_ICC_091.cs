@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_091: SimTemplate //* Dead Man's Hand
+    class Sim_ICC_091 : SimTemplate //* Dead Man's Hand
     {
         // Shuffle a copy of your hand into your deck.
 

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_696 : SimTemplate //* Devolve
-	{
-		// Transform all enemy minions into random ones that cost (1) less.
+    class Sim_CFM_696 : SimTemplate //* Devolve
+    {
+        // Transform all enemy minions into random ones that cost (1) less.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

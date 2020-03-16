@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_179 : SimTemplate //* Fiery Bat
-	{
-		//Deathrattle: Deal 1 damage to a random enemy.
-		
+    class Sim_OG_179 : SimTemplate //* Fiery Bat
+    {
+        //Deathrattle: Deal 1 damage to a random enemy.
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             Minion target = null;

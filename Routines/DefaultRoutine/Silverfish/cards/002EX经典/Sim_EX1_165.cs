@@ -12,8 +12,8 @@ namespace HREngine.Bots
         CardDB.Card bear = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_165t2);
         CardDB.Card bearcat = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.OG_044a);
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             if (p.ownFandralStaghelm > 0)
             {
                 p.minionTransform(own, bearcat);
@@ -29,6 +29,6 @@ namespace HREngine.Bots
                     p.minionTransform(own, bear);
                 }
             }
-		}
-	}
+        }
+    }
 }

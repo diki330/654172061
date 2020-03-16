@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_GAME_002 : SimTemplate //avatarofthecoin
-	{
+    class Sim_GAME_002 : SimTemplate //avatarofthecoin
+    {
 
-//    i&gt;ihr habt den münzwurf verloren, aber einen freund gewonnen./i&gt;
+        //    i&gt;ihr habt den münzwurf verloren, aber einen freund gewonnen./i&gt;
 
 
-	}
+    }
 }

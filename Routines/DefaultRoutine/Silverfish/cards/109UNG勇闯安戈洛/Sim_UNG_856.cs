@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_856 : SimTemplate //* Hallucination
-	{
-		//Discover a card from your opponent's class.
+    class Sim_UNG_856 : SimTemplate //* Hallucination
+    {
+        //Discover a card from your opponent's class.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             p.drawACard(CardDB.cardIDEnum.None, ownplay, true);
             p.drawACard(CardDB.cardName.thecoin, ownplay, true);
-			p.owncarddraw--;
+            p.owncarddraw--;
         }
     }
 }

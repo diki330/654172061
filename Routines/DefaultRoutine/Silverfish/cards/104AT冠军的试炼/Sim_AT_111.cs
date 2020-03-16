@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_111 : SimTemplate //* Refreshment Vendor
-	{
-		//Battlecry: Restore 4 Health to each hero.
+    class Sim_AT_111 : SimTemplate //* Refreshment Vendor
+    {
+        //Battlecry: Restore 4 Health to each hero.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_325 : SimTemplate //* Small-time Buccaneer
-	{
-		// Has +2 Attack while you have a weapon equipped.
+    class Sim_CFM_325 : SimTemplate //* Small-time Buccaneer
+    {
+        // Has +2 Attack while you have a weapon equipped.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

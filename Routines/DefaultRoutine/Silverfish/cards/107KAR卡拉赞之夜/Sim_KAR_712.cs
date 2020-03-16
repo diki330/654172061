@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_KAR_712 : SimTemplate //* Violet Illusionist
-	{
-		//During your turn, your hero is Immune.
+    class Sim_KAR_712 : SimTemplate //* Violet Illusionist
+    {
+        //During your turn, your hero is Immune.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS1_069 : SimTemplate //fencreeper
-	{
+    class Sim_CS1_069 : SimTemplate //fencreeper
+    {
 
-//    spott/
-		
+        //    spott/
 
-	}
+
+    }
 }

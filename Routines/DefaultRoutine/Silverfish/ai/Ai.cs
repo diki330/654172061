@@ -24,7 +24,7 @@
         public int lethalMissing = 30; //RR
 
         public MiniSimulator mainTurnSimulator;
- 		public List<EnemyTurnSimulator> enemyTurnSim = new List<EnemyTurnSimulator>();
+        public List<EnemyTurnSimulator> enemyTurnSim = new List<EnemyTurnSimulator>();
         public List<MiniSimulatorNextTurn> nextTurnSimulator = new List<MiniSimulatorNextTurn>();
         public List<EnemyTurnSimulator> enemySecondTurnSim = new List<EnemyTurnSimulator>();
 
@@ -171,7 +171,7 @@
                 help.logg("missing dmg to lethal " + this.lethalMissing);
             }
         }
-        
+
         public void doNextCalcedMove()
         {
             help.logg("noRecalcNeeded!!!-----------------------------------");
@@ -271,7 +271,7 @@
             //help.logging(true);
 
         }
-        
+
 
 
         public List<double> autoTester(bool printstuff, string data = "", int mode = 0) //-mode: 0-all, 1-lethalcheck, 2-normal

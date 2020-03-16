@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_DRG_224: SimTemplate //* Grim Necromancer
+    class Sim_DRG_224 : SimTemplate //* Grim Necromancer
     {
         // Battlecry: Summon two 1/1 Skeletons.
 

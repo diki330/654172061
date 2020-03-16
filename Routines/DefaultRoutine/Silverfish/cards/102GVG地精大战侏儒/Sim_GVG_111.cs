@@ -12,12 +12,12 @@ namespace HREngine.Bots
 
         public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
         {
-            if(turnStartOfOwner != triggerEffectMinion.own) return;
+            if (turnStartOfOwner != triggerEffectMinion.own) return;
             List<Minion> temp = (turnStartOfOwner) ? p.ownMinions : p.enemyMinions;
-            int anz =0;
+            int anz = 0;
             foreach (Minion m in temp)
             {
-                if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MECHANICAL && m.Hp >=1 )
+                if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MECHANICAL && m.Hp >= 1)
                 {
                     anz++;
                 }

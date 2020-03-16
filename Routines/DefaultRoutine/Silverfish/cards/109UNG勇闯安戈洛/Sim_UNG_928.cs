@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_928 : SimTemplate //* Tar Creeper
-	{
-		//Taunt. Has +2 Attack during your opponent's turn.
+    class Sim_UNG_928 : SimTemplate //* Tar Creeper
+    {
+        //Taunt. Has +2 Attack during your opponent's turn.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {

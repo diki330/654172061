@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_419: SimTemplate //* Bearshark
+    class Sim_ICC_419 : SimTemplate //* Bearshark
     {
         // Can't be targeted by spells of Hero Powers.
 

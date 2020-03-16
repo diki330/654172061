@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_661 : SimTemplate //* Pint-Size Potion
-	{
-		// Give all enemy minions -3 Attack this turn only.
+    class Sim_CFM_661 : SimTemplate //* Pint-Size Potion
+    {
+        // Give all enemy minions -3 Attack this turn only.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

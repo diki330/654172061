@@ -376,7 +376,7 @@
             }
 
         }
-        
+
         private ComboBreaker()
         {
             if (attackFaceHP != -1)
@@ -403,7 +403,7 @@
                 help.ErrorLog(behavName + ": 没有特定的“连招”.");
                 return;
             }
-            
+
             help.ErrorLog("[连招功能] 成功加载“连招” " + behavName);
             string[] lines = new string[0] { };
             combos.Clear();

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_094 : SimTemplate //* Felfire Potion
-	{
-		// Deal 5 damage to all characters.
+    class Sim_CFM_094 : SimTemplate //* Felfire Potion
+    {
+        // Deal 5 damage to all characters.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_917 : SimTemplate //* Dinomancy
-	{
-		//Your Hero Power: becomes 'Give a Beast +2/+2.'
+    class Sim_UNG_917 : SimTemplate //* Dinomancy
+    {
+        //Your Hero Power: becomes 'Give a Beast +2/+2.'
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

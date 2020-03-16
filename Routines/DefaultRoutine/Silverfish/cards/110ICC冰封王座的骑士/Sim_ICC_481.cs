@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_481: SimTemplate //* Thrall, Deathseer
+    class Sim_ICC_481 : SimTemplate //* Thrall, Deathseer
     {
         // Battlecry: Transform your minions into random ones that cost (2) more.
-        
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             p.setNewHeroPower(CardDB.cardIDEnum.ICC_481p, ownplay); // Transmute Spirit

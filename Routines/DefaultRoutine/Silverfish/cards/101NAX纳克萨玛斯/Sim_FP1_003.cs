@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_FP1_003 : SimTemplate //* Echoing Ooze
-	{
+    {
         //Battlecry: Summon an exact copy of this minion at the end of the turn.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
@@ -25,5 +25,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

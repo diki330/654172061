@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_125 : SimTemplate //* Icehowl
-	{
-		//Charge. Can't attack heroes.
-        
+    class Sim_AT_125 : SimTemplate //* Icehowl
+    {
+        //Charge. Can't attack heroes.
+
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             own.cantAttackHeroes = true;

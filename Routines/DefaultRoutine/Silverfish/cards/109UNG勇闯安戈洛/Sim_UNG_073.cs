@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_073 : SimTemplate //* Rockpool Hunter
-	{
-		//Battlecry: Give a friendly Murloc +1/+1.
+    class Sim_UNG_073 : SimTemplate //* Rockpool Hunter
+    {
+        //Battlecry: Give a friendly Murloc +1/+1.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

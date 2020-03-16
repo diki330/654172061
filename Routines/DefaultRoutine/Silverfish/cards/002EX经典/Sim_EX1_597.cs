@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_597 : SimTemplate //impmaster
-	{
+    class Sim_EX1_597 : SimTemplate //impmaster
+    {
 
-//    fügt am ende eures zuges diesem diener 1 schaden zu und beschwört einen wichtel (1/1).
+        //    fügt am ende eures zuges diesem diener 1 schaden zu und beschwört einen wichtel (1/1).
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_598);//imp
 
@@ -23,5 +23,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

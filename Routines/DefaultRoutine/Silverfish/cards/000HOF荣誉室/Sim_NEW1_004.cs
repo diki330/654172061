@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NEW1_004 : SimTemplate //vanish
-	{
+    class Sim_NEW1_004 : SimTemplate //vanish
+    {
 
-//    lasst alle diener auf die hand ihrer besitzer zurückkehren.
+        //    lasst alle diener auf die hand ihrer besitzer zurückkehren.
         //todo clear playfield
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
@@ -41,7 +41,7 @@ namespace HREngine.Bots
             p.ownBaronRivendare = 0;
             p.enemyBaronRivendare = 0;
             p.ownBrannBronzebeard = 0;
-            p.enemyBrannBronzebeard = 0;            
+            p.enemyBrannBronzebeard = 0;
             p.ownTurnEndEffectsTriggerTwice = 0;
             p.enemyTurnEndEffectsTriggerTwice = 0;
             p.ownFandralStaghelm = 0;
@@ -55,7 +55,7 @@ namespace HREngine.Bots
 
             p.spellpower = 0;
             p.enemyspellpower = 0;
-            
+
             p.winzigebeschwoererin = 0;
             p.managespenst = 0;
             p.ownMinionsCostMore = 0;
@@ -66,7 +66,7 @@ namespace HREngine.Bots
             p.anzOwnCloakedHuntress = 0;
             p.nerubarweblord = 0;
             p.ownSpelsCostMore = 0;
-            
+
 
             p.ownHeroPowerExtraDamage = 0;
             p.enemyHeroPowerExtraDamage = 0;
@@ -84,5 +84,5 @@ namespace HREngine.Bots
 
         }
 
-	}
+    }
 }

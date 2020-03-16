@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_667 : SimTemplate //* Bomb Squad
-	{
-		// Battlecry: Deal 5 damage to an enemy minion. Deathrattle: Deal 5 damage to your hero.
+    class Sim_CFM_667 : SimTemplate //* Bomb Squad
+    {
+        // Battlecry: Deal 5 damage to an enemy minion. Deathrattle: Deal 5 damage to your hero.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {
@@ -17,5 +17,5 @@ namespace HREngine.Bots
         {
             p.minionGetDamageOrHeal(m.own ? p.ownHero : p.enemyHero, 5);
         }
-	}
+    }
 }

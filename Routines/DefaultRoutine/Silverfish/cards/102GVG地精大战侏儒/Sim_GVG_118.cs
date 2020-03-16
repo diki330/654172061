@@ -8,11 +8,11 @@ namespace HREngine.Bots
     {
 
         // Whenever your opponent casts a spell, summon a Burly Rockjaw Trogg.
-  
+
         //done in triggerACardWillBePlayed
 
 
-        
+
 
 
     }

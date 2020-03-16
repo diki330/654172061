@@ -8,7 +8,7 @@ namespace HREngine.Bots
             {
                 p.minionGetBuffed(target, 1, 0);
                 p.minionGetRush(target);
-            }   
+            }
             else p.evaluatePenality += 10;
         }
     }

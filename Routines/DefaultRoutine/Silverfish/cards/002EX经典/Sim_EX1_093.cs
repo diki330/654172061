@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_093 : SimTemplate //* defenderofargus
-	{
+    class Sim_EX1_093 : SimTemplate //* defenderofargus
+    {
         //Battlecry: Give adjacent minions +1/+1 and Taunt.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        {
             List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
             foreach (Minion m in temp)
             {
@@ -24,6 +24,6 @@ namespace HREngine.Bots
                     }
                 }
             }
-		}
-	}
+        }
+    }
 }

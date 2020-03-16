@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX10_02H : SimTemplate //* Hook
-	{
-		//Windfury. Deathrattle: Put this weapon into your hand.
+    class Sim_NAX10_02H : SimTemplate //* Hook
+    {
+        //Windfury. Deathrattle: Put this weapon into your hand.
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.NAX10_02H);
 
@@ -17,7 +17,7 @@ namespace HREngine.Bots
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
-			p.drawACard(CardDB.cardIDEnum.NAX10_02H, m.own, true);
+            p.drawACard(CardDB.cardIDEnum.NAX10_02H, m.own, true);
         }
     }
 }

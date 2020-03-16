@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_324 : SimTemplate //* White Eyes
-	{
-		// Taunt. Deathrattle: Shuffle 'The Storm Guardian' into your deck.
+    class Sim_CFM_324 : SimTemplate //* White Eyes
+    {
+        // Taunt. Deathrattle: Shuffle 'The Storm Guardian' into your deck.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

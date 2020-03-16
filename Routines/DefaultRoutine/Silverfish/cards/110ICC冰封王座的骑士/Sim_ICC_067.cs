@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_067: SimTemplate //* Vryghoul
+    class Sim_ICC_067 : SimTemplate //* Vryghoul
     {
         // Deathrattle: If it's your opponent's turn, summon a 2/2 Ghoul.
 

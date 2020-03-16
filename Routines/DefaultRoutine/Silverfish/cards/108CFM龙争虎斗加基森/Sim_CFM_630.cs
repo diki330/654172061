@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_630 : SimTemplate //* Counterfeit Coin
-	{
-		// Gain 1 Mana Crystal this turn only.
+    class Sim_CFM_630 : SimTemplate //* Counterfeit Coin
+    {
+        // Gain 1 Mana Crystal this turn only.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

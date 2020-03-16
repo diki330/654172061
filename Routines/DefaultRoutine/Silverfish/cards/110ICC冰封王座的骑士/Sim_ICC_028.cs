@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_028: SimTemplate //* Sunborne Val'kyr
+    class Sim_ICC_028 : SimTemplate //* Sunborne Val'kyr
     {
         // Battlecry: Give adjacent minions +2 Health.
 

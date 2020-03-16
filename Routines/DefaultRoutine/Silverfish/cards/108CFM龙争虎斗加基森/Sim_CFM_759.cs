@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_759 : SimTemplate //* Meanstreet Marshal
-	{
-		// Deathrattle: If this minion has 2 or more Attack, draw a card.
+    class Sim_CFM_759 : SimTemplate //* Meanstreet Marshal
+    {
+        // Deathrattle: If this minion has 2 or more Attack, draw a card.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

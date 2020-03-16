@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_FP1_013 : SimTemplate //* Kel'Thuzad
-	{
+    {
         // At the end of each turn, summon all friendly minions that died this turn.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
@@ -20,5 +20,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

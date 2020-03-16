@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_621t28 : SimTemplate //* Netherbloom
-	{
-		// Summon an 8/8 Demon.
+    class Sim_CFM_621t28 : SimTemplate //* Netherbloom
+    {
+        // Summon an 8/8 Demon.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_621_m3);
 

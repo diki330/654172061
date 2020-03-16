@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_168 : SimTemplate //murlocraider
-	{
+    class Sim_CS2_168 : SimTemplate //murlocraider
+    {
 
-//
+        //
 
-	}
+    }
 }

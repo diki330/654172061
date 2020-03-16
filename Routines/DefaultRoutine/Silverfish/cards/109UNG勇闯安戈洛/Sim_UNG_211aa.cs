@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_211aa : SimTemplate //* Stone Elemental
-	{
-		
+    class Sim_UNG_211aa : SimTemplate //* Stone Elemental
+    {
 
 
 
-	}
+
+    }
 }

@@ -16,7 +16,7 @@ namespace HREngine.Bots
                 else p.minionGetTempBuff(p.enemyHero, 4, 0);
             }
             if (choice == 2 || (p.ownFandralStaghelm > 0 && ownplay))
-            {        
+            {
                 if (ownplay) p.minionGetArmor(p.ownHero, 8);
                 else p.minionGetArmor(p.enemyHero, 8);
             }

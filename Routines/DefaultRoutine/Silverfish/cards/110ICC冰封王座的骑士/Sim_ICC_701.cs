@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_701: SimTemplate //* Skulking Geist
+    class Sim_ICC_701 : SimTemplate //* Skulking Geist
     {
         // Battlecry: Destroy all 1-Cost spells in both hands and decks.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        {
             if (own.own)
             {
                 foreach (Handmanager.Handcard hc in p.owncards.ToArray())
@@ -18,6 +18,6 @@ namespace HREngine.Bots
                 }
                 p.renumHandCards(p.owncards);
             }
-		}
-	}
+        }
+    }
 }

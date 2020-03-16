@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_tk28 : SimTemplate //squirrel
-	{
+    class Sim_EX1_tk28 : SimTemplate //squirrel
+    {
 
-//
-		
+        //
 
-	}
+
+    }
 }

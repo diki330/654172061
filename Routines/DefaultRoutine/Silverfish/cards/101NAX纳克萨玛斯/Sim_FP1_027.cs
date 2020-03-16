@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_027 : SimTemplate //stoneskingargoyle
-	{
+    class Sim_FP1_027 : SimTemplate //stoneskingargoyle
+    {
 
-//    stellt zu beginn eures zuges das volle leben dieses dieners wieder her.
+        //    stellt zu beginn eures zuges das volle leben dieses dieners wieder her.
 
         public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
         {
@@ -18,5 +18,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

@@ -15,7 +15,7 @@ namespace HREngine.Bots
                 int heal = (own.own) ? p.getMinionHeal(5) : p.getEnemyMinionHeal(5);
                 p.minionGetDamageOrHeal(target, -heal);
             }
-            
+
             if (choice == 1 || (p.ownFandralStaghelm > 0 && own.own))
             {
                 p.drawACard(CardDB.cardIDEnum.None, own.own);

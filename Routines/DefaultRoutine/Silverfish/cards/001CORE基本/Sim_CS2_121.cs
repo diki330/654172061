@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_121 : SimTemplate //frostwolfgrunt
-	{
+    class Sim_CS2_121 : SimTemplate //frostwolfgrunt
+    {
 
-//    spott/
+        //    spott/
 
 
-	}
+    }
 }

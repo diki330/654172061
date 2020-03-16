@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DS1_175 : SimTemplate //timberwolf
-	{
+    class Sim_DS1_175 : SimTemplate //timberwolf
+    {
 
-//    eure anderen wildtiere haben +1 angriff.
+        //    eure anderen wildtiere haben +1 angriff.
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)
@@ -49,5 +49,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

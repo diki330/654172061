@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_222 : SimTemplate //stormwindchampion
-	{
+    class Sim_CS2_222 : SimTemplate //stormwindchampion
+    {
 
-//    eure anderen diener haben +1/+1.
+        //    eure anderen diener haben +1/+1.
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)
@@ -49,5 +49,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

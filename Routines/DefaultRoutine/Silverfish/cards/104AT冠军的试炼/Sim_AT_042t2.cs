@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_042t2 : SimTemplate //* Sabertooth Panther
-	{
-		//Stealth
-	}
+    class Sim_AT_042t2 : SimTemplate //* Sabertooth Panther
+    {
+        //Stealth
+    }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_235 : SimTemplate //* northshirecleric
-	{
+    class Sim_CS2_235 : SimTemplate //* northshirecleric
+    {
         //Whenever a minion is healed, draw a card.
 
         public override void onAMinionGotHealedTrigger(Playfield p, Minion triggerEffectMinion, int minionsGotHealed)
@@ -15,5 +15,5 @@ namespace HREngine.Bots
                 p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
             }
         }
-	}
+    }
 }

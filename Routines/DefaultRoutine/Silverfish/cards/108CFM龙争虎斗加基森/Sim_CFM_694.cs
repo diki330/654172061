@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_694 : SimTemplate //* Shadow Sensei
-	{
-		// Battlecry: Give a Stealth minion +2/+2.
+    class Sim_CFM_694 : SimTemplate //* Shadow Sensei
+    {
+        // Battlecry: Give a Stealth minion +2/+2.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

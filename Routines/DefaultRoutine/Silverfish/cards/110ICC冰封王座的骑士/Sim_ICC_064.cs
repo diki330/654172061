@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_064: SimTemplate //* Blood Razor
+    class Sim_ICC_064 : SimTemplate //* Blood Razor
     {
         // Battlecry and Deathrattle: Deal 1 damage to all minions.
 

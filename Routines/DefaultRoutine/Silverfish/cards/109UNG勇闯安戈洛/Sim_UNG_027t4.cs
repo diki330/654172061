@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_027t4 : SimTemplate //* Pyros
-	{
-		
+    class Sim_UNG_027t4 : SimTemplate //* Pyros
+    {
 
 
 
-	}
+
+    }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRMA06_4H : SimTemplate //* Flamewaker Acolyte
-	{
-		//-
-	}
+    class Sim_BRMA06_4H : SimTemplate //* Flamewaker Acolyte
+    {
+        //-
+    }
 }

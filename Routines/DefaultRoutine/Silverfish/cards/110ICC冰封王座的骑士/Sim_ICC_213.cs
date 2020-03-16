@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_213: SimTemplate //* Eternal Servitude
+    class Sim_ICC_213 : SimTemplate //* Eternal Servitude
     {
         // Discover a friendly minion that died this game. Summon it.
 

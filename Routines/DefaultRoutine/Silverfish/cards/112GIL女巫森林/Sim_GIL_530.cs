@@ -14,7 +14,7 @@ namespace HREngine.Bots
             {
                 int damage = 2;
                 p.minionGetDamageOrHeal(target, damage);
-                
+
             }
         }
     }

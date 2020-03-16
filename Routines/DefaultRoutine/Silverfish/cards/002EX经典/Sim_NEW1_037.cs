@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_NEW1_037 : SimTemplate //* Master Swordsmith
-	{
+    {
         //At the end of your turn, give another random friendly minion +1 Attack.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
@@ -29,5 +29,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX15_02H : SimTemplate //* frostblast heroic
-	{
+    class Sim_NAX15_02H : SimTemplate //* frostblast heroic
+    {
         //Hero Power: Deal 3 damage to the enemy hero and Freeze it.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
@@ -14,5 +14,5 @@ namespace HREngine.Bots
             p.minionGetDamageOrHeal(ownplay ? p.enemyHero : p.ownHero, dmg);
             p.minionGetFrozen(target);
         }
-	}
+    }
 }

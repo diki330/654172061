@@ -99,7 +99,7 @@
                 this.calculated++;
             }
         }
-        
+
         public float doallmoves(Playfield playf)
         {
             print = playf.print;
@@ -143,7 +143,7 @@
                         this.posmoves.AddRange(p.nextPlayfields);
                         p.nextPlayfields.Clear();
                     }
-                    
+
                     //get the best Playfield
                     float pVal = botBase.getPlayfieldValue(p);
                     if (pVal > bestoldval)
@@ -156,7 +156,7 @@
                 }
                 if (isLethalCheck && bestoldval >= 10000) this.posmoves.Clear();
                 if (this.posmoves.Count > 0) havedonesomething = true;
-                
+
                 if (this.printNormalstuff)
                 {
                     int donec = 0;
@@ -179,7 +179,7 @@
                 if (this.calculated > this.totalboards) enoughCalculations = true;
                 if (deep >= this.maxdeep) enoughCalculations = true;
             }
-            
+
             if (this.dirtyTwoTurnSim > 0 && !twoturnfields.Contains(bestold)) twoturnfields.Add(bestold);
             this.posmoves.Clear();
             this.posmoves.Add(bestold);
@@ -199,12 +199,12 @@
                 {
                     float val = botBase.getPlayfieldValue(posmoves[i]);
                     if (bestval > val) break;
-                    if (posmoves[i].cardsPlayedThisTurn > bestplay.cardsPlayedThisTurn) continue; 
+                    if (posmoves[i].cardsPlayedThisTurn > bestplay.cardsPlayedThisTurn) continue;
                     else if (posmoves[i].cardsPlayedThisTurn == bestplay.cardsPlayedThisTurn)
                     {
-                        if (bestplay.optionsPlayedThisTurn > posmoves[i].optionsPlayedThisTurn) continue; 
+                        if (bestplay.optionsPlayedThisTurn > posmoves[i].optionsPlayedThisTurn) continue;
                         else if (bestplay.optionsPlayedThisTurn == posmoves[i].optionsPlayedThisTurn && bestplay.enemyHero.Hp <= posmoves[i].enemyHero.Hp) continue;
-                        
+
                     }
                     bestplay = posmoves[i];
                     bestval = val;
@@ -259,7 +259,7 @@
                     {
                         Playfield pf = new Playfield(p);
                         pf.doAction(a);
-                        pf.evaluatePenality += - pf.ruleWeight + RulesEngine.Instance.getRuleWeight(pf);
+                        pf.evaluatePenality += -pf.ruleWeight + RulesEngine.Instance.getRuleWeight(pf);
                         if (pf.ownHero.Hp > 0 && pf.evaluatePenality < 500) p.nextPlayfields.Add(pf);
                     }
                 }
@@ -280,7 +280,7 @@
                             if (needETS) Ai.Instance.enemyTurnSim[threadnumber].simulateEnemysTurn(p, this.simulateSecondTurn, playaround, false, playaroundprob, playaroundprob2);
                         }
                     }
- 
+
                     p.complete = true;
 
                 }

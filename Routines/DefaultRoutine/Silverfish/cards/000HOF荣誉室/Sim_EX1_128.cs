@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_128 : SimTemplate //conceal
-	{
+    class Sim_EX1_128 : SimTemplate //conceal
+    {
 
-//    verleiht euren dienern bis zu eurem nächsten zug verstohlenheit/.
+        //    verleiht euren dienern bis zu eurem nächsten zug verstohlenheit/.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             if (ownplay)
             {
                 foreach (Minion m in p.ownMinions)
@@ -33,8 +33,8 @@ namespace HREngine.Bots
                     }
                 }
             }
-		}
+        }
 
-	}
+    }
 
 }

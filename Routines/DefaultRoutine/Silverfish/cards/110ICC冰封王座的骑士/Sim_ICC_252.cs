@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_252: SimTemplate //* Coldwraith
+    class Sim_ICC_252 : SimTemplate //* Coldwraith
     {
         // Battlecry: If an enemy is Frozen, draw a card.
 

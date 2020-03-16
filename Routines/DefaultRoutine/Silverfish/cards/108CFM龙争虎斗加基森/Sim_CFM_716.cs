@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_716 : SimTemplate //* Sleep with the Fishes
-	{
-		// Deal 3 damage to all damaged minions.
+    class Sim_CFM_716 : SimTemplate //* Sleep with the Fishes
+    {
+        // Deal 3 damage to all damaged minions.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

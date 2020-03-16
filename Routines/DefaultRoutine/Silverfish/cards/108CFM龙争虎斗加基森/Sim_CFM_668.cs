@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_668 : SimTemplate //* Doppelgangster
-	{
-		// Battlecry: Summon 2 copies of this minion.
+    class Sim_CFM_668 : SimTemplate //* Doppelgangster
+    {
+        // Battlecry: Summon 2 copies of this minion.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

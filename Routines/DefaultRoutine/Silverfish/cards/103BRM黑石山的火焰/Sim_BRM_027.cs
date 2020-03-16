@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_027 : SimTemplate //* Majordomo Executus
-	{
-		//Deathrattle: Replace your hero with Ragnaros, the Firelord.
-		        
-		public override void onDeathrattle(Playfield p, Minion m)
+    class Sim_BRM_027 : SimTemplate //* Majordomo Executus
+    {
+        //Deathrattle: Replace your hero with Ragnaros, the Firelord.
+
+        public override void onDeathrattle(Playfield p, Minion m)
         {
             p.setNewHeroPower(CardDB.cardIDEnum.BRM_027p, m.own); // DIE, INSECT!
 
-			if (m.own)
+            if (m.own)
             {
                 p.ownHeroName = HeroEnum.ragnarosthefirelord;
                 p.ownHero.Hp = 8;
@@ -25,5 +25,5 @@ namespace HREngine.Bots
                 p.enemyHero.maxHp = 8;
             }
         }
-	}
+    }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_913: SimTemplate //* Tainted Zealot
+    class Sim_ICC_913 : SimTemplate //* Tainted Zealot
     {
         // Divine Shield. Spell Damage + 1.
 

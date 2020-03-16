@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_717 : SimTemplate //* Jade Claws
-	{
-		// Battlecry: Summon a Jade Golem. Overload: (1)
+    class Sim_CFM_717 : SimTemplate //* Jade Claws
+    {
+        // Battlecry: Summon a Jade Golem. Overload: (1)
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_717);
 

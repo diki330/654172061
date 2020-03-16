@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_024 : SimTemplate //unstableghoul
-	{
+    class Sim_FP1_024 : SimTemplate //unstableghoul
+    {
 
-//    spott/. todesröcheln:/ fügt allen dienern 1 schaden zu.
+        //    spott/. todesröcheln:/ fügt allen dienern 1 schaden zu.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
@@ -15,5 +15,5 @@ namespace HREngine.Bots
         }
 
 
-	}
+    }
 }

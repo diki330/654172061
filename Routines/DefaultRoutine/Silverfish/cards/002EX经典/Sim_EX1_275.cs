@@ -5,11 +5,11 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_275 : SimTemplate //* Cone of Cold
-	{
+    {
         //Freeze a minion and the minions next to it, and deal $1 damage to them.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             int dmg = (ownplay) ? p.getSpellDamageDamage(1) : p.getEnemySpellDamageDamage(1);
             p.minionGetDamageOrHeal(target, dmg);
             p.minionGetFrozen(target);
@@ -22,6 +22,6 @@ namespace HREngine.Bots
                     p.minionGetFrozen(m);
                 }
             }
-		}
-	}
+        }
+    }
 }

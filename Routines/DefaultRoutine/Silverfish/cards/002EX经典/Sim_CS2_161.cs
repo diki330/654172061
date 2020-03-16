@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_161 : SimTemplate //ravenholdtassassin
-	{
+    class Sim_CS2_161 : SimTemplate //ravenholdtassassin
+    {
 
-//    verstohlenheit/
+        //    verstohlenheit/
 
-	}
+    }
 }

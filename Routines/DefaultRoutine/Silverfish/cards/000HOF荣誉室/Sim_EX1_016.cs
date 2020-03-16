@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_016 : SimTemplate //* Sylvanas Windrunner
-	{
+    {
         //Deathrattle: Take control of a random enemy minion.
 
         public override void onDeathrattle(Playfield p, Minion m)
@@ -22,5 +22,5 @@ namespace HREngine.Bots
             }
             if (target != null) p.minionGetControlled(target, m.own, false);
         }
-	}
+    }
 }

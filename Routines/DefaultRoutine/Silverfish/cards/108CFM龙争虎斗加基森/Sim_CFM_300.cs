@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_300 : SimTemplate //* Public Defender
-	{
-		// Taunt
-	}
+    class Sim_CFM_300 : SimTemplate //* Public Defender
+    {
+        // Taunt
+    }
 }

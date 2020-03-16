@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_469: SimTemplate //* Unwilling Sacrifice
+    class Sim_ICC_469 : SimTemplate //* Unwilling Sacrifice
     {
         // Choose a friendly minion. Destroy it and a random enemy minion
 

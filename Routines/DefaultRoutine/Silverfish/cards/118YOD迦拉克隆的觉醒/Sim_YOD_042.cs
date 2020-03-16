@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_042  : SimTemplate// YOD_042  thefistofraden
-//[x]after you cast a spell,
+    class Sim_YOD_042 : SimTemplate// YOD_042  thefistofraden
+                                   //[x]after you cast a spell,
 
-	{
-	}
+    {
+    }
 }

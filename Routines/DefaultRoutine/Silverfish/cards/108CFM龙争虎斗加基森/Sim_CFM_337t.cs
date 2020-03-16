@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_337t : SimTemplate //* Piranha
-	{
-		// -
-	}
+    class Sim_CFM_337t : SimTemplate //* Piranha
+    {
+        // -
+    }
 }

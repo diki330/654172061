@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_572 : SimTemplate //ysera
-	{
+    class Sim_EX1_572 : SimTemplate //ysera
+    {
 
-//    zieht am ende eures zuges eine traumkarte.
+        //    zieht am ende eures zuges eine traumkarte.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {
@@ -17,5 +17,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

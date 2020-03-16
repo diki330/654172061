@@ -111,10 +111,10 @@
                         if (p.ownMinions.Count < 7) retval -= 10;
                         else retval -= 3;
                         break;
-                    case CardDB.cardName.soultap: 
+                    case CardDB.cardName.soultap:
                         if (p.owncards.Count < 10 && p.ownDeckSize > 0) retval -= 10;
                         break;
-                    case CardDB.cardName.lifetap: 
+                    case CardDB.cardName.lifetap:
                         if (p.owncards.Count < 10 && p.ownDeckSize > 0)
                         {
                             retval -= 10;
@@ -168,7 +168,7 @@
             if (p.ownMinions.Count == 0) retval -= 20;
             if (p.enemyMinions.Count >= 4) retval -= 20;
             if (p.enemyHero.Hp <= 0) retval = 10000;
-            
+
             retval += p.anzOwnExtraAngrHp - p.anzEnemyExtraAngrHp / 2;
             //soulfire etc
             int deletecardsAtLast = 0;

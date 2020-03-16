@@ -6,10 +6,10 @@ namespace HREngine.Bots
 {
     class Sim_EX1_084 : SimTemplate //* Warsong Commander
     {
-		//Your Charge minions have +1 Attack.
+        //Your Charge minions have +1 Attack.
 
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 foreach (Minion m in p.ownMinions)
@@ -24,8 +24,8 @@ namespace HREngine.Bots
                     if (m.charge > 0) p.minionGetBuffed(m, 1, 0);
                 }
             }
-            
-		}
+
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
@@ -44,5 +44,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

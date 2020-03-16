@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_814 : SimTemplate //* Giant Wasp
-	{
-		//Stealth Poisonous
+    class Sim_UNG_814 : SimTemplate //* Giant Wasp
+    {
+        //Stealth Poisonous
 
 
 
-	}
+    }
 }

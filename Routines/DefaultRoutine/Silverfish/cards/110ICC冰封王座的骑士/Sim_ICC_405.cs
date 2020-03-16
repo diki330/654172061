@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_405: SimTemplate //* Rotface
+    class Sim_ICC_405 : SimTemplate //* Rotface
     {
         // Whenever this minion survives damage, summon a random Legendary minion.
 

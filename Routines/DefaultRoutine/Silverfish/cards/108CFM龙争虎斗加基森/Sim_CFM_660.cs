@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_660 : SimTemplate //* Manic Soulcaster
-	{
-		// Battlecry: Choose a friendly minion. Shuffle a copy into your deck.
+    class Sim_CFM_660 : SimTemplate //* Manic Soulcaster
+    {
+        // Battlecry: Choose a friendly minion. Shuffle a copy into your deck.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_611 : SimTemplate //* Bloodfury Potion
-	{
-		// Give a minion +3 Attack. If it's a Demon, also give it +3 Health.
+    class Sim_CFM_611 : SimTemplate //* Bloodfury Potion
+    {
+        // Give a minion +3 Attack. If it's a Demon, also give it +3 Health.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

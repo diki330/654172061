@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_KAR_097t : SimTemplate //* Atiesh
-	{
+    class Sim_KAR_097t : SimTemplate //* Atiesh
+    {
         //After you cast a spell, summon a random minion of that Cost. Lose 1 Durability.
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.KAR_097t);
@@ -14,5 +14,5 @@ namespace HREngine.Bots
         {
             p.equipWeapon(weapon, ownplay);
         }
-	}
+    }
 }

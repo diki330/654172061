@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_412 : SimTemplate //ragingworgen
-	{
+    class Sim_EX1_412 : SimTemplate //ragingworgen
+    {
 
-//    wutanfall:/ windzorn/ und +1 angriff
+        //    wutanfall:/ windzorn/ und +1 angriff
         public override void onEnrageStart(Playfield p, Minion m)
         {
             m.Angr++;
@@ -22,5 +22,5 @@ namespace HREngine.Bots
         }
 
 
-	}
+    }
 }

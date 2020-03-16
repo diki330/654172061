@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DS1_070 : SimTemplate //* houndmaster
-	{
+    class Sim_DS1_070 : SimTemplate //* houndmaster
+    {
         //Battlecry: Give a friendly Beast +2/+2 and Taunt.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        {
             if (target != null)
             {
                 p.minionGetBuffed(target, 2, 2);
@@ -20,6 +20,6 @@ namespace HREngine.Bots
                     else p.anzEnemyTaunt++;
                 }
             }
-		}
-	}
+        }
+    }
 }

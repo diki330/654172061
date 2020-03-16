@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_055: SimTemplate //* Drain Soul
+    class Sim_ICC_055 : SimTemplate //* Drain Soul
     {
         // Lifesteal. Deal 2 damage to a minion.
 
@@ -14,7 +14,7 @@ namespace HREngine.Bots
 
             int oldHp = target.Hp;
             p.minionGetDamageOrHeal(target, dmg);
-            if (oldHp > target.Hp) p.applySpellLifesteal(oldHp-target.Hp, ownplay);
+            if (oldHp > target.Hp) p.applySpellLifesteal(oldHp - target.Hp, ownplay);
         }
     }
 }

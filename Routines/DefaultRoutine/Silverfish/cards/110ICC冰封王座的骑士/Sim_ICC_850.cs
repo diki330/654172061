@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_850: SimTemplate //* Shadowblade
+    class Sim_ICC_850 : SimTemplate //* Shadowblade
     {
         // Battlecry: Your hero is Immune this turn.
 

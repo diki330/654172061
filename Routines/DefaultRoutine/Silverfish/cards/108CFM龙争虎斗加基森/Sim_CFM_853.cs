@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_853 : SimTemplate //* Grimestreet Smuggler
-	{
+    class Sim_CFM_853 : SimTemplate //* Grimestreet Smuggler
+    {
         // Battlecry: Give a random minion in your hand +1/+1
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
@@ -21,5 +21,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

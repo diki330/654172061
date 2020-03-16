@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_071: SimTemplate //* Light's Sorrow
+    class Sim_ICC_071 : SimTemplate //* Light's Sorrow
     {
         // After a friendly minion loses Divine Shield, gain +1 Attack.
         // Handled in triggerAMinionLosesDivineShield()

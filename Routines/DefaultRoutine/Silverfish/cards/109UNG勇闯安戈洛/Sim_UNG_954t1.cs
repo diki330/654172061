@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_954t1 : SimTemplate //* Galvadon
-	{
-		//Battlecry: Adapt 5 times.
+    class Sim_UNG_954t1 : SimTemplate //* Galvadon
+    {
+        //Battlecry: Adapt 5 times.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

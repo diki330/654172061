@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_028t : SimTemplate //* Time Warp
-	{
-		//Take an extra turn.
+    class Sim_UNG_028t : SimTemplate //* Time Warp
+    {
+        //Take an extra turn.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

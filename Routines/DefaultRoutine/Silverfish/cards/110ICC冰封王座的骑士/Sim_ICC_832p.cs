@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_832p: SimTemplate //* Plague Lord
+    class Sim_ICC_832p : SimTemplate //* Plague Lord
     {
         // Hero Power: Choose One - +3 Attack this turn; or Gain 3 Armor.
 

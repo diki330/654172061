@@ -4,15 +4,15 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_096 : SimTemplate //* loothoarder
-	{
+    class Sim_EX1_096 : SimTemplate //* loothoarder
+    {
 
-//    todesröcheln:/ zieht eine karte.
+        //    todesröcheln:/ zieht eine karte.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
             p.drawACard(CardDB.cardIDEnum.None, m.own);
         }
 
-	}
+    }
 }

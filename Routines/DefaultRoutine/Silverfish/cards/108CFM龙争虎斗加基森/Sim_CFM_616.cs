@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_616 : SimTemplate //* Pilfered Power
-	{
-		// Gain an empty Mana Crystal for each friendly minion.
+    class Sim_CFM_616 : SimTemplate //* Pilfered Power
+    {
+        // Gain an empty Mana Crystal for each friendly minion.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

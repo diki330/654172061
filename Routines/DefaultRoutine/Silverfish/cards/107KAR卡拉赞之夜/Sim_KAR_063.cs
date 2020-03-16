@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_KAR_063 : SimTemplate //* Spirit Claws
-	{
-		//Has +2 Attack while you have Spell Damage.
+    class Sim_KAR_063 : SimTemplate //* Spirit Claws
+    {
+        //Has +2 Attack while you have Spell Damage.
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.KAR_063);
 
@@ -32,5 +32,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

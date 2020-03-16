@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX9_03 : SimTemplate //* Thane Korth'azz
-	{
+    class Sim_NAX9_03 : SimTemplate //* Thane Korth'azz
+    {
         // Your hero is Immune.
 
         public override void onAuraStarts(Playfield p, Minion own)

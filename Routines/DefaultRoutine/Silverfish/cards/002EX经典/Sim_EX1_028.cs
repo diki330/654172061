@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_028 : SimTemplate //stranglethorntiger
-	{
+    class Sim_EX1_028 : SimTemplate //stranglethorntiger
+    {
 
-//    verstohlenheit/
-		
+        //    verstohlenheit/
 
-	}
+
+    }
 }

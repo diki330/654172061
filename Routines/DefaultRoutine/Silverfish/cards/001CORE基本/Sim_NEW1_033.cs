@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NEW1_033 : SimTemplate //leokk
-	{
+    class Sim_NEW1_033 : SimTemplate //leokk
+    {
 
-//    andere befreundete diener haben +1 angriff.
+        //    andere befreundete diener haben +1 angriff.
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)
@@ -15,7 +15,7 @@ namespace HREngine.Bots
                 p.anzOwnRaidleader++;
                 foreach (Minion m in p.ownMinions)
                 {
-                    if(own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 1, 0);
+                    if (own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 1, 0);
                 }
             }
             else
@@ -49,5 +49,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_617 : SimTemplate //* Celestial Dreamer
-	{
-		// Battlecry: If a friendly minion has 5 or more attack, gain +2/+2.
+    class Sim_CFM_617 : SimTemplate //* Celestial Dreamer
+    {
+        // Battlecry: If a friendly minion has 5 or more attack, gain +2/+2.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

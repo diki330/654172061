@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_013 : SimTemplate //wildgrowth
-	{
+    class Sim_CS2_013 : SimTemplate //wildgrowth
+    {
 
-//    erhaltet einen leeren manakristall.
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        //    erhaltet einen leeren manakristall.
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             if (ownplay)
             {
                 if (p.ownMaxMana < 10)
@@ -33,7 +33,7 @@ namespace HREngine.Bots
                     p.drawACard(CardDB.cardName.excessmana, false, true);
                 }
             }
-		}
+        }
 
-	}
+    }
 }

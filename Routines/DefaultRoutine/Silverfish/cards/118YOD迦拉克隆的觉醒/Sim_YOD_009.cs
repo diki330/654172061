@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_009  : SimTemplate// YOD_009  theamazingreno
-//battlecry: make all minions disappear. i&gt;*poof!*/i&gt;
+    class Sim_YOD_009 : SimTemplate// YOD_009  theamazingreno
+                                   //battlecry: make all minions disappear. i&gt;*poof!*/i&gt;
 
-	{
-	}
+    {
+    }
 }

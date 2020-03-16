@@ -115,7 +115,7 @@
             this.anzcards = anzown;
             this.enemyAnzCards = anzenemy;
         }
-        
+
         public void printcards()
         {
             help.logg("Own Handcards: ");

@@ -6,7 +6,7 @@ namespace HREngine.Bots
 {
     class Sim_GVG_014 : SimTemplate //* Vol'jin
     {
-       //Battlecry: Swap Health with another minion.
+        //Battlecry: Swap Health with another minion.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

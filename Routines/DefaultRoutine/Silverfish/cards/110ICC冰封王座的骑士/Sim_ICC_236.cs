@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_236: SimTemplate //* Ice Breaker
+    class Sim_ICC_236 : SimTemplate //* Ice Breaker
     {
         // Destroy any Frozen minion damaged by this.
         //done in Playfield

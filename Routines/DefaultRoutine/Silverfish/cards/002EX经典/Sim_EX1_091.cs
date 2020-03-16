@@ -5,10 +5,10 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_091 : SimTemplate //* Cabal Shadow Priest
-	{
+    {
         //Battlecry: Take control of an enemy minion that has 2 or less Attack.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             if (target != null)
             {
@@ -23,6 +23,6 @@ namespace HREngine.Bots
                     }
                 }
             }
-		}
-	}
+        }
+    }
 }

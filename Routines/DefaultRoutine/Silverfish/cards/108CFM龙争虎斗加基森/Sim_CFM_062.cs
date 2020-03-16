@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_062 : SimTemplate //* Grimestreet Protector
-	{
-		// Battlecry: Give adjacent minions Divine Shield.
+    class Sim_CFM_062 : SimTemplate //* Grimestreet Protector
+    {
+        // Battlecry: Give adjacent minions Divine Shield.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

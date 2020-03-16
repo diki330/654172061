@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_606 : SimTemplate //* Mana Geode
-	{
-		// Whenever this minion is healed, summon a 2/2 Crystal.
+    class Sim_CFM_606 : SimTemplate //* Mana Geode
+    {
+        // Whenever this minion is healed, summon a 2/2 Crystal.
 
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_606t); //2/2 Crystal
 

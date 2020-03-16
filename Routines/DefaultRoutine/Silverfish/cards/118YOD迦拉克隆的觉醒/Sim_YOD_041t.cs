@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_YOD_041t  : SimTemplate// YOD_041t  stormblocker
-//taunt
+    class Sim_YOD_041t : SimTemplate// YOD_041t  stormblocker
+                                    //taunt
 
-	{
-	}
+    {
+    }
 }

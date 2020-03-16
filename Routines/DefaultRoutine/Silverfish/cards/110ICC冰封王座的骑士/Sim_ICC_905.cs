@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_905: SimTemplate //* Bloodworm
+    class Sim_ICC_905 : SimTemplate //* Bloodworm
     {
         // Lifesteal
     }

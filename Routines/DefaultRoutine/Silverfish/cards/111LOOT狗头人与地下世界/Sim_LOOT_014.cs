@@ -1,7 +1,7 @@
 namespace HREngine.Bots
 {
-	class Sim_LOOT_014 : SimTemplate //* 狗头人图书管理员 Kobold Librarian
-	{
+    class Sim_LOOT_014 : SimTemplate //* 狗头人图书管理员 Kobold Librarian
+    {
         /// <summary>
         /// Battlecry: Draw a card. Deal 2 damage to your hero.
         /// 战吼：抽一张牌。对你的英雄造成2点伤害。

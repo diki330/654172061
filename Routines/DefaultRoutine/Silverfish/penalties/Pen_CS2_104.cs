@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_104 : PenTemplate //rampage
-	{
+    class Pen_CS2_104 : PenTemplate //rampage
+    {
 
-//    verleiht einem verletzten diener +3/+3.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht einem verletzten diener +3/+3.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (!m.Ready)
@@ -31,7 +31,7 @@ namespace HREngine.Bots
                 return 500;
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

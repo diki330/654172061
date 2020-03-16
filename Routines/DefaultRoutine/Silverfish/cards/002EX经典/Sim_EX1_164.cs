@@ -13,16 +13,16 @@ namespace HREngine.Bots
         {
             if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
             {
-				if (ownplay)
-				{
-					p.mana = Math.Min(10, p.mana+2);
-					p.ownMaxMana = Math.Min(10, p.ownMaxMana+2);
-				}
-				else
-				{
-					p.mana = Math.Min(10, p.mana+2);
-					p.enemyMaxMana = Math.Min(10, p.enemyMaxMana+2);
-				}
+                if (ownplay)
+                {
+                    p.mana = Math.Min(10, p.mana + 2);
+                    p.ownMaxMana = Math.Min(10, p.ownMaxMana + 2);
+                }
+                else
+                {
+                    p.mana = Math.Min(10, p.mana + 2);
+                    p.enemyMaxMana = Math.Min(10, p.enemyMaxMana + 2);
+                }
             }
             if (choice == 2 || (p.ownFandralStaghelm > 0 && ownplay))
             {

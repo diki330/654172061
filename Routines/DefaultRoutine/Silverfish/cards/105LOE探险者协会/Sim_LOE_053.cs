@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_LOE_053 : SimTemplate //* Djinni of Zephyrs
-	{
-		//Whenever you cast a spell on another friendly minion, cast a copy of it on this one.
+    class Sim_LOE_053 : SimTemplate //* Djinni of Zephyrs
+    {
+        //Whenever you cast a spell on another friendly minion, cast a copy of it on this one.
 
         public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
         {

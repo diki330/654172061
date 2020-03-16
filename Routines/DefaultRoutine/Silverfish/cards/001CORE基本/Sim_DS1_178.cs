@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DS1_178 : SimTemplate //tundrarhino
-	{
+    class Sim_DS1_178 : SimTemplate //tundrarhino
+    {
 
-//    eure wildtiere haben ansturm/.
+        //    eure wildtiere haben ansturm/.
         //todo charge?
         public override void onAuraStarts(Playfield p, Minion own)
         {
@@ -50,5 +50,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

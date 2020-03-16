@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_905 : SimTemplate //* Small-Time Recruits
-	{
-		// Draw three 1-Cost minions from your deck.
+    class Sim_CFM_905 : SimTemplate //* Small-Time Recruits
+    {
+        // Draw three 1-Cost minions from your deck.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
@@ -25,7 +25,7 @@ namespace HREngine.Bots
                             count++;
                             if (count > 2) break;
                         }
-						if (count > 2) break;
+                        if (count > 2) break;
                     }
                 }
             }

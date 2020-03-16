@@ -13,7 +13,7 @@
         searchLowestCost,
         searchHighesCost,
     }
-    
+
     public enum GAME_TAGs
     {
         TAG_SCRIPT_DATA_NUM_1 = 2,
@@ -354,7 +354,7 @@
         PIRATE = 23,
         DRAGON = 24
     }
-    
+
     public enum TAG_CARDTYPE
     {
         INVALID = 0,
@@ -413,5 +413,5 @@
         LEGENDARY = 5,
     }
 
-   
+
 }

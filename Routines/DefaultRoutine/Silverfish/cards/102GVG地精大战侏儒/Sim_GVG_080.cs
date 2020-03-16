@@ -21,7 +21,7 @@ namespace HREngine.Bots
                     break;
                 }
             }
-            if(hasbeast) p.minionTransform(own, betterguy);
+            if (hasbeast) p.minionTransform(own, betterguy);
         }
     }
 }

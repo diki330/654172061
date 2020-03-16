@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_312 : SimTemplate //* Jade Chieftain
-	{
-		// Battlecry: Summon a Jade Golem. Give it Taunt.
+    class Sim_CFM_312 : SimTemplate //* Jade Chieftain
+    {
+        // Battlecry: Summon a Jade Golem. Give it Taunt.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

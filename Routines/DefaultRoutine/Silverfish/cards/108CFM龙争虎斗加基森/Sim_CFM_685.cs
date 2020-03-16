@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_685 : SimTemplate //* Don Han'Cho
-	{
+    class Sim_CFM_685 : SimTemplate //* Don Han'Cho
+    {
         // Battlecry: Give a random minion in your hand +5/+5.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
@@ -21,5 +21,5 @@ namespace HREngine.Bots
                 }
             }
         }
-	}
+    }
 }

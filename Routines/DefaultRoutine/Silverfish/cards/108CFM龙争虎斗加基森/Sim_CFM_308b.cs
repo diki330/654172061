@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_308b : SimTemplate //* Forgotten Mana
-	{
-		// Refresh your Mana Crystals.
+    class Sim_CFM_308b : SimTemplate //* Forgotten Mana
+    {
+        // Refresh your Mana Crystals.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

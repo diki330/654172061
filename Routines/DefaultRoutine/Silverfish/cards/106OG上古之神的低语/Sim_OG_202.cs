@@ -21,7 +21,7 @@ namespace HREngine.Bots
                 }
                 else p.enemyMaxMana = Math.Min(10, p.enemyMaxMana + 1);
             }
-            
+
             if (choice == 1 || (p.ownFandralStaghelm > 0 && own.own))
             {
                 p.callKid(kid, own.zonepos, own.own);

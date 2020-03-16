@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_LOE_118 : SimTemplate //* Cursed Blade
-	{
-		//Double all damage dealt to your hero.
+    class Sim_LOE_118 : SimTemplate //* Cursed Blade
+    {
+        //Double all damage dealt to your hero.
         //handled in getDamageOrHeal
 
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOE_118);
@@ -15,5 +15,5 @@ namespace HREngine.Bots
         {
             p.equipWeapon(weapon, ownplay);
         }
-	}
+    }
 }

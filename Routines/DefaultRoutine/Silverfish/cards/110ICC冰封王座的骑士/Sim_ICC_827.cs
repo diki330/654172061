@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_827: SimTemplate //* Valeera the Hollow
+    class Sim_ICC_827 : SimTemplate //* Valeera the Hollow
     {
         // Battlecry: Gain Stealth until your next turn.
-        
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             p.setNewHeroPower(CardDB.cardIDEnum.ICC_827p, ownplay); // Death's Shadow

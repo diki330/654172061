@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_096: SimTemplate //* Furnacefire Colossus
+    class Sim_ICC_096 : SimTemplate //* Furnacefire Colossus
     {
         // Battlecry: Discard all weapons from your hand and gain their stats.
 
@@ -15,7 +15,7 @@ namespace HREngine.Bots
                 int atkBuff = 0;
                 int hpBuff = 0;
 
-                foreach(Handmanager.Handcard hc in p.owncards.ToArray())
+                foreach (Handmanager.Handcard hc in p.owncards.ToArray())
                 {
                     if (hc.card.type == CardDB.cardtype.WEAPON)
                     {

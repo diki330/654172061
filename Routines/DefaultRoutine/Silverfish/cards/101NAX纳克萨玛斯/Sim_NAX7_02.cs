@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX7_02 : SimTemplate //* Understudy
-	{
-		//Taunt
-	}
+    class Sim_NAX7_02 : SimTemplate //* Understudy
+    {
+        //Taunt
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_328 : SimTemplate //* Fight Promoter
-	{
-		// Battlecry: If you control a minion with 6 or more Health, draw two cards.
+    class Sim_CFM_328 : SimTemplate //* Fight Promoter
+    {
+        // Battlecry: If you control a minion with 6 or more Health, draw two cards.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

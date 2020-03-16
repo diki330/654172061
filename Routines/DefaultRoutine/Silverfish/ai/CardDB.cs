@@ -26,12 +26,12 @@ namespace HREngine.Bots
         public enum cardtype
         {
             NONE,
-            MOB=4,
-            SPELL=5,
-            WEAPON=7,
-            HEROPWR=10,
-            ENCHANTMENT=6,
-            HERO=3,
+            MOB = 4,
+            SPELL = 5,
+            WEAPON = 7,
+            HEROPWR = 10,
+            ENCHANTMENT = 6,
+            HERO = 3,
         }
 
         public enum cardtrigers
@@ -234,7 +234,7 @@ namespace HREngine.Bots
             public int needMinOwnMinions = 0;
             public int needMinionsCapIfAvailable = 0;
             public int needControlaSecret = 0;
-            
+
             //additional data
             public bool isToken = false;
             public int isCarddraw = 0;
@@ -264,7 +264,7 @@ namespace HREngine.Bots
             {
                 //if wereTargets=true and 0 targets at end -> then can not play this card
                 List<Minion> retval = new List<Minion>();
-                if (this.type == CardDB.cardtype.MOB && ((own && p.ownMinions.Count >= 7) || (!own && p.enemyMinions.Count >=7))) return retval; // cant play mob, if we have allready 7 mininos
+                if (this.type == CardDB.cardtype.MOB && ((own && p.ownMinions.Count >= 7) || (!own && p.enemyMinions.Count >= 7))) return retval; // cant play mob, if we have allready 7 mininos
                 if (this.Secret && ((own && (p.ownSecretsIDList.Contains(this.cardIDenum) || p.ownSecretsIDList.Count >= 5)) || (!own && p.enemySecretCount >= 5))) return retval;
                 //if (p.mana < this.getManaCost(p, 1)) return retval;
 
@@ -349,7 +349,7 @@ namespace HREngine.Bots
                             if ((own ? p.ownWeapon.Durability : p.enemyWeapon.Durability) == 0) return retval;
                             continue;
                         case ErrorType2.REQ_TARGET_FOR_COMBO:
-                            if (p.cardsPlayedThisTurn >=1) targetAll = true;
+                            if (p.cardsPlayedThisTurn >= 1) targetAll = true;
                             continue;
                         case ErrorType2.REQ_TARGET_MIN_ATTACK:
                             REQ_TARGET_MIN_ATTACK = true;
@@ -378,7 +378,7 @@ namespace HREngine.Bots
                             {
                                 foreach (Handmanager.Handcard hc in p.owncards)
                                 {
-                                    if ((TAG_RACE)hc.card.race == TAG_RACE.DRAGON) {targetAll = true; break; }
+                                    if ((TAG_RACE)hc.card.race == TAG_RACE.DRAGON) { targetAll = true; break; }
                                 }
                             }
                             else targetAll = true; // apriori the enemy have a dragon
@@ -446,8 +446,8 @@ namespace HREngine.Bots
                     }
                 }
 
-			    if(targetAll)
-			    {
+                if (targetAll)
+                {
                     wereTargets = true;
                     if (targetAllFriendly != targetAllEnemy)
                     {
@@ -465,11 +465,11 @@ namespace HREngine.Bots
                         foreach (Minion m in p.ownMinions) if (!m.untouchable) targets.Add(m);
                         foreach (Minion m in p.enemyMinions) if (!m.untouchable) targets.Add(m);
                     }
-				    if(targetOnlyMinion)
-				    {
+                    if (targetOnlyMinion)
+                    {
                         targetEnemyHero = false;
                         targetOwnHero = false;
-				    }
+                    }
                     else
                     {
                         if (!p.enemyHero.immune) targetEnemyHero = true;
@@ -477,12 +477,12 @@ namespace HREngine.Bots
                         if (targetAllEnemy) targetOwnHero = false;
                         if (targetAllFriendly) targetEnemyHero = false;
                     }
-			    }
+                }
 
-                if(extraParam)
+                if (extraParam)
                 {
                     wereTargets = true;
-                    if(REQ_TARGET_WITH_RACE)
+                    if (REQ_TARGET_WITH_RACE)
                     {
                         foreach (Minion m in targets)
                         {
@@ -491,7 +491,7 @@ namespace HREngine.Bots
                         targetOwnHero = (p.ownHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
                         targetEnemyHero = (p.enemyHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
                     }
-                    if(REQ_HERO_TARGET)
+                    if (REQ_HERO_TARGET)
                     {
                         foreach (Minion m in targets)
                         {
@@ -500,7 +500,7 @@ namespace HREngine.Bots
                         targetOwnHero = true;
                         targetEnemyHero = true;
                     }
-                    if(REQ_DAMAGED_TARGET)
+                    if (REQ_DAMAGED_TARGET)
                     {
                         foreach (Minion m in targets)
                         {
@@ -512,7 +512,7 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
-                    if(REQ_TARGET_MAX_ATTACK)
+                    if (REQ_TARGET_MAX_ATTACK)
                     {
                         foreach (Minion m in targets)
                         {
@@ -524,7 +524,7 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
-                    if(REQ_TARGET_MIN_ATTACK)
+                    if (REQ_TARGET_MIN_ATTACK)
                     {
                         foreach (Minion m in targets)
                         {
@@ -536,7 +536,7 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
-                    if(REQ_MUST_TARGET_TAUNTER)
+                    if (REQ_MUST_TARGET_TAUNTER)
                     {
                         foreach (Minion m in targets)
                         {
@@ -548,7 +548,7 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
-                    if(REQ_UNDAMAGED_TARGET)
+                    if (REQ_UNDAMAGED_TARGET)
                     {
                         foreach (Minion m in targets)
                         {
@@ -577,7 +577,7 @@ namespace HREngine.Bots
                         foreach (Minion m in targets)
                         {
                             if (!m.silenced && (m.handcard.card.deathrattle || m.deathrattle2 != null ||
-                            m.ancestralspirit + m.desperatestand + m.souloftheforest + m.stegodon + m.livingspores + m.explorershat + m.returnToHand + m.infest > 0)) continue;               
+                            m.ancestralspirit + m.desperatestand + m.souloftheforest + m.stegodon + m.livingspores + m.explorershat + m.returnToHand + m.infest > 0)) continue;
                             else m.extraParam = true;
                         }
                         targetOwnHero = false;
@@ -592,7 +592,7 @@ namespace HREngine.Bots
                             targetEnemyHero = false;
                         }
                     }
-                    if(REQ_LEGENDARY_TARGET)
+                    if (REQ_LEGENDARY_TARGET)
                     {
                         wereTargets = false;
                         foreach (Minion m in targets)
@@ -602,7 +602,7 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
-                    if(REQ_STEADY_SHOT)
+                    if (REQ_STEADY_SHOT)
                     {
                         if ((p.weHaveSteamwheedleSniper && own) || (p.enemyHaveSteamwheedleSniper && !own))
                         {
@@ -611,7 +611,7 @@ namespace HREngine.Bots
                                 if (m.cantBeTargetedBySpellsOrHeroPowers && (this.type == cardtype.HEROPWR || this.type == cardtype.SPELL))
                                 {
                                     m.extraParam = true;
-                                    if(m.stealth && !m.own) m.extraParam = true;
+                                    if (m.stealth && !m.own) m.extraParam = true;
                                 }
                             }
                             if (own) targetEnemyHero = true;
@@ -621,22 +621,22 @@ namespace HREngine.Bots
                     }
                     if (REQ_FROZEN_TARGET)
                     {
-                        
+
                         foreach (Minion m in targets)
                         {
                             if (!m.frozen) m.extraParam = true;
                         }
-                    }                    
+                    }
                 }
 
                 if (targetEnemyHero && own && p.enemyHero.stealth) targetEnemyHero = false;
                 if (targetOwnHero && !own && p.ownHero.stealth) targetOwnHero = false;
 
-                if (isLethalCheck) 
+                if (isLethalCheck)
                 {
                     if (targetEnemyHero && own) retval.Add(p.enemyHero);
                     else if (targetOwnHero && !own) retval.Add(p.ownHero);
-                    
+
                     switch (this.type)
                     {
                         case cardtype.SPELL:
@@ -731,7 +731,7 @@ namespace HREngine.Bots
 
                 return retval;
             }
-            
+
 
             public List<Minion> getTargetsForHeroPower(Playfield p, bool own)
             {
@@ -740,12 +740,12 @@ namespace HREngine.Bots
                 int abType = 0; //0 none, 1 damage, 2 heal, 3 baff
                 switch (abName)
                 {
-                    case cardName.heal: goto case cardName.lesserheal; 
+                    case cardName.heal: goto case cardName.lesserheal;
                     case cardName.lesserheal:
                         if (p.anzOwnAuchenaiSoulpriest > 0 || p.embracetheshadow > 0) abType = 1;
                         else abType = 2;
                         break;
-                    case cardName.ballistashot: abType = 1; break; 
+                    case cardName.ballistashot: abType = 1; break;
                     case cardName.steadyshot: abType = 1; break;
                     case cardName.fireblast: abType = 1; break;
                     case cardName.fireblastrank2: abType = 1; break;
@@ -768,17 +768,17 @@ namespace HREngine.Bots
                         {
                             switch (minions[i].name)
                             {
-                                case cardName.shadowboxer: 
+                                case cardName.shadowboxer:
                                     if (own && p.enemyHero.Hp == 1 && p.enemyMinions.Count > 0) needCut = false;
                                     break;
                                 case cardName.holychampion: needCut = false; break;
                                 case cardName.lightwarden: needCut = false; break;
                                 case cardName.northshirecleric: needCut = false; break;
-                                
-                                
+
+
                             }
                         }
-                        
+
                         tCount = trgts.Count;
                         if (tCount > 0)
                         {
@@ -844,7 +844,7 @@ namespace HREngine.Bots
                         break;
                     case cardtype.SPELL:
                         if (p.nextSpellThisTurnCost0) return 0;
-                        offset += p.ownSpelsCostMore; 
+                        offset += p.ownSpelsCostMore;
                         if (p.playedPreparation)
                         { //if the number of zauberlehrlings change
                             offset -= 2;
@@ -954,7 +954,7 @@ namespace HREngine.Bots
             public int getManaCost(Playfield p, int currentcost)
             {
                 int retval = currentcost;
-                
+
                 int offset = 0; // if offset < 0 costs become lower, if >0 costs are higher at the end
 
                 // CARDS that increase/decrease the manacosts of others ##############################
@@ -965,83 +965,83 @@ namespace HREngine.Bots
                         if (retval < 0) retval = 0;
                         return retval;
                     case cardtype.MOB:
-                        
+
                         if (p.ownMinionsCostMore != p.ownMinionsCostMoreAtStart)
                         {
                             offset += (p.ownMinionsCostMore - p.ownMinionsCostMoreAtStart);
                         }
 
-                        
+
                         if (this.deathrattle && p.ownDRcardsCostMore != p.ownDRcardsCostMoreAtStart)
                         {
                             offset += (p.ownDRcardsCostMore - p.ownDRcardsCostMoreAtStart);
                         }
 
-                        
+
                         if (p.managespenst != p.startedWithManagespenst)
                         {
                             offset += (p.managespenst - p.startedWithManagespenst);
                         }
 
-                        
+
                         if (this.battlecry && p.nerubarweblord != p.startedWithnerubarweblord)
                         {
                             offset += (p.nerubarweblord - p.startedWithnerubarweblord) * 2;
                         }
-                        
-                        
+
+
                         if (p.anzOwnAviana > 0)
                         {
                             retval = 1;
                         }
 
-                        
+
                         if (p.anzOwnMechwarper != p.anzOwnMechwarperStarted && (TAG_RACE)this.race == TAG_RACE.MECHANICAL)
                         {
                             offset += (p.anzOwnMechwarperStarted - p.anzOwnMechwarper);
                         }
 
-                        
+
                         if (p.startedWithbeschwoerungsportal != p.beschwoerungsportal)
                         {
                             offset += (p.startedWithbeschwoerungsportal - p.beschwoerungsportal) * 2;
                         }
 
-                        
+
                         if (p.winzigebeschwoererin != p.startedWithWinzigebeschwoererin && ((p.turnCounter == 0 && p.startedWithMobsPlayedThisTurn == 0) || (p.turnCounter > 0 && p.mobsplayedThisTurn == 0)))
                         {
                             offset += (p.startedWithWinzigebeschwoererin - p.winzigebeschwoererin);
                         }
 
-                        
+
                         if (p.anzOwnDragonConsort != p.anzOwnDragonConsortStarted && (TAG_RACE)this.race == TAG_RACE.DRAGON)
                         {
                             offset += (p.anzOwnDragonConsortStarted - p.anzOwnDragonConsort) * 2;
                         }
                         break;
                     case cardtype.SPELL:
-                        
+
                         if (p.nextSpellThisTurnCost0) return 0;
-                        
-                        
+
+
                         if (p.ownSpelsCostMoreAtStart != p.ownSpelsCostMore)
                         {
                             offset += p.ownSpelsCostMore - p.ownSpelsCostMoreAtStart;
                         }
 
-                        
+
                         if (p.playedPreparation)
                         {
                             offset -= 2;
                         }
                         break;
                     case cardtype.WEAPON:
-                        
+
                         if (p.blackwaterpirateStarted != p.blackwaterpirate)
                         {
                             offset += (p.blackwaterpirateStarted - p.blackwaterpirate) * 2;
                         }
-                        
+
                         if (this.deathrattle && p.ownDRcardsCostMore != p.ownDRcardsCostMoreAtStart)
                         {
                             offset += (p.ownDRcardsCostMore - p.ownDRcardsCostMoreAtStart);
@@ -1049,7 +1049,7 @@ namespace HREngine.Bots
                         break;
                 }
 
-                
+
                 if (p.startedWithmyCardsCostLess != p.myCardsCostLess)
                 {
                     offset += p.startedWithmyCardsCostLess - p.myCardsCostLess;
@@ -1080,7 +1080,7 @@ namespace HREngine.Bots
                         {
                             foreach (Action a in p.playactions)
                             {
-                                 if (a.actionType == actionEnum.useHeroPower)
+                                if (a.actionType == actionEnum.useHeroPower)
                                 {
                                     switch (a.card.card.name)
                                     {
@@ -1167,7 +1167,7 @@ namespace HREngine.Bots
                             {
                                 if (a.actionType == actionEnum.playcard)
                                 {
-                                    switch(a.card.card.name)
+                                    switch (a.card.card.name)
                                     {
                                         case cardName.tuskarrtotemic: retval -= p.ownBrannBronzebeard + 1; break;
                                         default:
@@ -1195,9 +1195,9 @@ namespace HREngine.Bots
                 {
                     retval = 0;
                 }
-                
+
                 retval = Math.Max(0, retval);
-                
+
                 return retval;
             }
 
@@ -1312,10 +1312,10 @@ namespace HREngine.Bots
 
                         switch (enumID)
                         {
-                            case   45: c.Health             = value;            break; //health
-                            case   47: c.Attack             = value;            break; //attack
-                            case   48: c.cost               = value;            break; //manacost
-                            case  114: c.Elite              = value == 1;       break; //elite
+                            case 45: c.Health = value; break; //health
+                            case 47: c.Attack = value; break; //attack
+                            case 48: c.cost = value; break; //manacost
+                            case 114: c.Elite = value == 1; break; //elite
                             case 185:
                                 {
 
@@ -1382,39 +1382,40 @@ namespace HREngine.Bots
                                         }
 
                                     }
-                                }               break; //durability
-                            case  187: c.Durability         = value;            break; //CARDNAME
-                            case  189: c.windfury           = value == 1;       break; //windfury
-                            case  190: c.tank               = value == 1;       break; //taunt
-                            case  191: c.Stealth            = value == 1;       break; //stealh
-                            case  192: c.spellpowervalue    = value;            break; //spellpower
-                            case  194: c.Shield             = value == 1;       break; //divineshield
-                            case  197: c.Charge             = value == 1;       break; //charge
-                            case  199: c.Class              = value;            break; //Class
-                            case  200: c.race               = value;            break; //race
-                            case  202: c.type               = (cardtype)value;  break; //cardtype
-                            case  203: c.rarity             = value;            break; //rarity
-                            case  208: c.Freeze             = value == 1;       break; //freeze
-                            case  212: c.Enrage             = value == 1;       break; //enrage
-                            case  217: c.deathrattle        = value == 1;       break; //deathrattle
-                            case  218: c.battlecry          = value == 1;       break; //battlecry
-                            case  219: c.Secret             = value == 1;       break; //secret
-                            case  220: c.Combo              = value == 1;       break; //combo
-                            case  293: c.Morph              = value == 1;       break; //morph
-                            case  296: c.overload        	= value;            break; //overload
-                            case  338: c.oneTurnEffect      = value == 1;       break; //OneTurnEffect
-                            case  339: c.Silence            = value == 1;       break; //silence
-                            case  350: c.AdjacentBuff       = value == 1;       break; //adjacentbuff
-                            case  362: c.Aura               = value == 1;       break; //aura
-                            case  363: c.poisonous          = value == 1;       break; //poisonous
-                            case  403: c.Inspire            = value == 1;       break; //Inspire
-                            case  415: c.discover           = value == 1;       break; //discover
-                            case  443: c.choice             = value == 1;       break; //choice
-                            case  448: c.untouchable        = value == 1;       break; //untouchable
-                            case  462: c.Quest              = value == 1;       break; //quest
-                            case  685: c.lifesteal          = value == 1;       break; //lifesteal
-                            case  791: c.Rush               = value == 1;       break; //RUSH
-                            case 1085: c.reborn             = value == 1;       break; //REBORN
+                                }
+                                break; //durability
+                            case 187: c.Durability = value; break; //CARDNAME
+                            case 189: c.windfury = value == 1; break; //windfury
+                            case 190: c.tank = value == 1; break; //taunt
+                            case 191: c.Stealth = value == 1; break; //stealh
+                            case 192: c.spellpowervalue = value; break; //spellpower
+                            case 194: c.Shield = value == 1; break; //divineshield
+                            case 197: c.Charge = value == 1; break; //charge
+                            case 199: c.Class = value; break; //Class
+                            case 200: c.race = value; break; //race
+                            case 202: c.type = (cardtype)value; break; //cardtype
+                            case 203: c.rarity = value; break; //rarity
+                            case 208: c.Freeze = value == 1; break; //freeze
+                            case 212: c.Enrage = value == 1; break; //enrage
+                            case 217: c.deathrattle = value == 1; break; //deathrattle
+                            case 218: c.battlecry = value == 1; break; //battlecry
+                            case 219: c.Secret = value == 1; break; //secret
+                            case 220: c.Combo = value == 1; break; //combo
+                            case 293: c.Morph = value == 1; break; //morph
+                            case 296: c.overload = value; break; //overload
+                            case 338: c.oneTurnEffect = value == 1; break; //OneTurnEffect
+                            case 339: c.Silence = value == 1; break; //silence
+                            case 350: c.AdjacentBuff = value == 1; break; //adjacentbuff
+                            case 362: c.Aura = value == 1; break; //aura
+                            case 363: c.poisonous = value == 1; break; //poisonous
+                            case 403: c.Inspire = value == 1; break; //Inspire
+                            case 415: c.discover = value == 1; break; //discover
+                            case 443: c.choice = value == 1; break; //choice
+                            case 448: c.untouchable = value == 1; break; //untouchable
+                            case 462: c.Quest = value == 1; break; //quest
+                            case 685: c.lifesteal = value == 1; break; //lifesteal
+                            case 791: c.Rush = value == 1; break; //RUSH
+                            case 1085: c.reborn = value == 1; break; //REBORN
                         }
                     }
 
@@ -1435,15 +1436,15 @@ namespace HREngine.Bots
                         {
                             switch (reqID)
                             {
-                                case  8: c.needWithMaxAttackValueOf     = param; continue;
-                                case 10: c.needRaceForPlaying           = param; continue;
-                                case 12: c.needEmptyPlacesForPlaying    = param; continue;
-                                case 19: c.needMinionsCapIfAvailable    = param; continue;
-                                case 23: c.needMinNumberOfEnemy         = param; continue;
-                                case 41: c.needWithMinAttackValueOf     = param; continue;
-                                case 45: c.needMinTotalMinions          = param; continue;
-                                case 56: c.needMinOwnMinions            = param; continue;
-                                case 59: c.needControlaSecret           = param; continue;
+                                case 8: c.needWithMaxAttackValueOf = param; continue;
+                                case 10: c.needRaceForPlaying = param; continue;
+                                case 12: c.needEmptyPlacesForPlaying = param; continue;
+                                case 19: c.needMinionsCapIfAvailable = param; continue;
+                                case 23: c.needMinNumberOfEnemy = param; continue;
+                                case 41: c.needWithMinAttackValueOf = param; continue;
+                                case 45: c.needMinTotalMinions = param; continue;
+                                case 56: c.needMinOwnMinions = param; continue;
+                                case 59: c.needControlaSecret = param; continue;
                             }
                         }
                     }
@@ -1518,18 +1519,18 @@ namespace HREngine.Bots
                 {
                     c.isSpecialMinion = true;
                 }
-                
+
                 c.trigers = new List<cardtrigers>();
                 Type trigerType = c.sim_card.GetType();
                 foreach (string trigerName in Enum.GetNames(typeof(cardtrigers)))
                 {
                     try
                     {
-	                    foreach (var m in trigerType.GetMethods().Where(e=>e.Name.Equals(trigerName, StringComparison.Ordinal)))
-	                    {
-							if (m.DeclaringType == trigerType)
-								c.trigers.Add((cardtrigers)Enum.Parse(typeof(cardtrigers), trigerName));
-						}
+                        foreach (var m in trigerType.GetMethods().Where(e => e.Name.Equals(trigerName, StringComparison.Ordinal)))
+                        {
+                            if (m.DeclaringType == trigerType)
+                                c.trigers.Add((cardtrigers)Enum.Parse(typeof(cardtrigers), trigerName));
+                        }
                     }
                     catch
                     {

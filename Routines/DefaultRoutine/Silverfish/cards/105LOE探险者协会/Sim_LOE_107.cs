@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_LOE_107 : SimTemplate //* Eerie Statue
-	{
-		//Can't attack unless it's the only minion on the battlefield.
-		
-		public override void onMinionWasSummoned(Playfield p, Minion m, Minion summonedMinion)
+    class Sim_LOE_107 : SimTemplate //* Eerie Statue
+    {
+        //Can't attack unless it's the only minion on the battlefield.
+
+        public override void onMinionWasSummoned(Playfield p, Minion m, Minion summonedMinion)
         {
             if (!m.silenced)
             {
@@ -16,7 +16,7 @@ namespace HREngine.Bots
                 m.updateReadyness();
             }
         }
-		
+
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
             if (!m.silenced)
@@ -28,5 +28,5 @@ namespace HREngine.Bots
                 m.updateReadyness();
             }
         }
-	}
+    }
 }

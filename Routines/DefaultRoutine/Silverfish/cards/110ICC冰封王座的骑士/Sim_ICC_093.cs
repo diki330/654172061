@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_093: SimTemplate //* Tuskarr Fisherman
+    class Sim_ICC_093 : SimTemplate //* Tuskarr Fisherman
     {
         // Battlecry: Give a friendly minion Spell Damage +1
 

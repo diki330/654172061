@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_GAME_005 : SimTemplate //thecoin
-	{
+    class Sim_GAME_005 : SimTemplate //thecoin
+    {
 
-//    erhaltet 1 manakristall nur für diesen zug.
+        //    erhaltet 1 manakristall nur für diesen zug.
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             if (ownplay)
@@ -20,5 +20,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

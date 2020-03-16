@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_211c : SimTemplate //* Invocation of Fire
-	{
-		//Deal 6 damage to the enemy hero.
+    class Sim_UNG_211c : SimTemplate //* Invocation of Fire
+    {
+        //Deal 6 damage to the enemy hero.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

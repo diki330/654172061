@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_062 : SimTemplate //* oldmurkeye
-	{
+    class Sim_EX1_062 : SimTemplate //* oldmurkeye
+    {
         // Charge. Has +1 Attack for each other Murloc on the battlefield.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             foreach (Minion m in p.ownMinions)
             {
                 if (m.handcard.card.race == 14)
@@ -25,7 +25,7 @@ namespace HREngine.Bots
                     if (m.entitiyID != own.entitiyID) p.minionGetBuffed(own, 1, 0);
                 }
             }
-		}
+        }
 
         public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
         {
@@ -43,10 +43,10 @@ namespace HREngine.Bots
             m.pID = p.pID;
             m.extraParam2 = diedMinions;
             if (residual >= 1)
-			{
+            {
                 p.minionGetBuffed(m, -1 * residual, 0);
-			}
+            }
         }
 
-	}
+    }
 }

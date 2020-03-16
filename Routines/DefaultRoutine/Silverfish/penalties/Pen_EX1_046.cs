@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_046 : PenTemplate //darkirondwarf
-	{
+    class Pen_EX1_046 : PenTemplate //darkirondwarf
+    {
 
-//    kampfschrei:/ verleiht einem diener +2 angriff in diesem zug.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    kampfschrei:/ verleiht einem diener +2 angriff in diesem zug.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (!m.Ready)
@@ -28,7 +28,7 @@ namespace HREngine.Bots
                 return 500;
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

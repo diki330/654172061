@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_858: SimTemplate //* Bolvar, Fireblood
+    class Sim_ICC_858 : SimTemplate //* Bolvar, Fireblood
     {
         // Divine Shield. After a friendly minion loses Divine Shield, gain +2 Attack.
 

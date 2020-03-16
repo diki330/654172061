@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_559 : SimTemplate //archmageantonidas
-	{
+    class Sim_EX1_559 : SimTemplate //archmageantonidas
+    {
 
-//    erhaltet jedes mal einen „feuerball“-zauber auf eure hand, wenn ihr einen zauber wirkt.
+        //    erhaltet jedes mal einen „feuerball“-zauber auf eure hand, wenn ihr einen zauber wirkt.
 
         public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
         {
@@ -17,5 +17,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

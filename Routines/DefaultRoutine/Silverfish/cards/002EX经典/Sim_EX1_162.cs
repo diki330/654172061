@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_162 : SimTemplate //direwolfalpha
-	{
+    class Sim_EX1_162 : SimTemplate //direwolfalpha
+    {
 
         //    benachbarte diener haben +1 angriff.
         // note buff and debuff is handled by playfield (faster)
@@ -61,5 +61,5 @@ namespace HREngine.Bots
             }
         }*/
 
-	}
+    }
 }

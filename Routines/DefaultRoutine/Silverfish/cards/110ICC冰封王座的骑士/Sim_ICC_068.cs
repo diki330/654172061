@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_068: SimTemplate //* Ice Walker
+    class Sim_ICC_068 : SimTemplate //* Ice Walker
     {
         // Your Hero Power also Freezes the target.
 

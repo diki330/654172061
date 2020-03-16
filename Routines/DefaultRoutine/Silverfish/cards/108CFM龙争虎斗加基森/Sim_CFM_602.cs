@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_602 : SimTemplate //* Jade Idol
-	{
-		// Choose One - Summon a Jade Golem; or Shuffle 3 copies of this card into your deck.
+    class Sim_CFM_602 : SimTemplate //* Jade Idol
+    {
+        // Choose One - Summon a Jade Golem; or Shuffle 3 copies of this card into your deck.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

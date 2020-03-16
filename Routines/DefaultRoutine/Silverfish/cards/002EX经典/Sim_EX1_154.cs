@@ -5,11 +5,11 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_154 : SimTemplate //* Wrath
-	{
+    {
         // Choose One - Deal $3 damage to a minion; or $1 damage and draw a card.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             int damage = 0;
             if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
             {
@@ -26,6 +26,6 @@ namespace HREngine.Bots
             {
                 p.drawACard(CardDB.cardIDEnum.None, ownplay);
             }
-		}
-	}
+        }
+    }
 }

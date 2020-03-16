@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_039 : SimTemplate //* Street Trickster
-	{
-		// Spell Damage +1
+    class Sim_CFM_039 : SimTemplate //* Street Trickster
+    {
+        // Spell Damage +1
 
         public override void onAuraStarts(Playfield p, Minion m)
         {

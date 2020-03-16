@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_039: SimTemplate //* Dark Conviction
+    class Sim_ICC_039 : SimTemplate //* Dark Conviction
     {
         // Set a minion's Attack and Health to 3.
 

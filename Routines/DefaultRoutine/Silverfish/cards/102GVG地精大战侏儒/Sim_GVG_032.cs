@@ -13,9 +13,9 @@ namespace HREngine.Bots
         {
             if (choice == 1 || (p.ownFandralStaghelm > 0 && own.own))
             {
-				p.mana = Math.Min(10, p.mana+1);
-				p.ownMaxMana = Math.Min(10, p.ownMaxMana+1);
-				p.enemyMaxMana = Math.Min(10, p.enemyMaxMana+1);
+                p.mana = Math.Min(10, p.mana + 1);
+                p.ownMaxMana = Math.Min(10, p.ownMaxMana + 1);
+                p.enemyMaxMana = Math.Min(10, p.enemyMaxMana + 1);
             }
 
             if (choice == 2 || (p.ownFandralStaghelm > 0 && own.own))

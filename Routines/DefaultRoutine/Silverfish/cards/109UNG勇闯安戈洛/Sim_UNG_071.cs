@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_071 : SimTemplate //* Giant Mastodon
-	{
-		//Taunt
+    class Sim_UNG_071 : SimTemplate //* Giant Mastodon
+    {
+        //Taunt
 
 
 
-	}
+    }
 }

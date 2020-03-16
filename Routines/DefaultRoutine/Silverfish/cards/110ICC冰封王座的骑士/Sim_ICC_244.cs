@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_244: SimTemplate //* Desperate Stand
+    class Sim_ICC_244 : SimTemplate //* Desperate Stand
     {
         // Give a minion: "Deathrattle: Revive this minion with one Health."
 

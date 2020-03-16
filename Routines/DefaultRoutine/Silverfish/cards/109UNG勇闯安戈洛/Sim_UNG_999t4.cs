@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_999t4 : SimTemplate //* Rocky Carapace
-	{
-		//+3 Health
+    class Sim_UNG_999t4 : SimTemplate //* Rocky Carapace
+    {
+        //+3 Health
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

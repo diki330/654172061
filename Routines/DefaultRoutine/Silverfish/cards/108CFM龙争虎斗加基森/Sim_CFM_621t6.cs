@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_621t6 : SimTemplate //* Goldthorn
-	{
-		// Give your minions +2 Health.
-		
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+    class Sim_CFM_621t6 : SimTemplate //* Goldthorn
+    {
+        // Give your minions +2 Health.
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-			p.allMinionOfASideGetBuffed(ownplay, 0, 2);
-		}
-	}
+            p.allMinionOfASideGetBuffed(ownplay, 0, 2);
+        }
+    }
 }

@@ -15,7 +15,7 @@ namespace HREngine.Bots
             int pos = tmp.Count;
 
             p.callKid(kid, pos, ownplay, true, true);
-            
+
             if (tmp.Count >= 1)
             {
                 Minion summonedMinion = tmp[pos];

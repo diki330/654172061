@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_206: SimTemplate //* Treachery
+    class Sim_ICC_206 : SimTemplate //* Treachery
     {
         // Choose a friendly minion. Your opponent gains control of it.
 

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_116 : SimTemplate //* Spreading Madness
-	{
-		//Deal 9 damage randomly split among ALL characters.
+    class Sim_OG_116 : SimTemplate //* Spreading Madness
+    {
+        //Deal 9 damage randomly split among ALL characters.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             List<Minion> temp = new List<Minion>(p.enemyMinions);
             temp.AddRange(p.ownMinions);

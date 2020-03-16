@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_754 : SimTemplate //* Grimy Gadgeteer
-	{
-		// At the end of your turn, give a random minion in your hand +2/+2.
+    class Sim_CFM_754 : SimTemplate //* Grimy Gadgeteer
+    {
+        // At the end of your turn, give a random minion in your hand +2/+2.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {

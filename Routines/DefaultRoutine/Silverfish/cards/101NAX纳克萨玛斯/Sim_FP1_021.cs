@@ -14,7 +14,7 @@ namespace HREngine.Bots
         {
             p.equipWeapon(weapon, ownplay);
         }
-        
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             p.allMinionsGetDamage(1);

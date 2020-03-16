@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_None : SimTemplate //* None
-	{
+    class Sim_None : SimTemplate //* None
+    {
 
-	}
+    }
 }

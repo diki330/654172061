@@ -1,7 +1,7 @@
 namespace HREngine.Bots
 {
-	partial class CardDB
-	{
+    partial class CardDB
+    {
         public enum cardName
         {
             unknown,

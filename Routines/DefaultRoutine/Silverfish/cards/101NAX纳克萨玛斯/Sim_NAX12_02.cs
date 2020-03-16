@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_NAX12_02 : SimTemplate //* Decimate
-	{
-		// Hero Power: Change the Health of all minions to 1.
+    class Sim_NAX12_02 : SimTemplate //* Decimate
+    {
+        // Hero Power: Change the Health of all minions to 1.
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             foreach (Minion m in p.ownMinions)
             {
                 p.minionSetLifetoX(m, 1);
@@ -18,6 +18,6 @@ namespace HREngine.Bots
             {
                 p.minionSetLifetoX(m, 1);
             }
-		}
-	}
+        }
+    }
 }

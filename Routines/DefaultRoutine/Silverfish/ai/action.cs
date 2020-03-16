@@ -1,5 +1,5 @@
 ﻿
- //TODO:
+//TODO:
 
 //cardids of duplicate + avenge
 //nozdormu (for computing time :D)
@@ -49,7 +49,7 @@ namespace HREngine.Bots
             if (ownM != null) prevHpOwn = ownM.Hp;
             if (targetM != null) prevHpTarget = targetM.Hp;
         }
-        
+
         public Action(Action a)
         {
             this.actionType = a.actionType;
@@ -146,7 +146,7 @@ namespace HREngine.Bots
             }
             help.logg("");
         }
-        
+
         public string printString()
         {
             string retval = "";
@@ -189,5 +189,5 @@ namespace HREngine.Bots
 
     }
 
-    
+
 }

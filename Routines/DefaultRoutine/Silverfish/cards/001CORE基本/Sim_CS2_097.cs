@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_097 : SimTemplate //truesilverchampion
-	{
+    class Sim_CS2_097 : SimTemplate //truesilverchampion
+    {
 
         CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_097);
         //
@@ -14,5 +14,5 @@ namespace HREngine.Bots
             p.equipWeapon(card, ownplay);
         }
 
-	}
+    }
 }

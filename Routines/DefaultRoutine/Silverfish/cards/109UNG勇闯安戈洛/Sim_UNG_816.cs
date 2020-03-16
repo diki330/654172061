@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_816 : SimTemplate //* Servant of Kalimos
-	{
-		//Battlecry: If you played an Elemental last turn Discover an Elemental.
+    class Sim_UNG_816 : SimTemplate //* Servant of Kalimos
+    {
+        //Battlecry: If you played an Elemental last turn Discover an Elemental.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

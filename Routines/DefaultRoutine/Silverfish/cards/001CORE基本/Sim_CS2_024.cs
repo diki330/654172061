@@ -12,7 +12,7 @@ namespace HREngine.Bots
         {
             int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
             p.minionGetFrozen(target);
-            p.minionGetDamageOrHeal(target,dmg);
+            p.minionGetDamageOrHeal(target, dmg);
         }
     }
 }

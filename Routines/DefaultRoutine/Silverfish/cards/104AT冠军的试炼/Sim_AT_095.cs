@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_095 : SimTemplate //* Silent Knight
-	{
-		//Stealth. Divine Shield
-	}
+    class Sim_AT_095 : SimTemplate //* Silent Knight
+    {
+        //Stealth. Divine Shield
+    }
 }

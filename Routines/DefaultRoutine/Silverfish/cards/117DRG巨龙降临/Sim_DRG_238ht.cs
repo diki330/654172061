@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots //by Summer Mate
 {
-    class Sim_DRG_238ht : SimTemplate 
+    class Sim_DRG_238ht : SimTemplate
     {
-        	
-		
+
+
     }
 }

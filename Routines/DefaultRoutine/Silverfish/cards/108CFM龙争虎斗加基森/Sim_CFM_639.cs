@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_639 : SimTemplate //* Grimestreet Enforcer
-	{
-		// At the end of your turn, give all minions in your hand +1/+1.
+    class Sim_CFM_639 : SimTemplate //* Grimestreet Enforcer
+    {
+        // At the end of your turn, give all minions in your hand +1/+1.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_827p: SimTemplate //* Death's Shadow
+    class Sim_ICC_827p : SimTemplate //* Death's Shadow
     {
         // Passive Hero Power: During your turn, add a 'Shadow Reflection' to your hand.
 

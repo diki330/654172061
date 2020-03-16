@@ -8,7 +8,7 @@ namespace HREngine.Bots
     {
 
         //   Charge Mega-Windfury(Can attack four times a turn.)
-       
+
 
     }
 

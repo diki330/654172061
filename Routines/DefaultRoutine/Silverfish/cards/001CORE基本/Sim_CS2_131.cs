@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_131 : SimTemplate //stormwindknight
-	{
+    class Sim_CS2_131 : SimTemplate //stormwindknight
+    {
 
-//    ansturm/
+        //    ansturm/
 
 
-	}
+    }
 }

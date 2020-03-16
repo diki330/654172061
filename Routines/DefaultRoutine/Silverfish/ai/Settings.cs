@@ -134,7 +134,7 @@ namespace HREngine.Bots
                         case "enemyTurnMaxWide": this.enemyTurnMaxWide = valueInt; break;
                         case "enemyTurnMaxWideSecondStep": this.enemyTurnMaxWideSecondStep = valueInt; break;
                         case "berserkIfCanFinishNextTour": this.berserkIfCanFinishNextTour = valueInt; break;
-                        case "concedeMode": this.concedeMode = valueInt; break;                            
+                        case "concedeMode": this.concedeMode = valueInt; break;
                         case "printRules": this.printRules = valueInt; break;
                         case "nextTurnDeep": this.nextTurnDeep = valueInt; break;
                         case "nextTurnMaxWide": this.nextTurnMaxWide = valueInt; break;

@@ -5,13 +5,13 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_409 : SimTemplate //* Upgrade!
-	{
+    {
         // If you have a weapon, give it +1/+1. Otherwise equip a 1/3 weapon.
 
         CardDB.Card wcard = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_409t);//Heavy Axe
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
             if (ownplay)
             {
                 if (p.ownWeapon.Durability > 0)
@@ -38,6 +38,6 @@ namespace HREngine.Bots
                     p.equipWeapon(wcard, false);
                 }
             }
-		}
-	}
+        }
+    }
 }

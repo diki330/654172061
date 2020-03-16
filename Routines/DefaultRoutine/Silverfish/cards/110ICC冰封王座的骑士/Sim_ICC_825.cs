@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_825: SimTemplate //* Abominable Bowman
+    class Sim_ICC_825 : SimTemplate //* Abominable Bowman
     {
         // Deathrattle: Summon a random friendly Beast that died this game.
 

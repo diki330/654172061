@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_050: SimTemplate //* Webweave
+    class Sim_ICC_050 : SimTemplate //* Webweave
     {
         // Summon two 1/2 Poisonous Spiders
 

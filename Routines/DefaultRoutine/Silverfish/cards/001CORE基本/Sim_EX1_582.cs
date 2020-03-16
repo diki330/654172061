@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_582 : SimTemplate //dalaranmage
-	{
+    class Sim_EX1_582 : SimTemplate //dalaranmage
+    {
 
-//    zauberschaden +1/
+        //    zauberschaden +1/
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)
@@ -32,5 +32,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_DREAM_05 : PenTemplate //nightmare
-	{
+    class Pen_DREAM_05 : PenTemplate //nightmare
+    {
 
-//    verleiht einem diener +5/+5. zu beginn eures nächsten zuges wird er vernichtet.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht einem diener +5/+5. zu beginn eures nächsten zuges wird er vernichtet.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (!m.Ready)
@@ -29,7 +29,7 @@ namespace HREngine.Bots
                 return 20;
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_334 : SimTemplate //* Smuggler's Crate
-	{
-		// Give a random Beast in your hand +2/+2.
+    class Sim_CFM_334 : SimTemplate //* Smuggler's Crate
+    {
+        // Give a random Beast in your hand +2/+2.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

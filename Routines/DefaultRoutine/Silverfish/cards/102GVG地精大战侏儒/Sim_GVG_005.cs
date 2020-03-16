@@ -18,7 +18,7 @@ namespace HREngine.Bots
             {
                 p.drawACard(m.handcard.card.name, ownplay, true);
             }
-            
+
         }
 
 

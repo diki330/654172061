@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_120 : SimTemplate //* Mistress of Mixtures
-	{
-		// Deathrattle: Restore 4 Health to both players.
+    class Sim_CFM_120 : SimTemplate //* Mistress of Mixtures
+    {
+        // Deathrattle: Restore 4 Health to both players.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

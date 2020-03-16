@@ -4,16 +4,16 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AT_089 : SimTemplate //* Boneguard Lieutenant
-	{
-		//Inspire: Gain +1 Health
+    class Sim_AT_089 : SimTemplate //* Boneguard Lieutenant
+    {
+        //Inspire: Gain +1 Health
 
-		public override void onInspire(Playfield p, Minion m, bool own)
+        public override void onInspire(Playfield p, Minion m, bool own)
         {
-			if (m.own == own)
-			{
-				p.minionGetBuffed(m, 0, 1);
-			}
+            if (m.own == own)
+            {
+                p.minionGetBuffed(m, 0, 1);
+            }
         }
-	}
+    }
 }

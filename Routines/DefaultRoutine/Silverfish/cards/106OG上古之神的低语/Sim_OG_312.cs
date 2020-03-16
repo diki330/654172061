@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_312 : SimTemplate //* N'Zoth's First Mate
-	{
-		//Battlecry: Equip a 1/3 Rusty Hook.
+    class Sim_OG_312 : SimTemplate //* N'Zoth's First Mate
+    {
+        //Battlecry: Equip a 1/3 Rusty Hook.
 
         CardDB.Card w = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.OG_058);
 

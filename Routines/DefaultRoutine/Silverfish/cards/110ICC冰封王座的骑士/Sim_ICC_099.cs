@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_099: SimTemplate //* Ticking Abomination
+    class Sim_ICC_099 : SimTemplate //* Ticking Abomination
     {
         // Deathrattle: Deal 5 damage to your minions.
 

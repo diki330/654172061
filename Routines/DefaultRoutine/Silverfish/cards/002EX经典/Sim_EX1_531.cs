@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_531 : SimTemplate //* scavenginghyena
-	{
-//    Whenever a friendly Beast dies, gain +2/+1.
+    class Sim_EX1_531 : SimTemplate //* scavenginghyena
+    {
+        //    Whenever a friendly Beast dies, gain +2/+1.
 
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
@@ -21,5 +21,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_EX1_603 : PenTemplate //crueltaskmaster
-	{
+    class Pen_EX1_603 : PenTemplate //crueltaskmaster
+    {
 
-//    kampfschrei:/ fügt einem diener 1 schaden zu und verleiht ihm +2 angriff.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    kampfschrei:/ fügt einem diener 1 schaden zu und verleiht ihm +2 angriff.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (target.own)
             {
                 if (m.Hp == 1) return 50;
@@ -39,10 +39,10 @@ namespace HREngine.Bots
                         if (hc.card.name == CardDB.cardName.execute) return 0;
                     }
                 }
-                return base.getValueOfMinion(4,5);
+                return base.getValueOfMinion(4, 5);
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_706: SimTemplate //* Nerubian Unraveler
+    class Sim_ICC_706 : SimTemplate //* Nerubian Unraveler
     {
         // Spells cost (2) more.
 

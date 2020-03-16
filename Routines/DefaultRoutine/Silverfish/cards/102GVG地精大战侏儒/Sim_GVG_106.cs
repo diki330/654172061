@@ -6,7 +6,7 @@ namespace HREngine.Bots
 {
     class Sim_GVG_106 : SimTemplate //* Junkbot
     {
-//   Whenever a friendly Mech dies, gain +2/+2.
+        //   Whenever a friendly Mech dies, gain +2/+2.
 
         public override void onMinionDiedTrigger(Playfield p, Minion m, Minion diedMinion)
         {
@@ -16,9 +16,9 @@ namespace HREngine.Bots
             m.pID = p.pID;
             m.extraParam2 = diedMinions;
             for (int i = 0; i < residual; i++)
-			{
+            {
                 p.minionGetBuffed(m, 2 * residual, 2 * residual);
-			}
+            }
         }
     }
 }

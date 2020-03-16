@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_006a : SimTemplate //* Silver Hand Murloc
-	{
-		// -
-	}
+    class Sim_OG_006a : SimTemplate //* Silver Hand Murloc
+    {
+        // -
+    }
 }

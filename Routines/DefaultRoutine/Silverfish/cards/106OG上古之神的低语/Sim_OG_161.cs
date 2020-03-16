@@ -8,8 +8,8 @@ namespace HREngine.Bots
     {
         //Battlecry: Deal 2 damage to all non-Murloc minions.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             foreach (Minion m in p.ownMinions)
             {
                 if ((TAG_RACE)m.handcard.card.race != TAG_RACE.MURLOC) p.minionGetDamageOrHeal(m, 2);
@@ -18,6 +18,6 @@ namespace HREngine.Bots
             {
                 if ((TAG_RACE)m.handcard.card.race != TAG_RACE.MURLOC) p.minionGetDamageOrHeal(m, 2);
             }
-		}
-	}
+        }
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_954 : SimTemplate //* The Last Kaleidosaur
-	{
-		//Quest: Cast 6 spells on your minions. Reward: Galvadon.
+    class Sim_UNG_954 : SimTemplate //* The Last Kaleidosaur
+    {
+        //Quest: Cast 6 spells on your minions. Reward: Galvadon.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

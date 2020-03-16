@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_810 : SimTemplate //* Leatherclad Hogleader
-	{
-		// Battlecry: If your opponent has 6 or more cards in hand, gain Charge.
+    class Sim_CFM_810 : SimTemplate //* Leatherclad Hogleader
+    {
+        // Battlecry: If your opponent has 6 or more cards in hand, gain Charge.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

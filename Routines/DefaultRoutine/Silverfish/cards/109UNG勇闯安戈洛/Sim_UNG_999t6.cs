@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_999t6 : SimTemplate //* Massive
-	{
-		//Taunt
+    class Sim_UNG_999t6 : SimTemplate //* Massive
+    {
+        //Taunt
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

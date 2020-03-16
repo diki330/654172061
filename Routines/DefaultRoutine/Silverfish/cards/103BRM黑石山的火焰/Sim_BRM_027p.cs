@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_027p : SimTemplate //* DIE, INSECT!
-	{
-		// Hero Power: Deal 8 damage to a random enemy.
-		
+    class Sim_BRM_027p : SimTemplate //* DIE, INSECT!
+    {
+        // Hero Power: Deal 8 damage to a random enemy.
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             int dmg = (ownplay) ? p.getHeroPowerDamage(8) : p.getEnemyHeroPowerDamage(8);
@@ -22,5 +22,5 @@ namespace HREngine.Bots
             }
             p.minionGetDamageOrHeal(target, dmg, true);
         }
-	}
+    }
 }

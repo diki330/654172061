@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_818 : SimTemplate //* Volatile Elemental
-	{
-		//Deathrattle: Deal 3 damage to a random enemy minion.
+    class Sim_UNG_818 : SimTemplate //* Volatile Elemental
+    {
+        //Deathrattle: Deal 3 damage to a random enemy minion.
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

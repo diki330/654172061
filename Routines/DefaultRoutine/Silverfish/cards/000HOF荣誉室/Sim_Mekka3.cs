@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_Mekka3 : SimTemplate //emboldener3000
-	{
+    class Sim_Mekka3 : SimTemplate //emboldener3000
+    {
 
-//    verleiht am ende eures zuges einem zufälligen diener +1/+1.
+        //    verleiht am ende eures zuges einem zufälligen diener +1/+1.
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {
@@ -38,5 +38,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }

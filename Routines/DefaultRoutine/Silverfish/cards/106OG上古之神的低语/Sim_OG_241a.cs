@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_241a : SimTemplate //* Shadowbeast
-	{
-		// -
-	}
+    class Sim_OG_241a : SimTemplate //* Shadowbeast
+    {
+        // -
+    }
 }

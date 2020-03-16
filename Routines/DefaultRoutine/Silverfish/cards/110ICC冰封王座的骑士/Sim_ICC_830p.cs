@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_830p: SimTemplate //* Voidform
+    class Sim_ICC_830p : SimTemplate //* Voidform
     {
         // Hero Power: Deal 2 damage. After you play a card, refresh this.
 

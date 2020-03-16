@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_963 : SimTemplate //* Lyra the Sunshard
-	{
-		//Whenever you cast a spell, add a random Priest spell to your hand.
+    class Sim_UNG_963 : SimTemplate //* Lyra the Sunshard
+    {
+        //Whenever you cast a spell, add a random Priest spell to your hand.
 
         public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
         {
@@ -15,5 +15,5 @@ namespace HREngine.Bots
                 p.drawACard(CardDB.cardIDEnum.None, wasOwnCard);
             }
         }
-	}
+    }
 }

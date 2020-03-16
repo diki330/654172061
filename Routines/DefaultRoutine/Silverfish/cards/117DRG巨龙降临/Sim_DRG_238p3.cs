@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_DRG_238p3 : SimTemplate //* 迦拉克隆的恶意
+    class Sim_DRG_238p3 : SimTemplate //* 迦拉克隆的恶意
     {
         //英雄技能 召唤两个1/1的 小鬼.
 
@@ -16,5 +16,5 @@ namespace HREngine.Bots
             p.callKid(kid, place, ownplay, false);
             p.callKid(kid, place, ownplay);
         }
-	}
+    }
 }

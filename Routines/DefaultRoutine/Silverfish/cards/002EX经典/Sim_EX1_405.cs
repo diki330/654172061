@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_405 : SimTemplate //shieldbearer
-	{
+    class Sim_EX1_405 : SimTemplate //shieldbearer
+    {
 
-//    spott/
+        //    spott/
 
 
-	}
+    }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_659 : SimTemplate //* Gadgetzan Socialite
-	{
-		// Battlecry: Restore 2 Health.
+    class Sim_CFM_659 : SimTemplate //* Gadgetzan Socialite
+    {
+        // Battlecry: Restore 2 Health.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

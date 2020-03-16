@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_656 : SimTemplate //* Streetwise Investigator
-	{
-		// Battlecry: Enemy minions lose Stealth.
+    class Sim_CFM_656 : SimTemplate //* Streetwise Investigator
+    {
+        // Battlecry: Enemy minions lose Stealth.
 
         public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
         {

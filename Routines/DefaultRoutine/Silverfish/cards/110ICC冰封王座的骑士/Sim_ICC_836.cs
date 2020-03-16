@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_836: SimTemplate //* Breath of Sindragosa
+    class Sim_ICC_836 : SimTemplate //* Breath of Sindragosa
     {
         // Deal 2 damage to a random enemy minion and Freeze it.
 

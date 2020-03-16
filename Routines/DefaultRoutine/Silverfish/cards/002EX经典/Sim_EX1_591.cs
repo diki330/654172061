@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_591 : SimTemplate //auchenaisoulpriest
-	{
+    class Sim_EX1_591 : SimTemplate //auchenaisoulpriest
+    {
 
-//    eure karten und fähigkeiten, die leben wiederherstellen, verursachen stattdessen nun schaden.
+        //    eure karten und fähigkeiten, die leben wiederherstellen, verursachen stattdessen nun schaden.
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)
@@ -34,5 +34,5 @@ namespace HREngine.Bots
         }
 
 
-	}
+    }
 }

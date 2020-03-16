@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_044 : SimTemplate //* Fandral Staghelm
-	{
-		//Your Choose One cards have both effects combine.
+    class Sim_OG_044 : SimTemplate //* Fandral Staghelm
+    {
+        //Your Choose One cards have both effects combine.
 
         public override void onAuraStarts(Playfield p, Minion own)
         {
@@ -17,5 +17,5 @@ namespace HREngine.Bots
         {
             if (m.own) p.ownFandralStaghelm--;
         }
-	}
+    }
 }

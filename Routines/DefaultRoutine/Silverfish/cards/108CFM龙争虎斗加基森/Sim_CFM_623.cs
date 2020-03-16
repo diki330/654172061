@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_623 : SimTemplate //* Greater Arcane Missiles
-	{
-		// Shoot three missiles at random enemies that deal 3 damage each.
+    class Sim_CFM_623 : SimTemplate //* Greater Arcane Missiles
+    {
+        // Shoot three missiles at random enemies that deal 3 damage each.
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

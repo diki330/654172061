@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_812: SimTemplate //* Meat Wagon
+    class Sim_ICC_812 : SimTemplate //* Meat Wagon
     {
         // Deathrattle: Summon a minion from your deck with less Attack than this minion.
 

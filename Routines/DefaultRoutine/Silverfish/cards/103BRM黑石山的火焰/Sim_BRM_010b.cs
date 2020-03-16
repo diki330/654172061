@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BRM_010b : SimTemplate //* Fire Hawk Form
-	{
-		// Transform into a 2/5 minion.
+    class Sim_BRM_010b : SimTemplate //* Fire Hawk Form
+    {
+        // Transform into a 2/5 minion.
 
         CardDB.Card hawk = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BRM_010t2);
 
@@ -14,5 +14,5 @@ namespace HREngine.Bots
         {
             p.minionTransform(target, hawk);
         }
-	}
+    }
 }

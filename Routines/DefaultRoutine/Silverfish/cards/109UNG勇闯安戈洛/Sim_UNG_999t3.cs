@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_UNG_999t3 : SimTemplate //* Flaming Claws
-	{
-		//+3 Attack
+    class Sim_UNG_999t3 : SimTemplate //* Flaming Claws
+    {
+        //+3 Attack
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {

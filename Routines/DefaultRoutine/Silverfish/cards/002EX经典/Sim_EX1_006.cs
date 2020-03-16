@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
     class Sim_EX1_006 : SimTemplate //* Alarm-o-Bot
-	{
+    {
         //At the start of your turn, swap this minion with a random one in your hand.
 
         public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
@@ -37,5 +37,5 @@ namespace HREngine.Bots
                 triggerEffectMinion.Hp = triggerEffectMinion.maxHp;
             }
         }
-	}
+    }
 }

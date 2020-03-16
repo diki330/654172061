@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_KAR_028 : SimTemplate //* Fool's Bane
-	{
+    class Sim_KAR_028 : SimTemplate //* Fool's Bane
+    {
         //Unlimited attacks each turn. Can't attack heroes.
         // handled in public void getMoveList
 
@@ -15,5 +15,5 @@ namespace HREngine.Bots
         {
             p.equipWeapon(weapon, ownplay);
         }
-	}
+    }
 }

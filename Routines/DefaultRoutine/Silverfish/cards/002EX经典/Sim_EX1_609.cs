@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_609 : SimTemplate //snipe
-	{
+    class Sim_EX1_609 : SimTemplate //snipe
+    {
         //todo secret
-//    geheimnis:/ wenn euer gegner einen diener ausspielt, werden diesem $4 schaden zugefügt.
+        //    geheimnis:/ wenn euer gegner einen diener ausspielt, werden diesem $4 schaden zugefügt.
 
         public override void onSecretPlay(Playfield p, bool ownplay, Minion target, int number)
         {
@@ -16,6 +16,6 @@ namespace HREngine.Bots
             p.minionGetDamageOrHeal(target, dmg);
         }
 
-	}
+    }
 
 }

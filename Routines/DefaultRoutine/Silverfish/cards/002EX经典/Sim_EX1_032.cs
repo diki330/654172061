@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_032 : SimTemplate //sunwalker
-	{
+    class Sim_EX1_032 : SimTemplate //sunwalker
+    {
 
-//    spott/, gottesschild/
+        //    spott/, gottesschild/
 
-	}
+    }
 }

@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Pen_CS2_011 : PenTemplate //savageroar
-	{
+    class Pen_CS2_011 : PenTemplate //savageroar
+    {
 
-//    verleiht euren charakteren +2 angriff in diesem zug.
-		public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
-		{
+        //    verleiht euren charakteren +2 angriff in diesem zug.
+        public override int getPlayPenalty(Playfield p, Minion m, Minion target, int choice, bool isLethal)
+        {
             if (!isLethal)
             {
                 int targets = 0;
@@ -27,10 +27,10 @@ namespace HREngine.Bots
                 {
                     return 20;
                 }
-                
+
             }
             return 0;
-		}
+        }
 
-	}
+    }
 }

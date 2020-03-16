@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_019: SimTemplate //* Skelemancer
+    class Sim_ICC_019 : SimTemplate //* Skelemancer
     {
         // Deathrattle: If it's your opponent's turn, summon an 8/8 Skeleton.
 

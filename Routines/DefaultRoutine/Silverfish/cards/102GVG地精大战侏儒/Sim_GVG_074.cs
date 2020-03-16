@@ -20,7 +20,7 @@ namespace HREngine.Bots
                     if (p.enemyHeroStartClass == TAG_CLASS.PALADIN) p.ownSecretsIDList.Add(CardDB.cardIDEnum.EX1_130);
 
                     if (p.enemyHeroStartClass != TAG_CLASS.HUNTER && p.enemyHeroStartClass != TAG_CLASS.MAGE && p.enemyHeroStartClass != TAG_CLASS.PALADIN) p.ownSecretsIDList.Add(CardDB.cardIDEnum.EX1_130);
-                    
+
                     p.enemySecretList.RemoveAt(0);
                 }
             }
@@ -53,7 +53,7 @@ namespace HREngine.Bots
                     //s.canBe_vaporize = false;
 
                     s.entityId = 1050;
-                    s.canBe_explosive=true;
+                    s.canBe_explosive = true;
 
                     p.enemySecretList.Add(s);
                 }

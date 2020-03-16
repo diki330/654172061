@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_240: SimTemplate //* Runeforge Haunter
+    class Sim_ICC_240 : SimTemplate //* Runeforge Haunter
     {
         // During your turn, your weapon doesn't lose Durability.
 

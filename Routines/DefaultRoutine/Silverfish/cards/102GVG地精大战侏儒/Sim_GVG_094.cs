@@ -15,7 +15,7 @@ namespace HREngine.Bots
             int cardstodraw = 0;
             if (p.owncards.Count <= 2)
             {
-                cardstodraw = 3 - p.owncards.Count; 
+                cardstodraw = 3 - p.owncards.Count;
             }
 
             for (int i = 0; i < cardstodraw; i++)

@@ -18,10 +18,10 @@ namespace HREngine.Bots
             {
                 if (m.handcard.card.deathrattle) gain++;
             }
-            if(gain>=1) p.minionGetBuffed(own, gain, gain);
+            if (gain >= 1) p.minionGetBuffed(own, gain, gain);
         }
 
-      
+
 
     }
 

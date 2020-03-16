@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_OG_316 : SimTemplate //* Herald Volazj
-	{
-		//Battlecry: Summon a 1/1 copy of each of your other minions.
+    class Sim_OG_316 : SimTemplate //* Herald Volazj
+    {
+        //Battlecry: Summon a 1/1 copy of each of your other minions.
 
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
             int pos = temp.Count;

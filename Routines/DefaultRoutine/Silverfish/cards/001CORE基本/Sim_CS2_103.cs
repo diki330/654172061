@@ -13,5 +13,5 @@ namespace HREngine.Bots
             p.minionGetCharge(target);
             target.cantAttackHeroes = true;
         }
-	}
+    }
 }

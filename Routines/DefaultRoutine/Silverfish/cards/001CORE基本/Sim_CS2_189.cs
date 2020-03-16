@@ -4,16 +4,16 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CS2_189 : SimTemplate //elvenarcher
-	{
+    class Sim_CS2_189 : SimTemplate //elvenarcher
+    {
 
-//    kampfschrei:/ verursacht 1 schaden.
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
+        //    kampfschrei:/ verursacht 1 schaden.
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             int dmg = 1;
             p.minionGetDamageOrHeal(target, dmg);
-		}
+        }
 
 
-	}
+    }
 }

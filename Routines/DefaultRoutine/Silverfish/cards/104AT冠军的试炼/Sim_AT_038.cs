@@ -6,8 +6,8 @@ namespace HREngine.Bots
 {
     class Sim_AT_038 : SimTemplate //* Darnassus Aspirant
     {
-		//Battlecry: Gain an empty mana crystal.
-		//Deathrattle: Destroy a mana crystal.
+        //Battlecry: Gain an empty mana crystal.
+        //Deathrattle: Destroy a mana crystal.
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
@@ -17,7 +17,7 @@ namespace HREngine.Bots
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
-			if (m.own) p.ownMaxMana--;
+            if (m.own) p.ownMaxMana--;
             else p.enemyMaxMana--;
         }
     }
