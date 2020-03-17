@@ -353,7 +353,9 @@ namespace HREngine.Bots
                 retval += m.handcard.card.targetPriority;
             }
             if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;
-            retval += m.synergy;
+            if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) retval += 2;//内战解图腾
+            if (p.enemyHeroStartClass == TAG_CLASS.PALADIN && p.enemyHeroAblility.card.cardIDenum == CardDB.cardIDEnum.AT_132_PALADIN) retval += 2;//打奇数骑解场癌
+			retval += m.synergy;
             return retval;
         }
 
