@@ -362,12 +362,34 @@ namespace HREngine.Bots
                             if ((own ? p.ownMinions.Count : p.enemyMinions.Count) > 7 - this.needMinionsCapIfAvailable) return retval;
                             continue;
                         case ErrorType2.REQ_ENTIRE_ENTOURAGE_NOT_IN_PLAY:
-                            int difftotem = 0;
+                            bool searingtotem = false;
+                            bool wrathofairtotem = false;
+                            bool stoneclawtotem = false;
+                            bool healingtotem = false;
                             foreach (Minion m in (own ? p.ownMinions : p.enemyMinions))
                             {
-                                if (m.name == CardDB.cardName.healingtotem || m.name == CardDB.cardName.wrathofairtotem || m.name == CardDB.cardName.searingtotem || m.name == CardDB.cardName.stoneclawtotem) difftotem++;
+                                if (m.name == CardDB.cardName.healingtotem)
+                                {
+                                    healingtotem = true;
+                                    continue;
                             }
-                            if (difftotem == 4) return retval;
+                                if (m.name == CardDB.cardName.wrathofairtotem)
+                                {
+                                    wrathofairtotem = true;
+                                    continue;
+                                }
+                                if (m.name == CardDB.cardName.searingtotem)
+                                {
+                                    searingtotem = true;
+                                    continue;
+                                }
+                                if (m.name == CardDB.cardName.stoneclawtotem)
+                                {
+                                    stoneclawtotem = true;
+                                    continue;
+                                }
+                            }
+                            if (searingtotem && wrathofairtotem && stoneclawtotem && healingtotem) return retval;
                             continue;
                         case ErrorType2.REQ_MUST_TARGET_TAUNTER:
                             REQ_MUST_TARGET_TAUNTER = true;
@@ -963,6 +985,7 @@ namespace HREngine.Bots
                     case cardtype.HEROPWR:
                         retval += p.ownHeroPowerCostLessOnce;
                         if (retval < 0) retval = 0;
+                        if (p.ownHeroStartClass == TAG_CLASS.SHAMAN) retval = 1;//Å¼ÊýÈø
                         return retval;
                     case cardtype.MOB:
 

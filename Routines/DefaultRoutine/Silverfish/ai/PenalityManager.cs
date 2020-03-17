@@ -2207,12 +2207,26 @@
                         if (!target.own) return 500;
                         else
                         {
-                            if (target.Ready) return -5;
-                            if ((TAG_RACE)target.handcard.card.race == TAG_RACE.TOTEM) return -2;
+                            if ((!target.playedThisTurn && !target.frozen) || target.rush > 0)
+                            {
+                                if ((TAG_RACE)target.handcard.card.race == TAG_RACE.TOTEM)
+                                {
+                                    if (target.name == CardDB.cardName.怪盗图腾) return -6;
+                                    if (target.name == CardDB.cardName.healingtotem) return -5;
+                                    if (target.name == CardDB.cardName.wrathofairtotem) return -4;
+                                    return -3;
+                                }
+                                return -2;
+                            }
+                            else if ((TAG_RACE)target.handcard.card.race == TAG_RACE.TOTEM)
+                            {
+                                if (target.name == CardDB.cardName.怪盗图腾) return -2;
+                                return -1;
+                            }
+                            else return 0;
                         }
                     }
                     else return 400;
-                    break;
                 case CardDB.cardName.maelstromportal:
                     int destroyenemy = 0;
                     foreach (Minion m in p.enemyMinions)
@@ -2221,9 +2235,10 @@
                         if (m.Hp <= dmg)
                             destroyenemy++;
                     }
-                    return (20 - destroyenemy * 10);
-                case CardDB.cardName.totemiccall:
-                    if (p.ownMaxMana == 1) return -20;
+                    return (15 - destroyenemy * 10);
+                case CardDB.cardName.阴燃电鳗:
+                    //针对硬币电鳗打脸的愚蠢行为
+                    if (p.ownMaxMana == 1 && target.isHero) return 50;
                     return 0;
                 case CardDB.cardName.风暴聚合器:
                     int ownMinionsValue = 0;
@@ -2296,7 +2311,7 @@
                     }
                     return 60 - ownTotemsCount * 30;
                 case CardDB.cardName.怪盗图腾:
-                    return -10;
+                    return -5;
                 //********原有********
                 case CardDB.cardName.hobartgrapplehammer: return -5;
                 case CardDB.cardName.bloodsailraider: if (p.ownWeapon.Durability == 0) return 5; return 0;
