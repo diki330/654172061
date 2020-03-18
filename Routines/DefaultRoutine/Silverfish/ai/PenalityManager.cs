@@ -2113,10 +2113,13 @@
                 case CardDB.cardName.炸弹牛仔:
                     return -4;
                 case CardDB.cardName.空中悍匪:
-                    if (p.ownMaxMana == 1) return -10;
+                    if (p.ownMaxMana == 1) return -5;
                     return 0;
                 case CardDB.cardName.nzothsfirstmate:
-                    if (p.ownMaxMana == 1) return -10;
+                    if (p.ownMaxMana == 1) return -5;
+                    return 0;
+                case CardDB.cardName.southseadeckhand:
+                    if (p.ownMaxMana == 1) return -3;
                     return 0;
                 case CardDB.cardName.废墟之子:
                     if (p.OwnInvoke >= 2) return -12;
