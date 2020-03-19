@@ -3508,29 +3508,29 @@
 
             //hero will end his readyness
             hero.updateReadyness();
-            if (weapon.name == CardDB.cardName.foolsbane && !hero.frozen) hero.Ready = true;
+            if (weapon.name == CardDB.cardName.foolsbane && !hero.frozen) hero.Ready = true;//愚者之灾
 
-            //heal whether truesilverchampion equipped
+            //heal whether 真银圣剑 equipped
             switch (weapon.name)
             {
-                case CardDB.cardName.truesilverchampion:
+                case CardDB.cardName.truesilverchampion://真银圣剑
                     int heal = own ? this.getMinionHeal(2) : this.getEnemyMinionHeal(2);
                     this.minionGetDamageOrHeal(hero, -heal);
                     doDmgTriggers();
                     break;
-                case CardDB.cardName.piranhalauncher:
+                case CardDB.cardName.piranhalauncher://食人鱼喷枪
                     int pos = (own) ? this.ownMinions.Count : this.enemyMinions.Count;
                     this.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CFM_337t), pos, own);
                     break;
-                case CardDB.cardName.vinecleaver:
+                case CardDB.cardName.vinecleaver://斩棘刀
                     int pos2 = (own) ? this.ownMinions.Count : this.enemyMinions.Count;
                     this.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_101t), pos2, own);
                     this.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_101t), pos2, own);
                     break;
-                case CardDB.cardName.foolsbane:
+                case CardDB.cardName.foolsbane://愚者之灾
                     if (!hero.frozen) hero.Ready = true;
                     break;
-                case CardDB.cardName.brassknuckles:
+                case CardDB.cardName.brassknuckles://黄铜指虎
                     if (own)
                     {
                         Handmanager.Handcard hc = this.searchRandomMinionInHand(this.owncards, searchmode.searchLowestCost, GAME_TAGs.Mob);
@@ -3544,6 +3544,30 @@
                     else
                     {
                         if (this.enemyAnzCards > 0) this.anzEnemyExtraAngrHp += this.enemyAnzCards * 2 - 1;
+                    }
+                    break;
+                case CardDB.cardName.圣剑扳手:
+                    if (own)
+                    {
+                        this.enemyDeckSize++;
+                        if (this.enemyDeckSize <= 6)
+                        {
+                            this.minionGetDamageOrHeal(this.enemyHero, Math.Min(5, this.enemyHero.Hp - 1), true);
+                        }
+                        else
+                        {
+                            if (this.enemyDeckSize <= 16)
+                            {
+                                this.minionGetDamageOrHeal(this.enemyHero, Math.Min(3, this.enemyHero.Hp - 1), true);
+                            }
+                            else
+                            {
+                                if (this.enemyDeckSize <= 26)
+                                {
+                                    this.minionGetDamageOrHeal(this.enemyHero, Math.Min(1, this.enemyHero.Hp - 1), true);
+                                }
+                            }
+                        }
                     }
                     break;
             }
@@ -3582,7 +3606,7 @@
             this.minionAttacksMinion(hero, target);
 
 
-            //gorehowl is not killed if he attacks minions
+            //血吼 is not killed if he attacks minions
             if (own)
             {
                 if (this.ownWeapon.name == CardDB.cardName.gorehowl && !target.isHero)

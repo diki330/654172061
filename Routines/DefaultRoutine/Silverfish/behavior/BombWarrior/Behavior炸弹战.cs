@@ -3,9 +3,9 @@
 namespace HREngine.Bots
 {
 
-    public class BehaviorGalakrondWarrior : Behavior
+    public class BehaviorBombWarrior : Behavior
     {
-        public override string BehaviorName() { return "jk战"; }
+        public override string BehaviorName() { return "炸弹战"; }
 
 
         PenalityManager penman = PenalityManager.Instance;

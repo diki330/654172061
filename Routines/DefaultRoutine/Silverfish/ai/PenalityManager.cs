@@ -2110,6 +2110,8 @@
             switch (name)
             {
                 //********jk战********
+                case CardDB.cardName.圣剑扳手:
+                    return -8;
                 case CardDB.cardName.炸弹牛仔:
                     return -4;
                 case CardDB.cardName.空中悍匪:

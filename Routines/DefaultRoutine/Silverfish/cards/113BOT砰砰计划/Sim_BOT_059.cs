@@ -4,7 +4,18 @@ namespace HREngine.Bots
     {
         //Whenever this minion takes damage, gain 2 Armor.
         //每当该随从受到伤害，便获得2点护甲值。
-
+        public override void onMinionGotDmgTrigger(Playfield p, Minion m, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
+        {
+            if (m.anzGotDmg > 0)
+            {
+                int tmp = m.anzGotDmg;
+                m.anzGotDmg = 0;
+                for (int i = 0; i < tmp; i++)
+                {
+                    p.minionGetArmor(m.own ? p.ownHero : p.enemyHero, 2);
+                }
+            }
+        }
 
     }
 }

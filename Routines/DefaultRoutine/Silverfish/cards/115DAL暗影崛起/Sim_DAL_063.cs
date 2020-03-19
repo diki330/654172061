@@ -4,7 +4,11 @@ namespace HREngine.Bots
     {
         //After your hero attacks, shuffle a Bomb into your [x]opponent's deck.
         //在你的英雄攻击后，将一张“炸弹”牌洗入你对手的牌库。
-
+        CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DAL_063);
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(card, ownplay);
+        }
 
     }
 }
