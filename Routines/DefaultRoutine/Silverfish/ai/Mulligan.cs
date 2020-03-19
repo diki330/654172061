@@ -153,7 +153,7 @@ as well as
                 {
                     if (ruleValue[2].Length < 4) // if lenght < 4 then it a manarule
                     {
-                        int manaRule = 4;
+                        int manaRule = 2;
                         try
                         {
                             manaRule = Convert.ToInt32(ruleValue[2]);
