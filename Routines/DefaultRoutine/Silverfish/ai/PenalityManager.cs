@@ -2110,6 +2110,9 @@
             switch (name)
             {
                 //********jk战********
+                case CardDB.cardName.sirfinleymrrgglton:
+                    if (p.ownHeroAblility.card.name == CardDB.cardName.迦拉克隆的巨力) return 50;
+                    return 0;
                 case CardDB.cardName.圣剑扳手:
                     return -2;
                 case CardDB.cardName.炸弹牛仔:

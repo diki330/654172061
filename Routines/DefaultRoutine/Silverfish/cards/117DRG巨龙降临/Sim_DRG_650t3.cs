@@ -4,7 +4,7 @@ namespace HREngine.Bots
     {
         //[x]<b>Battlecry:</b> Draw 4 minions.Give them +4/+4.Equip a 5/2 Claw.
         //<b>战吼：</b>抽四张随从牌，使其获得+4/+4。装备一只5/2的巨爪。
-        CardDB.Card w = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_112);
+        CardDB.Card w = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DRG_238ht);
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             p.drawACard(CardDB.cardName.unknown, own.own);
