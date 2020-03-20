@@ -41,6 +41,8 @@ namespace HREngine.Bots
         Dictionary<CardDB.cardIDEnum, int> turnDeck = new Dictionary<CardDB.cardIDEnum, int>();
         Dictionary<int, extraCard> extraDeck = new Dictionary<int, extraCard>();
         bool noDuplicates = false;
+        bool OnlyEvenCost = false;
+        bool OnlyOddCost = false;
 
         private int currentMana = 0;
         private int ownMaxMana = 0;
@@ -249,6 +251,13 @@ namespace HREngine.Bots
                     break;
                 }
             }
+            if (startDeck.Count == 0)
+            {
+                Helpfunctions.Instance.ErrorLog("牌库数据未添加请重新缓存牌库！（会影响到宇宙体系，奇数，偶数等的正常识别）");
+                //防止电鳗翻车
+                OnlyEvenCost = false;
+                OnlyOddCost = false;
+            }
         }
 
         public bool updateEverything(Behavior botbase, int numcal, out bool sleepRetry)
@@ -266,7 +275,7 @@ namespace HREngine.Bots
             getDecks();
 
 
-            Hrtprozis.Instance.updateTurnDeck(turnDeck, noDuplicates);
+            Hrtprozis.Instance.updateTurnDeck(turnDeck, noDuplicates, OnlyEvenCost, OnlyOddCost);
             Hrtprozis.Instance.setOwnPlayer(ownPlayerController);
             Handmanager.Instance.setOwnPlayer(ownPlayerController);
 
@@ -1046,13 +1055,15 @@ namespace HREngine.Bots
 
             if (startDeck.Count == 0) return;
             noDuplicates = true;
-            foreach (int i in turnDeck.Values)
+            OnlyEvenCost = true;
+            OnlyOddCost = true;
+            foreach (var item in turnDeck)
             {
-                if (i > 1)
-                {
-                    noDuplicates = false;
+                if (item.Value > 1) noDuplicates = false;
+                if ((CardDB.Instance.getCardDataFromID(item.Key).cost & 1) == 0) OnlyOddCost = false;
+                else OnlyEvenCost = false;
+                if (noDuplicates == false && OnlyEvenCost == false && OnlyOddCost == false)
                     break;
-                }
             }
         }
 

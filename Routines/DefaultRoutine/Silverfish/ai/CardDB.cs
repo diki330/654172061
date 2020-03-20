@@ -110,6 +110,7 @@ namespace HREngine.Bots
             REQ_FRIENDLY_TARGET = 2,
             REQ_ENEMY_TARGET = 3,
             REQ_DAMAGED_TARGET = 4,
+            REQ_ENCHANTED_TARGET = 5,
             REQ_MAX_SECRETS = 5,
             REQ_FROZEN_TARGET = 6,
             REQ_CHARGE_TARGET = 7,
@@ -123,6 +124,7 @@ namespace HREngine.Bots
             REQ_YOUR_TURN = 15,
             REQ_NONSTEALTH_ENEMY_TARGET = 16,
             REQ_HERO_TARGET = 17,
+            REQ_SECRET_CAP = 18,
             REQ_SECRET_ZONE_CAP = 18,
             REQ_MINION_CAP_IF_TARGET_AVAILABLE = 19,
             REQ_MINION_CAP = 20,
@@ -131,6 +133,7 @@ namespace HREngine.Bots
             REQ_MINIMUM_ENEMY_MINIONS = 23,
             REQ_TARGET_FOR_COMBO = 24,
             REQ_NOT_EXHAUSTED_ACTIVATE = 25,
+            REQ_UNIQUE_SECRET = 26,
             REQ_UNIQUE_SECRET_OR_QUEST = 26,
             REQ_TARGET_TAUNTER = 27,
             REQ_CAN_BE_ATTACKED = 28,
@@ -165,6 +168,7 @@ namespace HREngine.Bots
             REQ_TARGET_WITH_BATTLECRY = 57,
             REQ_TARGET_WITH_DEATHRATTLE = 58,
             REQ_TARGET_IF_AVAILABLE_AND_MINIMUM_FRIENDLY_SECRETS = 59,
+            REQ_SECRET_CAP_FOR_NON_SECRET = 60,
             REQ_SECRET_ZONE_CAP_FOR_NON_SECRET = 60,
             REQ_TARGET_EXACT_COST = 61,
             REQ_STEALTHED_TARGET = 62,
@@ -176,7 +180,26 @@ namespace HREngine.Bots
             REQ_NOT_DISABLED_HERO_POWER = 68,
             REQ_MUST_PLAY_OTHER_CARD_FIRST = 69,
             REQ_HAND_NOT_FULL = 70,
-            REQ_DRAG_TO_PLAY = 71,
+            REQ_TARGET_IF_AVAILABLE_AND_NO_3_COST_CARD_IN_DECK = 71,
+            REQ_CAN_BE_TARGETED_BY_COMBOS = 72,
+            REQ_CANNOT_PLAY_THIS = 73,
+            REQ_FRIENDLY_MINIONS_OF_RACE_DIED_THIS_GAME = 74,
+            REQ_DRAG_TO_PLAY_PRE29933 = 75,
+            REQ_OPPONENT_PLAYED_CARDS_THIS_GAME = 77,
+            REQ_LITERALLY_UNPLAYABLE = 78,
+            REQ_TARGET_IF_AVAILABLE_AND_HERO_HAS_ATTACK = 79,
+            REQ_FRIENDLY_MINION_OF_RACE_DIED_THIS_TURN = 80,
+            REQ_TARGET_IF_AVAILABLE_AND_MINIMUM_SPELLS_PLAYED_THIS_TURN = 81,
+            REQ_FRIENDLY_MINION_OF_RACE_IN_HAND = 82,
+            REQ_DRAG_TO_PLAY_PRE31761 = 83,
+            REQ_FRIENDLY_DEATHRATTLE_MINION_DIED_THIS_GAME = 86,
+            REQ_FRIENDLY_REBORN_MINION_DIED_THIS_GAME = 89,
+            REQ_MINION_DIED_THIS_GAME = 90,
+            REQ_BOARD_NOT_COMPLETELY_FULL = 92,
+            REQ_TARGET_IF_AVAILABLE_AND_HAS_OVERLOADED_MANA = 93,
+            REQ_DRAG_TO_PLAY = 94,
+            REQ_TARGET_IF_AVAILABLE_AND_NO_EVEN_COST_CARD_IN_DECK = 918,
+            REQ_TARGET_IF_AVAILABLE_AND_NO_ODD_COST_CARD_IN_DECK = 919,
         }
 
         public class Card
@@ -462,6 +485,12 @@ namespace HREngine.Bots
                             continue;
                         case ErrorType2.REQ_HAND_NOT_FULL:
                             if (p.owncards.Count == 10) return retval;
+                            continue;
+                        case ErrorType2.REQ_TARGET_IF_AVAILABLE_AND_NO_EVEN_COST_CARD_IN_DECK:
+                            if (p.prozis.OnlyEvenCost) targetAll = true;
+                            continue;
+                        case ErrorType2.REQ_TARGET_IF_AVAILABLE_AND_NO_ODD_COST_CARD_IN_DECK:
+                            if (p.prozis.OnlyOddCost) targetAll = true;
                             continue;
 
                             //default:
@@ -985,7 +1014,7 @@ namespace HREngine.Bots
                     case cardtype.HEROPWR:
                         retval += p.ownHeroPowerCostLessOnce;
                         if (retval < 0) retval = 0;
-                        if (p.ownHeroStartClass == TAG_CLASS.SHAMAN) retval = 1;//Å¼ÊýÈø
+                        if (p.prozis.OnlyEvenCost) retval = 1;//Å¼Êý
                         return retval;
                     case cardtype.MOB:
 

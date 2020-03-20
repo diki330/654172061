@@ -52,6 +52,8 @@
         public Dictionary<CardDB.cardIDEnum, int> turnDeck = new Dictionary<CardDB.cardIDEnum, int>();
         private Dictionary<int, CardDB.cardIDEnum> deckCardForCost = new Dictionary<int, CardDB.cardIDEnum>();
         public bool noDuplicates = false;
+        public bool OnlyEvenCost = false;
+        public bool OnlyOddCost = false;
 
         private int numTauntCards = -1;
         private int numDivineShieldCards = -1;
@@ -362,7 +364,7 @@
             this.enemySecretCount = numEnemSec;
         }
 
-        public void updateTurnDeck(Dictionary<CardDB.cardIDEnum, int> deck, bool noDupl)
+        public void updateTurnDeck(Dictionary<CardDB.cardIDEnum, int> deck, bool noDupl, bool OnlyEvenCost, bool OnlyOddCost)
         {
             this.turnDeck.Clear();
             foreach (KeyValuePair<CardDB.cardIDEnum, int> c in deck)
@@ -370,6 +372,8 @@
                 this.turnDeck.Add(c.Key, c.Value);
             }
             this.noDuplicates = noDupl;
+            this.OnlyEvenCost = OnlyEvenCost;
+            this.OnlyOddCost = OnlyOddCost;
             deckCardForCost.Clear();
         }
 

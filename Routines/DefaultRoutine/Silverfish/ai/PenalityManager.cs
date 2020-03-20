@@ -2111,7 +2111,7 @@
             {
                 //********jk战********
                 case CardDB.cardName.圣剑扳手:
-                    return -8;
+                    return -2;
                 case CardDB.cardName.炸弹牛仔:
                     return -4;
                 case CardDB.cardName.空中悍匪:
@@ -2124,7 +2124,11 @@
                     if (p.ownMaxMana == 1) return -3;
                     return 0;
                 case CardDB.cardName.废墟之子:
-                    if (p.OwnInvoke >= 2) return -12;
+                    if (p.OwnInvoke >= 2)
+                    {
+                        if (p.enemyMinions.Count > 0) return -12;
+                        return 0;
+                    }
                     return 20;
                 case CardDB.cardName.无敌巨龙迦拉克隆:
                     int InvokeInHand = 0;
@@ -2147,9 +2151,11 @@
                         }
                     }
                     if ((p.OwnInvoke + InvokeInHand) >= 4) return 20;
-                    return -20;
+                    return -10;
                 case CardDB.cardName.世界末日迦拉克隆:
-                    return -50;
+                    if (p.owncards.Count < 6)
+                        return -50;
+                    return 50;
                 case CardDB.cardName.克罗斯龙蹄:
                     bool GalakrondInHand = false;
                     foreach (Handmanager.Handcard hc in p.owncards)

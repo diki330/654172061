@@ -153,7 +153,7 @@ as well as
                 {
                     if (ruleValue[2].Length < 4) // if lenght < 4 then it a manarule
                     {
-                        int manaRule = 2;
+                        int manaRule = 4;
                         try
                         {
                             manaRule = Convert.ToInt32(ruleValue[2]);
@@ -279,7 +279,7 @@ as well as
             HeroEnum ownHeroClass = Hrtprozis.Instance.heroTAG_CLASSstringToEnum(mulliganData.UserClass.ToString());
             HeroEnum enemyHeroClass = Hrtprozis.Instance.heroTAG_CLASSstringToEnum(mulliganData.OpponentClass.ToString());
 
-            int manaRule = 4;
+            int manaRule = 2;
             string MullRuleKey = getMullRuleKey(CardDB.cardIDEnum.None, ownHeroClass, enemyHeroClass, 1);
             if (MulliganRules.ContainsKey(MullRuleKey))
             {
