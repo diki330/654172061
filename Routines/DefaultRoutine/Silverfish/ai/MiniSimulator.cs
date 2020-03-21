@@ -167,6 +167,17 @@
                     Helpfunctions.Instance.logg("deep " + deep + " len " + this.posmoves.Count + " dones " + donec);
                 }
 
+                int itemPlayfieldIndex = 0;
+                foreach (var itemPlayfield in posmoves)
+                {
+                    itemPlayfieldIndex++;
+                    var actionsCount = itemPlayfield.playactions.Count;
+                    Helpfunctions.Instance.logg(string.Format("ailoop{1} {0}{2} with {3} actions", "itemPlayfield", deep + 1, itemPlayfieldIndex, actionsCount));
+                    itemPlayfield.printActions();
+                    itemPlayfield.printBoard();
+                }
+
+                
                 cuttingposibilities(isLethalCheck);
 
                 if (this.printNormalstuff)
