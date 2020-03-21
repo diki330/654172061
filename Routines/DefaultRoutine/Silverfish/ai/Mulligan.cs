@@ -279,7 +279,7 @@ as well as
             HeroEnum ownHeroClass = Hrtprozis.Instance.heroTAG_CLASSstringToEnum(mulliganData.UserClass.ToString());
             HeroEnum enemyHeroClass = Hrtprozis.Instance.heroTAG_CLASSstringToEnum(mulliganData.OpponentClass.ToString());
 
-            int manaRule = 2;
+            int manaRule = 4;
             string MullRuleKey = getMullRuleKey(CardDB.cardIDEnum.None, ownHeroClass, enemyHeroClass, 1);
             if (MulliganRules.ContainsKey(MullRuleKey))
             {

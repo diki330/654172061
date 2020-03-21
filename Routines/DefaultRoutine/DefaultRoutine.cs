@@ -488,9 +488,9 @@ def Execute():
             var random = Client.Random;
             var type = random.Next(0, 100) % 4;
 
-            if (type == 0) return random.Next(800, 1200);
-            if (type == 1) return random.Next(1200, 2500);
-            if (type == 2) return random.Next(2500, 3700);
+            if (type == 0) return random.Next(200, 300);
+            if (type == 1) return random.Next(300, 600);
+            if (type == 2) return random.Next(600, 900);
             return 0;
         }
 
