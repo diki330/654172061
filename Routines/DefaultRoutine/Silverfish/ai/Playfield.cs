@@ -7670,6 +7670,7 @@
                     break;
                 case TAG_CLASS.WARRIOR://战士
                     this.minionGetTempBuff(own ? this.ownHero : this.enemyHero, 3, 0);
+					if(!this.ownHero.Ready) this.evaluatePenality += 20;
                     break;
                 case TAG_CLASS.PRIEST://牧师
                     this.drawACard(CardDB.cardIDEnum.None, own, true);
