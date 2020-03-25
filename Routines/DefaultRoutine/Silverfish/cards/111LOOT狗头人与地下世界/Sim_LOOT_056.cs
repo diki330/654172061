@@ -4,7 +4,17 @@ namespace HREngine.Bots
     {
         //<b>Deathrattle:</b> Shuffle a copy of this minion into your deck.
         //<b>亡语：</b>将该随从的一张复制洗入你的牌库。
-
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+            if (m.own)
+            {
+                p.ownDeckSize++;
+            }
+            else
+            {
+                p.enemyDeckSize++;
+            }
+        }
 
     }
 }

@@ -1,10 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_152 : SimTemplate //* 喧哗的诗人 Boisterous Bard
+    class Sim_LOOT_152 : SimTemplate//* 喧哗的诗人
     {
-        //<b>Battlecry:</b> Give your other minions +1 Health.
-        //<b>战吼：</b>使你的其他随从获得+1生命值。
+        // Battlecry: Give your other Minions +1 Health.
 
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+            foreach (Minion m in temp)
+            {
+                if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC && own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 0, 1);
+            }
+        }
     }
 }

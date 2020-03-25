@@ -1,10 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_150 : SimTemplate //* 缚雾熊怪 Furbolg Mossbinder
+    class Sim_LOOT_150 : SimTemplate//缚雾熊怪
     {
-        //<b>Battlecry:</b> Transform a friendly minion into a 6/6 Elemental.
-        //<b>战吼：</b>将一个友方随从变形成为一个6/6的元素。
 
+        private CardDB.Card 迷雾元素 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_150t1);
+
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            p.minionTransform(target, 迷雾元素);
+        }
 
     }
 }

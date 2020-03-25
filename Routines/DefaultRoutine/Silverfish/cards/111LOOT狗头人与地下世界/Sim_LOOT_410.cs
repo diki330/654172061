@@ -1,10 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_410 : SimTemplate //* 破晓之龙 Duskbreaker
+    class Sim_LOOT_410 : SimTemplate //* 破晓之龙
     {
-        //<b>Battlecry:</b> If you're holdinga Dragon, deal 3 damage to all other minions.
-        //<b>战吼：</b>如果你的手牌中有龙牌，则对所有其他随从造成3点伤害。
+        //Battlecry: If you're holding a Dragon, deal 3 damage to all other minions.
 
-
+        public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
+        {
+            if (m.own)
+            {
+                bool dragonInHand = false;
+                foreach (Handmanager.Handcard hc in p.owncards)
+                {
+                    if ((TAG_RACE)hc.card.race == TAG_RACE.DRAGON)
+                    {
+                        dragonInHand = true;
+                        break;
+                    }
+                }
+                if (dragonInHand) p.allMinionsGetDamage(3);
+            }
+        }
     }
 }

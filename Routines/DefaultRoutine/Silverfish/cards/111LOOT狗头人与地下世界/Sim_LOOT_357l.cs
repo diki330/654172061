@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_357l : SimTemplate //* 大师宝箱 Master Chest
+    class Sim_LOOT_357l : SimTemplate //* Master Chest
     {
-        //<b>Deathrattle:</b> Give your opponent a fantastic treasure!
-        //<b>亡语：</b>使你的对手获得一张宝藏牌！
+        // Deathrattle: Give your opponent a fantastic Treasure.
+        // +Handled in DBs
+
         public override void onDeathrattle(Playfield p, Minion m)
         {
             int cardsCount = (m.own) ? p.enemyAnzCards : p.owncards.Count;
@@ -15,6 +20,5 @@ namespace HREngine.Bots
 
             p.drawACard(CardDB.cardName.unknown, !m.own);
         }
-
     }
 }

@@ -1,10 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_286t2 : SimTemplate //* 神圣重槌 Sacred Maul
+    class Sim_LOOT_286t2 : SimTemplate //* 神圣重锤
     {
-        //<b>Battlecry:</b> Give your minions <b>Taunt</b>.
-        //<b>战吼：</b>使你的所有随从获得<b>嘲讽</b>。
+        //Give your minions Taunt.
 
 
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_286t2);
+
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(weapon, ownplay);
+            p.minionGetBuffed(target, 0, 0);
+            target.divineshild = true;
+
+        }
     }
 }

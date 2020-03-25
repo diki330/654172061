@@ -1,10 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_278t1 : SimTemplate //* 生命药剂 Elixir of Life
+    class Sim_LOOT_278t1 : SimTemplate //* 生命药剂
     {
-        //Give a minion +2/+2 and <b>Lifesteal</b>.
-        //使一个随从获得+2/+2和<b>吸血</b>。
+        //使一个随从获得+2/+2,在你手牌中时获得额外吸血效果
 
-
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.minionGetBuffed(target, 2, 2);
+            target.lifesteal = true;
+        }
     }
 }

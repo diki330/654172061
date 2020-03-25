@@ -1,10 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_500 : SimTemplate //* 瓦兰奈尔 Val'anyr
+    class Sim_LOOT_500 : SimTemplate //* 瓦兰奈尔
     {
-        //<b>Deathrattle:</b> Give a minion in your hand +4/+2. When it dies, reequip this.
-        //<b>亡语：</b>使你手牌中的一个随从获得+4/+2。当此随从死亡时，重新装备这把武器。
+        //Deathrattle: Give a minion in your hand +4/+2. When it dies, reequip this.
 
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_500);
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(weapon, ownplay);
+        }
+
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+            if (m.own)
+            {
+                Handmanager.Handcard hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.Mob);
+                if (hc != null)
+                {
+                    hc.addattack += 4;
+                    hc.addHp += 2;
+                    p.anzOwnExtraAngrHp += 6;
+                }
+            }
+            else
+            {
+                if (p.enemyAnzCards > 0) p.anzEnemyExtraAngrHp += 6;
+            }
+        }
     }
 }

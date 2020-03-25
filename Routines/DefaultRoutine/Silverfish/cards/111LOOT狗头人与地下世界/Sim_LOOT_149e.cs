@@ -4,11 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_LOOT_131t1 : SimTemplate //绿色软泥怪
-    {
+	class Sim_LOOT_149e : SimTemplate //通道爬行者
+	{
 
-        //    spott/
+//
 
-
-    }
+	}
 }

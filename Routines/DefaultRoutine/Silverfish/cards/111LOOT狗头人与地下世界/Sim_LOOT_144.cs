@@ -1,9 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_144 : SimTemplate //* 藏宝巨龙 Hoarding Dragon
+    class Sim_LOOT_144 : SimTemplate //藏宝巨龙
     {
-        //<b>Deathrattle:</b> Give your opponent two Coins.
-        //<b>亡语：</b>使你的对手获得两个幸运币。
+
+        //    kampfschrei:/ gebt eurem gegner 2 Coin.
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+            p.drawACard(CardDB.cardName.thecoin, !m.own);
+            p.drawACard(CardDB.cardName.thecoin, !m.own);
+        }
 
 
     }

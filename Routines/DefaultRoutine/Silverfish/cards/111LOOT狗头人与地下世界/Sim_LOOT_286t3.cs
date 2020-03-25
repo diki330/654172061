@@ -1,10 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_286t3 : SimTemplate //* 祝福重槌 Blessed Maul
+    class Sim_LOOT_286t3 : SimTemplate //* 祝福重锤
     {
-        //<b>Battlecry:</b> Give your minions +1 Attack.
-        //<b>战吼：</b>使你的所有随从获得+1攻击力。
+        //Give your minions +1/+1.
+
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_286t3);
 
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(weapon, ownplay);
+            p.allMinionOfASideGetBuffed(ownplay, 1, 1);
+
+        }
     }
 }

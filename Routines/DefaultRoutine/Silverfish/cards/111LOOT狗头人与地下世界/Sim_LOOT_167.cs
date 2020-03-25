@@ -1,10 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_167 : SimTemplate //* 菌菇术士 Fungalmancer
+    class Sim_LOOT_167 : SimTemplate //* 菌菇术士
     {
-        //<b>Battlecry:</b> Give adjacent minions +2/+2.
-        //<b>战吼：</b>使相邻的随从获得+2/+2。
+        //Battlecry: Give adjacent minios +2/+2
 
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+            foreach (Minion m in temp)
+            {
+                if (m.zonepos == own.zonepos - 1 || m.zonepos == own.zonepos + 1)
+                {
+                    p.minionGetBuffed(m, 2, 2);
+                }
+            }
+        }
     }
 }

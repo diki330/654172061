@@ -4,7 +4,10 @@ namespace HREngine.Bots
     {
         //<b>Battlecry:</b> Draw a weapon from your deck.
         //<b>战吼：</b>从你的牌库中抽一张武器牌。
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            p.drawACard(CardDB.cardName.fierywaraxe, own.own, true);
+        }
 
     }
 }

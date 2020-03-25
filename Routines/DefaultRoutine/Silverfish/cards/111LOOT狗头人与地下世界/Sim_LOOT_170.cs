@@ -1,10 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_170 : SimTemplate //* 乌鸦魔仆 Raven Familiar
+    class Sim_LOOT_170 : SimTemplate //* 乌鸦魔仆
     {
-        //<b>Battlecry:</b> Reveal a spell in each deck. If yours costs more, draw it.
-        //<b>战吼：</b>揭示双方牌库里的一张法术牌。如果你的牌法力值消耗较大，抽这张牌。
+        //战吼: 揭示双方牌库里的一张法术牌. If yours costs more, draw it.
 
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            p.drawACard(CardDB.cardName.fireball, own.own);
+        }
     }
 }

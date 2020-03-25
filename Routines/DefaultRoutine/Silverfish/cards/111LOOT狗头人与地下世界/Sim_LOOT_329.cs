@@ -1,10 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_329 : SimTemplate //* 伊克斯里德，真菌之王 Ixlid, Fungal Lord
+    class Sim_LOOT_329 : SimTemplate //* 伊克斯里德真菌之王
     {
-        //After you play a minion, summon a copy of it.
-        //在你使用一张随从牌后，召唤一个该随从的复制。
+        //在你使用一张随从牌后,召唤一个该随从的复制
 
-
+        public override void onMinionWasSummoned(Playfield p, Minion m, Minion summonedMinion)
+        {
+            int pos = (m.own) ? p.ownMinions.Count : p.enemyMinions.Count;
+            if (pos < 7)
+            {
+                p.callKid(summonedMinion.handcard.card, pos, m.own);
+                p.ownMinions[pos].setMinionToMinion(summonedMinion);
+            }
+        }
     }
 }

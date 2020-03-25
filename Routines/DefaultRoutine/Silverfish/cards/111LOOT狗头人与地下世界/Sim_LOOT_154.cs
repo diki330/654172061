@@ -1,10 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_154 : SimTemplate //* 砂齿骑兵 Gravelsnout Knight
+    class Sim_LOOT_154 : SimTemplate //* 砂齿骑兵
     {
-        //<b>Battlecry:</b> Summon a random 1-Cost minion for your opponent.
-        //<b>战吼：</b>为你的对手随机召唤一个法力值消耗为（1）点的随从。
+        // Battlecry: Summon a random 1-Cost minion for your opponent.
 
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_614t); //flameofazzinoth
 
+        public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
+        {
+            int zonepos = (m.own) ? p.enemyMinions.Count : p.ownMinions.Count;
+            p.callKid(kid, zonepos, !m.own);
+        }
     }
 }

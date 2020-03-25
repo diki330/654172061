@@ -4,7 +4,13 @@ namespace HREngine.Bots
     {
         //Has Attack equal to your Armor. Can't attack heroes.
         //攻击力等同于你的护甲值。无法攻击英雄。
+        private CardDB.Card w = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_044);
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(w, ownplay);
+
+        }
 
     }
 }

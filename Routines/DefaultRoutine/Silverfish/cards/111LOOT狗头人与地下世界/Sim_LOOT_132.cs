@@ -1,10 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace HREngine.Bots
 {
-    class Sim_LOOT_132 : SimTemplate //* å± é¾™è€… Dragonslayer
+    class Sim_LOOT_132 : SimTemplate //* ÍÀÁúÕß
     {
-        //<b>Battlecry:</b> Deal 6 damage to a Dragon.
-        //<b>æˆ˜å¼ï¼š</b>å¯¹ä¸€æ¡é¾™é€ æˆ6ç‚¹ä¼¤å®³ã€‚
+        //Õ½ºğ:¶ÔÒ»ÌõÁúÔì³É6µãÉËº¦.
 
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                int dmg = 6;
+                p.minionGetDamageOrHeal(target, dmg);
+            }
+        }
     }
 }

@@ -4,7 +4,17 @@ namespace HREngine.Bots
     {
         //<b>Battlecry:</b> If you have 15 or less Health, gain +3/+3 and <b>Taunt</b>.
         //<b>战吼：</b>如果你的生命值小于或等于15点，则获得+3/+3和<b>嘲讽</b>。
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if (own.own)
+            {
+                if (p.ownHero.Hp <= 15)
+                {
+                    p.minionGetBuffed(own, 3, 3);
+                    own.taunt = true;
+                }
+            }
+        }
 
     }
 }

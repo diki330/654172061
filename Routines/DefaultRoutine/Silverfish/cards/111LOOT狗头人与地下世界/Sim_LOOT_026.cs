@@ -4,7 +4,11 @@ namespace HREngine.Bots
     {
         //[x]<b>Battlecry:</b> Shuffle 3Ambushes into your deck.When drawn, summona 4/4 Spider.
         //<b>战吼：</b>将三张伏击牌洗入你的牌库。 当抽到伏击牌时，召唤一个4/4的蜘蛛。
-
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if (own.own) p.ownDeckSize += 3;
+            else p.enemyDeckSize += 3;
+        }
 
     }
 }
