@@ -395,7 +395,7 @@ namespace HREngine.Bots
                                 {
                                     healingtotem = true;
                                     continue;
-                            }
+                                }
                                 if (m.name == CardDB.cardName.wrathofairtotem)
                                 {
                                     wrathofairtotem = true;
@@ -987,6 +987,9 @@ namespace HREngine.Bots
                             retval = retval + offset - 4;
                         }
                         break;
+                    case CardDB.cardName.¿ñ±©Ð°Òíòð:
+                        retval = retval + offset - p.tempTrigger.enemyHeroGotDmg;
+                        break;
                     default:
                         retval = retval + offset;
                         break;
@@ -1222,6 +1225,13 @@ namespace HREngine.Bots
                                     switch (a.card.card.name)
                                     {
                                         case cardName.tuskarrtotemic: retval -= p.ownBrannBronzebeard + 1; break;
+                                        case cardName.·ÖÁÑÕ½¸«:
+                                            int ownTotemsCount = 0;
+                                            foreach (Minion m in p.ownMinions)
+                                            {
+                                                if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) ownTotemsCount++;
+                                            }
+                                            retval -= ownTotemsCount; break;
                                         default:
                                             if ((TAG_RACE)a.card.card.race == TAG_RACE.TOTEM) retval--;
                                             break;
@@ -1237,6 +1247,9 @@ namespace HREngine.Bots
                                 }
                             }
                         }
+                        break;
+                    case CardDB.cardName.¿ñ±©Ð°Òíòð:
+                        retval = retval + offset - p.tempTrigger.enemyHeroGotDmg;
                         break;
                     default:
                         retval = retval + offset;
