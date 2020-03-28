@@ -4466,7 +4466,7 @@ namespace HREngine.Bots
             grizzledguardian,
             trogggloomeater,
             ixlidfungallord,
-1level,
+			onelevel,
             primaltalismans,
             primaltalisman,
             koboldapprentice,
