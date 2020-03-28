@@ -273,6 +273,7 @@ namespace HREngine.Bots
 
             public SimTemplate sim_card;
 
+            public string EnglishName;
             public Card()
             {
                 playrequires = new List<ErrorType2>();
@@ -1383,6 +1384,8 @@ namespace HREngine.Bots
                             case 114: c.Elite = value == 1; break; //elite
                             case 185:
                                 {
+                                   
+                                    c.EnglishName = CardHelper.GetEnglishName(rootElement, c.cardIDenum);
 
                                     while ((index1 = s.IndexOf("<enUS>")) == -1)
                                     {
@@ -1515,7 +1518,7 @@ namespace HREngine.Bots
                     }
                 }
             }
-
+            DiscoverHelper.Init();
             Helpfunctions.Instance.ErrorLog("CardList:" + cardidToCardList.Count);
 
             //var sbb = new System.Text.StringBuilder();

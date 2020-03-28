@@ -67,5 +67,18 @@ namespace Silverfish.Routines.DefaultRoutine.Silverfish.Helpers
             bool implemented = type.IsSubclassOf(baseType);
             return implemented;
         }
+        public static string GetEnglishName(XElement rootElement, CardDB.cardIDEnum cardIdEnum)
+        {
+            if (cardIdEnum == CardDB.cardIDEnum.None)
+            {
+                return string.Empty;
+            }
+            var cardId = cardIdEnum.ToString();
+            var elements1 = rootElement.Elements("Entity");
+            var element1 = elements1.First(x => x.Attribute("CardID")?.Value == cardId);
+            var element2 = element1.Elements("Tag").First(x => x.Attribute("enumID")?.Value == "185");
+            var name = element2.Element("enUS")?.Value;
+            return name;
+        }
     }
 }
