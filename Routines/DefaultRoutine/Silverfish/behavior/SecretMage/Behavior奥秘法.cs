@@ -175,8 +175,8 @@
             foreach (Action a in p.playactions)
             {
                 if (a.actionType != actionEnum.playcard) continue;
-                if (a.card.card.name == CardDB.cardName.soulfire || a.card.card.name == CardDB.cardName.doomguard || a.card.card.name == CardDB.cardName.succubus) deletecardsAtLast = 1;
-                if (deletecardsAtLast == 1 && !(a.card.card.name == CardDB.cardName.soulfire || a.card.card.name == CardDB.cardName.doomguard || a.card.card.name == CardDB.cardName.succubus)) retval -= 20;
+                if (a.card.card.name == CardDB.cardName.soulfire || a.card.card.name == CardDB.cardName.doomguard) deletecardsAtLast = 1;
+                if (deletecardsAtLast == 1 && !(a.card.card.name == CardDB.cardName.soulfire || a.card.card.name == CardDB.cardName.doomguard || a.card.card.name == CardDB.cardName.felstalker)) retval -= 20;
             }
             if (p.enemyHero.Hp >= 1 && p.guessingHeroHP <= 0)
             {

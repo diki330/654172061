@@ -50,7 +50,7 @@ namespace HREngine.Bots
                         p.drawACard(CardDB.cardIDEnum.DRG_660, own.own, false);
                         break;
                     case TAG_CLASS.SHAMAN:
-                        p.drawACard(CardDB.cardName.风暴巨龙迦拉克隆, own.own, false);//620
+                        p.drawACard(CardDB.cardName.galakrondthetempest, own.own, false);//620
                         break;
                     case TAG_CLASS.PALADIN:
 

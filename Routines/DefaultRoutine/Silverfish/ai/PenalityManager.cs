@@ -154,7 +154,7 @@
                 case CardDB.cardName.flamewreathedfaceless://投火无面者打脸
                     if (target.isHero && !target.own) return -10;
                     break;
-                case CardDB.cardName.炸弹牛仔:
+                case CardDB.cardName.bombwrangler:
                     if (m.own && target.Angr < m.Hp) return -10;
                     break;
                 case CardDB.cardName.acolyteofpain: goto case CardDB.cardName.aiextra1;
@@ -1057,7 +1057,7 @@
                             case CardDB.cardName.acolyteofpain: if (p.owncards.Count <= 3) return 0; break;
                             case CardDB.cardName.dragonegg: if (p.ownMinions.Count <= 6) return 5; break;
                             case CardDB.cardName.impgangboss: if (p.ownMinions.Count <= 6) return 0; break;
-                            case CardDB.cardName.炸弹牛仔: if (p.ownMinions.Count <= 6) return 0; break;
+                            case CardDB.cardName.bombwrangler: if (p.ownMinions.Count <= 6) return 0; break;
                             case CardDB.cardName.grimpatron: if (p.ownMinions.Count <= 6) return 0; break;
                         }
                         foreach (Handmanager.Handcard hc in p.owncards)
@@ -2111,13 +2111,13 @@
             {
                 //********jk战********
                 case CardDB.cardName.sirfinleymrrgglton:
-                    if (p.ownHeroAblility.card.name == CardDB.cardName.迦拉克隆的巨力) return 50;
+                    if (p.ownHeroAblility.card.name == CardDB.cardName.galakrondsmight) return 50;
                     return 0;
-                case CardDB.cardName.圣剑扳手:
+                case CardDB.cardName.wrenchcalibur:
                     return -2;
-                case CardDB.cardName.炸弹牛仔:
+                case CardDB.cardName.bombwrangler:
                     return -4;
-                case CardDB.cardName.空中悍匪:
+                case CardDB.cardName.skyraider:
                     if (p.ownMaxMana == 1) return -5;
                     return 0;
                 case CardDB.cardName.nzothsfirstmate:
@@ -2126,51 +2126,51 @@
                 case CardDB.cardName.southseadeckhand:
                     if (p.ownMaxMana == 1) return -3;
                     return 0;
-                case CardDB.cardName.废墟之子:
+                case CardDB.cardName.scionofruin:
                     if (p.OwnInvoke >= 2)
                     {
                         if (p.enemyMinions.Count > 0) return -12;
                         return 0;
                     }
                     return 20;
-                case CardDB.cardName.无敌巨龙迦拉克隆:
+                case CardDB.cardName.galakrondtheunbreakable:
                     int InvokeInHand = 0;
                     foreach (Handmanager.Handcard hc in p.owncards)
                     {
-                        if (hc.card.name == CardDB.cardName.虔信狂徒 || hc.card.name == CardDB.cardName.迦拉克隆之盾 || hc.card.name == CardDB.cardName.仪式斩斧 || hc.card.name == CardDB.cardName.祈求觉醒)
+                        if (hc.card.name == CardDB.cardName.devotedmaniac || hc.card.name == CardDB.cardName.shieldofgalakrond || hc.card.name == CardDB.cardName.ritualchopper || hc.card.name == CardDB.cardName.awaken)
                         {
                             InvokeInHand++;
                         }
                     }
                     if ((p.OwnInvoke + InvokeInHand) >= 2) return 20;
                     return 0;
-                case CardDB.cardName.天降浩劫迦拉克隆:
+                case CardDB.cardName.galakrondtheapocalypse:
                     InvokeInHand = 0;
                     foreach (Handmanager.Handcard hc in p.owncards)
                     {
-                        if (hc.card.name == CardDB.cardName.虔信狂徒 || hc.card.name == CardDB.cardName.迦拉克隆之盾 || hc.card.name == CardDB.cardName.仪式斩斧 || hc.card.name == CardDB.cardName.祈求觉醒)
+                        if (hc.card.name == CardDB.cardName.devotedmaniac || hc.card.name == CardDB.cardName.shieldofgalakrond || hc.card.name == CardDB.cardName.ritualchopper || hc.card.name == CardDB.cardName.awaken)
                         {
                             InvokeInHand++;
                         }
                     }
                     if ((p.OwnInvoke + InvokeInHand) >= 4) return 20;
                     return -10;
-                case CardDB.cardName.世界末日迦拉克隆:
+                case CardDB.cardName.galakrondazerothsend:
                     if (p.owncards.Count < 6)
                         return -50;
                     return 50;
-                case CardDB.cardName.克罗斯龙蹄:
+                case CardDB.cardName.kronxdragonhoof:
                     bool GalakrondInHand = false;
                     foreach (Handmanager.Handcard hc in p.owncards)
                     {
-                        if (hc.card.name == CardDB.cardName.无敌巨龙迦拉克隆 || hc.card.name == CardDB.cardName.天降浩劫迦拉克隆 || hc.card.name == CardDB.cardName.世界末日迦拉克隆)
+                        if (hc.card.name == CardDB.cardName.galakrondtheunbreakable || hc.card.name == CardDB.cardName.galakrondtheapocalypse || hc.card.name == CardDB.cardName.galakrondazerothsend)
                         {
                             GalakrondInHand = true;
                             break;
                         }
                     }
                     if (GalakrondInHand) return 10;
-                    if (p.ownHeroAblility.card.name == CardDB.cardName.迦拉克隆的巨力) return -10;
+                    if (p.ownHeroAblility.card.name == CardDB.cardName.galakrondsmight) return -10;
                     if (p.ownHeroAblility.card.name == CardDB.cardName.armorup && !GalakrondInHand) return -10;
                     break;
                 //********奥秘法********
@@ -2180,7 +2180,7 @@
                         if (p.ownMaxMana == 1 && hc.card.Secret) return -50;
                     }
                     break;
-                case CardDB.cardName.对空奥术法师:
+                case CardDB.cardName.arcaneflakmage:
                     if (p.enemyMinions.Count < 2) return 5;
                     break;
                 case CardDB.cardName.madscientist: return -3;
@@ -2192,7 +2192,7 @@
                     bool found1 = false;
                     foreach (Minion mnn1 in p.ownMinions)
                     {
-                        if (mnn1.name == CardDB.cardName.kabalcrystalrunner || mnn1.name == CardDB.cardName.云雾王子) found1 = true;
+                        if (mnn1.name == CardDB.cardName.kabalcrystalrunner || mnn1.name == CardDB.cardName.cloudprince) found1 = true;
 
                     }
                     if (found1) return -10;
@@ -2201,21 +2201,21 @@
                     if (p.ownHero.Hp < 15) return -8;
                     else return -3;
                 case CardDB.cardName.counterspell: return -6;
-                case CardDB.cardName.火焰结界:
+                case CardDB.cardName.flameward:
                     if (p.enemyMinions.Count == 2) return -8;
                     if (p.enemyMinions.Count == 3) return -12;
                     if (p.enemyMinions.Count >= 4) return -15;
                     else return -3;
-                case CardDB.cardName.爆炸符文: return -8;
-                case CardDB.cardName.云雾王子:
+                case CardDB.cardName.explosiverunes: return -8;
+                case CardDB.cardName.cloudprince:
                     if (p.ownSecretsIDList.Count < 1) return 80;
                     if (target.isHero) return -1;
                     break;
-                case CardDB.cardName.艾露尼斯:
+                case CardDB.cardName.aluneth:
                     if (p.owncards.Count >= 7) return 500;
                     else return -50;
                 //********图腾偶数萨********
-                case CardDB.cardName.大地之力:
+                case CardDB.cardName.earthenmight:
                     if (target != null)
                     {
                         if (!target.own) return 500;
@@ -2225,7 +2225,7 @@
                             {
                                 if ((TAG_RACE)target.handcard.card.race == TAG_RACE.TOTEM)
                                 {
-                                    if (target.name == CardDB.cardName.怪盗图腾) return -6;
+                                    if (target.name == CardDB.cardName.eviltotem) return -6;
                                     if (target.name == CardDB.cardName.healingtotem) return -5;
                                     if (target.name == CardDB.cardName.wrathofairtotem) return -4;
                                     return -3;
@@ -2234,7 +2234,7 @@
                             }
                             else if ((TAG_RACE)target.handcard.card.race == TAG_RACE.TOTEM)
                             {
-                                if (target.name == CardDB.cardName.怪盗图腾) return -2;
+                                if (target.name == CardDB.cardName.eviltotem) return -2;
                                 return -1;
                             }
                             else return 0;
@@ -2250,11 +2250,11 @@
                             destroyenemy++;
                     }
                     return (15 - destroyenemy * 10);
-                case CardDB.cardName.阴燃电鳗:
+                case CardDB.cardName.murksparkeel:
                     //针对硬币电鳗打脸的愚蠢行为
                     if (p.ownMaxMana == 1 && target.isHero) return 50;
                     return 0;
-                case CardDB.cardName.风暴聚合器:
+                case CardDB.cardName.thestormbringer:
                     int ownMinionsValue = 0;
                     foreach (Minion m in p.ownMinions)
                     {
@@ -2263,7 +2263,7 @@
                     }
                     if (p.ownMinions.Count < 4) return 45 - p.ownMinions.Count * 30 + p.owncards.Count * 10 + ownMinionsValue;
                     return 0;
-                case CardDB.cardName.分裂战斧:
+                case CardDB.cardName.splittingaxe:
                     int ownTotemsValue = 0;
                     int TotemCount = 0;
                     foreach (Minion m in p.ownMinions)
@@ -2272,7 +2272,7 @@
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM)
                         {
                             TotemCount++;
-                            if (m.handcard.card.name == CardDB.cardName.怪盗图腾)
+                            if (m.handcard.card.name == CardDB.cardName.eviltotem)
                             {
                                 bonusValue += 6;
                             }
@@ -2317,14 +2317,14 @@
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) ownTotemsCount++;
                     }
                     return 60 - ownTotemsCount * 30;
-                case CardDB.cardName.图腾潮涌:
+                case CardDB.cardName.totemicsurge:
                     ownTotemsCount = 0;
                     foreach (Minion m in p.ownMinions)
                     {
                         if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) ownTotemsCount++;
                     }
                     return 60 - ownTotemsCount * 30;
-                case CardDB.cardName.怪盗图腾:
+                case CardDB.cardName.eviltotem:
                     return -5;
                 //********原有********
                 case CardDB.cardName.hobartgrapplehammer: return -5;
@@ -3082,18 +3082,18 @@
                     if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.seagiant) return -1;
                     if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.thingfrombelow) return -1;
                     if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.totemicmight) return -1;
-                    if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.图腾潮涌) return -1;
-                    if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.风暴聚合器) return -1;
+                    if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.totemicsurge) return -1;
+                    if (a.actionType == actionEnum.playcard && a.card.card.name == CardDB.cardName.thestormbringer) return -1;
                 }
                 if (p.owncards.Count > 1)
                 {
-                    if (card.type == CardDB.cardtype.SPELL && card.name != CardDB.cardName.风暴聚合器)
+                    if (card.type == CardDB.cardtype.SPELL && card.name != CardDB.cardName.thestormbringer)
                     {
                         if (!(DamageTargetDatabase.ContainsKey(card.name) || DamageAllEnemysDatabase.ContainsKey(card.name)
                             || DamageAllDatabase.ContainsKey(card.name) || DamageRandomDatabase.ContainsKey(card.name)
                             || DamageTargetSpecialDatabase.ContainsKey(card.name) || DamageHeroDatabase.ContainsKey(card.name))) pen += 10;
                     }
-                    else if (card.name == CardDB.cardName.frostwolfwarlord || card.name == CardDB.cardName.thingfrombelow || card.name == CardDB.cardName.draeneitotemcarver || card.name == CardDB.cardName.seagiant || card.name == CardDB.cardName.风暴聚合器) return -1;
+                    else if (card.name == CardDB.cardName.frostwolfwarlord || card.name == CardDB.cardName.thingfrombelow || card.name == CardDB.cardName.draeneitotemcarver || card.name == CardDB.cardName.seagiant || card.name == CardDB.cardName.thestormbringer) return -1;
                     else pen += 10;
                 }
             }
@@ -3725,7 +3725,7 @@
             DamageAllDatabase.Add(CardDB.cardName.unstableghoul, 1);
             DamageAllDatabase.Add(CardDB.cardName.volcanicpotion, 2);
             DamageAllDatabase.Add(CardDB.cardName.whirlwind, 1);
-            DamageAllDatabase.Add(CardDB.cardName.祈求觉醒, 1);
+            DamageAllDatabase.Add(CardDB.cardName.awaken, 1);
             DamageAllDatabase.Add(CardDB.cardName.yseraawakens, 5);
             DamageAllDatabase.Add(CardDB.cardName.spiritlash, 1);
             DamageAllDatabase.Add(CardDB.cardName.defile, 1);
@@ -4156,9 +4156,9 @@
             priorityDatabase.Add(CardDB.cardName.rotface, 1);
             priorityDatabase.Add(CardDB.cardName.professorputricide, 1);
             priorityDatabase.Add(CardDB.cardName.moorabi, 1);
-            priorityDatabase.Add(CardDB.cardName.大法师瓦格斯, 5);
-            priorityDatabase.Add(CardDB.cardName.了不起的杰弗里斯, 4);
-            priorityDatabase.Add(CardDB.cardName.观星者露娜, 5);
+            priorityDatabase.Add(CardDB.cardName.archmagevargoth, 5);
+            priorityDatabase.Add(CardDB.cardName.zephrysthegreat, 4);
+            priorityDatabase.Add(CardDB.cardName.stargazerluna, 5);
         }
 
         private void setupAttackBuff()//加攻击数据库
@@ -4168,12 +4168,12 @@
             this.heroAttackBuffDatabase.Add(CardDB.cardName.evolvespines, 4);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.feralrage, 4);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.heroicstrike, 4);
-            this.heroAttackBuffDatabase.Add(CardDB.cardName.迦拉克隆的巨力, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.galakrondsmight, 3);
             this.heroAttackBuffDatabase.Add(CardDB.cardName.gnash, 3);
-            this.heroAttackBuffDatabase.Add(CardDB.cardName.虔信狂徒, 3);
-            this.heroAttackBuffDatabase.Add(CardDB.cardName.迦拉克隆之盾, 3);
-            this.heroAttackBuffDatabase.Add(CardDB.cardName.仪式斩斧, 3);
-            this.heroAttackBuffDatabase.Add(CardDB.cardName.祈求觉醒, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.devotedmaniac, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.shieldofgalakrond, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.ritualchopper, 3);
+            this.heroAttackBuffDatabase.Add(CardDB.cardName.awaken, 3);
 
             this.attackBuffDatabase.Add(CardDB.cardName.abusivesergeant, 2);
             this.attackBuffDatabase.Add(CardDB.cardName.adaptation, 1);
@@ -4219,7 +4219,7 @@
             this.attackBuffDatabase.Add(CardDB.cardName.cryostasis, 3);
             this.attackBuffDatabase.Add(CardDB.cardName.bonemare, 4);
             this.attackBuffDatabase.Add(CardDB.cardName.acherusveteran, 1);
-            this.attackBuffDatabase.Add(CardDB.cardName.地精跟班, 1);
+            this.attackBuffDatabase.Add(CardDB.cardName.goblinlackey, 1);
         }
 
         private void setupHealthBuff()//加血数据库
@@ -4261,7 +4261,7 @@
             healthBuffDatabase.Add(CardDB.cardName.fallensuncleric, 1);
             healthBuffDatabase.Add(CardDB.cardName.cryostasis, 3);
             healthBuffDatabase.Add(CardDB.cardName.bonemare, 4);
-            healthBuffDatabase.Add(CardDB.cardName.泰坦造物跟班, 2);
+            healthBuffDatabase.Add(CardDB.cardName.titaniclackey, 2);
 
 
             tauntBuffDatabase.Add(CardDB.cardName.ancestralhealing, 1);
@@ -4272,7 +4272,7 @@
             tauntBuffDatabase.Add(CardDB.cardName.rustyhorn, 1);
             tauntBuffDatabase.Add(CardDB.cardName.sparringpartner, 1);
             tauntBuffDatabase.Add(CardDB.cardName.spikeridgedsteed, 1);
-            tauntBuffDatabase.Add(CardDB.cardName.泰坦造物跟班, 1);
+            tauntBuffDatabase.Add(CardDB.cardName.titaniclackey, 1);
         }
 
         private void setupCardDrawBattlecry()//战吼亡语抽牌数据库
@@ -4600,7 +4600,7 @@
             cardDiscardDatabase.Add(CardDB.cardName.doomguard, 5);
             cardDiscardDatabase.Add(CardDB.cardName.lakkarifelhound, 4);
             cardDiscardDatabase.Add(CardDB.cardName.soulfire, 1);
-            cardDiscardDatabase.Add(CardDB.cardName.succubus, 2);
+            cardDiscardDatabase.Add(CardDB.cardName.felstalker, 2);
         }
 
         private void setupDestroyOwnCards()//弃掉手牌数据库
@@ -4793,7 +4793,7 @@
             specialMinions.Add(CardDB.cardName.igneouselemental, 0);
             specialMinions.Add(CardDB.cardName.illidanstormrage, 0);
             specialMinions.Add(CardDB.cardName.impgangboss, 0);
-            specialMinions.Add(CardDB.cardName.炸弹牛仔, 0);
+            specialMinions.Add(CardDB.cardName.bombwrangler, 0);
             specialMinions.Add(CardDB.cardName.impmaster, 0);
             specialMinions.Add(CardDB.cardName.infestedtauren, 0);
             specialMinions.Add(CardDB.cardName.infestedwolf, 0);
@@ -4841,7 +4841,7 @@
             specialMinions.Add(CardDB.cardName.mekgineerthermaplugg, 0);
             specialMinions.Add(CardDB.cardName.micromachine, 0);
             specialMinions.Add(CardDB.cardName.mimironshead, 0);
-            specialMinions.Add(CardDB.cardName.mistressofpain, 0);
+            specialMinions.Add(CardDB.cardName.queenofpain, 0);
             specialMinions.Add(CardDB.cardName.moroes, 0);
             specialMinions.Add(CardDB.cardName.muklaschampion, 0);
             specialMinions.Add(CardDB.cardName.murlocknight, 0);
@@ -5174,7 +5174,7 @@
             priorityTargets.Add(CardDB.cardName.igneouselemental, 10);
             priorityTargets.Add(CardDB.cardName.illidanstormrage, 10);
             priorityTargets.Add(CardDB.cardName.impgangboss, 10);
-            priorityTargets.Add(CardDB.cardName.炸弹牛仔, 10);
+            priorityTargets.Add(CardDB.cardName.bombwrangler, 10);
             priorityTargets.Add(CardDB.cardName.impmaster, 10);
             priorityTargets.Add(CardDB.cardName.ironsensei, 10);
             priorityTargets.Add(CardDB.cardName.junglemoonkin, 10);
@@ -5283,7 +5283,7 @@
             priorityTargets.Add(CardDB.cardName.icewalker, 10);
             priorityTargets.Add(CardDB.cardName.cryptlord, 10);
             priorityTargets.Add(CardDB.cardName.corpsewidow, 10);
-            priorityTargets.Add(CardDB.cardName.观星者露娜, 10);
+            priorityTargets.Add(CardDB.cardName.stargazerluna, 10);
         }
 
         private void setupLethalHelpMinions()
@@ -5467,7 +5467,7 @@
             silenceTargets.Add(CardDB.cardName.igneouselemental, 0);
             silenceTargets.Add(CardDB.cardName.illidanstormrage, 0);
             silenceTargets.Add(CardDB.cardName.impgangboss, 0);
-            silenceTargets.Add(CardDB.cardName.炸弹牛仔, 0);
+            silenceTargets.Add(CardDB.cardName.bombwrangler, 0);
             silenceTargets.Add(CardDB.cardName.impmaster, 0);
             silenceTargets.Add(CardDB.cardName.ironsensei, 0);
             silenceTargets.Add(CardDB.cardName.jadeswarmer, 0);
@@ -6137,7 +6137,7 @@
             equipWeaponPlayDatabase.Add(CardDB.cardName.visionsoftheassassin, 1);
             equipWeaponPlayDatabase.Add(CardDB.cardName.utheroftheebonblade, 5);
             equipWeaponPlayDatabase.Add(CardDB.cardName.scourgelordgarrosh, 4);
-            equipWeaponPlayDatabase.Add(CardDB.cardName.世界末日迦拉克隆, 5);
+            equipWeaponPlayDatabase.Add(CardDB.cardName.galakrondazerothsend, 5);
         }
 
 

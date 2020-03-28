@@ -134,7 +134,7 @@ namespace HREngine.Bots
                 }
                 if (m.Ready) readycount++;
                 if (m.Hp <= 4 && (m.Angr > 2 || m.Hp > 3)) ownMinionsCount++;
-                if (m.name == CardDB.cardName.废墟之子) retval -= 4;//废墟之子测试
+                if (m.name == CardDB.cardName.scionofruin) retval -= 4;//废墟之子测试
                 retval += m.synergy;
             }
             retval += p.anzOgOwnCThunAngrBonus;
@@ -184,7 +184,7 @@ namespace HREngine.Bots
                     case CardDB.cardName.darkshirelibrarian: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.darkbargain: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.doomguard: goto case CardDB.cardName.soulfire;
-                    case CardDB.cardName.succubus: goto case CardDB.cardName.soulfire;
+                    case CardDB.cardName.felstalker: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.soulfire: deletecardsAtLast = 1; break;
                     default:
                         if (deletecardsAtLast == 1) retval -= 20;

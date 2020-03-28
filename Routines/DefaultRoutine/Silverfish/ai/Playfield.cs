@@ -627,7 +627,7 @@
                     case CardDB.cardName.fallenhero:
                         this.ownHeroPowerExtraDamage++;
                         continue;
-                    case CardDB.cardName.奥术增幅体:
+                    case CardDB.cardName.arcaneamplifier:
                         this.ownHeroPowerExtraDamage += 2;
                         continue;
                     case CardDB.cardName.garrisoncommander:
@@ -3546,7 +3546,7 @@
                         if (this.enemyAnzCards > 0) this.anzEnemyExtraAngrHp += this.enemyAnzCards * 2 - 1;
                     }
                     break;
-                case CardDB.cardName.圣剑扳手:
+                case CardDB.cardName.wrenchcalibur:
                     if (own)
                     {
                         this.enemyDeckSize++;
@@ -7670,7 +7670,7 @@
                     break;
                 case TAG_CLASS.WARRIOR://战士
                     this.minionGetTempBuff(own ? this.ownHero : this.enemyHero, 3, 0);
-					if(!this.ownHero.Ready) this.evaluatePenality += 20;
+                    if (!this.ownHero.Ready) this.evaluatePenality += 20;
                     break;
                 case TAG_CLASS.PRIEST://牧师
                     this.drawACard(CardDB.cardIDEnum.None, own, true);

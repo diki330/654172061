@@ -987,7 +987,7 @@ namespace HREngine.Bots
                             retval = retval + offset - 4;
                         }
                         break;
-                    case CardDB.cardName.¿ñ±©Ð°Òíòð:
+                    case CardDB.cardName.frenziedfelwing:
                         retval = retval + offset - p.tempTrigger.enemyHeroGotDmg;
                         break;
                     default:
@@ -1225,7 +1225,7 @@ namespace HREngine.Bots
                                     switch (a.card.card.name)
                                     {
                                         case cardName.tuskarrtotemic: retval -= p.ownBrannBronzebeard + 1; break;
-                                        case cardName.·ÖÁÑÕ½¸«:
+                                        case cardName.splittingaxe:
                                             int ownTotemsCount = 0;
                                             foreach (Minion m in p.ownMinions)
                                             {
@@ -1248,7 +1248,7 @@ namespace HREngine.Bots
                             }
                         }
                         break;
-                    case CardDB.cardName.¿ñ±©Ð°Òíòð:
+                    case CardDB.cardName.frenziedfelwing:
                         retval = retval + offset - p.tempTrigger.enemyHeroGotDmg;
                         break;
                     default:

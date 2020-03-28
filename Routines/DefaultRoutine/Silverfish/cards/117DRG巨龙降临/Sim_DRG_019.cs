@@ -15,7 +15,7 @@ namespace HREngine.Bots
                 int count = 0;
                 foreach (Minion mnn in p.ownMinions)
                 {
-                    if (mnn.name == CardDB.cardName.废墟之子 && m.entitiyID != mnn.entitiyID && mnn.playedThisTurn)
+                    if (mnn.name == CardDB.cardName.scionofruin && m.entitiyID != mnn.entitiyID && mnn.playedThisTurn)
                     {
                         mnn.setMinionToMinion(m);
                         count++;

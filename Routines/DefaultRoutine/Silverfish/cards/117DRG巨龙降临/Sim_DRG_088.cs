@@ -13,7 +13,7 @@ namespace HREngine.Bots
             foreach (Minion mn in temp)
             {
                 if (mn.entitiyID == m.entitiyID) continue;
-                if (mn.name == CardDB.cardName.恐惧渡鸦) bonusattack++;
+                if (mn.name == CardDB.cardName.dreadraven) bonusattack++;
             }
             p.minionGetBuffed(m, 3 * bonusattack, 0);
         }
@@ -24,7 +24,7 @@ namespace HREngine.Bots
             foreach (Minion mn in temp)
             {
                 if (mn.entitiyID == m.entitiyID) continue;
-                if (mn.name == CardDB.cardName.恐惧渡鸦) bonusattack++;
+                if (mn.name == CardDB.cardName.dreadraven) bonusattack++;
             }
             p.minionGetBuffed(m, -3 * bonusattack, 0);
         }

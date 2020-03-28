@@ -134,7 +134,7 @@ namespace HREngine.Bots
                 }
                 if (m.Ready) readycount++;
                 if (m.Hp <= 4 && (m.Angr > 2 || m.Hp > 3)) ownMinionsCount++;
-                if (m.name == CardDB.cardName.废墟之子) retval -= 4;//废墟之子测试
+                if (m.name == CardDB.cardName.scionofruin) retval -= 4;//废墟之子测试
                 retval += m.synergy;
             }
             retval += p.anzOgOwnCThunAngrBonus;
@@ -184,7 +184,7 @@ namespace HREngine.Bots
                     case CardDB.cardName.darkshirelibrarian: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.darkbargain: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.doomguard: goto case CardDB.cardName.soulfire;
-                    case CardDB.cardName.succubus: goto case CardDB.cardName.soulfire;
+                    case CardDB.cardName.felstalker: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.soulfire: deletecardsAtLast = 1; break;
                     default:
                         if (deletecardsAtLast == 1) retval -= 20;
@@ -371,7 +371,7 @@ namespace HREngine.Bots
         public override int getSirFinleyPriority(List<Handmanager.Handcard> discoverCards)
         {
 
-            return -1; //comment out or remove this to set manual priority
+            //return -1; comment out or remove this to set manual priority
             int sirFinleyChoice = -1;
             int tmp = int.MinValue;
             for (int i = 0; i < discoverCards.Count; i++)

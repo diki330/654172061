@@ -176,7 +176,7 @@ namespace HREngine.Bots
                     case CardDB.cardName.darkshirelibrarian: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.darkbargain: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.doomguard: goto case CardDB.cardName.soulfire;
-                    case CardDB.cardName.succubus: goto case CardDB.cardName.soulfire;
+                    case CardDB.cardName.felstalker: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.soulfire: deletecardsAtLast = 1; break;
                     default:
                         if (deletecardsAtLast == 1) retval -= 20;
@@ -355,7 +355,7 @@ namespace HREngine.Bots
             if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;
             if ((TAG_RACE)m.handcard.card.race == TAG_RACE.TOTEM) retval += 2;//内战解图腾
             if (p.enemyHeroStartClass == TAG_CLASS.PALADIN && p.enemyHeroAblility.card.cardIDenum == CardDB.cardIDEnum.AT_132_PALADIN) retval += 2;//打奇数骑解场癌
-			retval += m.synergy;
+            retval += m.synergy;
             return retval;
         }
 

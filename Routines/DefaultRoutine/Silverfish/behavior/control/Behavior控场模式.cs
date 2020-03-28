@@ -176,7 +176,7 @@ namespace HREngine.Bots
                     case CardDB.cardName.darkshirelibrarian: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.darkbargain: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.doomguard: goto case CardDB.cardName.soulfire;
-                    case CardDB.cardName.succubus: goto case CardDB.cardName.soulfire;
+                    case CardDB.cardName.felstalker: goto case CardDB.cardName.soulfire;
                     case CardDB.cardName.soulfire: deletecardsAtLast = 1; break;
                     default:
                         if (deletecardsAtLast == 1) retval -= 20;

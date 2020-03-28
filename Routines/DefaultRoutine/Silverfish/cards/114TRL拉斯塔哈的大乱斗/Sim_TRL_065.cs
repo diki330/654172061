@@ -40,7 +40,7 @@ namespace HREngine.Bots
                                     p.ownSecretsIDList.Add(kid.cardIDenum);
 
                             }
-                            else if (kid.name == CardDB.cardName.猛兽出笼)
+                            else if (kid.name == CardDB.cardName.unleashthebeast)
                             {
                                 p.callKid(kid2, pos, ownplay);
                                 p.drawACard(CardDB.cardName.unknown, ownplay, true);
@@ -51,7 +51,7 @@ namespace HREngine.Bots
                                 if (e.Value > 1) p.callKid(kid3, pos, ownplay);
                                 p.callKid(kid3, pos, ownplay);
                             }
-                            else if (kid.name == CardDB.cardName.主人的召唤)
+                            else if (kid.name == CardDB.cardName.masterscall)
                             {
                                 p.drawACard(CardDB.cardName.unknown, ownplay, true);
                                 p.drawACard(CardDB.cardName.unknown, ownplay, true);

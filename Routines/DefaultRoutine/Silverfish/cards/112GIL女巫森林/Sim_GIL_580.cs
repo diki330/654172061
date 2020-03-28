@@ -6,7 +6,7 @@ namespace HREngine.Bots
         //<b>战吼：</b>从你的牌库中抽一张具有<b>突袭</b>的随从牌。
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            p.drawACard(CardDB.cardName.虔信狂徒, own.own);
+            p.drawACard(CardDB.cardName.devotedmaniac, own.own);
         }
 
     }
