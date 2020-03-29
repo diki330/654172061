@@ -3848,7 +3848,7 @@
             DamageTargetDatabase.Add(CardDB.cardName.heartoffire, 5);
             DamageTargetDatabase.Add(CardDB.cardName.hoggersmash, 4);
             DamageTargetDatabase.Add(CardDB.cardName.holyfire, 5);
-            DamageTargetDatabase.Add(CardDB.cardName.holysmite, 2);
+            DamageTargetDatabase.Add(CardDB.cardName.holysmite, 3);
             DamageTargetDatabase.Add(CardDB.cardName.icelance, 4);//only if iced
             DamageTargetDatabase.Add(CardDB.cardName.implosion, 2);
             DamageTargetDatabase.Add(CardDB.cardName.ironforgerifleman, 1);
@@ -4360,7 +4360,6 @@
             cardDrawBattleCryDatabase.Add(CardDB.cardName.netherspitehistorian, 1);
             cardDrawBattleCryDatabase.Add(CardDB.cardName.nourish, 3); //choice = 2
             cardDrawBattleCryDatabase.Add(CardDB.cardName.noviceengineer, 1);
-            cardDrawBattleCryDatabase.Add(CardDB.cardName.powerwordshield, 1);
             cardDrawBattleCryDatabase.Add(CardDB.cardName.primalfinlookout, 1);
             cardDrawBattleCryDatabase.Add(CardDB.cardName.primordialglyph, 1);
             cardDrawBattleCryDatabase.Add(CardDB.cardName.purify, 1);
@@ -4499,7 +4498,7 @@
             UsefulNeedKeepDatabase.Add(CardDB.cardName.hobgoblin, 10);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.hogger, 13);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.homingchicken, 12);
-            UsefulNeedKeepDatabase.Add(CardDB.cardName.illidanstormrage, 10);
+            UsefulNeedKeepDatabase.Add(CardDB.cardName.xavius, 10);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.illuminator, 2);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.impmaster, 5);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.ironsensei, 10);
@@ -4791,7 +4790,7 @@
             specialMinions.Add(CardDB.cardName.hoodedacolyte, 0);
             specialMinions.Add(CardDB.cardName.hugetoad, 0);
             specialMinions.Add(CardDB.cardName.igneouselemental, 0);
-            specialMinions.Add(CardDB.cardName.illidanstormrage, 0);
+            specialMinions.Add(CardDB.cardName.xavius, 0);
             specialMinions.Add(CardDB.cardName.impgangboss, 0);
             specialMinions.Add(CardDB.cardName.bombwrangler, 0);
             specialMinions.Add(CardDB.cardName.impmaster, 0);
@@ -5172,7 +5171,7 @@
             priorityTargets.Add(CardDB.cardName.holychampion, 10);
             priorityTargets.Add(CardDB.cardName.hoodedacolyte, 10);
             priorityTargets.Add(CardDB.cardName.igneouselemental, 10);
-            priorityTargets.Add(CardDB.cardName.illidanstormrage, 10);
+            priorityTargets.Add(CardDB.cardName.xavius, 10);
             priorityTargets.Add(CardDB.cardName.impgangboss, 10);
             priorityTargets.Add(CardDB.cardName.bombwrangler, 10);
             priorityTargets.Add(CardDB.cardName.impmaster, 10);
@@ -5465,7 +5464,7 @@
             silenceTargets.Add(CardDB.cardName.homingchicken, 0);
             silenceTargets.Add(CardDB.cardName.hoodedacolyte, 0);
             silenceTargets.Add(CardDB.cardName.igneouselemental, 0);
-            silenceTargets.Add(CardDB.cardName.illidanstormrage, 0);
+            silenceTargets.Add(CardDB.cardName.xavius, 0);
             silenceTargets.Add(CardDB.cardName.impgangboss, 0);
             silenceTargets.Add(CardDB.cardName.bombwrangler, 0);
             silenceTargets.Add(CardDB.cardName.impmaster, 0);
@@ -5991,7 +5990,7 @@
             GangUpDatabase.Add(CardDB.cardName.hogger, 5);
             GangUpDatabase.Add(CardDB.cardName.hoggerdoomofelwynn, 1);
             GangUpDatabase.Add(CardDB.cardName.igneouselemental, 1);
-            GangUpDatabase.Add(CardDB.cardName.illidanstormrage, 5);
+            GangUpDatabase.Add(CardDB.cardName.xavius, 5);
             GangUpDatabase.Add(CardDB.cardName.impmaster, 0);
             GangUpDatabase.Add(CardDB.cardName.infestedtauren, 1);
             GangUpDatabase.Add(CardDB.cardName.ironbeakowl, 4);

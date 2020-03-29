@@ -400,7 +400,7 @@
                         continue;
                     //****************************************
                     //****************************************play
-                    case CardDB.cardName.illidanstormrage:
+                    case CardDB.cardName.xavius:
                         if (p.enemyAnzCards >= 1) p.callKid(flame, p.enemyMinions.Count, false);
                         continue;
                     case CardDB.cardName.questingadventurer:

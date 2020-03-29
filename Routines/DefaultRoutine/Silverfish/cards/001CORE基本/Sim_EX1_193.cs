@@ -7,6 +7,9 @@ namespace HREngine.Bots
 	class Sim_EX1_193  : SimTemplate// EX1_193  心灵咒术师
 	  //战吼：复制你对手的牌库中的一张牌，并将其置入你的手牌。
 	{
-
+		public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, m.own, true);
+		}
 	}
 }

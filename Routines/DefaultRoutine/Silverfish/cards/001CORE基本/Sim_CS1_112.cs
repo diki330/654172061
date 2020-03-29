@@ -14,8 +14,7 @@ namespace HREngine.Bots
             int heal = (ownplay) ? p.getSpellHeal(2) : p.getEnemySpellHeal(2);
             if (ownplay)
             {
-                p.minionGetDamageOrHeal(p.ownHero, -heal);
-                p.minionGetDamageOrHeal(p.enemyHero, dmg);
+                p.minionGetDamageOrHeal(p.ownHero, -heal);              
                 foreach (Minion m in p.ownMinions)
                 {
                     p.minionGetDamageOrHeal(m, -heal);
@@ -29,7 +28,6 @@ namespace HREngine.Bots
             else
             {
                 p.minionGetDamageOrHeal(p.enemyHero, -heal);
-                p.minionGetDamageOrHeal(p.ownHero, dmg);
                 foreach (Minion m in p.enemyMinions)
                 {
                     p.minionGetDamageOrHeal(m, -heal);
