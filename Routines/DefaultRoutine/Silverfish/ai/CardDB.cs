@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 using Silverfish.Routines.DefaultRoutine.Silverfish.Helpers;
 
 namespace HREngine.Bots
@@ -1312,7 +1313,9 @@ namespace HREngine.Bots
             this.cardlist.Add(new Card { name = cardName.unknown, cost = 10 });
             this.unknownCard = cardlist[0];
 
-            using (var stream = File.OpenRead(Settings.Instance.path + "CardDefs.xml"))
+            var xmlPath = Path.Combine(Settings.Instance.path, "CardDefs.xml");
+            XElement rootElement = XElement.Load(xmlPath);
+            using (var stream = File.OpenRead(xmlPath))
             using (var reader = new StreamReader(stream))
             {
                 Card c = null;

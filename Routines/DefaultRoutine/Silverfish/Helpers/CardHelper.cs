@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Xml.Linq;
 using HREngine.Bots;
 
 namespace Silverfish.Routines.DefaultRoutine.Silverfish.Helpers
@@ -75,9 +76,9 @@ namespace Silverfish.Routines.DefaultRoutine.Silverfish.Helpers
             }
             var cardId = cardIdEnum.ToString();
             var elements1 = rootElement.Elements("Entity");
-            var element1 = elements1.First(x => x.Attribute("CardID")?.Value == cardId);
-            var element2 = element1.Elements("Tag").First(x => x.Attribute("enumID")?.Value == "185");
-            var name = element2.Element("enUS")?.Value;
+            var element1 = elements1.First(x => x.Attribute("CardID").Value == cardId);
+            var element2 = element1.Elements("Tag").First(x => x.Attribute("enumID").Value == "185");
+            var name = element2.Element("enUS").Value;
             return name;
         }
     }
