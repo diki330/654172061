@@ -2174,46 +2174,46 @@
                     if (p.ownHeroAblility.card.name == CardDB.cardName.armorup && !GalakrondInHand) return -10;
                     break;
                 //********奥秘法********
-                case CardDB.cardName.kaballackey:
-                    foreach (Handmanager.Handcard hc in p.owncards)
-                    {
-                        if (p.ownMaxMana == 1 && hc.card.Secret) return -50;
-                    }
-                    break;
-                case CardDB.cardName.arcaneflakmage:
-                    if (p.enemyMinions.Count < 2) return 5;
-                    break;
-                case CardDB.cardName.madscientist: return -3;
-                case CardDB.cardName.medivhsvalet:
-                    if (p.ownSecretsIDList.Count < 1) return 50;
-                    if (target.isHero) return -1;
-                    break;
-                case CardDB.cardName.duplicate:
-                    bool found1 = false;
-                    foreach (Minion mnn1 in p.ownMinions)
-                    {
-                        if (mnn1.name == CardDB.cardName.kabalcrystalrunner || mnn1.name == CardDB.cardName.cloudprince) found1 = true;
+                // case CardDB.cardName.kaballackey:
+                    // foreach (Handmanager.Handcard hc in p.owncards)
+                    // {
+                        // if (p.ownMaxMana == 1 && hc.card.Secret) return -50;
+                    // }
+                    // break;
+                // case CardDB.cardName.arcaneflakmage:
+                    // if (p.enemyMinions.Count < 2) return 5;
+                    // break;
+                // case CardDB.cardName.madscientist: return -3;
+                // case CardDB.cardName.medivhsvalet:
+                    // if (p.ownSecretsIDList.Count < 1) return 50;
+                    // if (target.isHero) return -1;
+                    // break;
+                // case CardDB.cardName.duplicate:
+                    // bool found1 = false;
+                    // foreach (Minion mnn1 in p.ownMinions)
+                    // {
+                        // if (mnn1.name == CardDB.cardName.kabalcrystalrunner || mnn1.name == CardDB.cardName.cloudprince) found1 = true;
 
-                    }
-                    if (found1) return -10;
-                    else return -5;
-                case CardDB.cardName.iceblock:
-                    if (p.ownHero.Hp < 15) return -8;
-                    else return -3;
-                case CardDB.cardName.counterspell: return -6;
-                case CardDB.cardName.flameward:
-                    if (p.enemyMinions.Count == 2) return -8;
-                    if (p.enemyMinions.Count == 3) return -12;
-                    if (p.enemyMinions.Count >= 4) return -15;
-                    else return -3;
-                case CardDB.cardName.explosiverunes: return -8;
-                case CardDB.cardName.cloudprince:
-                    if (p.ownSecretsIDList.Count < 1) return 80;
-                    if (target.isHero) return -1;
-                    break;
-                case CardDB.cardName.aluneth:
-                    if (p.owncards.Count >= 7) return 500;
-                    else return -50;
+                    // }
+                    // if (found1) return -10;
+                    // else return -5;
+                // case CardDB.cardName.iceblock:
+                    // if (p.ownHero.Hp < 15) return -8;
+                    // else return -3;
+                // case CardDB.cardName.counterspell: return -6;
+                // case CardDB.cardName.flameward:
+                    // if (p.enemyMinions.Count == 2) return -8;
+                    // if (p.enemyMinions.Count == 3) return -12;
+                    // if (p.enemyMinions.Count >= 4) return -15;
+                    // else return -3;
+                // case CardDB.cardName.explosiverunes: return -8;
+                // case CardDB.cardName.cloudprince:
+                    // if (p.ownSecretsIDList.Count < 1) return 80;
+                    // if (target.isHero) return -1;
+                    // break;
+                // case CardDB.cardName.aluneth:
+                    // if (p.owncards.Count >= 7) return 500;
+                    // else return -50;
                 //********图腾偶数萨********
                 case CardDB.cardName.earthenmight:
                     if (target != null)
