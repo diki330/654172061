@@ -13,8 +13,14 @@ namespace HREngine.Bots
             List<Minion> tmp = own.own ? p.enemyMinions : p.ownMinions;
             Minion m1 = p.searchRandomMinion(tmp, searchmode.searchLowestHP);
             Minion m2 = p.searchRandomMinion(tmp, searchmode.searchHighestHP);
+            if (m1 != null)
+            {
             p.minionGetDamageOrHeal(m1, 4);
+            }
+            if (m2 != null)
+            {
             p.minionGetDamageOrHeal(m2, 4);
+            }
         }
 
     }

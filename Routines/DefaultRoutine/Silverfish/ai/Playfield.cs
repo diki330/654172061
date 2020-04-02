@@ -6882,6 +6882,11 @@
 
         public void minionGetDamageOrHeal(Minion m, int dmgOrHeal, bool dontDmgLoss = false)
         {
+            if (m == null)
+            {
+                Helpfunctions.Instance.ErrorLog("minionGetDamageOrHeal error.");
+                return;
+            }
             if (m.Hp > 0) m.getDamageOrHeal(dmgOrHeal, this, false, dontDmgLoss);
         }
 
