@@ -5003,6 +5003,7 @@
             specialMinions.Add(CardDB.cardName.doomedapprentice, 0);
             specialMinions.Add(CardDB.cardName.cryptlord, 0);
             specialMinions.Add(CardDB.cardName.corpsewidow, 0);
+            specialMinions.Add(CardDB.cardName.stargazerluna, 0);
         }
 
         private void setupOwnSummonFromDeathrattle()
