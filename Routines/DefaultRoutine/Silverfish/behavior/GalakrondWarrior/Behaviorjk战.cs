@@ -16,21 +16,22 @@ namespace HREngine.Bots
             int retval = 0;
             int hpboarder = 12;
             int aggroboarder = 8;
-            if (p.enemyHeroName == HeroEnum.pala) aggroboarder = 3;//骑士无脑解
-            if (p.enemyHeroName == HeroEnum.shaman) aggroboarder = 3;//萨满无脑解
+            if (p.enemyHeroName == HeroEnum.pala) aggroboarder = 10;
+            if (p.enemyHeroName == HeroEnum.shaman) aggroboarder = 10;
             if (p.enemyHeroName == HeroEnum.druid) aggroboarder = 20;
             if (p.enemyHeroName == HeroEnum.mage) aggroboarder = 15;
             if (p.enemyHeroName == HeroEnum.priest) aggroboarder = 20;
             if (p.enemyHeroName == HeroEnum.thief) aggroboarder = 15;
             if (p.enemyHeroName == HeroEnum.warrior) aggroboarder = 15;
             if (p.enemyHeroName == HeroEnum.warlock) aggroboarder = 22;
-            if (p.enemyHeroName == HeroEnum.hunter) aggroboarder = 3;//猎人无脑解
+            if (p.enemyHeroName == HeroEnum.hunter) aggroboarder = 10;
             retval -= p.evaluatePenality;
             retval += p.owncards.Count * 3;
             retval += p.ownQuest.questProgress * 10;
             retval += p.OwnInvoke * 5;
             retval += p.ownMaxMana;
             retval -= p.enemyMaxMana;
+            retval -= 5 * p.manaTurnEnd;
 
             retval += p.ownMaxMana * 20 - p.enemyMaxMana * 20;
             retval += (p.enemyHeroAblility.manacost - p.ownHeroAblility.manacost) * 4;
