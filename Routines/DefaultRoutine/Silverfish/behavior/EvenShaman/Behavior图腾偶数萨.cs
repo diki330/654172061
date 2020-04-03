@@ -15,25 +15,20 @@ namespace HREngine.Bots
             if (p.value >= -2000000) return p.value;
             int retval = 0;
             int hpboarder = 10;
-            if (p.ownHeroName == HeroEnum.warlock && p.enemyHeroName != HeroEnum.mage) hpboarder = 6;
             int aggroboarder = 11;
+            if (p.enemyHeroName == HeroEnum.pala) aggroboarder = 10;
+            if (p.enemyHeroName == HeroEnum.shaman) aggroboarder = 10;
+            if (p.enemyHeroName == HeroEnum.druid) aggroboarder = 10;
+            if (p.enemyHeroName == HeroEnum.mage) aggroboarder = 15;
+            if (p.enemyHeroName == HeroEnum.priest) aggroboarder = 20;
+            if (p.enemyHeroName == HeroEnum.thief) aggroboarder = 15;
+            if (p.enemyHeroName == HeroEnum.warrior) aggroboarder = 15;
+            if (p.enemyHeroName == HeroEnum.warlock) aggroboarder = 22;
+            if (p.enemyHeroName == HeroEnum.hunter) aggroboarder = 10;
 
             retval -= p.evaluatePenality;
-            retval += p.owncards.Count * 5;
-            retval += p.ownQuest.questProgress * 10;
-
-            retval += p.ownMaxMana;
-            retval -= p.enemyMaxMana;
-
-            retval += p.ownMaxMana * 20 - p.enemyMaxMana * 20;
-            retval += (p.enemyHeroAblility.manacost - p.ownHeroAblility.manacost) * 4;
-            if (p.ownHeroPowerAllowedQuantity != p.enemyHeroPowerAllowedQuantity)
-            {
-                if (p.ownHeroPowerAllowedQuantity > p.enemyHeroPowerAllowedQuantity) retval += 3;
-                else retval -= 3;
-            }
-
-            if (p.enemyHeroName == HeroEnum.mage || p.enemyHeroName == HeroEnum.druid) retval -= 2 * p.enemyspellpower;
+            retval += p.owncards.Count * 3;
+            retval -= 5 * p.manaTurnEnd;
 
             if (p.ownHero.Hp + p.ownHero.armor > hpboarder)
             {
@@ -98,14 +93,12 @@ namespace HREngine.Bots
                 retval += 5;
                 retval += m.Hp * 2;
                 retval += m.Angr * 2;
-                retval += m.handcard.card.rarity;
                 if (!m.playedThisTurn && m.windfury) retval += m.Angr;
                 if (m.divineshild) retval += 1;
                 if (m.stealth) retval += 1;
                 if (m.handcard.card.isSpecialMinion && !m.silenced)
                 {
                     retval += 1;
-                    if (!m.taunt && m.stealth) retval += 20;
                 }
                 else
                 {
@@ -129,7 +122,6 @@ namespace HREngine.Bots
                 if (m.Hp <= 4 && (m.Angr > 2 || m.Hp > 3)) ownMinionsCount++;
                 retval += m.synergy;
             }
-            retval += p.anzOgOwnCThunAngrBonus;
             retval += p.anzOwnExtraAngrHp - p.anzEnemyExtraAngrHp;
 
             /*if (p.enemyMinions.Count >= 0)
@@ -203,50 +195,8 @@ namespace HREngine.Bots
             }
             if (p.manaTurnEnd >= 1 && !useAbili && p.ownAbilityReady)
             {
-                switch (p.ownHeroAblility.card.name)
-                {
-                    case CardDB.cardName.heal: goto case CardDB.cardName.lesserheal;
-                    case CardDB.cardName.lesserheal:
-                        bool wereTarget = false;
-                        if (p.ownHero.Hp < p.ownHero.maxHp) wereTarget = true;
-                        if (!wereTarget)
-                        {
-                            foreach (Minion m in p.ownMinions)
-                            {
-                                if (m.wounded) { wereTarget = true; break; }
-                            }
-                        }
-                        if (wereTarget && !(p.anzOwnAuchenaiSoulpriest > 0 || p.embracetheshadow > 0)) retval -= 10;
-                        break;
-                    case CardDB.cardName.poisoneddaggers: goto case CardDB.cardName.daggermastery;
-                    case CardDB.cardName.daggermastery:
-                        if (!(p.ownWeapon.Durability > 1 || p.ownWeapon.Angr > 1)) retval -= 10;
-                        break;
-                    case CardDB.cardName.totemicslam: goto case CardDB.cardName.totemiccall;
-                    case CardDB.cardName.totemiccall:
-                        if (p.ownMinions.Count < 7) retval -= 10;
-                        else retval -= 3;
-                        break;
-                    case CardDB.cardName.thetidalhand: goto case CardDB.cardName.reinforce;
-                    case CardDB.cardName.thesilverhand: goto case CardDB.cardName.reinforce;
-                    case CardDB.cardName.reinforce:
-                        if (p.ownMinions.Count < 7) retval -= 10;
-                        else retval -= 3;
-                        break;
-                    case CardDB.cardName.soultap:
-                        if (p.owncards.Count < 10 && p.ownDeckSize > 0) retval -= 10;
-                        break;
-                    case CardDB.cardName.lifetap:
-                        if (p.owncards.Count < 10 && p.ownDeckSize > 0)
-                        {
-                            retval -= 10;
-                            if (p.ownHero.immune) retval -= 5;
-                        }
-                        break;
-                    default:
-                        retval -= 10;
-                        break;
-                }
+                if (p.ownMinions.Count < 7) retval -= 10;
+                else retval -= 3;
             }
             //if (usecoin && p.mana >= 1) retval -= 20;
 
@@ -362,8 +312,6 @@ namespace HREngine.Bots
 
         public override int getSirFinleyPriority(List<Handmanager.Handcard> discoverCards)
         {
-
-            return -1; //comment out or remove this to set manual priority
             int sirFinleyChoice = -1;
             int tmp = int.MinValue;
             for (int i = 0; i < discoverCards.Count; i++)

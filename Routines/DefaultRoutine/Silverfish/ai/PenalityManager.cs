@@ -151,9 +151,9 @@
                         }
                     }
                     goto case CardDB.cardName.aiextra1;
-                case CardDB.cardName.flamewreathedfaceless://投火无面者打脸
-                    if (target.isHero && !target.own) return -10;
-                    break;
+                //case CardDB.cardName.flamewreathedfaceless:
+                //    if (target.isHero && !target.own) return -10;
+                //    break;
                 case CardDB.cardName.bombwrangler:
                     if (m.own && target.Angr < m.Hp) return -10;
                     break;
