@@ -5398,11 +5398,40 @@
             }
         }
 
+        public void doReborns(List<Minion> RebornMinions)
+        {
+            foreach (Minion m in RebornMinions)
+            {
+                if (m.reborn > 0)
+                {
+                    for (int i = 0; i < m.reborn; i++)
+                    {
+                        CardDB.Card kid = m.handcard.card;
+                        List<Minion> tmp = (m.own) ? this.ownMinions : this.enemyMinions;
+                        int pos = tmp.Count;
+                        callKid(kid, pos, m.own, false, true);
+
+                        if (tmp.Count >= 1)
+                        {
+                            Minion summonedMinion = tmp[pos];
+                            if (summonedMinion.handcard.card.cardIDenum == kid.cardIDenum)
+                            {
+                                summonedMinion.Hp = 1;
+                                summonedMinion.wounded = false;
+                                if (summonedMinion.Hp < summonedMinion.maxHp) summonedMinion.wounded = true;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
 
         public void updateBoards()
         {
             if (!this.tempTrigger.ownMinionsChanged && !this.tempTrigger.enemyMininsChanged) return;
             List<Minion> deathrattleMinions = new List<Minion>();
+            List<Minion> rebornMinions = new List<Minion>();
 
             bool minionOwnReviving = false;
             bool minionEnemyReviving = false;
@@ -5433,6 +5462,10 @@
                             deathrattleMinions.Add(m);
                         }
 
+                        if (!m.silenced && m.reborn > 0)
+                        {
+                            rebornMinions.Add(m);
+                        }
                         // end aura of minion m
                         if (!m.silenced) m.handcard.card.sim_card.onAuraEnds(this, m);
                     }
@@ -5713,7 +5746,7 @@
 
             hc.addattack = 0;
             hc.addHp = 0;
-
+            m.reborn = hc.card.Reborn;
             m.name = hc.card.name;
             m.playedThisTurn = true;
             m.numAttacksThisTurn = 0;

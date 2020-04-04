@@ -61,6 +61,7 @@ namespace HREngine.Bots
 
         public bool conceal = false;
         public int ancestralspirit = 0;
+        public int reborn = 0;
         public int desperatestand = 0;
         public int souloftheforest = 0;
         public int stegodon = 0;
@@ -148,6 +149,7 @@ namespace HREngine.Bots
             this.shadowmadnessed = m.shadowmadnessed;
 
             this.ancestralspirit = m.ancestralspirit;
+            this.reborn = m.reborn;
             this.desperatestand = m.desperatestand;
             this.destroyOnOwnTurnStart = m.destroyOnOwnTurnStart; // depends on own!
             this.destroyOnEnemyTurnStart = m.destroyOnEnemyTurnStart; // depends on own!
@@ -233,6 +235,7 @@ namespace HREngine.Bots
             this.shadowmadnessed = m.shadowmadnessed;
 
             this.ancestralspirit = m.ancestralspirit;
+            this.reborn = m.reborn;
             this.desperatestand = m.desperatestand;
             this.destroyOnOwnTurnStart = m.destroyOnOwnTurnStart; // depends on own!
             this.destroyOnEnemyTurnStart = m.destroyOnEnemyTurnStart; // depends on own!

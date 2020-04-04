@@ -216,6 +216,7 @@ namespace HREngine.Bots
 
             public int Attack = 0;
             public int Health = 0;
+            public int Reborn = 0;
             public int Durability = 0;//for weapons
             public bool tank = false;
             public bool Silence = false;
@@ -223,7 +224,6 @@ namespace HREngine.Bots
             public bool windfury = false;
             public bool poisonous = false;
             public bool lifesteal = false;
-            public bool reborn = false;
             public bool deathrattle = false;
             public bool battlecry = false;
             public bool discover = false;
@@ -1387,7 +1387,7 @@ namespace HREngine.Bots
                             case 114: c.Elite = value == 1; break; //elite
                             case 185:
                                 {
-                                   
+
                                     c.EnglishName = CardHelper.GetEnglishName(rootElement, c.cardIDenum);
 
                                     while ((index1 = s.IndexOf("<enUS>")) == -1)
@@ -1486,7 +1486,7 @@ namespace HREngine.Bots
                             case 462: c.Quest = value == 1; break; //quest
                             case 685: c.lifesteal = value == 1; break; //lifesteal
                             case 791: c.Rush = value == 1; break; //RUSH
-                            case 1085: c.reborn = value == 1; break; //REBORN
+                            case 1085: c.Reborn = value; break; //REBORN
                         }
                     }
 
