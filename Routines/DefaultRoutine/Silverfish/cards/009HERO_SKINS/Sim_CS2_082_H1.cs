@@ -4,7 +4,12 @@ namespace HREngine.Bots
     {
         //
         //
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_082);
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(weapon, ownplay);
+        }
 
     }
 }
