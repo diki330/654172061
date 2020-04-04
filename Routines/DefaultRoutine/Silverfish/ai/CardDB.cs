@@ -1132,21 +1132,7 @@ namespace HREngine.Bots
                     case CardDB.cardName.dreadcorsair:
                         retval = retval + offset - p.ownWeapon.Angr + p.ownWeaponAttackStarted; // if weapon attack change we change manacost
                         break;
-                    case CardDB.cardName.seagiant://º£¾ÞÈË
-                        if (p.playactions.Count > 0)
-                        {
-                            foreach (Action a in p.playactions)
-                            {
-                                if (a.actionType == actionEnum.useHeroPower)
-                                {
-                                    switch (a.card.card.name)
-                                    {
-                                        case cardName.totemiccall: retval--; break;
-                                        case cardName.totemicslam: retval--; break;
-                                    }
-                                }
-                            }
-                        }
+                    case CardDB.cardName.seagiant:
                         retval = retval + offset - p.ownMinions.Count - p.enemyMinions.Count + p.ownMobsCountStarted + p.enemyMobsCountStarted;
                         break;
                     case CardDB.cardName.mountaingiant:
