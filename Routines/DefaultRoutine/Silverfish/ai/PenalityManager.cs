@@ -4445,6 +4445,7 @@
             cardDrawDeathrattleDatabase.Add(CardDB.cardName.bonebaron, 2);
             cardDrawDeathrattleDatabase.Add(CardDB.cardName.arfus, 1);
             cardDrawDeathrattleDatabase.Add(CardDB.cardName.glacialmysteries, 1);
+            cardDrawDeathrattleDatabase.Add(CardDB.cardName.octosari, 8);
         }
 
 
@@ -5286,9 +5287,8 @@
             priorityTargets.Add(CardDB.cardName.stargazerluna, 10);
         }
 
-        private void setupLethalHelpMinions()
+        private void setupLethalHelpMinions() //法强随从
         {
-            //spellpower minions
             lethalHelpers.Add(CardDB.cardName.ancientmage, 0);
             lethalHelpers.Add(CardDB.cardName.arcanotron, 0);
             lethalHelpers.Add(CardDB.cardName.archmage, 0);
@@ -5310,10 +5310,9 @@
             lethalHelpers.Add(CardDB.cardName.streettrickster, 0);
             lethalHelpers.Add(CardDB.cardName.wrathofairtotem, 0);
             lethalHelpers.Add(CardDB.cardName.tuskarrfisherman, 0);
-            lethalHelpers.Add(CardDB.cardName.taintedzealot, 1);
-            lethalHelpers.Add(CardDB.cardName.spellweaver, 2);
-
-            lethalHelpers.Add(CardDB.cardName.totemiccall, 0);
+            lethalHelpers.Add(CardDB.cardName.taintedzealot, 0);
+            lethalHelpers.Add(CardDB.cardName.spellweaver, 0);
+            lethalHelpers.Add(CardDB.cardName.squallhunter, 0);
         }
 
         private void setupRelations()
@@ -5859,60 +5858,60 @@
 
         private void setupClassRacePriorityDatabase()
         {
-            this.ClassRacePriorityWarloc.Add(TAG_RACE.MURLOC, 2);
+            this.ClassRacePriorityWarloc.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityWarloc.Add(TAG_RACE.DEMON, 2);
-            this.ClassRacePriorityWarloc.Add(TAG_RACE.MECHANICAL, 1);
+            this.ClassRacePriorityWarloc.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityWarloc.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityWarloc.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityHunter.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityHunter.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityHunter.Add(TAG_RACE.DEMON, 0);
             this.ClassRacePriorityHunter.Add(TAG_RACE.MECHANICAL, 1);
             this.ClassRacePriorityHunter.Add(TAG_RACE.PET, 2);
             this.ClassRacePriorityHunter.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityMage.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityMage.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityMage.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityMage.Add(TAG_RACE.MECHANICAL, 2);
+            this.ClassRacePriorityMage.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityMage.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityMage.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityShaman.Add(TAG_RACE.MURLOC, 2);
-            this.ClassRacePriorityShaman.Add(TAG_RACE.PIRATE, 1);
+            this.ClassRacePriorityShaman.Add(TAG_RACE.MURLOC, 0);
+            this.ClassRacePriorityShaman.Add(TAG_RACE.PIRATE, 0);
             this.ClassRacePriorityShaman.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityShaman.Add(TAG_RACE.MECHANICAL, 2);
+            this.ClassRacePriorityShaman.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityShaman.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityShaman.Add(TAG_RACE.TOTEM, 2);
 
-            this.ClassRacePriorityDruid.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityDruid.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityDruid.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityDruid.Add(TAG_RACE.MECHANICAL, 1);
-            this.ClassRacePriorityDruid.Add(TAG_RACE.PET, 1);
+            this.ClassRacePriorityDruid.Add(TAG_RACE.MECHANICAL, 0);
+            this.ClassRacePriorityDruid.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityDruid.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityPaladin.Add(TAG_RACE.MURLOC, 1);
-            this.ClassRacePriorityPaladin.Add(TAG_RACE.PIRATE, 1);
+            this.ClassRacePriorityPaladin.Add(TAG_RACE.MURLOC, 0);
+            this.ClassRacePriorityPaladin.Add(TAG_RACE.PIRATE, 0);
             this.ClassRacePriorityPaladin.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityPaladin.Add(TAG_RACE.MECHANICAL, 1);
+            this.ClassRacePriorityPaladin.Add(TAG_RACE.MECHANICAL, 2);
             this.ClassRacePriorityPaladin.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityPaladin.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityPriest.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityPriest.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityPriest.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityPriest.Add(TAG_RACE.MECHANICAL, 1);
+            this.ClassRacePriorityPriest.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityPriest.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityPriest.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityRouge.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityRouge.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityRouge.Add(TAG_RACE.PIRATE, 2);
             this.ClassRacePriorityRouge.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityRouge.Add(TAG_RACE.MECHANICAL, 1);
+            this.ClassRacePriorityRouge.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityRouge.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityRouge.Add(TAG_RACE.TOTEM, 0);
 
-            this.ClassRacePriorityWarrior.Add(TAG_RACE.MURLOC, 1);
+            this.ClassRacePriorityWarrior.Add(TAG_RACE.MURLOC, 0);
             this.ClassRacePriorityWarrior.Add(TAG_RACE.DEMON, 0);
-            this.ClassRacePriorityWarrior.Add(TAG_RACE.MECHANICAL, 1);
+            this.ClassRacePriorityWarrior.Add(TAG_RACE.MECHANICAL, 0);
             this.ClassRacePriorityWarrior.Add(TAG_RACE.PET, 0);
             this.ClassRacePriorityWarrior.Add(TAG_RACE.TOTEM, 0);
             this.ClassRacePriorityWarrior.Add(TAG_RACE.PIRATE, 2);
