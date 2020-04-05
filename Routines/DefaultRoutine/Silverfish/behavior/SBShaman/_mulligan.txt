@@ -1,11 +1,4 @@
 KAR_073;shaman;None;Discard:2;/
-UNG_807;shaman;mage;Discard:2;/
-UNG_807;shaman;priest;Discard:2;/
-UNG_807;shaman;pala;Discard:2;/
-UNG_807;shaman;warlock;Discard:2;/
-UNG_807;shaman;druid;Discard:2;/
-UNG_807;shaman;hunter;Discard:2;/
-UNG_807;shaman;shaman;Discard:2;/
 CFM_696;shaman;warlock;Hold:1;/
 CFM_696;shaman;warrior;Discard:2;/
 CFM_696;shaman;mage;Discard:2;/
@@ -15,7 +8,8 @@ CFM_696;shaman;pala;Discard:2;/
 CFM_696;shaman;druid;Discard:2;/
 CFM_696;shaman;hunter;Discard:2;/
 CFM_696;shaman;shaman;Discard:2;/
-GIL_586;shaman;None;Hold:1;/
+ULD_158;shaman;None;Discard:2;/
 GVG_038;shaman;None;Discard:2;/
+GIL_600;shaman;None;Discard:2;/
+TRL_352;shaman;None;Hold:1;/
 ULD_171;shaman;None;Hold:1;/
-EX1_244;shaman;None;Hold:1;/

@@ -126,6 +126,7 @@
     <Compile Include="Routines\DefaultRoutine\Silverfish\ai\SimTemplate.cs" />
     <Compile Include="Routines\DefaultRoutine\Silverfish\ai\TAGGS.cs" />
     <Compile Include="Routines\DefaultRoutine\Silverfish\ai\Weapon.cs" />
+    <Compile Include="Routines\DefaultRoutine\Silverfish\behavior\SBShaman\BehaviorSB萨.cs" />
     <Compile Include="Routines\DefaultRoutine\Silverfish\behavior\EvenShaman\Behavior图腾偶数萨.cs" />
     <Compile Include="Routines\DefaultRoutine\Silverfish\behavior\BombWarrior\Behavior炸弹战.cs" />
     <Compile Include="Routines\DefaultRoutine\Silverfish\behavior\GalakrondWarrior\Behaviorjk战.cs" />
@@ -4041,6 +4042,10 @@
   <ItemGroup>
     <Content Include="Routines\DefaultRoutine\Silverfish\behavior\BombWarrior\_mulligan.txt" />
     <Content Include="Routines\DefaultRoutine\Silverfish\behavior\BombWarrior\_settings.txt" />
+    <Content Include="Routines\DefaultRoutine\Silverfish\behavior\SBShaman\_combo.txt" />
+    <Content Include="Routines\DefaultRoutine\Silverfish\behavior\SBShaman\_mulligan.txt" />
+    <Content Include="Routines\DefaultRoutine\Silverfish\behavior\SBShaman\_rules.txt" />
+    <Content Include="Routines\DefaultRoutine\Silverfish\behavior\SBShaman\_settings.txt" />
     <Content Include="Routines\DefaultRoutine\Silverfish\behavior\GalakrondWarrior\_mulligan.txt" />
     <Content Include="Routines\DefaultRoutine\Silverfish\behavior\GalakrondWarrior\_settings.txt" />
     <Content Include="Routines\DefaultRoutine\Silverfish\behavior\SecretMage\_mulligan.txt" />
