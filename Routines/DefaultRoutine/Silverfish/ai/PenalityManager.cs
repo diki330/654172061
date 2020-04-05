@@ -3902,6 +3902,7 @@
             DamageTargetDatabase.Add(CardDB.cardName.drainsoul, 2);
             DamageTargetDatabase.Add(CardDB.cardName.doomerang, 2);
             DamageTargetDatabase.Add(CardDB.cardName.avalanche, 0);
+            DamageTargetDatabase.Add(CardDB.cardName.zap, 2);
 
             DamageTargetSpecialDatabase.Add(CardDB.cardName.baneofdoom, 2);
             DamageTargetSpecialDatabase.Add(CardDB.cardName.bash, 3); //+3 armor
