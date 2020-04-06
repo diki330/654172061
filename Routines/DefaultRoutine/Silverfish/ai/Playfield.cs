@@ -65,6 +65,8 @@
         //todo reduce buffing vars
         public int anzOwnRaidleader = 0;
         public int anzEnemyRaidleader = 0;
+        public int anzOwnVessina = 0;
+        public int anzEnemyVessina = 0;
         public int anzOwnStormwindChamps = 0;
         public int anzEnemyStormwindChamps = 0;
         public int anzOwnWarhorseTrainer = 0;
@@ -400,6 +402,8 @@
 
             this.anzOwnRaidleader = 0;
             this.anzEnemyRaidleader = 0;
+            this.anzOwnVessina = 0;
+            this.anzEnemyVessina = 0;
             this.anzOwnStormwindChamps = 0;
             this.anzEnemyStormwindChamps = 0;
             this.anzOwnAnimatedArmor = 0;
@@ -617,6 +621,9 @@
                         continue;
                     case CardDB.cardName.leokk:
                         this.anzOwnRaidleader++;
+                        continue;
+                    case CardDB.cardName.vessina:
+                        this.anzOwnVessina++;
                         continue;
                     case CardDB.cardName.raidleader:
                         this.anzOwnRaidleader++;
@@ -1053,6 +1060,8 @@
 
             this.anzOwnRaidleader = p.anzOwnRaidleader;
             this.anzEnemyRaidleader = p.anzEnemyRaidleader;
+            this.anzOwnVessina = p.anzOwnVessina;
+            this.anzEnemyVessina = p.anzEnemyVessina;
             this.anzOwnWarhorseTrainer = p.anzOwnWarhorseTrainer;
             this.anzEnemyWarhorseTrainer = p.anzEnemyWarhorseTrainer;
             this.anzOwnMalGanis = p.anzOwnMalGanis;
@@ -5597,6 +5606,9 @@
             {
                 switch (m.name)
                 {
+                    case CardDB.cardName.vessina:
+                        if (this.ueberladung > 0 || this.lockedMana > 0)
+                            angr--; break;
                     case CardDB.cardName.raidleader: angr--; break;
                     case CardDB.cardName.leokk: angr--; break;
                     case CardDB.cardName.timberwolf: angr--; break;
@@ -5655,7 +5667,10 @@
                     vert += anzOwnMalGanis * 2;
 
                 }
-
+                if (this.ueberladung > 0 || this.lockedMana > 0)
+                {
+                    angr += anzOwnVessina;
+                }
             }
             else
             {
@@ -5680,6 +5695,10 @@
                     angr += anzEnemyMalGanis * 2;
                     vert += anzEnemyMalGanis * 2;
 
+                }
+                if (this.ueberladung > 0 || this.lockedMana > 0)
+                {
+                    angr += anzEnemyVessina;
                 }
             }
 
@@ -6656,6 +6675,7 @@
                                 case CardDB.cardName.flametonguetotem: if (this.ownMinions.Count > 2) cardValue += 10; break;
                                 case CardDB.cardName.stormwindchampion: if (this.ownMinions.Count > 2) cardValue += 10; break;
                                 case CardDB.cardName.raidleader: if (this.ownMinions.Count > 2) cardValue += 10; break;
+                                case CardDB.cardName.vessina: if (this.ownMinions.Count > 2) cardValue += 10; break;
                                 case CardDB.cardName.silverwaregolem: cardValue = (c.Health + hc.addHp) * 2 + c.rarity; break;
                                 case CardDB.cardName.clutchmotherzavas: cardValue = (c.Health + hc.addHp) * 2 + c.rarity; break;
                             }

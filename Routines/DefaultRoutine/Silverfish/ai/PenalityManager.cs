@@ -4134,6 +4134,7 @@
             priorityDatabase.Add(CardDB.cardName.radiantelemental, 3);
             priorityDatabase.Add(CardDB.cardName.ragnaroslightlord, 5);
             priorityDatabase.Add(CardDB.cardName.raidleader, 5);
+            priorityDatabase.Add(CardDB.cardName.vessina, 5);
             priorityDatabase.Add(CardDB.cardName.recruiter, 1);
             priorityDatabase.Add(CardDB.cardName.scavenginghyena, 5);
             priorityDatabase.Add(CardDB.cardName.secretkeeper, 5);
@@ -4542,6 +4543,7 @@
             UsefulNeedKeepDatabase.Add(CardDB.cardName.ragnaroslightlord, 19);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.ragnarosthefirelord, 5);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.raidleader, 11);
+            UsefulNeedKeepDatabase.Add(CardDB.cardName.vessina, 11);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.recruiter, 15);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.redmanawyrm, 8);
             UsefulNeedKeepDatabase.Add(CardDB.cardName.repairbot, 10);
@@ -4872,6 +4874,7 @@
             specialMinions.Add(CardDB.cardName.ragingworgen, 0);
             specialMinions.Add(CardDB.cardName.ragnaroslightlord, 0);
             specialMinions.Add(CardDB.cardName.raidleader, 0);
+            specialMinions.Add(CardDB.cardName.vessina, 0);
             specialMinions.Add(CardDB.cardName.raptorhatchling, 0);
             specialMinions.Add(CardDB.cardName.ratpack, 0);
             specialMinions.Add(CardDB.cardName.recruiter, 0);
@@ -5072,6 +5075,7 @@
             buffingMinionsDatabase.Add(CardDB.cardName.murlocwarleader, 3);
             buffingMinionsDatabase.Add(CardDB.cardName.quartermaster, 6);
             buffingMinionsDatabase.Add(CardDB.cardName.raidleader, 0);
+            buffingMinionsDatabase.Add(CardDB.cardName.vessina, 0);
             buffingMinionsDatabase.Add(CardDB.cardName.screwjankclunker, 2);
             buffingMinionsDatabase.Add(CardDB.cardName.shatteredsuncleric, 0);
             buffingMinionsDatabase.Add(CardDB.cardName.skeramcultist, 10);
@@ -5224,6 +5228,7 @@
             priorityTargets.Add(CardDB.cardName.radiantelemental, 10);
             priorityTargets.Add(CardDB.cardName.ragnaroslightlord, 10);
             priorityTargets.Add(CardDB.cardName.raidleader, 10);
+            priorityTargets.Add(CardDB.cardName.vessina, 10);
             priorityTargets.Add(CardDB.cardName.raptorhatchling, 10);
             priorityTargets.Add(CardDB.cardName.recruiter, 10);
             priorityTargets.Add(CardDB.cardName.redmanawyrm, 10);
@@ -5527,6 +5532,7 @@
             silenceTargets.Add(CardDB.cardName.radiantelemental, 0);
             silenceTargets.Add(CardDB.cardName.ragingworgen, 0);
             silenceTargets.Add(CardDB.cardName.raidleader, 0);
+            silenceTargets.Add(CardDB.cardName.vessina, 0);
             silenceTargets.Add(CardDB.cardName.raptorhatchling, 0);
             silenceTargets.Add(CardDB.cardName.ratpack, 0);
             silenceTargets.Add(CardDB.cardName.recruiter, 0);
@@ -6044,6 +6050,7 @@
             GangUpDatabase.Add(CardDB.cardName.ragnaroslightlord, 3);
             GangUpDatabase.Add(CardDB.cardName.ragnarosthefirelord, 5);
             GangUpDatabase.Add(CardDB.cardName.raidleader, 2);
+            GangUpDatabase.Add(CardDB.cardName.vessina, 2);
             GangUpDatabase.Add(CardDB.cardName.ratpack, 2);
             GangUpDatabase.Add(CardDB.cardName.razorgore, 5);
             GangUpDatabase.Add(CardDB.cardName.recruiter, 5);

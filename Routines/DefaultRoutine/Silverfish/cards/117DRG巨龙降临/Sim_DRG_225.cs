@@ -4,10 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_DRG_225 : SimTemplate //raidleader
+    class Sim_DRG_225 : SimTemplate //空中飞爪
     {
 
-        //    eure anderen diener haben +1 angriff.
+        //    你的其他机械获得+1攻击力。战吼：召唤两个1/1的微型旋翼机。
         public override void onAuraStarts(Playfield p, Minion own)
         {
             if (own.own)

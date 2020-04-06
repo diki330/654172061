@@ -9,37 +9,41 @@ namespace HREngine.Bots
             if (m.own)
             {
                 if (p.ueberladung > 0 || p.lockedMana > 0)
-                    foreach (Minion mn in p.ownMinions)
-                    {
-                        if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, 2, 0);
-                    }
+                    p.anzOwnVessina++;
+                foreach (Minion mn in p.ownMinions)
+                {
+                    if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, 2, 0);
+                }
             }
             else
             {
                 if (p.ueberladung > 0 || p.lockedMana > 0)
-                    foreach (Minion mn in p.enemyMinions)
-                    {
-                        if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, 2, 0);
-                    }
+                    p.anzEnemyVessina++;
+                foreach (Minion mn in p.enemyMinions)
+                {
+                    if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, 2, 0);
+                }
             }
         }
         public override void onAuraEnds(Playfield p, Minion m)
         {
             if (m.own)
             {
-                if (p.ueberladung <= 0 && p.lockedMana <= 0)
-                    foreach (Minion mn in p.ownMinions)
-                    {
-                        if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, -2, 0);
-                    }
+                if (p.ueberladung > 0 || p.lockedMana > 0)
+                    p.anzOwnVessina--;
+                foreach (Minion mn in p.ownMinions)
+                {
+                    if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, -2, 0);
+                }
             }
             else
             {
-                if (p.ueberladung <= 0 && p.lockedMana <= 0)
-                    foreach (Minion mn in p.enemyMinions)
-                    {
-                        if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, -2, 0);
-                    }
+                if (p.ueberladung > 0 || p.lockedMana > 0)
+                    p.anzEnemyVessina--;
+                foreach (Minion mn in p.enemyMinions)
+                {
+                    if (m.entitiyID != mn.entitiyID) p.minionGetBuffed(m, -2, 0);
+                }
             }
         }
     }
