@@ -14,9 +14,18 @@ namespace HREngine.Bots
                 {
                     p.minionGetBuffed(p.ownHero, 2, 0);
                     p.ownWeapon.Angr += 2;
+                    p.ownLikkim = true;
                 }
             }
-
+            else
+            {
+                if (p.ueberladung > 0 || p.lockedMana > 0)
+                {
+                    p.minionGetBuffed(p.ownHero, 2, 0);
+                    p.ownWeapon.Angr += 2;
+                    p.enemyLikkim = true;
+                }
+            }
         }
 
     }

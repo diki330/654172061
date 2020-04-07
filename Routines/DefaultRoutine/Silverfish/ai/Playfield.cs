@@ -149,6 +149,8 @@
         public bool enemyHaveSteamwheedleSniper = false;
         public bool ownSpiritclaws = false;
         public bool enemySpiritclaws = false;
+        public bool ownLikkim = false;
+        public bool enemyLikkim = false;
 
         public bool needGraveyard = false;
 
@@ -885,6 +887,8 @@
 
             if (this.spellpowerStarted > 0) this.ownSpiritclaws = true;
             if (this.enemyspellpowerStarted > 0) this.enemySpiritclaws = true;
+            if (this.ueberladung > 0 || this.lockedMana > 0) this.ownLikkim = true;
+            if (this.ueberladung > 0 || this.lockedMana > 0) this.enemyLikkim = true;
 
             if (this.enemySecretCount >= 1) this.needGraveyard = true;
             if (this.needGraveyard) this.diedMinions = new List<GraveYardItem>(Probabilitymaker.Instance.turngraveyard);
@@ -1124,6 +1128,8 @@
             this.weHavePlayedMillhouseManastorm = p.weHavePlayedMillhouseManastorm;
             this.ownSpiritclaws = p.ownSpiritclaws;
             this.enemySpiritclaws = p.enemySpiritclaws;
+            this.ownLikkim = p.ownLikkim;
+            this.enemyLikkim = p.enemyLikkim;
 
             this.doublepriest = p.doublepriest;
             this.enemydoublepriest = p.enemydoublepriest;
@@ -5557,8 +5563,8 @@
             if (this.enemyWeapon.name == CardDB.cardName.spiritclaws)
             {
                 int dif = 0;
-                if (this.enemyspellpower > 0) dif += 2;
-                if (this.enemyspellpowerStarted > 0) dif -= 2;
+                if (this.spellpower > 0) dif += 2;
+                if (this.spellpowerStarted > 0) dif -= 2;
                 if (dif > 0)
                 {
                     if (!this.enemySpiritclaws)
@@ -5577,9 +5583,56 @@
                         this.enemySpiritclaws = false;
                     }
                 }
+                if (this.ownWeapon.name == CardDB.cardName.likkim)
+                {
+                    int dif2 = 0;
+                    if (this.ueberladung > 0 || this.lockedMana > 0) dif2 += 2;
+                    if (this.ueberladung > 0 || this.lockedMana > 0) dif2 -= 2;
+                    if (dif2 > 0)
+                    {
+                        if (!this.ownLikkim)
+                        {
+                            this.minionGetBuffed(this.ownHero, 2, 0);
+                            this.ownWeapon.Angr += 2;
+                            this.ownLikkim = true;
+                        }
+                    }
+                    else if (dif2 < 0)
+                    {
+                        if (this.ownLikkim)
+                        {
+                            this.minionGetBuffed(this.ownHero, -2, 0);
+                            this.ownWeapon.Angr -= 2;
+                            this.ownLikkim = false;
+                        }
+                    }
+                }
+                if (this.enemyWeapon.name == CardDB.cardName.likkim)
+                {
+                    int dif2 = 0;
+                    if (this.ueberladung > 0 || this.lockedMana > 0) dif2 += 2;
+                    if (this.ueberladung > 0 || this.lockedMana > 0) dif2 -= 2;
+                    if (dif2 > 0)
+                    {
+                        if (!this.enemyLikkim)
+                        {
+                            this.minionGetBuffed(this.enemyHero, 2, 0);
+                            this.enemyWeapon.Angr += 2;
+                            this.enemyLikkim = true;
+                        }
+                    }
+                    else
+                    {
+                        if (this.enemyLikkim)
+                        {
+                            this.minionGetBuffed(this.enemyHero, -2, 0);
+                            this.enemyWeapon.Angr -= 2;
+                            this.enemyLikkim = false;
+                        }
+                    }
+                }
+
             }
-
-
             if (deathrattleMinions.Count >= 1) this.doDeathrattles(deathrattleMinions);
 
             if (minionOwnReviving)

@@ -261,6 +261,14 @@
                         else return 7;
                     }
                     break;
+                case CardDB.cardName.likkim:
+                    if (!isLethalCheck && p.ownWeapon.Angr == 1)
+                    {
+                        if (target.isHero) return 500;
+                        else if (target.Hp == 1 && this.specialMinions.ContainsKey(target.name)) return 0;
+                        else return 7;
+                    }
+                    break;
                 case CardDB.cardName.gorehowl:
                     if (target.isHero && p.ownWeapon.Angr >= 3) return 10;
                     break;
