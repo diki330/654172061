@@ -5608,7 +5608,7 @@
                 {
                     case CardDB.cardName.vessina:
                         if (this.ueberladung > 0 || this.lockedMana > 0)
-                            angr--; break;
+                            angr -= 2; break;
                     case CardDB.cardName.raidleader: angr--; break;
                     case CardDB.cardName.leokk: angr--; break;
                     case CardDB.cardName.timberwolf: angr--; break;
@@ -5669,7 +5669,7 @@
                 }
                 if (this.ueberladung > 0 || this.lockedMana > 0)
                 {
-                    angr += anzOwnVessina;
+                    angr += anzOwnVessina * 2;
                 }
             }
             else
@@ -5698,7 +5698,7 @@
                 }
                 if (this.ueberladung > 0 || this.lockedMana > 0)
                 {
-                    angr += anzEnemyVessina;
+                    angr += anzEnemyVessina * 2;
                 }
             }
 
