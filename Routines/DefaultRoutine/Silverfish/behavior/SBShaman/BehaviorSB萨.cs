@@ -28,7 +28,7 @@ namespace HREngine.Bots
 
             retval -= p.evaluatePenality;
             retval += p.owncards.Count * 3;
-            retval -= 5 * p.manaTurnEnd;
+            //retval -= 5 * p.manaTurnEnd;
 
             if (p.ownHero.Hp + p.ownHero.armor > hpboarder)
             {
@@ -276,7 +276,7 @@ namespace HREngine.Bots
                 retval += m.Angr * 2;
                 if (m.windfury) retval += m.Angr * 2;
                 if (m.Angr >= 4) retval += 10;
-                if (m.Angr >= 7) retval += 50;
+                //if (m.Angr >= 7) retval += 50;
             }
 
             if (!m.handcard.card.isSpecialMinion)
@@ -304,6 +304,7 @@ namespace HREngine.Bots
             }
             if (m.name == CardDB.cardName.nerubianegg && m.Angr <= 3 && !m.taunt) retval = 0;           
             if (p.enemyHeroStartClass == TAG_CLASS.PALADIN && p.enemyHeroAblility.card.cardIDenum == CardDB.cardIDEnum.AT_132_PALADIN) retval += 2;//打奇数骑解场癌
+            if (m.name == CardDB.cardName.voidlord) retval += 50;
             retval += m.synergy;
             return retval;
         }
